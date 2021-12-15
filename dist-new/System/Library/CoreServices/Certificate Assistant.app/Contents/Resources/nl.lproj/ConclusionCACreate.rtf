@@ -1,0 +1,31 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Hoe neem ik contact op met mijn gebruikers en stel ik mijn certificaatautoriteit beschikbaar?
+\b0 \
+Nadat er met Certificaatassistent een certificaatautoriteit is aangemaakt, klik je op de knop 'Verstuur configuratiebestand\'85' om een e-mail op te stellen met het configuratiebestand als bijlage. Vervolgens geef je de e-mailadressen op van de gebruikers die certificaten van je moeten ontvangen.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\b \cf0 Wat is de map 'Certificate Authority'?
+\b0 \
+Deze map bevat de bestanden die samen de certificaatautoriteit vormen, namelijk het configuratiebestand en de diverse certificaten. \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\b \cf0 Hoe stel ik de certificaten van de certificaatautoriteit beschikbaar aan mijn gebruikers?
+\f1\b0 \
+
+\f0 De gebruikers kunnen hun certificaten alleen gebruiken als je ze toegang biedt tot de CA-certificaten die je hebt aangemaakt. In Certificaatassistent wordt automatisch een PEM-bestand (.pem) aangemaakt dat deze certificaten bevat. Dit bestand bevindt zich in de map 'Certificate Authority'. Je moet dit .pem-bestand op een beveiligde locatie beschikbaar stellen aan de gebruikers. Uit beveiligingsoogpunt is het niet toegestaan dit bestand per e-mail te verzenden aan de gebruikers. Stel het bestand beschikbaar op een beveiligde bestandsserver of in een LDAP-repository. Je kunt ook gebruikmaken van verwisselbare schijven. Wanneer gebruikers het .pem-bestand openen, kunnen ze met Sleutelhangertoegang de CA-certificaten als vertrouwd markeren. Voor certificaten die niet worden vertrouwd, wordt de melding 'Dit rootcertificaat wordt niet vertrouwd' weergegeven.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\b \cf0 Hoe kan ik nieuwe certificaten verstrekken aan gebruikers voordat hun certificaten verlopen?
+\b0 \
+Wanneer je een e-mail van een gebruiker ontvangt met een certificaatondertekeningsaanvraag (CSR), moet je die e-mail bewaren zodat je het certificaat van de gebruiker later kunt vernieuwen. Klik op de bijlage van de e-mail om een nieuw certificaat te verstrekken. Verstrek nieuwe certificaten v\'f3\'f3r de vervaldatum van het certificaat. Gebruikers hoeven zich dan geen zorgen te maken over het aanvragen van een nieuw certificaat.}

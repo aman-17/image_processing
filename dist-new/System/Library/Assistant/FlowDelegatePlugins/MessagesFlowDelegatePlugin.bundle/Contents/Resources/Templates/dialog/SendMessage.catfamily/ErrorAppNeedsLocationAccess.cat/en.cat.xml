@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ErrorAppNeedsLocationAccess" locale="en">
+    <first>
+        <dialog condition="deviceState.isCarPlay">I can help with that if you turn on Precise Location for ‘<var name="app.name"/>’,<break time="250ms"/> once you‘re not driving.</dialog>
+        <first condition="deviceState.isWatch">
+            <dialog condition="isSettingInherited">I can help with that if you turn on Precise Location for ‘<var name="app.name"/>’ on your iPhone.</dialog>
+            <dialog>I can help with that if you turn on Precise Location for ‘<var name="app.name"/>’ in Privacy Settings.</dialog>
+        </first>
+        <dialog>I can help with that if you turn on Precise Location for ‘<var name="app.name"/>’.</dialog>
+    </first>
+</cat>

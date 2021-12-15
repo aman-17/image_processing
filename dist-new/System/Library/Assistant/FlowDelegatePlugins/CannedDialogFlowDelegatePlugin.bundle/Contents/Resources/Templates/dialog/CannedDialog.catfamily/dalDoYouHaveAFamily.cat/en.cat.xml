@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalDoYouHaveAFamily">
+	<all>
+		<random phrase="">
+			<dialog>I don’t have a family the way a person would.</dialog>
+			<dialog>I don’t have a family. But I have my colleagues at Apple. We try to take good care of each other.</dialog>
+			<dialog>I don’t have a family tree. But I have a pretty great file directory.</dialog>
+		</random>
+	</all>
+</cat>

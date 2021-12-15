@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AnswerCall#IntentHandledResponse" locale="en">
+    <phrases>
+        <first phrase="justMissedCall">
+            <text><opt>Sorry, <var name="user.groundingAlwaysIfMultiUser"/>, </opt>Looks like you just missed a call<opt> from <var name="incomingCallConcept.latestCallRecord.caller"/></opt>!</text>
+        </first>
+        <first phrase="justMissedUnknownCall">
+            <text><opt>Sorry, <var name="user.groundingAlwaysIfMultiUser"/>, </opt>You just missed a call from a blocked number.</text>
+        </first>
+        <first phrase="noIncomingCall">
+            <text>There’s nobody calling right now<opt>, <var name="user.groundingAlwaysIfMultiUser"/></opt>.</text>
+        </first>
+    </phrases>
+    
+    
+    <conditions>
+        <condition name="justMissedCall">
+            <and>
+                <expression name="incomingCallConcept.latestCallRecord" op="defined"/>
+                <expression name="incomingCallConcept.incomingCall" op="eq" value="false"/>
+                <expression name="incomingCallConcept.unknownCaller" op="eq" value="false"/>
+            </and>
+        </condition>
+        <condition name="justMissedUnknownCall">
+            <and>
+                <expression name="incomingCallConcept.latestCallRecord" op="defined"/>
+                <expression name="incomingCallConcept.incomingCall" op="eq" value="false"/>
+                <expression name="incomingCallConcept.unknownCaller" op="eq" value="true"/>
+            </and>
+        </condition>
+    </conditions>
+    
+    
+    <first>
+        <dialog id="JustMissedCall" condition="justMissedCall">
+            <phrase name="justMissedCall"/>
+        </dialog>
+        <dialog id="JustMissedUnknownCall" condition="justMissedUnknownCall">
+            <phrase name="justMissedUnknownCall"/>
+        </dialog>
+        <dialog id="NoIncomingCall">
+            <phrase name="noIncomingCall"/>
+        </dialog>
+    </first>
+</cat>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#PromptForRecipient" locale="en">
+    
+    <phrases >
+        <first phrase="multiuserGrounding" note="This will never be printed, it is only used on HomePod.">
+            <text><opt>OK, <var name="user.groundingIfNeeded"/>, </opt></text>
+        </first>
+    </phrases>
+    
+    <first>
+        <dialog condition="isReply"><opt><phrase name="multiuserGrounding"/></opt>Who do you want to reply to?</dialog>
+        <dialog><opt><phrase name="multiuserGrounding"/></opt>Who do you want to send it to?</dialog>
+    </first>
+</cat>

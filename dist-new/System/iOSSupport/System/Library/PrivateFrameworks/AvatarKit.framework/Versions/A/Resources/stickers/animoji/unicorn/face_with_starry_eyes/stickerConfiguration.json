@@ -1,0 +1,58 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../sharedAngled/face_with_starry_eyes/cam.scnz"
+  },
+  "emoji" : "🤩",
+  "identifier" : "face_with_starry_eyes",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 1,
+    "browOuterUp_L" : 0.93411248922348022,
+    "browOuterUp_R" : 0.8536713719367981,
+    "eyeWide_L" : 0.76741957664489746,
+    "eyeWide_R" : 0.6566842794418335,
+    "jawOpen" : 0.90997493267059326,
+    "mouthDimple_L" : 0.47382906079292297,
+    "mouthDimple_R" : 0.52341580390930176,
+    "mouthSmile_L" : 0.95919305086135864,
+    "mouthSmile_R" : 0.88958442211151123,
+    "mouthUpperUp_R" : 0.008264484815299511,
+    "neckOrientation" : [
+      -0.064791806042194366,
+      -0.15013234317302704,
+      0.071141347289085388,
+      0.98397213220596313
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "image" : "../../../shared/face_with_starry_eyes/star_left.heic",
+      "position" : {
+        "x" : -0.070000000000000007,
+        "y" : 0.070000000000000007,
+        "z" : 25
+      },
+      "rotation" : 0.17999999999999999,
+      "scale" : 1.25
+    },
+    {
+      "image" : "../../../shared/face_with_starry_eyes/star_right.heic",
+      "position" : {
+        "x" : -0.070000000000000007,
+        "y" : 0.070000000000000007,
+        "z" : 25
+      },
+      "rotation" : 0.17999999999999999,
+      "scale" : 1.25
+    }
+  ]
+}

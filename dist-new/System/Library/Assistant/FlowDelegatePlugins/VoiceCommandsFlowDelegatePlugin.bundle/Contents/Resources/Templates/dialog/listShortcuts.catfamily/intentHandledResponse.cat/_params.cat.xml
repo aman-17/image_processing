@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="listShortcuts#intentHandledResponse">
+    <meta name="description" value="A list of shortcuts satisfying returned."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="shortcutsCount" type="dialog.Number" description="The number of shortcuts a user have"/>
+        <parameter name="appTitle" type="dialog.String" description="App name the user mentioned"/>
+		<parameter name="device" type="sirikit.DeviceState"/>
+		<parameter name="deviceCompanionName" type="dialog.String"/>
+    </parameters>
+</cat>

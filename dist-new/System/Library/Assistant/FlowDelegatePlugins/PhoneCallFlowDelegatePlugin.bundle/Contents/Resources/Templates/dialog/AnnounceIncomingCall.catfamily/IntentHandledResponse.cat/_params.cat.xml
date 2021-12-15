@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AnnounceIncomingCall#IntentHandledResponse">
+    <meta name="description" value="Incoming call announcement"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <meta name="excludeIfSet" value="*****"/>
+    <parameters>
+        <parameter name="incomingCallConcept" type="phone.IncomingCall"/>
+    </parameters>
+
+</cat>

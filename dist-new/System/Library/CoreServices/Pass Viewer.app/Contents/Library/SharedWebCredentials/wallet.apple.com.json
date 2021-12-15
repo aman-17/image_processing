@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "details": [{
+            "appID": "0000000000.com.apple.Pass-Viewer",
+            "alwaysEnabled": true,
+            "components": [
+                { "/": "/setup/" },
+            ]
+        }]
+    }
+}

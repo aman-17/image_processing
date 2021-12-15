@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>20A241115</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>AppleH263</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.vcp.AppleH263</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>AppleH263</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>CMClassImplementations</key>
+	<array>
+		<dict>
+			<key>CMClassID</key>
+			<string>com.apple.videotoolbox.videodecoder</string>
+			<key>CMClassImplementationID</key>
+			<string>com.apple.videotoolbox.videodecoder.h263</string>
+			<key>CMClassImplementationName</key>
+			<string>H.263 Video Decoder</string>
+			<key>CMClassImplementationVersion</key>
+			<integer>1</integer>
+			<key>CMCopyright</key>
+			<string>Copyright (c) 2012-2019 Apple Inc. All rights reserved.</string>
+			<key>CMExecutableArchitectures</key>
+			<array>
+				<string>x86_64</string>
+				<string>arm64</string>
+			</array>
+			<key>CMFactoryFunction</key>
+			<string>VCH263VideoDecoder_CreateInstance</string>
+			<key>CMManufacturer</key>
+			<string>Apple</string>
+			<key>CMMatchingInfo</key>
+			<dict>
+				<key>VTCodecType</key>
+				<string>h263</string>
+				<key>VTRating</key>
+				<integer>0</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>CMClassID</key>
+			<string>com.apple.videotoolbox.videoencoder</string>
+			<key>CMClassImplementationID</key>
+			<string>com.apple.videotoolbox.videoencoder.h263</string>
+			<key>CMClassImplementationName</key>
+			<string>H.263 Video Encoder</string>
+			<key>CMClassImplementationVersion</key>
+			<integer>1</integer>
+			<key>CMCopyright</key>
+			<string>Copyright (c) 2012-2019 Apple Inc. All rights reserved.</string>
+			<key>CMExecutableArchitectures</key>
+			<array>
+				<string>x86_64</string>
+				<string>arm64</string>
+			</array>
+			<key>CMFactoryFunction</key>
+			<string>VCH263VideoEncoder_CreateInstance</string>
+			<key>CMManufacturer</key>
+			<string>Apple</string>
+			<key>CMMatchingInfo</key>
+			<dict>
+				<key>VTCodecType</key>
+				<string>h263</string>
+				<key>VTRating</key>
+				<integer>-10</integer>
+			</dict>
+			<key>VTCodecName</key>
+			<string>H.263</string>
+			<key>VTEncoderName</key>
+			<string>Apple H.263 (SW)</string>
+		</dict>
+	</array>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>12E6178j</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
+	<key>DTPlatformVersion</key>
+	<string>11.4</string>
+	<key>DTSDKBuild</key>
+	<string>20F67</string>
+	<key>DTSDKName</key>
+	<string>macosx11.4internal</string>
+	<key>DTXcode</key>
+	<string>1240</string>
+	<key>DTXcodeBuild</key>
+	<string>12E6178j</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>11.4</string>
+</dict>
+</plist>

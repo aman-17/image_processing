@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#ConfirmPlaybackRepeatMode" locale="en">
+    <conditions>
+        <condition name="repeatModeAll">
+            <expression name="repeatMode" op="eq" value="'ALL'"/>
+        </condition>
+        <condition name="repeatModeNone">
+            <expression name="repeatMode" op="eq" value="'NONE'"/>
+        </condition>
+        <condition name="repeatModeOne">
+            <expression name="repeatMode" op="eq" value="'ONE'"/>
+        </condition>
+    </conditions>
+      <first>
+          <dialog condition="repeatModeAll">Just to confirm, you want to turn on repeat, right?</dialog>
+          <dialog condition="repeatModeNone">Just to confirm, you don’t want to repeat anything, right?</dialog>
+          <dialog condition="repeatModeOne">Just to confirm, you want to repeat this, right?</dialog>
+      </first>
+</cat>

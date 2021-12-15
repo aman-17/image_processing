@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#PromptForOutgoingMessageType">
+
+    <meta name="description" value="Prompting for a value for send message type."/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+ </cat>

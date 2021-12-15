@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ErrorWithCode" locale="en">
+    
+    <first>
+        <dialog condition="deviceState.isCarPlay">
+            Sorry, <opt><var name="user.groundingIfNeeded"/>, </opt>there was a problem with the app.
+        </dialog>
+        <dialog>Sorry, <opt><var name="user.groundingIfNeeded"/>, </opt>you’ll need to continue in the app.</dialog>
+    </first>
+    
+</cat>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="runVoiceCommand#deviceNames">
+    <meta name="description" value="In the following format: appleTV|||carPlay|||homePod|||mac|||pad|||phone|||watch|||unknown|||unknown_companion"/>
+    <first>
+        <dialog>Apple TV|||CarPlay|||HomePod|||Mac|||iPad|||iPhone|||Apple Watch|||device|||personal device</dialog>
+    </first>
+</cat>

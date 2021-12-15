@@ -1,0 +1,10 @@
+#CAT-DIALOG-METADATA 1.0
+
+locales:
+    - en
+
+categories:
+    - smsAttributes
+    - smsMessageType
+    - personRelationship:
+        allowUnbounded: true

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#RequestIntroductionSingleSenderUnreadMessages" locale="en">
+  <conditions>
+      <condition name="isNamedGroup">
+          <and>
+              <expression name="conversation.isGroup" op="set"/>
+              <expression name="conversation.speakableGroupName" op="defined"/>
+          </and>
+      </condition>
+      
+      <condition name="isNotNamedGroup">
+          <expression name="conversation.speakableGroupName" op="undefined"/>
+      </condition>
+      
+      <condition name="isSingleMessage">
+          <expression name="conversation.numberOfMessages" op="eq" value="1"/>
+      </condition>
+  </conditions>
+
+  <phrases>
+      <first phrase="senderAndVerb">
+          <text condition="conversation.sender"><var name="conversation.sender"/> sent </text>
+          <text>Someone sent </text>
+      </first>
+      
+      <first phrase="groupName">
+          <text condition="isNamedGroup"> in <var name="conversation.speakableGroupName"/></text>
+      </first>
+      
+      <first phrase="groupMembers">
+          <switch condition="isNotNamedGroup" value="numberOfMembersInConversationOtherThanYouAndSender">
+              <text case="0">you</text>
+              <text case="1">you and <var name="membersInConversationOtherThanYouAndSender[0]"/></text>
+              <text case="2">you, <var name="membersInConversationOtherThanYouAndSender[0]"/>, and <var name="membersInConversationOtherThanYouAndSender[1]"/></text>
+              <text>you and <var name="numberOfMembersInConversationOtherThanYouAndSender"/> others</text>
+          </switch>
+      </first>
+      
+      <first phrase="message">
+          <text condition="isSingleMessage">a new message</text>
+          <text>new messages</text>
+      </first>
+  </phrases>
+
+  <all>
+      <dialog>
+          <opt>OK, <var name="user.groundingIfNeeded"/>, </opt>
+          <phrase name="senderAndVerb"/>
+          <opt><phrase name="groupMembers"/></opt>
+          <phrase name="message"/><opt><phrase name="groupName"/></opt>…
+      </dialog>
+  </all>
+
+</cat>

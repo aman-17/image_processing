@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalAssistantNice" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<random phrase="">
+		<dialog>Thanks, <var name="user"/>. You’re nice too.</dialog>
+		<dialog>Nice of you to say so!</dialog>
+		<dialog>That’s nice.</dialog>
+		<dialog>You’re sweet.</dialog>
+		<dialog>Thanks. You’re not so bad yourself.</dialog>
+		<dialog>You’re too kind.</dialog>
+		<dialog condition="device.isDisplayDriven"><print>Aww.</print><speak>Aw.</speak></dialog>
+	</random>
+</cat>

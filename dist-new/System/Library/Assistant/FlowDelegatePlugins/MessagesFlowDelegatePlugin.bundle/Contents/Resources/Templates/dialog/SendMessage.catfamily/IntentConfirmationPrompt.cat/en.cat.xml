@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#IntentConfirmationPrompt" locale="en">
+    <conditions>
+        <condition name="attachmentOnlyMessage">
+            <and>
+                <expression name="content" op="empty"/>
+                <expression name="currentLocationAttachment" />
+            </and>
+        </condition>
+        <condition name="attachmentAndContentMessage">
+            <and>
+                <expression name="content" op="nonempty"/>
+                <expression name="currentLocationAttachment" />
+            </and>
+        </condition>
+        <condition name="isAudioMessage">
+            <expression name="outgoingMessageType" op="eq" value="'audio'"/>
+        </condition>
+        <condition name="isSingleRelationshipRecipient">
+            <and>
+                <expression name="recipients.length" op="eq" value="1" />
+                <expression name="recipients[0].useRelationshipName" />
+            </and>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="recipientDialog">
+            <text condition="groupName"><var name="groupName"/></text>
+            <text condition="isSingleRelationshipRecipient">your <var name="recipients[0]"/></text>
+            <text><var name="recipients" list="and" /></text>
+        </first>
+        
+        <first phrase="appName">
+            <text condition="app.isDesignedByApple"></text>
+            <text condition="app.name"><var name="app.name"/> </text>
+            <text></text>
+        </first>
+
+        <first phrase="messageOrReply">
+            <text condition="reply">reply</text>
+            <text>message</text>
+        </first>
+                            
+        <first phrase="attachmentType">
+            <text condition="currentLocationAttachment">your location</text>
+            <text>attachment</text>
+        </first>
+
+        <first phrase="spokenDialogDialogDriven">
+            <text condition="isAudioMessage"></text>
+            <text condition="attachmentOnlyMessage"><opt>OK, <var name="user.groundingIfNeeded"/>, </opt>send <phrase name="attachmentType"/> to <phrase name="recipientDialog"/>?</text>
+            <text condition="attachmentAndContentMessage"><opt>OK, <var name="user.groundingIfNeeded"/>, </opt>you’re sending <phrase name="attachmentType"/> to <phrase name="recipientDialog"/> and saying <say-as interpret-as="sms"><var name="content"/></say-as><break time="500ms"/>Ready to send it?</text>
+            <text><opt>OK, <var name="user.groundingIfNeeded"/>, </opt>your <phrase name="appName"/><phrase name="messageOrReply"/> to <phrase name="recipientDialog"/> says <say-as interpret-as="sms"><var name="content"/></say-as><break time="500ms"/>Ready to send it?</text>
+        </first>
+        
+        <first phrase="spokenDialogDisplayDriven">
+            <text>Ready to send it?</text>
+        </first>
+        
+        <first phrase="spokenDialog">
+            <text condition="isAudioMessage">Great. <break time="300ms"/>Send it to <phrase name="recipientDialog"/>?</text>
+            <text condition="deviceState.isDialogDriven"><phrase name="spokenDialogDialogDriven"/></text>
+            <text><phrase name="spokenDialogDisplayDriven"/></text>
+        </first>
+        
+        <first phrase="printedDialog">
+            <text condition="isAudioMessage">Great. Send it?</text>
+            <text>Ready to send it?</text>
+        </first>
+    </phrases>
+
+    <first>
+        <dialog>
+            <print><phrase name="printedDialog"/></print>
+            <speak><phrase name="spokenDialog"/></speak>
+        </dialog>
+    </first>
+</cat>

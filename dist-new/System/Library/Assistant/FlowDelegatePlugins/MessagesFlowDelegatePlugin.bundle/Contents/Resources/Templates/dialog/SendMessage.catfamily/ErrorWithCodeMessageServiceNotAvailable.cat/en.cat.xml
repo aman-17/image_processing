@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ErrorWithCodeMessageServiceNotAvailable" locale="en">
+    
+    <phrases>
+        <first phrase="appName">
+            <text condition="app.name"><var name="app.name"/></text>
+            <text>the app</text>
+        </first>
+    </phrases>
+    
+    <random>
+        <dialog>Sorry, <phrase name="appName"/> can’t send messages right now.</dialog>
+        <dialog>Sorry, <phrase name="appName"/> can’t send messages at the moment.</dialog>
+    </random>
+    
+</cat>
+

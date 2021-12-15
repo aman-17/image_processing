@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayWithAppCorrection" locale="en">
+    <conditions>
+        <condition name="fallbackUsernamePresent" note="fallback username present">
+            <expression name="fallbackUsername" op="nonempty"/>
+        </condition>
+    </conditions>
+    <phrases>
+       <first phrase="correctedAppName">
+           <text condition="fallbackUsernamePresent"><var name="fallbackUsername" inflect="genitive"/> <var name="app.localizedName"/></text>
+           <text><var name="app.localizedName"/></text>
+       </first>
+    </phrases>
+    <first>
+        <dialog>OK, playing on <phrase name="correctedAppName"/>…</dialog>
+    </first>
+</cat>

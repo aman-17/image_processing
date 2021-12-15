@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutStart#errorWithCode" locale="en">
+    
+    <conditions>
+        <condition name="appIsUndefined">
+            <expression name="appName" op="empty"/>
+        </condition>
+    </conditions>
+    
+    <first>
+        <dialog condition="device.isCarPlay" id="deviceIsCarplay">Sorry, I cannot start workouts in the car.</dialog>
+        <switch value="errorCode">
+            <dialog case="5" id="ongoingWorkout">Sorry, looks like you already have an ongoing workout.</dialog>
+            <first case="6">
+                <dialog condition="appIsUndefined" id="noMatchingWorkoutAndUndefinedApp">
+                    Sorry, the app couldn't find a matching workout.
+                </dialog>
+                <dialog id="noMatchingWorkout">
+                    Sorry, <var name="appName"/> couldn’t find a matching workout.
+                </dialog>
+            </first>
+            <dialog id="continueInApp">Sorry, you’ll need to continue in the app.</dialog>
+        </switch>
+    </first>
+</cat>

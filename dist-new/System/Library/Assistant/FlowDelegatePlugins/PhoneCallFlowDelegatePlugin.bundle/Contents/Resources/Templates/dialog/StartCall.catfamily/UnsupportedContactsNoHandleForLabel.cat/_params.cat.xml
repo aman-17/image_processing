@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#UnsupportedContactsNoHandleForLabel">
+    <meta name="description" value="Unsupported dialog for contacts slot"/>
+    <meta name="category" value="Incomplete"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="intent" type="phone.StartCallIntent"/>
+        <parameter name="unsupportedPerson" type="dialog.Person" description="First siriMatch from intent, represents unsupported person"/>
+        <parameter name="unsupportedPersonHandleLabel" type="dialog.String" description="Label enum - see possible values in switch statement."/>
+        <parameter name="unsupportedHandle" type="dialog.PersonHandle" description="Convenience parameter - same as handle of the first contact from 'intent'. Note that the label here has been translated using iOS."/>
+    </parameters>
+</cat>

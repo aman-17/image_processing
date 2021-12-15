@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedRecipientNoAccount" locale="en">
+    
+    <first>
+        <dialog condition="app.isDesignedByApple">Hmm, it looks like you haven’t set up iMessage yet.</dialog>
+        <dialog condition="app.name">Hmm, it looks like you haven’t set up <var name="app.name"/> yet.</dialog>
+        <dialog>Hmm, it looks like you haven’t set up the app yet.</dialog>
+    </first>
+</cat>

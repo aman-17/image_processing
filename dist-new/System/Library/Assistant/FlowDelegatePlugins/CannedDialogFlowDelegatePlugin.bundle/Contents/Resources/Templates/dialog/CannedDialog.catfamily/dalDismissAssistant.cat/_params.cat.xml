@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CannedDialog#dalDismissAssistant">
+	<meta name="description" value="The user was dismissive, eg 'buzz off', 'get lost', etc."/>
+	<meta name="category" value="Canned"/>
+	<meta name="subcategory" value="Utility"/>
+	<meta name="readyForLoc" value="false"/>
+	<meta name="listenAfterSpeaking" value="false"/>
+</cat>

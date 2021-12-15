@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayNonSubscriberRadioFallback">
+    <meta name="description" value="Dialog to handle non subscriber falling back to radio results"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="radioStationName" type="dialog.String" description="Name of broadcast radio station"/>
+        <parameter name="spokenRadioStationName" type="dialog.String" description="Spoken name of broadcast radio station"/>
+        <parameter name="providerName" type="dialog.String" description="Radio Provider"/>
+        <parameter name="isPlaybackQueueLocationNext" type="dialog.Boolean" description="If the playback queue location is next"/>
+        <parameter name="isPlaybackQueueLocationLater" type="dialog.Boolean" description="If the playback queue location is later"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+        <parameter name="wha" type="audio.WholeHouseAudio" description="WHA Params"/>
+        <parameter name="genre" type="dialog.String" description="Genre of the original query" semanticConcept="musicGenre"/>
+        <parameter name="isMultiplyStation" type="dialog.Boolean" description="If the radio is a first party multiplay station"/>
+        <parameter name="isGrounding" type="dialog.Boolean" description="If user grounding is required"/>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="useDialogMemoryForAppAttribution" type="dialog.Boolean" description="should app attribution use dialog memory"/>
+        <parameter name="isAppAttributionRequired" type="dialog.Boolean" description="if app attribution is required"/>
+    </parameters>
+</cat>

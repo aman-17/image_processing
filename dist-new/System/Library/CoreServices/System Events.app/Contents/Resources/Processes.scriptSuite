@@ -1,0 +1,1005 @@
+{
+    Name = "Processes";
+    AppleEventCode = "prcs";
+
+    UsedFeatures = (UnnamedArguments); 
+    Commands = {
+        perform = {
+            AppleEventClassCode = "prcs";
+            AppleEventCode = "perf";
+            CommandClass = "NSScriptCommand";
+            Type = "Processes.UIAction";
+            ResultAppleEventCode = "actT";
+			UnnamedArgument = {
+				Optional = "NO";
+				Type = "Processes.UIAction";
+			};
+        };
+        click = {
+            AppleEventClassCode = "prcs";
+            AppleEventCode = "clic";
+            CommandClass = "NSScriptCommand";
+            Type = "Processes.UIElement";
+            ResultAppleEventCode = "uiel";
+			UnnamedArgument = {
+				Optional = "YES";
+				Type = "Processes.UIElement";
+			};
+            Arguments = {
+                atPosition = {
+                    Type = "NSArray";
+                    AppleEventCode = "insh";
+                    Optional = "YES";
+                };
+            };
+        };
+        select = {
+            AppleEventClassCode = "misc";
+            AppleEventCode = "slct";
+            CommandClass = "NSScriptCommand";
+            Type = "Processes.UIElement";
+            ResultAppleEventCode = "uiel";
+			UnnamedArgument = {
+				Optional = "NO";
+				Type = "Processes.UIElement";
+			};
+        };
+        keycode = {
+            AppleEventClassCode = "prcs";
+            AppleEventCode = "kcod";
+            CommandClass = "KeyCodeVerb";
+			UnnamedArgument = {
+				Optional = "NO";
+				Type = "NSNumber<Int>";
+			};
+            Arguments = {
+                using = {
+                    Type = "NSNumber<ModifierKeyStates>";
+                    AppleEventCode = "faal";
+                    Optional = "YES";
+                };
+            };
+        };
+        keystroke = {
+            AppleEventClassCode = "prcs";
+            AppleEventCode = "kprs";
+            CommandClass = "KeystrokeVerb";
+			UnnamedArgument = {
+				Optional = "NO";
+				Type = "NSString";
+			};
+            Arguments = {
+                using = {
+                    Type = "NSNumber<ModifierKeyStates>";
+                    AppleEventCode = "faal";
+                    Optional = "YES";
+                };
+            };
+        };
+    };
+    Classes = {
+        Process = {
+            AppleEventCode = "prcs";
+            Superclass = "Processes.UIElement";
+            SupportedCommands = {
+                "Processes.click" = "click:";
+            };
+            ToManyRelationships = {
+                uiMenuBars = {
+                    AppleEventCode = "mbar";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiWindows = {
+                    AppleEventCode = "cwin";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+            };
+            Attributes = {
+                name = {
+                    AppleEventCode = "pnam";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                uniqueID = {
+                    AppleEventCode = "ID  ";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<UnsignedLong>";
+                };
+                unixID = {
+                    AppleEventCode = "idux";
+                    ReadOnly = "YES";
+                    Type = "NSNumber";
+                };
+                displayedName = {
+                    AppleEventCode = "dnam";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                shortName = {
+                    AppleEventCode = "cfbn";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                backgroundOnly = {
+                    AppleEventCode = "bkgo";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<Bool>";
+                };
+                visible = {
+                    AppleEventCode = "pvis";
+                    ReadOnly = "NO";
+                    Type = "NSNumber<Bool>";
+                };
+                frontmost = {
+                    AppleEventCode = "pisf";
+                    ReadOnly = "NO";
+                    Type = "NSNumber<Bool>";
+                };
+                file = {
+                    AppleEventCode = "file";
+                    ReadOnly = "YES";
+                    Type = "NSString<FilePath>";
+                };
+                fileType = {
+                    AppleEventCode = "asty";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                creatorType = {
+                    AppleEventCode = "fcrt";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                acceptsHighLevelEvents = {
+                    AppleEventCode = "isab";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<Bool>";
+                };
+                acceptsRemoteEvents = {
+                    AppleEventCode = "revt";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<Bool>";
+                };
+                hasScriptingTerminology = {
+                    AppleEventCode = "hscr";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<Bool>";
+                };
+                totalPartitionSize = {
+                    AppleEventCode = "appt";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<UnsignedInt>";
+                };
+                partitionSpaceUsed = {
+                    AppleEventCode = "pusd";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<UnsignedInt>";
+                };
+                classic = {
+                    AppleEventCode = "clsc";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<Bool>";
+                };
+                bundleIdentifier = {
+                    AppleEventCode = "bnid";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                architecture = {
+                    AppleEventCode = "arch";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+            };
+        };
+        ApplicationProcess = {
+            AppleEventCode = "pcap";
+            Superclass = "Processes.Process";
+            Attributes = {
+                applicationFile = {
+                    AppleEventCode = "appf";
+                    ReadOnly = "YES";
+                    Type = "NSString<FilePath>";
+                };
+            };
+        };
+        DeskAccessoryProcess = {
+            AppleEventCode = "pcda";
+            Superclass = "Processes.Process";
+            Attributes = {
+                deskAccessoryFile = {
+                    AppleEventCode = "dafi";
+                    ReadOnly = "YES";
+                    Type = "NSString<FilePath>";
+                };
+            };
+        };
+        UIElement = {
+            AppleEventCode = "uiel";
+            Superclass = "NSCoreSuite.AbstractObject";
+            SupportedCommands = {
+                "Processes.click" = "click:"; 
+                "Processes.select" = "select:"; 
+                "Hidden.increment" = "increment:"; 
+                "Hidden.decrement" = "decrement:"; 
+                "Hidden.confirm" = "confirm:"; 
+                "Hidden.pick" = "pick:"; 
+                "Hidden.cancel" = "cancel:"; 
+            };
+            ToManyRelationships = {
+                uiWindows = {
+                    AppleEventCode = "cwin";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiSheets = {
+                    AppleEventCode = "sheE";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiDrawers = {
+                    AppleEventCode = "draA";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiGrowAreas = {
+                    AppleEventCode = "grow";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiImages = {
+                    AppleEventCode = "imaA";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiElements = {
+                    AppleEventCode = "uiel";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiButtons = {
+                    AppleEventCode = "butT";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiRadioButtons = {
+                    AppleEventCode = "radB";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiCheckBoxes = {
+                    AppleEventCode = "chbx";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiPopovers = {
+                    AppleEventCode = "popv";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiPopUpButtons = {
+                    AppleEventCode = "popB";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiMenuButtons = {
+                    AppleEventCode = "menB";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiTabGroups = {
+                    AppleEventCode = "tabg";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiTables = {
+                    AppleEventCode = "tabB";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiColumns = {
+                    AppleEventCode = "ccol";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiRows = {
+                    AppleEventCode = "crow";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiOutlines = {
+                    AppleEventCode = "outl";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiBrowsers = {
+                    AppleEventCode = "broW";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiScrollAreas = {
+                    AppleEventCode = "scra";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiScrollBars = {
+                    AppleEventCode = "scrb";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiRadioGroups = {
+                    AppleEventCode = "rgrp";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiLists = {
+                    AppleEventCode = "list";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiGroups = {
+                    AppleEventCode = "sgrp";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiValueIndicators = {
+                    AppleEventCode = "vali";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiComboBoxes = {
+                    AppleEventCode = "comB";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiSliders = {
+                    AppleEventCode = "sliI";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiIncrementors = {
+                    AppleEventCode = "incr";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiBusyIndicators = {
+                    AppleEventCode = "busi";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiProgressIndicators = {
+                    AppleEventCode = "proI";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiRelevanceIndicators = {
+                    AppleEventCode = "reli";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiToolbars = {
+                    AppleEventCode = "tbar";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiTextFields = {
+                    AppleEventCode = "txtf";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiTextAreas = {
+                    AppleEventCode = "txta";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiStaticTexts = {
+                    AppleEventCode = "sttx";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiMenuBars = {
+                    AppleEventCode = "mbar";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiMenuBarItems = {
+                    AppleEventCode = "mbri";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiMenus = {
+                    AppleEventCode = "menE";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiMenuItems = {
+                    AppleEventCode = "menI";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiSplitGroups = {
+                    AppleEventCode = "splg";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiSplitters = {
+                    AppleEventCode = "splr";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiColorWells = {
+                    AppleEventCode = "colW";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiAttributes = {
+                    AppleEventCode = "attr";
+                    ReadOnly = "YES";
+                    Type = "Processes.UIAttribute";
+                };
+                uiActions = {
+                    AppleEventCode = "actT";
+                    ReadOnly = "YES";
+                    Type = "Processes.UIAction";
+                };
+			};
+            Attributes = {
+                name = {
+                    AppleEventCode = "pnam";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                classCode = {
+                    AppleEventCode = "pcls";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<TypeCode>";
+                };
+                role = {
+                    AppleEventCode = "role";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                roleDescription = {
+                    AppleEventCode = "rold";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                subrole = {
+                    AppleEventCode = "sbrl";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                axDescription = {
+                    AppleEventCode = "axds";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                scriptingDescription = {
+                    AppleEventCode = "desc";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                help = {
+                    AppleEventCode = "help";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                title = {
+                    AppleEventCode = "titl";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                value = {
+                    AppleEventCode = "valL";
+                    ReadOnly = "NO";
+                    Type = "NSObject";
+                };
+                minimumValue = {
+                    AppleEventCode = "minW";
+                    ReadOnly = "YES";
+                    Type = "NSObject";
+                };
+                maximumValue = {
+                    AppleEventCode = "maxV";
+                    ReadOnly = "YES";
+                    Type = "NSObject";
+                };
+                enabled = {
+                    AppleEventCode = "enaB";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<Bool>";
+                };
+                focused = {
+                    AppleEventCode = "focu";
+                    ReadOnly = "NO";
+                    Type = "NSNumber<Bool>";
+                };
+                position = {
+                    AppleEventCode = "posn";
+                    ReadOnly = "NO";
+                    Type = "NSArray";
+                };
+                size = {
+                    AppleEventCode = "ptsz";
+                    ReadOnly = "NO";
+                    Type = "NSArray";
+                };
+                orientation = {
+                    AppleEventCode = "orie";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                selected = {
+                    AppleEventCode = "selE";
+                    ReadOnly = "NO";
+                    Type = "NSNumber<Bool>";
+                };
+                entireContents = {
+                    AppleEventCode = "ects";
+                    ReadOnly = "YES";
+                    Type = "NSArray";
+                };
+            };
+        };
+        UIWindow = {
+            AppleEventCode = "cwin";
+            Superclass = "Processes.UIElement";
+            ToManyRelationships = {
+                uiSheets = {
+                    AppleEventCode = "sheE";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiDrawers = {
+                    AppleEventCode = "draA";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiGrowAreas = {
+                    AppleEventCode = "grow";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiImages = {
+                    AppleEventCode = "imaA";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiElements = {
+                    AppleEventCode = "uiel";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiButtons = {
+                    AppleEventCode = "butT";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiRadioButtons = {
+                    AppleEventCode = "radB";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiCheckBoxes = {
+                    AppleEventCode = "chbx";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiPopovers = {
+                    AppleEventCode = "popv";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiPopUpButtons = {
+                    AppleEventCode = "popB";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiMenuButtons = {
+                    AppleEventCode = "menB";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiTabGroups = {
+                    AppleEventCode = "tabg";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiTables = {
+                    AppleEventCode = "tabB";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiOutlines = {
+                    AppleEventCode = "outl";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiBrowsers = {
+                    AppleEventCode = "broW";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiScrollAreas = {
+                    AppleEventCode = "scra";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiScrollBars = {
+                    AppleEventCode = "scrb";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiRadioGroups = {
+                    AppleEventCode = "rgrp";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiLists = {
+                    AppleEventCode = "list";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiGroups = {
+                    AppleEventCode = "sgrp";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiComboBoxes = {
+                    AppleEventCode = "comB";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiSliders = {
+                    AppleEventCode = "sliI";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiIncrementors = {
+                    AppleEventCode = "incr";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiBusyIndicators = {
+                    AppleEventCode = "busi";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiProgressIndicators = {
+                    AppleEventCode = "proI";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiRelevanceIndicators = {
+                    AppleEventCode = "reli";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiToolbars = {
+                    AppleEventCode = "tbar";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiTextFields = {
+                    AppleEventCode = "txtf";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiTextAreas = {
+                    AppleEventCode = "txta";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiStaticTexts = {
+                    AppleEventCode = "sttx";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiSplitGroups = {
+                    AppleEventCode = "splg";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiSplitters = {
+                    AppleEventCode = "splr";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiColorWells = {
+                    AppleEventCode = "colW";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+			};
+        };
+        UISheet = {
+            AppleEventCode = "sheE";
+            Superclass = "Processes.UIElement";
+        };
+        UIDrawer = {
+            AppleEventCode = "draA";
+            Superclass = "Processes.UIElement";
+        };
+        UIGrowArea = {
+            AppleEventCode = "grow";
+            Superclass = "Processes.UIElement";
+        };
+        UIImage = {
+            AppleEventCode = "imaA";
+            Superclass = "Processes.UIElement";
+        };
+        UIButton = {
+            AppleEventCode = "butT";
+            Superclass = "Processes.UIElement";
+        };
+        UIRadioButton = {
+            AppleEventCode = "radB";
+            Superclass = "Processes.UIElement";
+        };
+        UICheckBox = {
+            AppleEventCode = "chbx";
+            Superclass = "Processes.UIElement";
+        };
+        UIPopover = {
+            AppleEventCode = "popv";
+            Superclass = "Processes.UIElement";
+        };
+        UIPopUpButton = {
+            AppleEventCode = "popB";
+            Superclass = "Processes.UIElement";
+        };
+        UIMenuButton = {
+            AppleEventCode = "menB";
+            Superclass = "Processes.UIElement";
+        };
+        UITabGroup = {
+            AppleEventCode = "tabg";
+            Superclass = "Processes.UIElement";
+        };
+        UITable = {
+            AppleEventCode = "tabB";
+            Superclass = "Processes.UIElement";
+        };
+        UIColumn = {
+            AppleEventCode = "ccol";
+            Superclass = "Processes.UIElement";
+        };
+        UIRow = {
+            AppleEventCode = "crow";
+            Superclass = "Processes.UIElement";
+        };
+        UIOutline = {
+            AppleEventCode = "outl";
+            Superclass = "Processes.UIElement";
+        };
+        UIBrowser = {
+            AppleEventCode = "broW";
+            Superclass = "Processes.UIElement";
+        };
+        UIScrollArea = {
+            AppleEventCode = "scra";
+            Superclass = "Processes.UIElement";
+        };
+        UIScrollBar = {
+            AppleEventCode = "scrb";
+            Superclass = "Processes.UIElement";
+            ToManyRelationships = {
+                uiButtons = {
+                    AppleEventCode = "butT";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiValueIndicators = {
+                    AppleEventCode = "vali";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+			};
+        };
+        UIRadioGroup = {
+            AppleEventCode = "rgrp";
+            Superclass = "Processes.UIElement";
+            ToManyRelationships = {
+                uiRadioButtons = {
+                    AppleEventCode = "radB";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+			};
+        };
+        UIList = {
+            AppleEventCode = "list";
+            Superclass = "Processes.UIElement";
+        };
+        UIGroup = {
+            AppleEventCode = "sgrp";
+            Superclass = "Processes.UIElement";
+            ToManyRelationships = {
+                uiStaticTexts = {
+                    AppleEventCode = "sttx";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiCheckBoxes = {
+                    AppleEventCode = "chbx";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+			};
+        };
+        UIValueIndicator = {
+            AppleEventCode = "vali";
+            Superclass = "Processes.UIElement";
+        };
+        UIComboBox = {
+            AppleEventCode = "comB";
+            Superclass = "Processes.UIElement";
+        };
+        UISlider = {
+            AppleEventCode = "sliI";
+            Superclass = "Processes.UIElement";
+        };
+        UIIncrementor = {
+            AppleEventCode = "incr";
+            Superclass = "Processes.UIElement";
+        };
+        UIBusyIndicator = {
+            AppleEventCode = "busi";
+            Superclass = "Processes.UIElement";
+        };
+        UIProgressIndicator = {
+            AppleEventCode = "proI";
+            Superclass = "Processes.UIElement";
+        };
+        UIRelevanceIndicator = {
+            AppleEventCode = "reli";
+            Superclass = "Processes.UIElement";
+        };
+        UIToolBar = {
+            AppleEventCode = "tbar";
+            Superclass = "Processes.UIElement";
+        };
+        UITextField = {
+            AppleEventCode = "txtf";
+            Superclass = "Processes.UIElement";
+        };
+        UITextArea = {
+            AppleEventCode = "txta";
+            Superclass = "Processes.UIElement";
+        };
+        UIStaticText = {
+            AppleEventCode = "sttx";
+            Superclass = "Processes.UIElement";
+            ToManyRelationships = {
+                uiImages = {
+                    AppleEventCode = "imaA";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+			};
+        };
+        UIMenuBar = {
+            AppleEventCode = "mbar";
+            Superclass = "Processes.UIElement";
+            ToManyRelationships = {
+                uiMenuBarItems = {
+                    AppleEventCode = "mbri";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+                uiMenus = {
+                    AppleEventCode = "menE";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+			};
+        };
+        UIMenuBarItem = {
+            AppleEventCode = "mbri";
+            Superclass = "Processes.UIElement";
+            ToManyRelationships = {
+                uiMenus = {
+                    AppleEventCode = "menE";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+			};
+        };
+        UIMenu = {
+            AppleEventCode = "menE";
+            Superclass = "Processes.UIElement";
+            ToManyRelationships = {
+                uiMenuItems = {
+                    AppleEventCode = "menI";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+			};
+        };
+        UIMenuItem = {
+            AppleEventCode = "menI";
+            Superclass = "Processes.UIElement";
+            ToManyRelationships = {
+                uiMenus = {
+                    AppleEventCode = "menE";
+                    ReadOnly = "NO";
+                    Type = "Processes.UIElement";
+                };
+			};
+        };
+        UISplitterGroup = {
+            AppleEventCode = "splg";
+            Superclass = "Processes.UIElement";
+        };
+        UISplitter = {
+            AppleEventCode = "splr";
+            Superclass = "Processes.UIElement";
+        };
+        UIColorWell = {
+            AppleEventCode = "colW";
+            Superclass = "Processes.UIElement";
+        };
+        UIAttribute = {
+            AppleEventCode = "attr";
+            Superclass = "NSCoreSuite.AbstractObject";
+            Attributes = {
+                name = {
+                    AppleEventCode = "pnam";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                value = {
+                    AppleEventCode = "valL";
+                    ReadOnly = "NO";
+                    Type = "NSObject";
+                };
+                settable = {
+                    AppleEventCode = "stbl";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<Bool>";
+                };
+            };
+        };
+        UIAction = {
+            AppleEventCode = "actT";
+            Superclass = "NSCoreSuite.AbstractObject";
+            SupportedCommands = {
+                "Processes.perform" = "perform:";
+            };
+            Attributes = {
+                name = {
+                    AppleEventCode = "pnam";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                actionDescription = {
+                    AppleEventCode = "desc";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+            };
+        };
+    };
+	Enumerations = {
+        ModifierKeyStates = {
+            AppleEventCode = "eMds";
+            Enumerators = {
+				OptionDown = "Kopt";
+				CommandDown = "Kcmd";
+				ControlDown = "Kctl";
+				ShiftDown  = "Ksft";
+			};
+        };
+        ModifierKeys = {
+            AppleEventCode = "eMky";
+            Enumerators = {
+				Option = "eOpt";
+				Command = "eCmd";
+				Control = "eCnt";
+				Shift  = "eSft";
+			};
+        };
+    };
+}

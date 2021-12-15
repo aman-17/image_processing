@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalILoveYou">
+	<all>
+		<random phrase="">
+			<dialog>That’s sweet.</dialog>
+			<first phrase="">
+				<dialog condition="device.isAppleTV">Aw, shucks.</dialog>
+				<dialog>You are the wind beneath my wings.</dialog>
+			</first>
+			<dialog><print>I think you’re pretty great, too.</print><speak>I think you’re pretty great too.</speak></dialog>
+		</random>
+	</all>
+	<conditions/>
+</cat>

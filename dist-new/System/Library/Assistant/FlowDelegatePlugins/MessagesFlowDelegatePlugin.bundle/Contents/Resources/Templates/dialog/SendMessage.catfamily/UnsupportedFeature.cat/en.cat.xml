@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedFeature" locale="en">
+    <phrases>
+        <first phrase="messageType">
+            <switch value="unsupportedMessageType">
+                <text case="'audio_message'">audio</text>
+                <text case="'video_message'">video</text>
+                <text case="'image_message'">image</text>
+                <text case="'photo'">image</text>
+                <text case="'video'">video</text>
+                <text>that</text>
+            </switch>
+        </first>
+    </phrases>
+
+    <dialog>Sorry, I can’t send <phrase name="messageType"/> for you.</dialog>
+</cat>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadAudioComponent" locale="en">
+    <conditions>
+        <condition name="needConversationConnector">
+            <and>
+                <expression name="dialogContext.conversation.isFirstComponentInConversation" op="set"/>
+                <expression name="dialogContext.readingRequest.conversationCount" op="gt" value="2"/>
+                <or>
+                    <and>
+                        <expression name="dialogContext.conversation.isLast" op="set"/>
+                        <expression name="componentContext.isAppended" op="unset"/>
+                    </and>
+                    <expression name="dialogContext.conversation.isFirst" op="set"/>
+                    <expression name="dialogContext.conversation.isSecond" op="set"/>
+                </or>
+            </and>
+        </condition>
+        
+        <condition name="needGroupIntroduction" note="Read groupIntro if: we haven't already done so in summary, is group, and isFirstComponent in conversation">
+            <and>
+                <or>
+                    <expression name="dialogContext.readingRequest.didReadRequestIntroduction" op="unset"/>
+                    <expression name="dialogContext.readingRequest.conversationCount" op="gt" value="1"/>
+                </or>
+                <expression name="dialogContext.conversation.isGroup" op="set"/>
+                <expression name="dialogContext.conversation.isFirstComponentInConversation" op="set"/>
+            </and>
+        </condition>
+        
+        <condition name="hasUsableGroupName">
+            <expression name="dialogContext.conversation.group.speakableGroupName" op="defined"/>
+        </condition>
+        
+        <condition name="needComponentConnector" note="Possible cases: 1. Shayan said hi and said… 2. Bill said sup and Daniel said… 3. Dave said… and Bill said where?">
+            <or>
+                <and>
+                    <expression name = "componentContext.isFirstComponentFromSender" op="set"/>
+                    <expression name = "componentContext.isFirstSender" op="unset"/>
+                </and>
+                
+                <and>
+                    <expression name = "componentContext.isFirstComponentFromSender" op="unset"/>
+                    <expression name="componentContext.isPreviousComponentOfSameType" op="unset"/>
+                </and>
+            </or>
+        </condition>
+        
+        <condition name="isMultiple">
+            <expression name="count" op="gt" value="1"/>
+        </condition>
+        
+        <condition name="hasEffectOrUnplayable">
+            <or>
+                <and>
+                    <expression name="effect" op="defined"/>
+                    <expression name="effect" op="ne" value="'unknown'"/>
+                </and>
+                <expression name="shouldSummarize" op="set"/>
+            </or>
+        </condition>
+        
+        <condition name="needGrounding">
+            <and>
+                <expression name="dialogContext.readingRequest.didReadRequestIntroduction" op="unset"/>
+                <expression name="dialogContext.conversation.isFirstComponentInRequest" op="set"/>
+            </and>
+        </condition>
+        
+        <condition name="includeSender">
+            <and>
+                <expression name="componentContext.isFirstComponentFromSender" op="set"/>
+                <expression name="dialogContext.readingRequest.didReadSingleSenderUnreadMessagesIntro" op="unset"/>
+            </and>
+        </condition>
+        
+        <condition name="needVerb" note="Include verb (Shayan sent) if: a) First component and we did not read verb in intro b) Read more than one component of different types.">
+            <or>
+                <and>
+                    <expression name="componentContext.isFirstComponentFromSender" op="set"/>
+                    <expression name="dialogContext.readingRequest.didReadSingleSenderUnreadMessagesIntro" op="unset"/>
+                </and>
+                <and>
+                    <expression name="componentContext.isPreviousComponentOfSameType" op="unset"/>
+                    <expression name="componentContext.isFirstComponentFromSender" op="unset"/>
+                </and>
+            </or>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first condition="needGrounding" phrase="multiuserGrounding" note="This will never be printed, it is only used on HomePod.">
+            <text><opt>OK, <var name="user.groundingIfNeeded"/>, </opt></text>
+        </first>
+        
+        <first condition="needConversationConnector" phrase="conversationConnector">
+            <text condition="dialogContext.conversation.isFirst">First, </text>
+            <text condition="dialogContext.conversation.isSecond">Next, </text>
+            <text>And finally, </text>
+        </first>
+        
+        <first phrase="capitalizeIn">
+            <text condition="needConversationConnector">in</text>
+            <text>In</text>
+        </first>
+        
+        <first condition="needGroupIntroduction" phrase="groupIntroduction">
+            <text condition="hasUsableGroupName"><phrase name="capitalizeIn"/> <var name="dialogContext.conversation.group.speakableGroupName"/>, </text>
+            <switch value="dialogContext.conversation.group.numberOfMembersOtherThanYou">
+                <text case="2"><phrase name="capitalizeIn"/> your group with <var name="dialogContext.conversation.group.membersOtherThanYou[0]"/> and <var name="dialogContext.conversation.group.membersOtherThanYou[1]"/>, </text>
+                <text case="3"><phrase name="capitalizeIn"/> your group with <var name="dialogContext.conversation.group.membersOtherThanYou[0]"/>, <var name="dialogContext.conversation.group.membersOtherThanYou[1]"/>, and <var name="dialogContext.conversation.group.membersOtherThanYou[2]"/>, </text>
+                <text><phrase name="capitalizeIn"/> your group with <var name="dialogContext.conversation.group.membersOtherThanYou[0]"/> and <var name="dialogContext.conversation.group.numberOfMembersOtherThanYouMinusOne"/> others, </text>
+            </switch>
+        </first>
+        
+        <first condition="needComponentConnector" phrase="componentConnector">
+            <text>and </text>
+        </first>
+        
+        <first condition="includeSender" phrase="sender">
+            <text condition="sender"><var name="sender"/> </text>
+            <text>someone </text>
+        </first>
+        
+        <first phrase="printingVerb">
+            <text condition="hasEffectOrUnplayable">sent </text>
+            <text>said</text>
+        </first>
+
+        <first condition="needVerb" phrase="speakingVerb">
+            <text condition="hasEffectOrUnplayable">sent </text>
+            <text>said</text>
+        </first>
+        
+        <first phrase="componentDescription">
+            <first condition="hasEffectOrUnplayable">
+                <text condition="isMultiple"><var name="count"/> audio messages</text>
+                <text>an audio message</text>
+            </first>
+        </first>
+        
+        <first phrase="effect">
+            <switch value="effect">
+                <text case="'confetti'"> with a confetti effect</text>
+                <text case="'echo'"> with an echo effect</text>
+                <text case="'fireworks'"> with a fireworks effect</text>
+                <text case="'gentle'"> with a gentle effect</text>
+                <text case="'happyBirthday'"> with a balloons effect</text>
+                <text case="'heart'"> with a love effect</text>
+                <text case="'impact'"> with a slam effect</text>
+                <text case="'invisibleInk'"> with an invisible ink effect</text>
+                <text case="'lasers'"> with a laser effect</text>
+                <text case="'loud'"> with a loud effect</text>
+                <text case="'shootingStar'"> with a shooting star effect</text>
+                <text case="'sparkles'"> with a celebration effect</text>
+                <text case="'spotlight'"> with a spotlight effect</text>
+            </switch>
+        </first>
+    </phrases>
+    
+    <all>
+        <dialog>
+            <speak>
+                <opt><phrase name="multiuserGrounding"/></opt>
+                <opt><phrase name="conversationConnector"/></opt>
+                <opt><phrase name="groupIntroduction"/></opt>
+                <opt><phrase name="componentConnector"/></opt>
+                <opt><phrase name="sender"/></opt>
+                <opt><phrase name="speakingVerb"/></opt>
+                <opt><phrase name="componentDescription"/></opt>
+                <opt><phrase name="effect"/>.</opt>
+            </speak>
+
+            <print>
+                <opt><phrase name="conversationConnector"/></opt>
+                <opt><phrase name="groupIntroduction"/></opt>
+                <var name="sender"/> <phrase name="printingVerb"/><opt><phrase name="componentDescription"/></opt>…
+            </print>
+        </dialog>
+    </all>
+</cat>

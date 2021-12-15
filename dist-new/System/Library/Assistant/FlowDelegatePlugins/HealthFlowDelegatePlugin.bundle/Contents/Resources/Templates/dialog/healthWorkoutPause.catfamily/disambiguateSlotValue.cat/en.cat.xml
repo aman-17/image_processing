@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutPause#disambiguateSlotValue" locale="en">
+
+    <phrases>
+        <random phrase="whichWorkoutPhrase">
+            <text>OK, which workout would you like to pause?</text>
+            <text>OK, which workout?</text>            
+        </random>
+    </phrases>
+
+    <dialog id="whichWorkout">
+        <phrase name="whichWorkoutPhrase"/>
+    </dialog>
+    
+</cat>

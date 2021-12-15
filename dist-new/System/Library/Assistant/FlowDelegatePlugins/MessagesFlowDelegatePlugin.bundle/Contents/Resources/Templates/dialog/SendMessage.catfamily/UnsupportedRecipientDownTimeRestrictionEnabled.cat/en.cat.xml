@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedRecipientDownTimeRestrictionEnabled" locale="en">
+    
+    <first>
+        <first condition="hasOneRecipient">
+            <dialog condition="recipient">Sorry, I can’t send messages to <var name="recipient"/> during Downtime.</dialog>
+            <dialog>Sorry, I can’t send messages to that contact during Downtime.</dialog>
+        </first>
+        
+        <dialog note="If more than one recipient or group">
+            Sorry, I can’t send messages to that set of contacts during Downtime.
+        </dialog>
+    </first>
+    
+</cat>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalHello" xmlns="urn:apple:names:siri:cat:1.4">
+	<meta name="description" value="User says “Hello” at the start of a conversation."/>
+	<parameters/>
+	<meta name="category" value="Social"/>
+	<meta name="subcategory" value="Daily Rituals"/>
+	<meta name="readyForLoc" value="false"/>
+	<meta name="listenAfterSpeaking" value="false"/>
+</cat>

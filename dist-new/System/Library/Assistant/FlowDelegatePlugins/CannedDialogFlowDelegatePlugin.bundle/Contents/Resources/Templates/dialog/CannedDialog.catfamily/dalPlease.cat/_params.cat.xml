@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalPlease" xmlns="urn:apple:names:siri:cat:1.0">
+	<meta name="description" value="User said 'please' (and that's all), and we have no other context. (There should be few meaningful times that this ever happens.)"/>
+	<meta name="category" value="Can't Understand"/>
+	<meta name="readyForLoc" value="false"/>
+	<meta name="listenAfterSpeaking" value="false"/>
+</cat>

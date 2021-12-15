@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AddMediaIntent#ConfirmMediaDestination" locale="en">
+    <conditions>
+        <condition name="hasMediaItems">
+          <expression name="mediaItemCount" op="ne" value="0"/>
+        </condition>
+        
+        <condition name="artistNotEmpty">
+            <not>
+                <expression name="artist" op="empty"/>
+            </not>
+        </condition>
+        <condition name="titleNotEmpty">
+            <not>
+                <expression name="title" op="empty"/>
+            </not>
+        </condition>
+        <condition name="playlistNotEmpty">
+            <not>
+                <expression name="playlistTitle" op="empty"/>
+            </not>
+        </condition>
+        <condition name="isPodcast" note="if it is podcast request">
+            <and>
+              <expression name="mediaType" op="nonempty"/>
+              <expression name="mediaType" op="eq" value="'podcast'"/>
+            </and>
+        </condition>
+    </conditions>
+      <phrases>
+          <first phrase="title">
+              <text>
+                  <print>‘<var name="title"/>’</print>
+                  <speak><say-as interpret-as="music"><var name="title"/></say-as></speak>
+              </text>
+          </first>
+          
+          <first phrase="byArtist">
+              <text condition="artistNotEmpty"><break time="0ms"/> by <say-as interpret-as="music"><var name="artist"/></say-as></text>
+              <text/>
+          </first>
+          
+          <first phrase="titleByArtist">
+              <text condition="titleNotEmpty"><phrase name="title"/><phrase name="byArtist"/></text>
+              <text condition="artistNotEmpty"><say-as interpret-as="music"><var name="artist"/></say-as></text>
+              <text>that</text>
+          </first>
+          <first phrase="mediaItemToQueue">
+              <text condition="hasMediaItems"><phrase name="titleByArtist"/></text>
+              <text>that</text>
+          </first>
+          
+          <first phrase="destination">
+              <text condition="playlistNotEmpty"><say-as interpret-as="music"><var name="playlistTitle"/></say-as></text>
+              <text>library</text>
+          </first>
+      </phrases>
+      <first>
+          <dialog condition="isPodcast">Just to confirm, would you like to follow the podcast <phrase name="mediaItemToQueue"/>?</dialog>
+          <dialog>Just to confirm, you’d like to add <phrase name="mediaItemToQueue"/> to your <phrase name="destination"/><opt> on <var name="app.localizedName"/></opt>, right?</dialog>
+      </first>
+</cat>

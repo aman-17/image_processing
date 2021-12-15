@@ -1,0 +1,37 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Qu\'e8 \'e9s una identitat digital?
+\b0 \
+Una identitat digital \'e9s un mitj\'e0 electr\'f2nic per identificar una persona. Consisteix en un secret que s\'92ha de mantenir (la \'93clau privada\'94) i una altra part que es publica lliurement (la \'93clau p\'fablica\'94). La clau privada et permet signar documents electr\'f2nics, la signatura dels quals pot verificar qualsevol usant nom\'e9s la teva clau p\'fablica. De manera similar, la clau privada pot revelar (\'93desxifrar\'94) secrets que hagin amagat (\'93xifrat\'94) altres usant la teva clau p\'fablica.\
+\
+
+\b Qu\'e8 \'e9s un certificat digital?
+\b0 \
+Un certificat digital \'e9s un document electr\'f2nic que associa la teva identitat digital amb d\'92altra informaci\'f3, com ara el nom, l\'92adre\'e7a de correu electr\'f2nic o l\'92empresa. Un certificat est\'e0 format per la part p\'fablica de la teva identitat digital, la identitat de l\'92organitzaci\'f3 (\'93autoritat de certificaci\'f3\'94 o CA) que signa el certificat i la resta de dades que hagi decidit associar a la teva identitat. Normalment, un certificat est\'e0 restringit per a usos particulars, com ara signatures digitals, encriptaci\'f3, \'fas amb servidors web, etc. Aix\'f2 s\'92anomena restricci\'f3 \'93d\'92\'fas de clau\'94 d\'92un certificat. Qualsevol intent d\'92utilitzar un certificat per a altres finalitats no funcionar\'e0. Malgrat que \'e9s possible crear una identitat (i un certificat) amb diversos usos, normalment no es crea un sol certificat per a tots els usos possibles. Crear un certificat per a diversos usos \'e9s menys segur. Un certificat nom\'e9s \'e9s v\'e0lid durant un per\'edode limitat de temps, despr\'e9s del qual deixa de ser v\'e0lid i s\'92ha de reempla\'e7ar per una versi\'f3 nova. L\'92autoritat de certificaci\'f3 tamb\'e9 pot invalidar (\'93revocar\'94) un certificat abans que caduqui. La validesa d\'92un certificat es pot verificar de manera electr\'f2nica, usant la \'93
+\f1 infraestructura
+\f0  de clau p\'fablica\'94 o PKI.\
+\
+
+\b Com puc obtenir un certificat?
+\b0 \
+Per obtenir un certificat v\'e0lid, has de crear una sol\'b7licitud de certificat i enviar-la a una autoritat de certificaci\'f3. Si l\'92autoritat hi est\'e0 d\'92acord, et far\'e0 un certificat i te l\'92enviar\'e0. Per crear la teva sol\'b7licitud de certificat, pots utilitzar l\'92Assistent de Certificats o pots utilitzar el lloc web d\'92una autoritat de certificaci\'f3 comercial. Pots obtenir i conservar diversos certificats signats per diferents CA, cadascun dels quals pot ser v\'e0lid i estar subjecte a pol\'edtiques diferents. Per exemple, pots tenir un certificat que et permeti signar missatges de correu electr\'f2nic i un altre que et permeti identificar-te a Missatges.\
+\
+
+\b On puc desar els meus certificats?
+\b0 \
+Les identitats digitals, inclosos els certificats, es desen al teu clauer. Aix\'ed, queden disponibles per fer-se servir en aplicacions com ara Mail i Safari. Els certificats d\'92altres usuaris (contactes de correu, llocs web, etc.) tamb\'e9 es desen al clauer a mida que l\'92ordinador els va obtenint. Pots utilitzar l\'92Acc\'e9s a Clauers (a Aplicacions \'a0> Utilitats) per veure i manipular els certificats. Pots moure i copiar lliurement els certificats (de manera independent de la clau privada associada) perqu\'e8 no contenen informaci\'f3 personal ni privada que calgui protegir. Es poden tenir diverses c\'f2pies d\'92un certificat. Si has d\'92enviar un certificat a alg\'fa, el pots exportar usant l\'92Acc\'e9s a Clauers i enviar-lo per correu electr\'f2nic o per qualsevol altre mitj\'e0. De manera similar, si alg\'fa t\'92envia un certificat, el pots afegir al teu clauer deixant-lo anar sobre l\'92Acc\'e9s a Clauers, o anant al men\'fa Arxiu > \'93Importar \'edtems\'85\'94 de la utilitat Acc\'e9s a Clauers.\
+\
+
+\b Qu\'e8 \'e9s una Autoritat de Certificaci\'f3?
+\b0 \
+Una Autoritat de Certificaci\'f3 (CA - Certificate Authority) \'e9s una identitat digital que signa certificats i els converteix en documents electr\'f2nics v\'e0lids. Com que les CA s\'f3n tamb\'e9 identitats digitals, tamb\'e9 les pot validar una altra CA, formant el que s\'92anomena una \'93cadena de certificats\'94. Perqu\'e8 un certificat sigui v\'e0lid, la CA que l\'92ha signat ha de ser v\'e0lida, i aix\'ed successivament a tota la cadena. Aix\'f2 ho comprova autom\'e0ticament el programari del sistema quan avalua un certificat.\
+\
+
+\b Per qu\'e8 s\'92han d\'92avaluar els certificats?
+\b0 \
+Usa l\'92Assistent de Certificats per avaluar la validesa d\'92un certificat i determinar si \'e9s genu\'ed. El programari segur, com ara Safari o Mail, avalua els certificats abans d\'92utilitzar-los. Per exemple, si utilitzes el Safari per comprar alguna cosa en l\'ednia, el Safari avalua el certificat del lloc web i et fa saber si \'e9s v\'e0lid. L\'92Assistent de Certificats et dona informaci\'f3 m\'e9s detallada i et permet tenir m\'e9s control sobre l\'92\'fas de certificats.}

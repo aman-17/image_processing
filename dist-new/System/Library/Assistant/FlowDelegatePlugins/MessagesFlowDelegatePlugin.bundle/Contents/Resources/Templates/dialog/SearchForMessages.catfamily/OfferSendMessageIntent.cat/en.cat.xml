@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#OfferSendMessageIntent" locale="en">
+    <first>
+        <dialog condition="isGroup">Reply to the group?</dialog>
+        <dialog>Would you like to reply?</dialog>
+    </first>
+</cat>

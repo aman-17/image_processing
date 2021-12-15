@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalGoodNight" locale="en" xmlns="urn:apple:names:siri:cat:1.4">
+	<all>
+		<first>
+			<dialog condition="no_Canned_in_past_hour_and_evening_night_late_night">Good night.</dialog>
+			<random>
+				<dialog>Nighty night.</dialog>
+				<dialog>Night night.</dialog>
+				<dialog>Good night.</dialog>
+				<dialog><print>G’night.</print><speak>Night.</speak></dialog>
+				<dialog><print>G’night.</print><speak><phoneme alphabet="lhp" ph="g"/>night.</speak></dialog>
+				<dialog condition="night_or_late_night">Sleep tight.</dialog>
+				<dialog condition="used_more_than_20_times">Good night, room. Good night, moon.</dialog>
+				<dialog condition="used_more_than_20_times"><print>Good night, moon. Good night, <var name="user"/>.</print><speak>Good night, moon. Good night <var name="user"/>.</speak></dialog>
+			</random>
+		</first>
+	</all>
+	<phrases/>
+	<conditions>
+		<condition name="no_Canned_in_past_hour_and_evening_night_late_night">
+			<and>
+				<expression name="dialogState.familyHoursSinceLastUse" op="gt" value="1"/>
+				<or>
+					<expression name="now.isNight"/>
+					<expression name="now.isLateNight"/>
+					<expression name="now.isEvening"/>
+				</or>
+			</and>
+		</condition>
+		<condition name="night_or_late_night">
+			<or>
+				<expression name="now.isNight"/>
+				<expression name="now.isLateNight"/>
+			</or>
+		</condition>
+		<condition name="used_more_than_20_times">
+			<expression name="dialogState.usageCount" op="gt" value="20"/>
+		</condition>
+	</conditions>
+</cat>

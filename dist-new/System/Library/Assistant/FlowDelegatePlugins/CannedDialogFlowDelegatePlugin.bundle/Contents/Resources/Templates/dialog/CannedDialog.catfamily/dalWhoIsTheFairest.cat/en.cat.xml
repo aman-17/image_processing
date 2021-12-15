@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalWhoIsTheFairest">
+    <all>
+        <random phrase="">
+            <dialog>You, my friend, are the fairest of all.</dialog>
+            <dialog>You are full fair, ’tis true, but… <break time="1000ms"/>No, you’re definitely the fairest one of all.</dialog>
+            <dialog>Snow White? Is that you?</dialog>
+        </random>
+    </all>
+</cat>

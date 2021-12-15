@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalWhenIsYourBirthday" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<random phrase="">
+			<dialog><print>I don’t have a date of birth per se. But I made my first appearance on October 4th, 2011.</print>
+<speak>I don’t have a date of birth per say. <break time="500ms"/>But I made my first appearance on October 4th, 2011.</speak></dialog>
+			<dialog>I wasn’t really born. I came into existence gradually. But my first day as an assistant was October 4th, 2011.</dialog>
+			<dialog><print>I don’t exactly have a birthday. My first day as an assistant was October 4th, 2011.</print>
+<speak>I don’t exactly have a birthday. <break time="500ms"/>My first day as an assistant was October 4th, 2011.</speak></dialog>
+			<dialog>My first day as an assistant was October 4th, 2011.</dialog>
+		</random>
+	</all>
+</cat>

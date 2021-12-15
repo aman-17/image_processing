@@ -1,0 +1,46 @@
+{
+    "Name": "TransparentUnlitMaterialDefinition",
+    "OverrideMaterial": "pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "colorTint" : "[1, 1, 1, 1]"
+        },
+        "Textures": {
+            "textureBaseColor"  : "fallback.white",
+            "textureOpacity"    : "fallback.white"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "Unlit",
+        "VertexShader": {
+            "Entry": "vsUnlit"
+        },
+        "PixelShader": {
+            "Entry": "fsUnlit"
+        },
+        "State" : {
+            "AlphaBlend"                : true,
+            "WriteDepth"                : true,
+            "DepthCompareFunction"      : "Greater",
+            "AlphaBlendOperation"       : "Add",
+            "AlphaSourceFactor"         : "One",
+            "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+            "RgbBlendOperation"         : "Add",
+            "RgbSourceFactor"           : "One",
+            "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+        },
+        "FunctionConstants" : {
+            "EnableUnlitTexture"             : "true",
+            "EnableOpacityMap"               : "true",
+            "EnableTransparency"             : "true",
+            "EnableSRGBToLinearConversion"   : "true"
+        }
+    }],
+    "TechniqueMapping": {
+        "Transparent": "Unlit",
+        "TransparentAR": "Unlit",
+        "TransparentDynamicLighting": "Unlit",
+        "TransparentARDynamicLighting": "Unlit"
+    }
+}

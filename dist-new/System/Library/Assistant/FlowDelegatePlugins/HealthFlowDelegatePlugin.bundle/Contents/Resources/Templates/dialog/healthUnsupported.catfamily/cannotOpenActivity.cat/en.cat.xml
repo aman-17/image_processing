@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthUnsupported#cannotOpenActivity" locale="en">
+  <first>
+    <dialog>I’m not able to open the Activity app. My apologies.</dialog>
+  </first>
+</cat>

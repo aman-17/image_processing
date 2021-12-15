@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayNewsPodcast" locale="en">
+    <conditions>
+       <condition name="hasTopicAndProvider" note="news has topic and provider">
+           <and>
+               <expression name="topic" op="nonempty"/>
+               <expression name="provider" op="nonempty"/>
+           </and>
+       </condition>
+       <condition name="hasProvider" note="news has provider">
+           <expression name="provider" op="nonempty"/>
+       </condition>
+       <condition name="hasTopic" note="news has topic">
+           <expression name="topic" op="nonempty"/>
+       </condition>
+       <condition name="hasOneAlternativeProvider">
+           <and>
+               <expression name="dialogState.usageCount" op="lt" value="3"/>
+               <expression name="provider" op="nonempty"/>
+               <expression name="numberOfAlternativeProviders"  op="eq" value="1"/>
+           </and>
+       </condition>
+       <condition name="hasTwoAlternativeProviders">
+           <and>
+               <expression name="dialogState.usageCount" op="lt" value="3"/>
+               <expression name="provider" op="nonempty"/>
+               <expression name="numberOfAlternativeProviders"  op="eq" value="2"/>
+           </and>
+       </condition>
+       <condition name="hasMoreThanTwoAlternativeProviders">
+           <and>
+               <expression name="dialogState.usageCount" op="lt" value="3"/>
+               <expression name="provider" op="nonempty"/>
+               <expression name="numberOfAlternativeProviders"  op="gt" value="2"/>
+           </and>
+       </condition>
+       <condition name="areSpeakerNamesPresent">
+           <or>
+               <expression name="wha.firstSpeakerName"/>
+               <expression name="wha.secondSpeakerName"/>
+           </or>
+       </condition>
+       <condition name="areSpeakerRoomsPresent">
+           <or>
+               <expression name="wha.firstSpeakerRoom"/>
+               <expression name="wha.secondSpeakerRoom"/>
+           </or>
+       </condition>
+       <condition name="areBothPermanentNamesPresent">
+           <and>
+               <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+               <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+           </and>
+       </condition>
+       <condition name="isPermanentNameAndRoomNamePresent">
+           <and>
+               <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+               <expression name="wha.firstRoomNameFromSpokenEntities"/>
+               <or>
+                   <not>
+                       <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                   </not>
+                   <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+               </or>
+           </and>
+       </condition>
+       <condition name="isOnlyFirstPermanentNamePresent">
+           <and>
+               <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+               <or>
+                   <not>
+                       <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                   </not>
+                   <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+               </or>
+               <or>
+                   <not>
+                       <expression name="wha.firstRoomNameFromSpokenEntities"/>
+                   </not>
+                   <expression name="wha.firstRoomNameFromSpokenEntities" op="empty"/>
+               </or>
+           </and>
+       </condition>
+    </conditions>
+    <phrases>
+        <first phrase="alternativeProviders">
+            <random condition="hasOneAlternativeProvider">
+                <text>
+                    Or if you prefer, say "Hey Siri, switch to <var name="alternativeProviders[0]"/> instead.
+                </text>
+                <text>
+                    You can also tell me to switch to <var name="alternativeProviders[0]"/> instead.
+                </text>
+            </random>
+            <random condition="hasTwoAlternativeProviders">
+                <text>
+                    Or if you prefer, say "Hey Siri, switch to <var name="alternativeProviders[0]"/>" or "Switch to <var name="alternativeProviders[1]"/>" instead.
+                </text>
+                <text>
+                    You can also tell me to switch to <var name="alternativeProviders[0]"/> or <var name="alternativeProviders[1]"/> instead.
+                </text>
+            </random>
+            <random condition="hasMoreThanTwoAlternativeProviders">
+                <text>
+                    Or if you prefer, say "Hey Siri, switch to <var name="alternativeProviders[0]"/>", "Switch to <var name="alternativeProviders[1]"/>" or "Switch to <var name="alternativeProviders[2]"/>" instead.
+                </text>
+                <text>
+                    You can also tell me to switch to <var name="alternativeProviders[0]"/>, <var name="alternativeProviders[1]"/> or <var name="alternativeProviders[2]"/> instead.
+                </text>
+            </random>
+        </first>
+        <first phrase="groupsDialog">
+            <text condition="areBothPermanentNamesPresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and <var name="wha.secondPermanentNameFromSpokenEntities"/></text>
+            <text condition="isPermanentNameAndRoomNamePresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and in the <var name="wha.firstRoomNameFromSpokenEntities"/></text>
+            <text condition="isOnlyFirstPermanentNamePresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/></text>
+            <text></text>
+        </first>
+        <first phrase="whaDialog">
+            <text condition="wha.isAllSpeakers"> everywhere</text>
+            <text condition="wha.hasThreeOrMoreRooms"> in multiple rooms</text>
+            <text condition="wha.hasGroups"><phrase name="groupsDialog"/></text>
+            <text condition="areSpeakerNamesPresent"> on the <var name="wha.firstSpeakerName"/><opt> and <var name="wha.secondSpeakerName"/></opt></text>
+            <text condition="areSpeakerRoomsPresent"> in the <var name="wha.firstSpeakerRoom"/><opt> and <var name="wha.secondSpeakerRoom"/></opt></text>
+            <text></text>
+        </first>
+    </phrases>
+    
+    <first>
+        <first condition="hasTopicAndProvider">
+            <random>
+                <dialog>Here’s the latest <var name="topic"/> news, from <var name="provider"/><phrase name="whaDialog"/>…<opt><phrase name="alternativeProviders"/></opt></dialog>
+                <dialog>From <var name="provider"/>, here’s the latest <var name="topic"/> news<phrase name="whaDialog"/>…<opt><phrase name="alternativeProviders"/></opt></dialog>
+                <dialog><var name="topic.upperFirst"/> news from <var name="provider"/> coming up<phrase name="whaDialog"/>…<opt><phrase name="alternativeProviders"/></opt></dialog>
+            </random>
+        </first>
+        <first condition="hasProvider">
+            <dialog>Here’s the latest news from <var name="provider"/><phrase name="whaDialog"/>…</dialog>
+        </first>
+        <first condition="hasTopic">
+            <dialog>Here’s the latest <var name="topic"/> news<phrase name="whaDialog"/>…</dialog>
+        </first>
+        <first>
+            <dialog>Here’s the latest news<phrase name="whaDialog"/>…</dialog>
+        </first>
+    </first>
+</cat>

@@ -1,0 +1,55 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 LucidaGrande;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\margl1440\margr1440\vieww10800\viewh8400
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Ce este extensia pentru folosirea cheii extinse?
+\b0 \
+Extensia pentru folosirea cheii extinse (EKU) este foarte asem\uc0\u259 n\u259 toare cu extensia pentru folosirea cheii (KUE), doar c\u259  valorile EKU sunt definite \'een func\u539 ie de \'93scop\'94 (de exemplu, semnarea de r\u259 spunsuri OCSP, identificarea unui client SSL, \u537 .a.m.d.), \u537 i pot fi u\u537 or extinse.\'a0 EKU este definit prin identificatori de obiect numi\u539 i OID-uri. 
+\f1  Dac
+\f2 \uc0\u259 
+\f1  este omis
+\f2 \uc0\u259 
+\f1  extensia EKU, toate opera
+\f2 \uc0\u539 
+\f1 iile sunt poten
+\f2 \uc0\u539 
+\f1 ial valabile.
+\f0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\b \cf0 Care este diferen\uc0\u539 a dintre KUE \u537 i EKU?
+\b0 \
+ EKU este mai nou \uc0\u537 i este \'een general considerat mecanismul principal de restric\u539 ionare a utiliz\u259 rii, \'een timp ce KUE este considerat de obicei ca fiind mai pu\u539 in flexibil. KUE este definit \'een func\u539 ie de \'93opera\u539 ii\'94. EKU este definit \'een func\u539 ie de \'93scop\'94. EKU-urile sunt verificate de obicei ofensiv (de ex. \'93trebuie s\u259  aib\u259  acest EKU OID\'94), \'een timp ce KUE-urile sunt verificate de obicei defensiv (de ex. \'93trebuie s\u259  aib\u259  un bit de nerepudiere \u537 i poate avea bit doar de criptare/decriptare\'94). 
+\f1 Pentru o autoritate de certificare, lista de obiective restric
+\f2 \uc0\u539 
+\f1 ioneaz
+\f2 \uc0\u259 
+\f1  tipurile de certificate care pot fi create de autoritate; o opera
+\f2 \uc0\u539 
+\f1 ie trebuie inclus
+\f2 \uc0\u259 
+\f1  at\'e2t \'een autoritate c\'e2t 
+\f2 \uc0\u537 
+\f1 i \'een certificatele pe care le semneaz
+\f2 \uc0\u259 
+\f1  pentru a fi valid
+\f2 \uc0\u259 
+\f1 .
+\f0 \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Ce \'eenseamn\uc0\u259  \'93Aceast\u259  extensie este critic\u259 \'94?\
+
+\b0 Acesta este cunoscut \uc0\u537 i sub numele de \'93indicator de stare critic\u259 \'94. Este un fanion care indic\u259  software-ului care utilizeaz\u259  certificatul dac\u259  este precaut s\u259  ignore extensia pentru folosirea cheii extinse dac\u259  nu o recunoa\u537 te. Certificatul va fi respins dac\u259  software-ul nu recunoa\u537 te o \'93extensie critic\u259 \'94.
+\f3\fs26 \
+}

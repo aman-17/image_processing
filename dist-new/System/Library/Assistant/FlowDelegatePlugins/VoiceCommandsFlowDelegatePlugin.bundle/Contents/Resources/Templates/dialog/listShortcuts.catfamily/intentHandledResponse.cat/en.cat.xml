@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <conditions>
+        <condition name="hasTooManyShortcuts" note="Returns true if user has more than 25 shortcuts">
+            <expression name="shortcutsCount" op="gt" value="25"/>
+        </condition>
+        <condition name="hasNoShortcuts" note="Returns true if user has 0 shortcut">
+            <expression name="shortcutsCount" op="eq" value="0"/>
+        </condition>
+        <condition name="hasGrounding" note="Returns true if we need to provide grounding">
+            <expression name="user.groundingIfNeeded" op="nonempty"/>
+        </condition>
+        <condition name="hasCompanionDevice" note="Returns true if it is either homepod or watch">
+		    <or>
+                <expression name="device.isHomePod"/>
+                <expression name="device.isWatch"/>
+			</or>
+        </condition>
+        <condition name="companionDeviceGrounding" note="Returns true if we are on a companion device and need to provide grounding">
+            <and>
+                <expression name="user.groundingIfNeeded" op="nonempty"/>
+                <or>
+                    <expression name="device.isHomePod"/>
+                    <expression name="device.isWatch"/>
+                </or>
+            </and>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="userGrounding" note="Speak user's name if grounding is needed">
+            <text condition="companionDeviceGrounding"> on <var name="user.groundingIfNeeded"/>'s <var name="deviceCompanionName"/></text>
+            <text condition="hasCompanionDevice"> on your <var name="deviceCompanionName"/></text>
+        </first>
+        <first phrase="OkUser" note="Speak 'Ok, User' if grounding is needed">
+            <text condition="hasGrounding">OK, <var name="user.groundingIfNeeded"/>. </text>
+        </first>
+        <first phrase="shortcutsWithCount" note="Decide whether to use the plural form or single form of the word 'shortcut'">
+            <text>
+                <quantity includeValue="false" value="shortcutsCount">
+                    <one><opt><var name="appTitle"/> </opt>shortcut</one>
+                    <other><opt><var name="appTitle"/> </opt>shortcuts</other>
+                </quantity></text>
+        </first>
+    </phrases>
+
+   <first>
+       <dialog condition="hasNoShortcuts">You don't have any shortcuts<opt> for <var name="appTitle"/></opt>. You can set up<opt> <var name="appTitle"/></opt> shortcuts in the Shortcuts app<opt><phrase name="userGrounding"/></opt>.</dialog>
+       <dialog condition="hasTooManyShortcuts"><opt><phrase name="OkUser"/></opt>You have <phrase name="shortcutsWithCount"/>. Here are the first 25.</dialog>
+       <dialog>You have <phrase name="shortcutsWithCount"/>.</dialog>
+   </first>
+</cat>

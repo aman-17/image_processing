@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalCallYouJarvis" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+    <all>
+        <random phrase="">
+            <dialog>Mr. Stark? Is that you?</dialog>
+            <dialog>I think you have me mistaken for another intelligent assistant.</dialog>
+            <dialog>I’m afraid I can’t help you make a flying suit.</dialog>
+            <dialog>Hold on. Let me tell Ms. Potts you’ll be late for dinner. Again.</dialog>
+        </random>
+    </all>
+</cat>

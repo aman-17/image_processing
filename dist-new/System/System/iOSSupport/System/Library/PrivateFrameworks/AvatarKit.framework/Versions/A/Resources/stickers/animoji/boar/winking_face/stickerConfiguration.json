@@ -1,0 +1,48 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../sharedAngled/winking_face/cam.scnz"
+  },
+  "emoji" : "😉",
+  "identifier" : "winking_face",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_L" : 0.4461616575717926,
+    "browInnerUp" : 0.1334858238697052,
+    "browOuterUp_R" : 0.39944911003112793,
+    "cheekSquint_L" : 1,
+    "cheekSquint_R" : 0.26446273922920227,
+    "eyeBlink_L" : 1,
+    "eyeBlink_R" : 0.077465243637561798,
+    "eyeLookDown_L" : 0.060606066137552261,
+    "eyeLookDown_R" : 0.063360877335071564,
+    "eyeLookIn_R" : 0.15977963805198669,
+    "eyeLookOut_L" : 0.15151515603065491,
+    "eyeSquint_L" : 0.96108216047286987,
+    "eyeSquint_R" : 0.22865022718906403,
+    "jawOpen" : 0.45730021595954895,
+    "mouthDimple_L" : 0.96969687938690186,
+    "mouthDimple_R" : 0.61707991361618042,
+    "mouthLeft" : 0.34999999403953552,
+    "mouthSmile_L" : 1,
+    "mouthSmile_R" : 0.66150742769241333,
+    "neckOrientation" : [
+      0.014515498653054237,
+      0.15005701780319214,
+      -0.095283530652523041,
+      0.98396813869476318
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ],
+    "noseSneer_L" : 0.21253287792205811
+  },
+  "props" : [
+
+  ]
+}

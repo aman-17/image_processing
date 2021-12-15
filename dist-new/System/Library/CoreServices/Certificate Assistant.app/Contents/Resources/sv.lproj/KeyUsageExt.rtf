@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fswiss\fcharset204 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Vad \uc0\u228 r nyckelanv\u228 ndningstill\u228 gget?
+\b0 \
+Nyckelanv\uc0\u228 ndningstill\u228 gget (Key Usage Extension, KUE) avg\u246 r hur certifikat kan anv\u228 ndas. Ett nyckelanv\u228 ndningstill\u228 gg kan anv\u228 ndas till att begr\u228 nsa vilka \u229 tg\u228 rder den publika nyckeln i ett certifikat kan utf\u228 rda. Till exempel kan ett certifikat skapas f\u246 r att signera mejl, men inte kryptera dem.Till\u228 gget f\u246 r ut\u246 kad nyckelanv\u228 ndning (Extended Key Usage Extension - EKU) \u228 r ganska likt Nyckelanv\u228 ndningstill\u228 gg (Key Usage Extension - KUE), f\u246 rutom att certifikat definieras baserat p\u229  dess \'94syfte\'94 (t.ex. att signera OCSP-svar, identifiera en SSL-klient, etc.) EKU \u228 r nyare och l\u228 ttare att ut\u246 ka \u228 n KUE och betraktas ofta som den prim\u228 ra anv\u228 ndningsbegr\u228 nsingsmekanismen. Du kan st\u228 lla in EKU-till\u228 gget senare i den h\u228 r assistenten.\
+\
+Du kan anv\uc0\u228 nda f\u246 ljande nyckelanv\u228 ndningstill\u228 gg:\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 Signatur\ulnone : Markera detta om certifikatets publika nyckel anv\uc0\u228 nds med en digital signaturmekanism som ska st\u246 da andra s\u228 kerhetstj\u228 nster \u228 n certifikatsignering.\
+\
+\ul Oavvislighet\ulnone : Markera detta om certifikatets publika nyckel anv\uc0\u228 nds till att bekr\u228 fta digitala signaturer som anv\u228 nds till att erbjuda en oavvislig tj\u228 nst som skyddar mot att falskt neka en \u229 tg\u228 rd. Oavvislighet f\u246 rs\u228 krar att en part i en dispyt inte kan f\u246 rneka eller motbevisa giltigheten i ett uttalande eller kontrakt.\
+\
+\ul Nyckelchiffrering\ulnone : Markera detta om certifikatets publika nyckel anv\uc0\u228 nds till att kryptera en nyckel, oavsett syfte. Nyckelchiffrering anv\u228 nds f\u246 r nyckeltransport and nyckelinpackning (eller nyckelhantering).\
+\
+\ul Datachiffrering\ulnone : Markera detta om certifikatets publika nyckel anv\uc0\u228 nds chiffrering av andra anv\u228 ndardata \u228 n de kryptografiska nycklarna.\
+\
+\ul Nyckelavtal\ulnone : Markera detta om certifikatets publika nyckel anv\uc0\u228 nds f\u246 r nyckelavtal. Nyckelavtalsprotokoll (\u228 ven kallade nyckelutbytesprotokoll) anv\u228 nds n\u228 r tv\u229  parter kommer \u246 verens om en nyckel som ska anv\u228 ndas i ett krypteringssystem med hemlig nyckel d\u228 r nycklar kan delas fritt och s\u228 kert via ett os\u228 krat medium. (Om till exempel Diffie-Hellman-nycklar anv\u228 nds f\u246 r nyckelhantering \u228 r till\u228 gget inst\u228 llt.)\
+\
+\ul Certifikatsignering\ulnone : Markera detta om certifikatets publika nyckel anv\uc0\u228 nds till att bekr\u228 fta en signatur p\u229  publika nyckelcertifikat. Certifikat med det h\u228 r till\u228 gget \u228 r certifikatutf\u228 rdarcertifikat. Om det h\u228 r till\u228 gget tilldelas ett certifikat m\u229 ste \'94Anv\u228 nd detta certifikat som certifikatutf\u228 rdare\'94 i Till\u228 gg f\u246 r grundl\u228 ggande begr\u228 nsningar ocks\u229  st\u228 llas in. Detta visas senare i den h\u228 r assistenten.\
+\
+\ul CRL-signering\ulnone : Markera detta alternativ om certifikatets publika nyckel till att bekr\uc0\u228 fta en signatur p\u229  en certifikat\u229 terkallningslista (Certificate Revocation List - CRL).\
+\
+\ul Chiffrera bara\ulnone : Markera detta endast om Nyckelavtalet ocks\uc0\u229  \u228 r inst\u228 llt. Det g\u246 r att certifikatets publika nyckel bara kan anv\u228 ndas f\u246 r chiffrering av data vid utf\u246 rande av nyckelavtal.\
+\
+\ul Dechiffrera bara\ulnone : Markera detta om Nyckelavtalet ocks\uc0\u229  \u228 r inst\u228 llt. Det g\u246 r att certifikatets publika nyckel bara kan anv\u228 ndas f\u246 r dechiffrering av data vid utf\u246 rande av nyckelavtal.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\b \cf0 Vad betyder \'94Detta till\uc0\u228 gg \u228 r kritiskt\'94?
+\b0 \
+Detta \uc0\u228 r \u228 ven k\u228 nt som \'94kritiskhet-indikator\'94. Det \u228 r en flagga som instruerar programvara som anv\u228 nder certifikatet om det \u228 r s\u228 kert att ignorera Nyckelanv\u228 ndningstill\u228 gget n\u228 r det inte k\u228 nns igen. Ett certifikat kommer att nekas om programvaran inte k\u228 nner igen ett \'94kritiskt till\u228 gg\'94.}

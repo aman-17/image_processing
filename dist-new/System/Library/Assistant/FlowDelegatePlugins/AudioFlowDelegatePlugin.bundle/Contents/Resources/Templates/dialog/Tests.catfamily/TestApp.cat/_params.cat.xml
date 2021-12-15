@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="Tests#TestApp">
+    <meta name="description" value="Test for audio.app property filling"/>
+    <meta name="category" value="Fatal"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="wha" type="audio.WholeHouseAudio" description="WHA Params"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+    </parameters>
+</cat>

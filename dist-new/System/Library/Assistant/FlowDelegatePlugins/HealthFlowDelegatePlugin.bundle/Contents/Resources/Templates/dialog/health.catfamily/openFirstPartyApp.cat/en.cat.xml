@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="health#openFirstPartyApp" locale="en">
+
+  <first>
+    <dialog>Open Workout</dialog>
+  </first>
+
+</cat>

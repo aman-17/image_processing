@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#InProgressResponse" locale="en">
+    <first>
+        <dialog>OK, <var name="app.localizedName"/> is processing your request.</dialog>
+    </first>
+</cat>

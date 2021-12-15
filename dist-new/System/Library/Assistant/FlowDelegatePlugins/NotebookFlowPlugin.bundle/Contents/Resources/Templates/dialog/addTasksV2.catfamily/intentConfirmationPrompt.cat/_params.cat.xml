@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#intentConfirmationPrompt">
+  <meta name="category" value="Prompt"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="description" value="Confirmation to create a new task"/>
+  <parameters>
+    <parameter name="intent" type="com.apple.siri.kit.dialog.concepts.notebook.AddTasksConcept"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>

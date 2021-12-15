@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#VoiceMailOfferToContinueReading" locale="en">
+    
+  <first>
+      <dialog condition="isLeadingSavedVoiceMailPrePrompt">Should I play it?</dialog>
+      <dialog condition="isLastPage">Would you like to repeat that or call back?</dialog>
+      <dialog>Would you like to repeat that, call back, or hear the next one?</dialog>
+  </first>
+</cat>

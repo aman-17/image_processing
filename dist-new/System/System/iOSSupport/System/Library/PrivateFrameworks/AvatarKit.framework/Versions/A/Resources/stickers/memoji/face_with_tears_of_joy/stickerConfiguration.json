@@ -1,0 +1,125 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../shared/cam.scnz"
+  },
+  "emoji" : "🤣",
+  "identifier" : "face_with_tears_of_joy",
+  "options" : {
+    "duration" : 1
+  },
+  "physicsState" : {
+    "memoji" : {
+      "lowerBack_DYN" : {
+        "offset" : [
+          0.81516933441162109,
+          0.92483234405517578,
+          2.2845046032671235e-07
+        ]
+      },
+      "lowerBackLeft_DYN" : {
+        "offset" : [
+          0.56035614013671875,
+          0.67001247406005859,
+          -0.87000018358230591
+        ]
+      },
+      "lowerBackRight_DYN" : {
+        "offset" : [
+          0.56035804748535156,
+          0.67001152038574219,
+          0.87000113725662231
+        ]
+      },
+      "lowerFront_DYN" : {
+        "offset" : [
+          -0.92482948303222656,
+          0.81516933441162109,
+          4.6852619561832398e-09
+        ]
+      },
+      "lowerFrontLeft_DYN" : {
+        "offset" : [
+          -0.67001438140869141,
+          -0.56035518646240234,
+          -0.87000364065170288
+        ]
+      },
+      "lowerFrontRight_DYN" : {
+        "offset" : [
+          -0.67001724243164062,
+          -0.56035709381103516,
+          0.87000513076782227
+        ]
+      },
+      "lowerLeft_DYN" : {
+        "offset" : [
+          -0.054829597473144531,
+          0.054829597473144531,
+          -1.2303643226623535
+        ]
+      },
+      "lowerRight_DYN" : {
+        "offset" : [
+          -0.05483245849609375,
+          -0.054829120635986328,
+          -1.2303640842437744
+        ]
+      }
+    }
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_L" : 0.82263004779815674,
+    "browDown_R" : 0.798164963722229,
+    "browInnerUp" : 0.8715595006942749,
+    "browOuterUp_L" : 0.2818952202796936,
+    "browOuterUp_R" : 0.27548208832740784,
+    "cheekSquint_L" : 0.93215173482894897,
+    "cheekSquint_R" : 1,
+    "eyeBlink_L" : 1,
+    "eyeBlink_R" : 1,
+    "eyeSquint_L" : 1,
+    "eyeSquint_R" : 0.94561862945556641,
+    "jawOpen" : 0.55184805393218994,
+    "mouthDimple_L" : 0.41896027326583862,
+    "mouthDimple_R" : 0.47094795107841492,
+    "mouthSmile_L" : 1,
+    "mouthSmile_R" : 1,
+    "mouthUpperUp_L" : 0.61368203163146973,
+    "mouthUpperUp_R" : 0.58904117345809937,
+    "neckOrientation" : [
+      -0.062898218631744385,
+      0,
+      0,
+      0.99801993370056152
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "image" : "../../shared/face_with_tears_of_joy/tears.heic",
+      "position" : {
+        "x" : 0,
+        "y" : 0.070000000000000007,
+        "z" : 20
+      }
+    }
+  ],
+  "shaders" : [
+    {
+      "file" : "fragment_eyes.metal",
+      "geometry" : "L_eye",
+      "modifier" : "fragment"
+    },
+    {
+      "file" : "fragment_eyes.metal",
+      "geometry" : "R_eye",
+      "modifier" : "fragment"
+    }
+  ]
+}

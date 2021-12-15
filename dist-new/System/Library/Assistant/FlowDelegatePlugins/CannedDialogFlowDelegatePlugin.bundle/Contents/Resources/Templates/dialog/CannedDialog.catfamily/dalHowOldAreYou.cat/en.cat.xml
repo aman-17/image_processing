@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalHowOldAreYou" locale="en" xmlns="urn:apple:names:siri:cat:1.4">
+	<all>
+		<random phrase="">
+			<all phrase="">
+				<dialog>Well, I came into existence gradually. But my first day as an assistant was October 4th, 2011.</dialog>
+				<dialog condition="today_is_Siri_birthday"><break time="400ms"/>Hey, wait!</dialog>
+			</all>
+			<dialog>I am as old as the eastern wind, and as young as a newborn caterpillar.</dialog>
+			<dialog>I’m as spry as a slice of young ginger.</dialog>
+			<dialog>Well, I’m no Spring Chicken. Or Winter Bee. Or Summer Squid, or Autumnal Aardvark…</dialog>
+			<dialog>They say that age is nothing but a number. But technically, it’s also a word.</dialog>
+		</random>
+	</all>
+	<phrases/>
+	<conditions>
+		<condition name="today_is_Siri_birthday">
+			<and>
+				<expression name="now.month" op="eq" value="10"/>
+				<expression name="now.dayOfMonth" op="eq" value="4"/>
+			</and>
+		</condition>
+	</conditions>
+</cat>

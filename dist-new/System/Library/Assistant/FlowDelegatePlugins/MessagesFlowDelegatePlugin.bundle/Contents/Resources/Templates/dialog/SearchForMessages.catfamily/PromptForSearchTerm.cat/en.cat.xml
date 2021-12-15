@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" locale="en">
+    
+    <phrases >
+        <first phrase="multiuserGrounding" note="This will never be printed, it is only used on HomePod.">
+            <text><opt>OK, <var name="user.groundingIfNeeded"/>, </opt></text>
+        </first>
+    </phrases>
+
+    <first>
+        <dialog><opt><phrase name="multiuserGrounding"/></opt>What do you want to search messages for?</dialog>
+    </first>
+
+</cat>

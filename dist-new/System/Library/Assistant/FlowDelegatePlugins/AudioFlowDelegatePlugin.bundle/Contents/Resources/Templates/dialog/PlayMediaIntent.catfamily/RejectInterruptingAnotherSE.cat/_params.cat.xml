@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#RejectInterruptingAnotherSE">
+    <meta name="description" value="User declined interruption of playback elsewhere, confirming that nothing will be interrupted"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="isClearRejection" type="dialog.Boolean" description="The user explicitly said no or cancel"/>
+    </parameters>
+</cat>

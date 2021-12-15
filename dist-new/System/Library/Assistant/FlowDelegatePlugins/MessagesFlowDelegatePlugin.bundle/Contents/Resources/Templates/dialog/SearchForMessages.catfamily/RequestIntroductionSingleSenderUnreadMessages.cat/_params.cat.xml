@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#RequestIntroductionSingleSenderUnreadMessages">
+    
+    <meta name="description" value="Reading request introduction used when we have a only Unread messages in a single conversation from a single sender."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="conversation" type="messages.Group" description="The single conversation we're dialoguing about"/>
+        <parameter name="membersInConversationOtherThanYouAndSender" type="dialog.Person[]" description="Members in this conversation other than you and the sender"/>
+        <parameter name="numberOfMembersInConversationOtherThanYouAndSender" type="dialog.Number" description=""/>
+    </parameters>
+
+</cat>

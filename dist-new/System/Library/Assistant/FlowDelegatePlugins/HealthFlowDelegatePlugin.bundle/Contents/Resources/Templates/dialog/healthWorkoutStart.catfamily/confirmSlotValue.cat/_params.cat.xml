@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutStart#confirmSlotValue">
+    <meta name="category" value="Confirm"/>
+    <meta name="readyForLoc" value="true"/>
+    <meta name="description" value="Dialog for confirm slot value"/>
+    <parameters>
+        <parameter name="slot" type="dialog.String"/>
+        <parameter name="duration" type="dialog.Duration"/>
+        <parameter name="workoutName" type="dialog.String"/>
+        <parameter name="goalType" type="dialog.String"/>
+        <parameter name="goalValue" type="dialog.Number"/>
+        <parameter name="location" type="dialog.String"/>
+        <parameter name="isOpenEnded" type="dialog.Boolean"/>
+    </parameters>
+</cat>

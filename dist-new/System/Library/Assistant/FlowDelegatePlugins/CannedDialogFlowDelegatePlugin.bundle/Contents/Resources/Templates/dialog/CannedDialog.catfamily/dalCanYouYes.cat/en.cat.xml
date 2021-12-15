@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalCanYouYes" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+    <all>
+        <random phrase="">
+            <dialog>I most certainly can.</dialog>
+            <dialog>I can, indeed.</dialog>
+            <dialog>Of course.</dialog>
+            <dialog>Why, of course.</dialog>
+        </random>
+    </all>
+</cat>

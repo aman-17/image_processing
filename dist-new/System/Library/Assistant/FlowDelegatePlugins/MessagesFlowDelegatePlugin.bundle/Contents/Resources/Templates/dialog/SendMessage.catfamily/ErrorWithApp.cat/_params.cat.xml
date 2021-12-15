@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ErrorWithApp">
+
+    <meta name="description" value="Executed whenever an code specific error occurs in a non slot-resolution Synapse transaction."/>
+    <meta name="category" value="Fatal"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="app" type="messages.App" description="The app object used to send the message."/>
+        <parameter name="messageServiceNotAvailable" type="dialog.Boolean" description="If the error is MESSAGE_SERVICE_NOT_AVAILABLE."/>
+        <parameter name="deviceState" type="sirikit.DeviceState" description="If request was from Carplay."/>
+    </parameters>
+
+</cat>
+

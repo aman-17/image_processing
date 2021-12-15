@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#PromptForContactsKnownLabel">
+    <meta name="description" value="Prompt for the contacts to call when label has already been provided, e.g. Call home"/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="requestedHandleLabelEnum" type="dialog.String" description="Label enum - see possible values in switch statement."/>
+        <parameter name="requestedHandle" type="dialog.PersonHandle" description="handle that was requested before specifying contact"/>
+    </parameters>
+
+</cat>

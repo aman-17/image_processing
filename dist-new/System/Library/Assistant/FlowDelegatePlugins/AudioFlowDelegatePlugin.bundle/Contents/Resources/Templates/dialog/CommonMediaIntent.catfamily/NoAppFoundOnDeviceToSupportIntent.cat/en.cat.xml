@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#NoAppFoundOnDeviceToSupportIntent" locale="en">
+    <first>
+        <dialog condition="isCarPlay">I don’t see an app for that. You’ll need to download one when you aren’t in the car.</dialog>
+        <dialog condition="isWatch">
+          You’ll need an app for me to help with that. Try searching in the Apple Watch app on your personal device.
+        </dialog>
+        <dialog condition="isHomePod">
+            I don’t see an app for that. You’ll need to download one on your personal device.
+        </dialog>
+        <dialog>I don’t see an app for that. You’ll need to download one.</dialog>
+    </first>
+</cat>

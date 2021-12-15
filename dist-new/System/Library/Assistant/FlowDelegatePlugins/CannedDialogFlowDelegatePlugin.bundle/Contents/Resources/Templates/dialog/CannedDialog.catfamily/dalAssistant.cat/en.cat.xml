@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalAssistant">
+	<all>
+		<random phrase="">
+			<dialog>Yes?</dialog>
+			<dialog>Go ahead…</dialog>
+			<dialog>I’m here…</dialog>
+			<dialog>I’m listening…</dialog>
+		</random>
+	</all>
+</cat>

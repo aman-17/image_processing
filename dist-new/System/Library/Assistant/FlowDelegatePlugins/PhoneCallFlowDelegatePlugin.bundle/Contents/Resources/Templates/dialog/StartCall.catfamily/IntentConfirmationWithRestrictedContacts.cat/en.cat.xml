@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#IntentConfirmationWithRestrictedContacts" locale="en">
+  <conditions>
+    <condition name="isFaceTime">
+        <expression name="intent.preferredCallProvider" op="eq" value="'FACETIME_PROVIDER'"/>
+    </condition>
+    <condition name="hasOnlyRestrictedContacts">
+        <and>
+            <expression name="allowedContacts.list.length" op="eq" value="0"/>
+            <expression name="restrictedContacts.list.length" op="gt" value="0"/>
+        </and>
+    </condition>
+    <condition name="hasBothContacts">
+        <and>
+            <expression name="allowedContacts.list.length" op="gt" value="0"/>
+            <expression name="restrictedContacts.list.length" op="gt" value="0"/>
+        </and>
+    </condition>
+  </conditions>
+
+  <phrases>
+    <first phrase="callType">
+      <text condition="isFaceTime">FaceTime call</text>
+      <text>call</text>
+    </first>
+    <first phrase="allowedContactsListForCall">
+      <text><var list="and" itemformat="{toString}" name="allowedContacts.list"/></text>
+    </first>
+    <first phrase="restrictedContactsListForCall">
+      <text><var list="and" itemformat="{toString}" name="restrictedContacts.list"/></text>
+    </first>
+  </phrases>
+  <first>
+      <dialog id="ConfirmRestrictedContacts" condition="hasBothContacts">I can’t make a <phrase name="callType"/> to <phrase name="restrictedContactsListForCall"/> during Downtime. Do you still want to call <phrase name="allowedContactsListForCall"/>?</dialog>
+      <dialog id="NoAllowedContactsToConfirm" condition="hasOnlyRestrictedContacts">I can’t make a <phrase name="callType"/> to <phrase name="restrictedContactsListForCall"/> during Downtime.</dialog>
+  </first>
+</cat>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="Tests#TestWHA" locale="en">
+    <first>
+        <dialog id="Test">
+            <opt>firstSpeakerName:<var name="wha.firstSpeakerName"/></opt>
+            <opt>secondSpeakerName:<var name="wha.secondSpeakerName"/></opt>
+            <opt>firstSpeakerRoom:<var name="wha.firstSpeakerRoom"/></opt>
+            <opt>secondSpeakerRoom:<var name="wha.secondSpeakerRoom"/></opt>
+            <opt>firstRoomNameFromSpokenEntities:<var name="wha.firstRoomNameFromSpokenEntities"/></opt>
+            <opt>isAllSpeakers:<var name="wha.isAllSpeakers"/></opt>
+            <opt>isWholeHouseAudioCommand:<var name="wha.isWholeHouseAudioCommand"/></opt>
+            <opt>isInHere:<var name="wha.isInHere"/></opt>
+            <opt>hasExcept:<var name="wha.hasExcept"/></opt>
+            <opt>hasThreeOrMoreRooms:<var name="wha.hasThreeOrMoreRooms"/></opt>
+            <opt>hasGroups:<var name="wha.hasGroups"/></opt>
+            <opt>isParticipatingSpeaker:<var name="wha.isParticipatingSpeaker"/></opt>
+        </dialog>
+    </first>
+</cat>
+

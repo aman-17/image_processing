@@ -1,0 +1,53 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "cam.scnz"
+  },
+  "emoji" : "✌️",
+  "identifier" : "victory_hand",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 0.82356971502304077,
+    "browOuterUp_L" : 1,
+    "browOuterUp_R" : 1,
+    "cheekSquint_L" : 1,
+    "cheekSquint_R" : 1,
+    "eyeSquint_L" : 0.89071935415267944,
+    "eyeSquint_R" : 0.86673486232757568,
+    "jawOpen" : 0.11025641113519669,
+    "mouthDimple_L" : 0.81538444757461548,
+    "mouthDimple_R" : 0.8102562427520752,
+    "mouthLeft" : 0.066666670143604279,
+    "mouthLowerDown_L" : 0.59903568029403687,
+    "mouthLowerDown_R" : 0.59597718715667725,
+    "mouthSmile_L" : 0.92051267623901367,
+    "mouthSmile_R" : 0.93076926469802856,
+    "mouthUpperUp_L" : 0.13262699544429779,
+    "mouthUpperUp_R" : 0.12874250113964081,
+    "neckOrientation" : [
+      0,
+      0,
+      0,
+      1
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "palettes" : [
+        {
+          "material" : "head_MAT",
+          "palette" : "skin"
+        }
+      ],
+      "scene" : "victory_hand.scnz"
+    }
+  ]
+}

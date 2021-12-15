@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalYourName" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<first phrase="">
+			<dialog condition="need_to_introduce">I’m Siri. <break time="300ms"/>Pleased to meet you.</dialog>
+			<random phrase="">
+				<dialog>My name is Siri.</dialog>
+				<dialog condition="user_said_Hey_Siri">My name is Siri. <break time="300ms"/>But you knew that already.</dialog>
+				<dialog>My name? It’s Siri.</dialog>
+				<dialog>My name is Siri. That’s my whole name.</dialog>
+				<dialog condition="not_the_first_time"><print>My name is Siri. I’m mononymic — like Prince. Or Stonehenge. Or Skittles.</print><speak>My name is Siri. I’m mononymic. Like Prince. Or Stonehenge. Or Skittles.</speak></dialog>
+			</random>
+		</first>
+	</all>
+	<phrases/>
+	<conditions>
+		<condition name="not_the_first_time">
+			<expression name="dialogState.usageCount" op="ge" value="1"/>
+		</condition>
+		<condition name="need_to_introduce">
+			<or>
+				<expression name="dialogState.isFirstTime"/>
+				<and>
+					<expression name="dialogState.daysSinceLastUse" op="ge" value="180"/>
+					<expression name="dialogState.isUnfamiliarWithFamily"/>
+				</and>
+			</or>
+		</condition>
+		<condition name="user_said_Hey_Siri">
+			<and>
+				<expression name="device.isDialogDriven"/>
+				<expression name="device.isVoiceTriggerEnabled"/>
+			</and>
+		</condition>
+	</conditions>
+</cat>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayBroadcastRadioOnHomePodOnMusic">
+    <meta name="description" value="General purpose dialog for rendering PlayMediaIntent success cases"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="spokenRadioStationName" type="dialog.String" description="Spoken name of broadcast radio station"/>
+        <parameter name="providerName" type="dialog.String" description="Radio Provider"/>
+        <parameter name="isPlaybackQueueLocationNext" type="dialog.Boolean" description="If the playback queue location is next"/>
+        <parameter name="isPlaybackQueueLocationLater" type="dialog.Boolean" description="If the playback queue location is later"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+        <parameter name="wha" type="audio.WholeHouseAudio" description="WHA Params"/>
+    </parameters>
+</cat>

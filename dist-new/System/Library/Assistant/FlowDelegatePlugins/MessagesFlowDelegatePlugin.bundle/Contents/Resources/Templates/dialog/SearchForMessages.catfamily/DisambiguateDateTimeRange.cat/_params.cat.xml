@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#DisambiguateDateTimeRange">
+    <meta name="description" value="When user searches for messages by date and app needs user to disambiguate which date"/>
+    <meta name="category" value="Disambiguate"/>
+    <meta name="readyForLoc" value="true"/>
+</cat>

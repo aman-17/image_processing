@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadSpokenPaymentComponent">
+    <meta name="description" value="Dialog about a spoken payment message"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="paymentNote" type="dialog.String" description="Payment note content."/>
+        <parameter name="paymentAmount" type="dialog.Currency" description="Payment amount"/>
+        <parameter name="paymentType" type="dialog.String" description="The type of the payment represented as an enum."/>
+        <parameter name="componentCount" type="dialog.Number" description="The number of payment items represented by this component."/>
+        
+        <parameter name="sender" type="dialog.Person" description="The sender of the components."/>
+        <parameter name="effect" type="dialog.String" description="The effect on the message."/>
+
+        <parameter name="componentContext" type="messages.MessageComponentDialogContext" description="Context used for dialoging about given message component"/>
+        <parameter name="spokenContext" type="messages.SpokenDialogContext" description="Spoken messages context used for dialoging."/>
+    </parameters>
+
+</cat>

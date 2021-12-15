@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="UpdateMediaAffinityIntent#IntentHandledResponse">
+    <meta name="description" value="Dialog for rendering UpdateMediaAffinityIntent successfully handled responses" />
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="title" type="dialog.String" description="Title of the content" profanityFilter="yes"/>
+        <parameter name="isDislikeAffinity" type="dialog.Boolean" description="Is the affinityType dislike"/>
+        <parameter name="isCurrentlyPlaying" type="dialog.Boolean" description="Media search reference"/>
+        <parameter name="isShowMediaItemTitle" type="dialog.Boolean" description="Number of media items in intent"/>
+        <parameter name="isGrounding" type="dialog.Boolean" description="if user grounding is required"/>
+        <parameter name="isAppAttributionRequired" type="dialog.Boolean" description="if app attribution is required"/>
+        <parameter name="useDialogMemoryForAppAttribution" type="dialog.Boolean" description="should app attribution use dialog memory"/>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+    </parameters>
+</cat>

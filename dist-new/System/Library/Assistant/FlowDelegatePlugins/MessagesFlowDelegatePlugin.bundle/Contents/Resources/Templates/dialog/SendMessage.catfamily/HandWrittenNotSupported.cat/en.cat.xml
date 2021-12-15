@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#HandWrittenNotSupported" locale="en">
+    <first>
+        <dialog condition="deviceState.isMac">Sorry, I can’t send handwritten messages on Mac.</dialog>
+        <dialog condition="deviceState.isCarPlay">I’m not able to send handwritten messages while you’re driving.</dialog>
+        <dialog condition="deviceState.isWatch">You can write notes in Messages.</dialog>
+        <dialog>I’m not able to send handwritten notes, but you can do that in Messages.</dialog>
+    </first>
+</cat>

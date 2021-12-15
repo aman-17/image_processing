@@ -1,0 +1,119 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../../shared/cam.scnz"
+  },
+  "emoji" : "😍",
+  "identifier" : "smiling_face_with_heart-shaped_eyes",
+  "options" : {
+    "duration" : 1
+  },
+  "physicsState" : {
+    "octopus" : {
+      "L_tentacleA_DYN" : {
+        "offset" : [
+          -0.63094902038574219,
+          -0.068351268768310547,
+          0.91760855913162231
+        ]
+      },
+      "L_tentacleB_DYN" : {
+        "offset" : [
+          -1.067622184753418,
+          -0.16980934143066406,
+          0.27586355805397034
+        ]
+      },
+      "L_tentacleC_DYN" : {
+        "offset" : [
+          -0.98645305633544922,
+          -0.15095329284667969,
+          -0.49887067079544067
+        ]
+      },
+      "L_tentacleD_DYN" : {
+        "offset" : [
+          -0.40405368804931641,
+          -0.015635490417480469,
+          -1.0398387908935547
+        ]
+      },
+      "R_tentacleA_DYN" : {
+        "offset" : [
+          -0.59644985198974609,
+          -0.21681737899780273,
+          0.91760331392288208
+        ]
+      },
+      "R_tentacleB_DYN" : {
+        "offset" : [
+          -1.0331315994262695,
+          -0.31827354431152344,
+          0.27586346864700317
+        ]
+      },
+      "R_tentacleC_DYN" : {
+        "offset" : [
+          -0.95196247100830078,
+          -0.29941463470458984,
+          -0.49887579679489136
+        ]
+      },
+      "R_tentacleD_DYN" : {
+        "offset" : [
+          -0.36955356597900391,
+          -0.16410207748413086,
+          -1.039839506149292
+        ]
+      }
+    }
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 0.38877007365226746,
+    "cheekSquint_L" : 0.5,
+    "cheekSquint_R" : 0.5,
+    "eyeBlink_L" : 0.25344356894493103,
+    "eyeBlink_R" : 0.25619840621948242,
+    "eyeSquint_L" : 0.10000000149011612,
+    "eyeSquint_R" : 0.10000000149011612,
+    "jawOpen" : 0.46424591541290283,
+    "mouthDimple_L" : 0.47382906079292297,
+    "mouthDimple_R" : 0.52341580390930176,
+    "mouthSmile_L" : 0.89242082834243774,
+    "mouthSmile_R" : 0.92058825492858887,
+    "neckOrientation" : [
+      0,
+      0,
+      0.068307608366012573,
+      0.99766433238983154
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "image" : "../../../shared/smiling_face_with_heart-shaped_eyes/heart.heic",
+      "position" : {
+        "x" : -0.25,
+        "y" : 0.065000000000000002,
+        "z" : 20
+      },
+      "rotation" : 0.62,
+      "scale" : 1.1000000000000001
+    },
+    {
+      "image" : "../../../shared/smiling_face_with_heart-shaped_eyes/heart.heic",
+      "position" : {
+        "x" : 0.125,
+        "y" : 0.13500000000000001,
+        "z" : 20
+      },
+      "rotation" : -0.27000000000000002,
+      "scale" : 1.1000000000000001
+    }
+  ]
+}

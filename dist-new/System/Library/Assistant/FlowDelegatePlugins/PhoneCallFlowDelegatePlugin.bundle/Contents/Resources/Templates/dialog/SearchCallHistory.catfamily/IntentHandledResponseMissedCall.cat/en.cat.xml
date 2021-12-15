@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#IntentHandledResponseMissedCall" locale="en">
+  <conditions>
+    <condition name="isSingleCallRecord" note="to display call vs calls">
+      <expression name="totalCallRecordCount" op="eq" value="1"/>
+    </condition>
+    
+    <condition name="isZeroCallRecord" note="check whether there are 0 call records">
+      <expression name="totalCallRecordCount" op="eq" value="0"/>
+    </condition>
+    
+    <condition name="hasCallRecords" note="check whether call records are greater than 0">
+      <expression name="callRecordCount" op="gt" value="0"/>
+    </condition>
+    
+    <condition name="isMaxCallRecords" note="check whether there are 25 call records">
+      <expression name="callRecordCount" op="eq" value="25"/>
+    </condition>
+    
+    <condition name="isSingularLatest" note="does call records have a single latest call">
+      <and>
+        <expression name="intent.isRequestForLatest"/>
+        <expression name="totalCallRecordCount" op="eq" value="1"/>
+      </and>
+    </condition>
+    
+    <condition name="hasRecipient" note="does the intent have a recipient">
+      <expression name="intent.recipient.list.length" op="gt" value="0"/>
+    </condition>
+  </conditions>
+  
+  <phrases>      
+      <first phrase="summary">
+        <text condition="isSingularLatest">here’s your most recent missed call</text>
+        <text condition="intent.isRequestForLatest">here are your most recent missed calls</text>
+        <text condition="isZeroCallRecord">I didn’t find any missed calls</text>
+        <text condition="isSingleCallRecord">I found one missed call</text>
+        <text condition="isMaxCallRecords">I found at least <var name="callRecordCount"/> missed calls</text>
+        <text>I found <var name="totalCallRecordCount"/> missed calls</text>
+      </first>
+      
+      <first phrase="summaryWithOptionalGrounding">
+          <text condition="hasCallRecords">Ok, <var name="user.groundingIfNeeded"/>, <phrase name="summary"/></text>
+          <text><transform mode="capitalizeFirst"><phrase name="summary"/></transform></text>
+      </first>
+      
+      <first phrase="contactsNames">
+          <text condition="hasCallRecords"><var name="intent.recipient.list" list="and"/></text>
+          <text condition="isZeroCallRecord"><var name="intent.recipient.list" list="or" /></text>
+      </first>
+      
+      <first phrase="recipientSummary">
+          <text condition="hasRecipient"> from <phrase name="contactsNames"/></text>
+      </first>
+    
+  </phrases>
+  
+  <first>
+    <dialog>
+        <opt><phrase name="summaryWithOptionalGrounding"/></opt><opt><phrase name="recipientSummary"/></opt>.
+    </dialog>
+  </first>
+</cat>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <phrases>
+        <switch phrase="labelForPhone" value="personHandleLabel">
+            <text case="'com.apple.intents.PersonHandleLabel.Home'">Home Phone</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Work'">Work Phone</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Mobile'">Mobile Phone</text>
+            <text case="'com.apple.intents.PersonHandleLabel.iPhone'">iPhone</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Main'">Main Phone</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Home_Fax'">Home Fax</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Work_Fax'">Work Fax</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Pager'">Pager</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Other'">Other</text>
+            <text><var name="label"/> Phone</text>
+        </switch>
+        <switch phrase="labelForEmail" value="personHandleLabel">
+            <text case="'com.apple.intents.PersonHandleLabel.Home'">Home Email</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Work'">Work Email</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Mobile'">Mobile Email</text>
+            <text case="'com.apple.intents.PersonHandleLabel.iPhone'">iPhone</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Main'">Main Email</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Home_Fax'">Home Fax</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Work_Fax'">Work Fax</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Pager'">Pager</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Other'">Other</text>
+            <text><var name="label"/> Email</text>
+        </switch>
+    </phrases>
+    <first>
+        <switch value="type">
+            <dialog case="'PhoneNumber'"><phrase name="labelForPhone"/></dialog>
+            <dialog case="'EmailAddress'"><phrase name="labelForEmail"/></dialog>
+            <dialog><var name="label"/></dialog>
+        </switch>
+    </first>
+  
+</cat>
+

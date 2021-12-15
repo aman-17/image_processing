@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="UpdateMediaAffinityIntent#ConfirmAffinityType" locale="en">
+    <conditions>
+        <condition name="hasMediaItems">
+          <expression name="mediaItemCount" op="ne" value="0"/>
+        </condition>
+        
+        <condition name="artistNotEmpty">
+            <not>
+                <expression name="artist" op="empty"/>
+            </not>
+        </condition>
+        <condition name="titleNotEmpty">
+            <not>
+                <expression name="title" op="empty"/>
+            </not>
+        </condition>
+        
+        <condition name="isLike">
+            <expression name="affinityType" op="eq" value="'LIKE'"/>
+        </condition>
+        <condition name="isDislike">
+            <expression name="affinityType" op="eq" value="'DISLIKE'"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="title">
+            <text>
+                <print>‘<var name="title"/>’</print>
+                <speak><say-as interpret-as="music"><var name="title"/></say-as></speak>
+            </text>
+        </first>
+        
+        <first phrase="byArtist">
+            <text condition="artistNotEmpty"><break time="0ms"/> by <say-as interpret-as="music"><var name="artist"/></say-as></text>
+            <text/>
+        </first>
+        
+        <first phrase="titleByArtist">
+            <text condition="titleNotEmpty"><phrase name="title"/><phrase name="byArtist"/></text>
+            <text condition="artistNotEmpty"><say-as interpret-as="music"><var name="artist"/></say-as></text>
+            <text>that</text>
+        </first>
+        <first phrase="mediaItemToQueue">
+            <text condition="hasMediaItems"><phrase name="titleByArtist"/></text>
+            <text>that</text>
+        </first>
+        
+        <first phrase="updateVerb">
+            <text condition="isLike">like</text>
+            <text condition="isDislike">dislike</text>
+            <text>update</text>
+        </first>
+    </phrases>
+    <first>
+      <dialog>Just to confirm, you want to <phrase name="updateVerb"/> <phrase name="titleByArtist"/> on <var name="app.localizedName"/>, right?</dialog>
+    </first>
+</cat>

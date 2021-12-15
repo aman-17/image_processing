@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayFirstPrediction" locale="en">
+    <conditions>
+        <condition name="titleAndArtist">
+            <and>
+                <expression name="title"/>
+                <expression name="artist"/>
+            </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="contentTitle">
+            <text condition="titleAndArtist"> ‘<var name="title"/>‘ by <var name="artist"/></text>
+            <text condition="title"> ‘<var name="title"/>‘</text>
+            <text condition="artist"> <var name="artist"/></text>
+            <text></text>
+        </first>
+    </phrases>
+    <first>
+        <dialog>Now playing<phrase name="contentTitle"/> on <var name="app.localizedName"/>. You can always ask me to switch to a different app.<break time="100ms"/> Your choices will help me learn the ones you like.</dialog>
+    </first>
+</cat>

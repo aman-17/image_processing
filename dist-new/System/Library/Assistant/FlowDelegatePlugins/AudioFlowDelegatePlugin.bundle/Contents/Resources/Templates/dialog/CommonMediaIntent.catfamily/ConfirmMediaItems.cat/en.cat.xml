@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#ConfirmMediaItems" locale="en">
+    <conditions>
+        <condition name="isPlay">
+            <expression name="intentType" op="eq" value="'PLAY'"/>
+        </condition>
+        <condition name="isSearch">
+            <expression name="intentType" op="eq" value="'SEARCH'"/>
+        </condition>
+        <condition name="isAdd">
+            <expression name="intentType" op="eq" value="'ADD'"/>
+        </condition>
+        <condition name="isUpdate">
+            <or>
+                <expression name="intentType" op="eq" value="'LIKE'"/>
+                <expression name="intentType" op="eq" value="'DISLIKE'"/>
+            </or>
+        </condition>
+        
+        <condition name="artistToConfirmNotEmpty">
+            <not>
+                <expression name="artistToConfirm" op="empty"/>
+            </not>
+        </condition>
+        <condition name="titleToConfirmNotEmpty">
+            <not>
+                <expression name="titleToConfirm" op="empty"/>
+            </not>
+        </condition>
+        
+        <condition name="isLike">
+            <expression name="intentType" op="eq" value="'LIKE'"/>
+        </condition>
+        <condition name="isDislike">
+            <expression name="intentType" op="eq" value="'DISLIKE'"/>
+        </condition>
+    </conditions>
+      <phrases>
+          <first phrase="titleToConfirm">
+              <text>
+                  <print>‘<var name="titleToConfirm"/>’</print>
+                  <speak><say-as interpret-as="music"><var name="titleToConfirm"/></say-as></speak>
+              </text>
+          </first>
+          <first phrase="artistToConfirm">
+              <text><say-as interpret-as="music"><var name="artistToConfirm"/></say-as></text>
+          </first>
+          <first phrase="mediaItemToConfirm">
+              <text condition="titleToConfirmNotEmpty"><phrase name="titleToConfirm"/><phrase name="byArtistToConfirm"/></text>
+              <text condition="artistToConfirmNotEmpty"><phrase name="artistToConfirm"/></text>
+              <text>that</text>
+          </first>
+          <first phrase="byArtistToConfirm">
+              <text condition="artistToConfirmNotEmpty"> by <var name="artistToConfirm"/></text>
+          </first>
+          
+          <first phrase="updateVerb">
+              <text condition="isLike">like</text>
+              <text condition="isDislike">dislike</text>
+              <text>update</text>
+          </first>
+      </phrases>
+      <first>
+          <dialog condition="isPlay">Just to confirm, you’d like to play <phrase name="mediaItemToConfirm"/> from <var name="app.localizedName"/>, right?</dialog>
+          <dialog condition="isAdd">Just to confirm, you’d like to add <phrase name="mediaItemToConfirm"/> from <var name="app.localizedName"/>, right?</dialog>
+          <dialog condition="isSearch">Just to confirm, you’d like to find <phrase name="mediaItemToConfirm"/> from <var name="app.localizedName"/>, right?</dialog>
+          <dialog condition="isUpdate">Just to confirm, you’d like to <phrase name="updateVerb"/> <phrase name="mediaItemToConfirm"/> from <var name="app.localizedName"/>, right?</dialog>
+          <dialog>To confirm, you want  <phrase name="mediaItemToConfirm"/> from <var name="app.localizedName"/>, right?</dialog>
+      </first>
+</cat>

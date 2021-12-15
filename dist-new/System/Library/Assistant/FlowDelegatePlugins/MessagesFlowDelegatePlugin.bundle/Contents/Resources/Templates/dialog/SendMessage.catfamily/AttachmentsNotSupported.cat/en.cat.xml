@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#AttachmentsNotSupported" locale="en">
+    <all>
+        <dialog>Sorry, I can’t send messages with attachments.</dialog>
+    </all>
+</cat>

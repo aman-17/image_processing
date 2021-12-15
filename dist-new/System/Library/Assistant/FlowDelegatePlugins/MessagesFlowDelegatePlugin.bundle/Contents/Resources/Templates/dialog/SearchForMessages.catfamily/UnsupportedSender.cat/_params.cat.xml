@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#UnsupportedSender">
+    <meta name="description" value="Unsupported value for sender"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="app" type="messages.App" description="The App object."/>
+        <parameter name="unsupportedSender" type="dialog.Person" description="The unsupported sender in the intent"/>
+    </parameters>
+
+</cat>

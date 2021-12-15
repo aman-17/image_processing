@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AddMediaIntent#UnsupportedMediaItemsAlreadyInLibrary">
+    <meta name="description" value="Dialog for rendering AddMediaIntent unsuported parameter value"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+        <parameter name="title" type="dialog.String" description="title of the collection" profanityFilter="yes"/>
+        <parameter name="isPodcast" type="dialog.Boolean" description="Is this subscribe to podcast request?"/>
+    </parameters>
+</cat>

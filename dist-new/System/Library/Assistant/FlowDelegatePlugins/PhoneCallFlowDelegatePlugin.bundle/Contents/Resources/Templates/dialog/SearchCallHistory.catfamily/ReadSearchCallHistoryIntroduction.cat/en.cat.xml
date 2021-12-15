@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ReadSearchCallHistoryIntroduction" locale="en">
+  <conditions>      
+      <condition name="showAppName" note="should we show the calling app name?">
+        <and>
+          <expression name="appName" op="defined"/>
+          <not><expression name="isFirstPartyApp"/></not>
+        </and>
+      </condition>
+      
+      <condition name="hasCallRecords" note="check whether call records are greater than 0">
+        <expression name="callRecordCount" op="gt" value="0"/>
+      </condition>
+      
+      <condition name="isZeroCallRecord" note="check whether there are 0 call records">
+        <expression name="totalCallRecordCount" op="eq" value="0"/>
+      </condition>
+      
+      <condition name="isMaxCallRecords" note="check whether there are 25 call records">
+        <expression name="callRecordCount" op="eq" value="25"/>
+      </condition>
+      
+      <condition name="hasRecipient" note="does the intent have a recipient">
+        <expression name="intent.recipient.list.length" op="gt" value="0"/>
+      </condition>
+      
+  </conditions>
+
+  <phrases>
+      <first phrase="optionalGrounding">
+          <text>Ok, <var name="user.groundingIfNeeded"/>, </text>
+      </first>
+      
+      <first phrase="callType">
+        <text condition="intent.isRequestForFaceTime">FaceTime </text>
+        <text condition="showAppName"><var name="appName"/> </text>
+        <text condition="intent.isRequestForVideo">video </text>
+      </first>
+      
+      <first phrase="summary">
+        <text condition="isZeroCallRecord">I didn’t find any <opt><phrase name="callType"/></opt>calls</text>
+        <text condition="isMaxCallRecords">I found at least <var name="callRecordCount" number="asWords"/> <opt><phrase name="callType"/></opt>calls</text>
+        <text>I found <var name="totalCallRecordCount" number="asWords"/> <opt><phrase name="callType"/></opt>calls</text>
+      </first>
+      
+      <switch phrase="contactRole" value="intent.getContactRole">
+          <text case="'from'"> from </text>
+          <text case="'to'"> to </text>
+          <text> with </text>
+      </switch>
+      
+      <first phrase="contactsNames">
+          <text condition="hasCallRecords"><var name="intent.recipient.list" list="and"/></text>
+          <text condition="isZeroCallRecord"><var name="intent.recipient.list" list="or" /></text>
+      </first>
+      
+      <first phrase="recipientSummary">
+          <text condition="hasRecipient"><phrase name="contactRole"/><phrase name="contactsNames"/></text>
+      </first>
+  </phrases>
+
+  <first>
+      <dialog><opt><phrase name="optionalGrounding"/></opt><phrase name="summary"/><opt><phrase name="recipientSummary"/></opt>.</dialog>
+  </first>
+
+</cat>

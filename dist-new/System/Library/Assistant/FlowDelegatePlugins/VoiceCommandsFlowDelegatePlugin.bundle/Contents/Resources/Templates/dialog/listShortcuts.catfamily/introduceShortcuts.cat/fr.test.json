@@ -1,0 +1,17 @@
+{
+    "context": {
+        "shortcutCount": "3",
+        "request": {
+            "grounding": true,
+            "multiuser": true,
+            "pluginName": "phonePlugin",
+            "voiceGender": "female",
+            "parameters": {},
+            "globalParameters": {},
+            "test": true
+        }
+    },
+    "assertions": [{
+        "contains": "3 raccourcis"
+    }]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="Messages#NoMeCard">
+    <meta name="description" value="Tells the user that me card is not set"/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="deviceState" type="sirikit.DeviceState" description="The device state"/>
+    </parameters>
+</cat>
+

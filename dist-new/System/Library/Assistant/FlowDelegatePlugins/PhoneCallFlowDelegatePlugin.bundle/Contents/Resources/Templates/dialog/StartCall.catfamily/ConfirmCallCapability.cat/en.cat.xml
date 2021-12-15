@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+  <conditions>
+      <condition name="isUnknownCallCapability">
+          <or>
+              <expression name="callCapability" op="eq" value="'UNKNOWN'"/>
+              <expression name="callCapability" op="empty"/>
+          </or>
+      </condition>
+  </conditions>
+  <phrases>
+      <switch phrase="callType" value="callCapability">
+          <text case="'AUDIO_CALL'">an audio call</text>
+          <text case="'VIDEO_CALL'">a video call</text>
+      </switch>
+  </phrases>
+  <first>
+      <dialog id="Unknown" condition="isUnknownCallCapability">There is nothing to confirm for call capability.</dialog>
+      <dialog>Just to confirm, you would like to make <phrase name="callType"/>?</dialog>
+  </first>
+</cat>

@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw12240\paperh15840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Ce este extensia pentru folosirea cheii?
+\f1\b0 \
+Extensia pentru folosirea cheii (KUE) define\uc0\u537 te modul \'een care poate fi utilizat un certificat. Pute\u539 i utiliza o extensie pentru folosirea cheii pentru a restric\u539 iona opera\u539 iile pe care le poate efectua cheia public\u259  dintr-un certificat. De exemplu, pute\u539 i crea un certificat pentru a semna e-mailuri, dar nu pentru a le cripta. Certificatul pentru folosirea cheii extinse (EKU) este similar cu KUE, dar define\u537 te un certificat \'een func\u539 ie de \'93scop\'94 (de exemplu, de a semna r\u259 spunsuri OCSP, de a identifica un client SSL, \u537 .a.m.d.). EKU este mai nou \u537 i mai extensibil dec\'e2t KUE, astfel c\u259  este frecvent considerat mecanismul principal de restric\u539 ie a utiliz\u259 rilor. Pute\u539 i configura extensia pentru folosirea cheii extinse \'eentr-o etap\u259  ulterioar\u259  \'een acest asistent.\
+\
+Pute\uc0\u539 i utiliza urm\u259 toarele extensii pentru folosirea cheii:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 Semn\uc0\u259 tur\u259 :\ulnone  Selecta\uc0\u539 i aceast\u259  op\u539 iune c\'e2nd cheia public\u259  a certificatului este utilizat\u259  cu un mecanism de semn\u259 tur\u259  digital\u259  pentru a admite alte servicii de securitate \'een afar\u259  de semnarea certificatelor.\
+\
+\ul Nerepudiere:\ulnone  Selecta\uc0\u539 i aceast\u259  op\u539 iune c\'e2nd cheia public\u259  a certificatului este utilizat\u259  pentru verificarea semn\u259 turilor digitale utilizate pentru a oferi un serviciu de nerepudiere care protejeaz\u259  \'eempotriva falsei neg\u259 ri a anumitor ac\u539 iuni. Nerepudierea asigur\u259  c\u259  o parte a unui conflict nu poate repudia sau infirma valabilitatea unei declara\u539 ii sau a unui contract.\'a0\
+\
+\ul Cifrarea cheilor\ulnone : Selecta\uc0\u539 i aceast\u259  op\u539 iune c\'e2nd cheia public\u259  a certificatului este utilizat\u259  pentru criptarea unei chei, indiferent de scop. Cifrarea cheilor este utilizat\u259  pentru transportul cheilor \u537 i \'eempachetarea cheilor (sau administrarea cheilor).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Cifrarea datelor\ulnone : Selecta\uc0\u539 i aceast\u259  op\u539 iune c\'e2nd cheia public\u259  a certificatului este utilizat\u259  pentru cifrarea altor date despre utilizator \'een afara cheilor criptografice.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Acord cheie\ulnone : Selecta\uc0\u539 i aceast\u259  op\u539 iune c\'e2nd cheia public\u259  a certificatului este utilizat\u259  pentru acordul cheilor. Protocolul de acord al cheilor (cunoscut \u537 i ca protocolul de schimb al cheilor) este utilizat c\'e2nd dou\u259  p\u259 r\u539 i convin asupra unei chei de utilizat \'eentr-un sistem criptografic cu cheie secret\u259  \'een care cheile pot fi partajate liber \u537 i \'een siguran\u539 \u259  \'een orice mediu nesigur. (De exemplu, \'een cazul \'een care cheile Diffie-Hellman sunt utilizate pentru administrarea cheilor, aceast\u259  extensie este selectat\u259 .)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Semnarea certificatelor\ulnone : Selecta\uc0\u539 i aceast\u259  op\u539 iune c\'e2nd cheia public\u259  a certificatului este utilizat\u259  pentru verificarea unei semn\u259 turi \'een certificate cheie publice. Certificatele cu aceast\u259  extensie sunt certificate ale autorit\u259 \u539 ii de certificare (CA). Dac\u259  aceast\u259  extensie este alocat\u259  unui certificat, trebuie selectat\u259  de asemenea op\u539 iunea \'93Utilizeaz\u259  acest certificat ca autoritate de certificare\'94 \'een extensia pentru constr\'e2ngeri de baz\u259  (BCE). BCE este afi\u537 at ulterior \'een acest asistent.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Semnare CRL\ulnone : Selecta\uc0\u539 i aceast\u259  op\u539 iune c\'e2nd cheia public\u259  a certificatului este utilizat\u259  pentru verificarea unei semn\u259 turi \'eentr-o list\u259  de revocare a certificatelor (CRL).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Numai cifrare\ulnone : Selecta\uc0\u539 i aceast\u259  op\u539 iune doar c\'e2nd este definit \u537 i acordul cheie. Indic\u259  urm\u259 torul fapt: cheia public\u259  a certificatului poate fi utilizat\u259  pentru criptarea datelor \'een timp ce se efectueaz\u259  acordul cheilor.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Numai decifrare:\'a0\ulnone  Selecta\uc0\u539 i aceast\u259  op\u539 iune c\'e2nd este definit \u537 i acordul cheilor, pentru a indica urm\u259 torul fapt: cheia public\u259  a certificatului poate fi utilizat\u259  pentru decriptarea datelor \'een timp ce se efectueaz\u259  acordul cheilor.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Ce \'eenseamn\uc0\u259  \'93Aceast\u259  extensie este critic\u259 \'94?
+\f1\b0 \
+Aceasta este cunoscut\uc0\u259  \u537 i drept \'93indicatorul de nivel critic\'94. Este un fanion care indic\u259  software-ului care utilizeaz\u259  certificatul c\'e2t este de precaut s\u259  se ignore extensia pentru folosirea cheii dac\u259  nu este recunoscut\u259 . Certificatul va fi respins dac\u259  software-ul nu recunoa\u537 te o \'93extensie critic\u259 \'94.}

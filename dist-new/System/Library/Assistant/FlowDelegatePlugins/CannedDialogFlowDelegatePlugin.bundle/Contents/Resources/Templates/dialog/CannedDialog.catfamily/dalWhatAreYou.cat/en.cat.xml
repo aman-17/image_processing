@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalWhatAreYou" xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <random>
+        <dialog>I’m Siri, your virtual assistant.</dialog>
+        <dialog>I’m a virtual assistant, not an actual person. But you can still talk to me.</dialog>
+        <dialog>I’m not a person, or a robot. I’m software, here to help.</dialog>
+    </random>
+</cat>

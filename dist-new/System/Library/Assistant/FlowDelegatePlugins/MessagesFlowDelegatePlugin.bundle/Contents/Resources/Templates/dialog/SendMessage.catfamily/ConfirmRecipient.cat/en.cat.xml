@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ConfirmRecipient" locale="en">
+    
+    <first>
+        <dialog condition="valueToConfirm">To confirm, you’d like to send that to <var name="valueToConfirm"/>?</dialog>
+        <dialog>To confirm, you want to send a message to the specified recipient?</dialog>
+    </first>
+    
+</cat>

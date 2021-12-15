@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalWhatIsMyFavorite" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+    <random>
+        <dialog>I don’t know.</dialog>
+        <dialog>
+            <print>I can’t read your mind.</print>
+            <speak>I can’t read your mind.<break time="1500ms"/>Not yet, anyway.</speak>
+        </dialog>
+        <dialog>I can do many things, but reading your mind isn’t one of them.</dialog>
+    </random>
+</cat>

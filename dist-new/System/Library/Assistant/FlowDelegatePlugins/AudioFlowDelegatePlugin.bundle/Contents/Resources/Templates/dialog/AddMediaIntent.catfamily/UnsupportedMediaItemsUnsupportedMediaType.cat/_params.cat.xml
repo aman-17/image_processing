@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AddMediaIntent#UnsupportedMediaItemsUnsupportedMediaType">
+    <meta name="description" value="Dialog for rendering AddMediaIntent unsuported parameter value"/>
+    <meta name="category" value="Incomplete"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="mediaType" type="dialog.String" description="Kind of media"/>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+    </parameters>
+</cat>

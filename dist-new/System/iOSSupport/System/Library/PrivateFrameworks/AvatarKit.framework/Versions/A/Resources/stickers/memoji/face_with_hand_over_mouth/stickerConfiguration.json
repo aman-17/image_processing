@@ -1,0 +1,41 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../shared/cam.scnz"
+  },
+  "emoji" : "🤭",
+  "identifier" : "face_with_hand_over_mouth",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 0.60054630041122437,
+    "browOuterUp_L" : 0.44247788190841675,
+    "browOuterUp_R" : 0.45427733659744263,
+    "eyeWide_L" : 0.77655041217803955,
+    "eyeWide_R" : 0.78284484148025513,
+    "neckOrientation" : [
+      -2.0816681711721685e-16,
+      0,
+      0,
+      1
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "palettes" : [
+        {
+          "material" : "head_MAT",
+          "palette" : "skin"
+        }
+      ],
+      "scene" : "hand_over_mouth.scnz"
+    }
+  ]
+}

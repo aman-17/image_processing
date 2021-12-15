@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Apa itu Ekstensi Penggunaan Kunci?
+\f1\b0 \
+Ekstensi Penggunaan Kunci (KUE) menentukan cara sertifikat dapat digunakan. Anda dapat menggunakan ekstensi penggunaan kunci untuk membatasi operasi mana yang dapat dilakukan sertifikat dengan kunci publik di dalamnya. Misalnya, Anda dapat membuat sertifikat untuk menandatangani email, tetapi tidak untuk mengenkripsinya. Sertifikat Penggunaan Kunci yang Diperpanjang (EKU) serupa dengan KUE, tetapi EKU menentukan sertifikat berdasarkan \'93tujuan\'94 (misalnya, untuk menandatangani respons OCSP, mengidentifikasi klien SSL, dan seterusnya). EKU lebih baru dan lebih dapat diperpanjang daripada KUE, sehingga sering dianggap sebagai mekanisme pembatasan penggunaan \'93terbaik\'94. Anda dapat mengonfigurasi ekstensi Penggunaan Kunci yang Diperpanjang nanti di asisten ini.\
+\
+Anda dapat menggunakan Ekstensi Penggunaan Kunci berikut ini:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 Tanda Tangan:\ulnone  Pilih ini saat kunci publik sertifikat digunakan dengan mekanisme tanda tangan digital untuk mendukung layanan keamanan selain penandatanganan sertifikat.\
+\
+\ul Tanpa Penolakan:\ulnone  Pilih ini saat kunci publik sertifikat digunakan untuk memverifikasi tanda tangan digital yang digunakan untuk menyediakan layanan tanpa penolakan yang melindungi dari penolakan yang tidak tepat terhadap beberapa tindakan. Tanpa Penolakan memastikan pihak yang berselisih tidak menolak atau menyanggah keabsahan pernyataan atau kontrak.\'a0\
+\
+\ul Penulisan Kode Kunci\ulnone : Pilih ini saat kunci publik sertifikat digunakan untuk mengenkripsi kunci untuk tujuan apa pun. Penulisan kode kunci digunakan untuk transpor kunci dan pembungkusan kunci (atau manajemen kunci).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Penulisan Kode Data\ulnone : Pilih ini saat kunci publik sertifikat digunakan untuk menulis kode data pengguna selain kunci kriptografik.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Perjanjian Kunci\ulnone : Pilih ini saat kunci publik sertifikat digunakan untuk perjanjian kunci. Protokol perjanjian kunci (juga dikenal sebagai protokol pertukaran kunci) digunakan saat dua pihak setuju mengenai satu kunci yang akan digunakan di sistem kripto kunci rahasia tempat kunci dapat dibagikan dengan bebas dan aman melalui media apa pun yang tidak aman. (Misalnya, jika kunci Diffie-Hellman digunakan untuk manajemen kunci, ekstensi ini akan diatur.)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Penandatanganan Sertifikat\ulnone : Pilih ini saat kunci publik sertifikat digunakan untuk memverifikasi tanda tangan di sertifikat kunci publik. Sertifikat dengan ekstensi ini adalah sertifikat Otoritas Sertifikat (CA).\'a0 Jika ekstensi ini ditetapkan untuk sebuah sertifikat, \'93Gunakan sertifikat ini sebagai Otoritas Sertifikat\'94\'a0 di Ekstensi Batasan Dasar (BCE) juga harus diatur. BCE ditampilkan di asisten ini nanti.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Penandatanganan CRL\ulnone : Pilih ini saat kunci publik sertifikat digunakan untuk memverifikasi tanda tangan di Daftar Pencabutan Sertifikat (CRL).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Hanya Tulis Kode\ulnone : Pilih ini hanya saat Perjanjian Kunci juga diatur.\'a0 Hal ini menunjukkan bahwa kunci publik sertifikat dapat digunakan untuk menulis kode data saat melakukan perjanjian kunci.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Hanya Baca Kode:\'a0\ulnone  Pilih ini saat Perjanjian Kunci juga diatur. Hal ini menunjukkan bahwa kunci publik sertifikat dapat digunakan untuk membaca kode data saat melakukan perjanjian kunci.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Apa yang dimaksud dengan \'93Ekstensi ini kritis\'94?
+\f1\b0 \
+Ini juga dikenal sebagai \'93indikator kekritisan.\'94 Ini adalah bendera yang menginstruksikan perangkat lunak yang menggunakan sertifikat bahwa Ekstensi Penggunaan Kunci aman diabaikan jika tidak dikenali. Sertifikat akan ditolak jika perangkat lunak tidak mengenali \'93ekstensi kritis\'94.}

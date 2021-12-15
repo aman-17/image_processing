@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#IntentConfirmation" locale="en">
+  <conditions>
+    <condition name="isFaceTime">
+      <expression name="intent.preferredCallProvider" op="eq" value="'FACETIME_PROVIDER'"/>
+    </condition>
+    <condition name="hasContacts">
+      <expression name="intent.contacts.list.length" op="gt" value="0"/>
+    </condition>
+    <condition name="hasHandleLabels">
+      <expression name="intent.contacts.hasHandleLabels"/>
+    </condition>
+  </conditions>
+
+  <phrases>
+    <first phrase="callVerb">
+      <text condition="isFaceTime">FaceTime</text>
+      <text>call</text>
+    </first>
+    <first phrase="contactsListForCall">
+      <text condition="hasHandleLabels"><var list="and" itemformat="{toString} - {personHandle.label}" name="intent.contacts.list"/></text>
+      <text><var list="and" itemformat="{toString}" name="intent.contacts.list"/></text>
+    </first>
+  </phrases>
+  <first>
+      <dialog id="ConfirmContact" condition="hasContacts">Just to confirm — you’d like to <phrase name="callVerb"/> <phrase name="contactsListForCall"/>?</dialog>
+    <dialog id="NoContactToConfirm">Just to confirm — you’d like to make this call?</dialog>
+  </first>
+</cat>

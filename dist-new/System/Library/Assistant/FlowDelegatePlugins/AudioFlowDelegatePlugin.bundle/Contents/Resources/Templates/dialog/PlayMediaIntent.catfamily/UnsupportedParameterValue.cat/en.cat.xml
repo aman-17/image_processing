@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#UnsupportedParameterValue" locale="en">
+    <conditions>
+        <condition name="attributionWithDialogMemory" note="attribution required using dialog memory">
+            <and>
+                <expression name="app.localizedName" op="nonempty"/>
+                <expression name="isAppAttributionRequired"/>
+                <expression name="useDialogMemoryForAppAttribution"/>
+            </and>
+        </condition>
+        <condition name="appSpecified">
+            <expression name="app.localizedName" op="nonempty"/>
+        </condition>
+        <condition name="titleAndArtist" note="title and artist present">
+            <and>
+                <expression name="title" op="nonempty"/>
+                <expression name="artist" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="titleTooLong" note="title">
+            <expression name="title.length" op="gt" value="29"/>
+        </condition>
+        <condition name="parameterIsMediaItems">
+            <expression name="parameter" op="eq" value="'mediaItems'"/>
+        </condition>
+        <condition name="parameterIsPlaybackQueueLocation">
+            <expression name="parameter" op="eq" value="'playbackQueueLocation'"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="title">
+            <text>
+                <print>‘<var name="title"/>’</print>
+                <speak><say-as interpret-as="music"><var name="title"/></say-as></speak>
+            </text>
+        </first>
+        <first phrase="content">
+            <text condition="isPersonalized">that</text>
+            <text condition="titleTooLong">that</text>
+            <text condition="titleAndArtist"><phrase name="title"/> by <say-as interpret-as="music"><var name="artist"/></say-as></text>
+            <text condition="title"><phrase name="title"/></text>
+            <text condition="artist"><say-as interpret-as="music"><var name="artist"/></say-as></text>
+            <text>that</text>
+        </first>
+        <first phrase="onAppIfSpecified">
+            <text condition="attributionWithDialogMemory"><opt> on <var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="parameterIsMediaItems"><opt> on <var name="app.localizedName"/></opt></text>
+            <text condition="parameterIsPlaybackQueueLocation"><opt> in <var name="app.localizedName"/></opt></text>
+            <text/>
+        </first>
+        <first phrase="appIfSpecified">
+            <text condition="attributionWithDialogMemory"><opt><var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="appSpecified"><opt><var name="app.localizedName"/></opt></text>
+            <text/>
+        </first>
+        <first phrase="appMustBeSpecified">
+            <text condition="appSpecified"><opt><var name="app.localizedName"/></opt></text>
+            <text>That app</text>
+        </first>
+        <first phrase="hint">
+            <text condition="space"><opt><var name="space" ground="TwiceThisWeek"/>You can ask for a radio station, or ask me to use a specific app.</opt></text>
+        </first>
+    </phrases>
+    <first>
+        <switch value="parameter">
+            <dialog case="'nonSubOnAppleMusic'">I couldn’t find <phrase name="content"/> in your <phrase name="appIfSpecified"/> library.<phrase name="hint"/></dialog>
+            <dialog case="'mediaItems'">I didn’t find <phrase name="content"/><phrase name="onAppIfSpecified"/>.</dialog>
+            <dialog case="'playShuffled'"><phrase name="appMustBeSpecified"/> doesn’t support shuffle.</dialog>
+            <dialog case="'playbackRepeatMode'"><phrase name="appMustBeSpecified"/> doesn’t support repeat.</dialog>
+            <dialog case="'resumePlayback'"><phrase name="appMustBeSpecified"/> doesn’t support resuming.</dialog>
+            <dialog case="'playbackQueueLocation'">I couldn’t add that to be played next<phrase name="onAppIfSpecified"/>.</dialog>
+            <dialog case="'playbackSpeed'"><phrase name="appMustBeSpecified"/> doesn’t support changing playback speed.</dialog>
+            <dialog><phrase name="appMustBeSpecified"/> doesn’t support that.</dialog>
+        </switch>
+    </first>
+</cat>

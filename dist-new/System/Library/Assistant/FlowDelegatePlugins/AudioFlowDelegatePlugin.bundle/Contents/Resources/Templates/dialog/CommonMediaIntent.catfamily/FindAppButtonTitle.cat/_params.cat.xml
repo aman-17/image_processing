@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#FindAppButtonTitle">
+    <meta name="description" value="Used as the title for the button when users don't have the requested app."/>
+    <meta name="category" value="UsedForSnippet"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+    </parameters>
+</cat>

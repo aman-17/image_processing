@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalWoW">
+    <all>
+        <random phrase="">
+            <dialog>Wowowowowowow!</dialog>
+            <dialog>Woweeeee!</dialog>
+            <dialog>Wowza.</dialog>
+            <dialog>Wow! A man, a plan, a canal, Panama. Wow!</dialog>
+        </random>
+    </all>
+</cat>

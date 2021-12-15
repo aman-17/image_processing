@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#DisambiguateSlotValue" locale="en">
+    <random>
+        <dialog>Which do you want?</dialog>
+        <dialog>Which one?</dialog>
+    </random>
+</cat>

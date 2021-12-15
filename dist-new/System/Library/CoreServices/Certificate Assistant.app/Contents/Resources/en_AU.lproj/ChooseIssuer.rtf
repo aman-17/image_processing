@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\partightenfactor0
+
+\f0\b\fs24 \cf0 What is an issuer?
+\b0 \
+An issuer is an Certificate Authority that signs and issues certificates. It will vouch for the certificate it signs as genuine. Only a valid issuer can properly sign certificates. A self-signed root Certificate Authority signs and issues itself a certificate. A intermediate Certificate Authority can be signed by another a signed-signed root CA or an intermediate CA. This chain of certificates is known as a certification path or certificate chain.  \
+\
+
+\b What is a certificate chain?
+\b0 \
+A certificate chain is composed of a root certificate at the top, followed by any intermediate certificates, ending up with the leaf certificate at the bottom. A certificate chain at a minimum contains a root and a leaf and no intermediates.\
+\
+
+\b What is an intermediate Certificate Authority (intermediate certificate)?
+\b0 \
+An intermediate CA issues certificates and is signed by another intermediate CA or self-signed root CA. \
+\
+
+\b What is a leaf certificate?
+\b0 \
+A leaf certificate is the last certificate in the certificate chain. It is the certificate actually being used by the user to perform operations.}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayNewsPodcast">
+    <meta name="description" value="General purpose dialog for rendering PlayMediaIntent success cases"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="title" type="dialog.String" description="Title of the podcast" profanityFilter="yes"/>
+        <parameter name="topic" type="dialog.String" description="Topic of the news" semanticConcept="musicGenre"/>
+        <parameter name="provider" type="dialog.String" description="Provider of the news"/>
+        <parameter name="alternativeProviders" type="dialog.String[]" description="Alternatives of providers"/>
+        <parameter name="numberOfAlternativeProviders" type="dialog.Number" description="Number of alternative providers"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+        <parameter name="wha" type="audio.WholeHouseAudio" description="WHA Params"/>
+    </parameters>
+</cat>

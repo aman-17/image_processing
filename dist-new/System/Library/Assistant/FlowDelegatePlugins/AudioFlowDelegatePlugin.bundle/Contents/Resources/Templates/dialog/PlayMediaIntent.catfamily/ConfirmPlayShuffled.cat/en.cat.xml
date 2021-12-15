@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#ConfirmPlayShuffled" locale="en">
+      <first>
+          <dialog condition="isShuffle">Just to confirm, you’d like to play that shuffled, right?</dialog>
+          <dialog>Just to confirm, you don't want to shuffle?</dialog>
+      </first>
+</cat>

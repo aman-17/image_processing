@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutResume#confirmSlotValue">
+    <meta name="category" value="Confirm"/>
+    <meta name="readyForLoc" value="true"/>
+    <meta name="description" value="Dialog for confirm slot value"/>
+    <parameters>
+        <parameter name="slot" type="dialog.String"/>
+        <parameter name="workoutName" type="dialog.String"/>
+    </parameters>
+</cat>

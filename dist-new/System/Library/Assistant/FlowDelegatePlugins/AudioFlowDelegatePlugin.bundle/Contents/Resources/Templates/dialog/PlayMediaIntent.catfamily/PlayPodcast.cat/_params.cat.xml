@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayPodcast">
+    <meta name="description" value="General purpose dialog for rendering PlayMediaIntent success cases"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="title" type="dialog.String" description="Title of the podcast" profanityFilter="yes"/>
+        <parameter name="episodeTitle" type="dialog.String" description="Title of the episode" profanityFilter="yes"/>
+        <parameter name="mediaType" type="dialog.String" description="MediaType of the content"/>
+        <parameter name="isOldest" type="dialog.Boolean" description="If the user specified oldest episodes first"/>
+        <parameter name="isNewest" type="dialog.Boolean" description="If the user specified newest episodes first"/>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="isGrounding" type="dialog.Boolean" description="if user grounding is required"/>
+        <parameter name="isDialogDriven" type="dialog.Boolean" description="if interaction type is dialog driven"/>
+        <parameter name="isAppSpecified" type="dialog.Boolean" description="if user specified app"/>
+        <parameter name="isAppAttributionRequired" type="dialog.Boolean" description="if app attribution is required"/>
+        <parameter name="useDialogMemoryForAppAttribution" type="dialog.Boolean" description="should app attribution use dialog memory"/>
+        <parameter name="fallbackUsername" type="dialog.String" description="Fallback Username for multiuser"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+        <parameter name="wha" type="audio.WholeHouseAudio" description="WHA Params"/>
+    </parameters>
+</cat>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#ConfirmPlaybackSpeed" locale="en">
+    <conditions>
+        <condition name="playBackSpeedHalf">
+            <expression name="playbackSpeed" op="eq" value="0.5"/>
+        </condition>
+        <condition name="playBackSpeedOne">
+            <expression name="playbackSpeed" op="eq" value="1"/>
+        </condition>
+        <condition name="playbackSpeedTwo">
+            <expression name="playbackSpeed" op="eq" value="2"/>
+        </condition>
+    </conditions>
+    <phrases>
+      <first phrase="playbackSpeedText">
+          <text condition="playBackSpeedHalf">half</text>
+          <text condition="playBackSpeedOne">normal</text>
+          <text condition="playbackSpeedTwo">double</text>
+          <text><var name="playbackSpeed"/></text>
+      </first>
+    </phrases>
+    <first>
+      <dialog>Just to confirm, you wanted to play that at <phrase name="playbackSpeedText"/> speed, right?</dialog>
+    </first>
+</cat>

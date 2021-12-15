@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AddMediaIntent#UnsupportedMediaItemsCloudSyncOff" locale="en">
+    <all>
+        <dialog>To add to library, you’ll need to turn on iCloud Music Library in Settings.</dialog>
+    </all>
+</cat>

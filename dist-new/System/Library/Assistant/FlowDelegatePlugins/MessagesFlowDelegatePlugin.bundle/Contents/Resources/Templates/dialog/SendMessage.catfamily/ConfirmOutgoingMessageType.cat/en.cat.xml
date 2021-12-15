@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ConfirmOutgoingMessageType" locale="en">
+    <phrases>
+        <first phrase="messageType">
+            <switch value="outgoingMessageType">
+                <text case="'audio'">an audio</text>
+                <text case="'text'">a text</text>
+                <text></text>
+            </switch>
+        </first>
+    </phrases>
+    
+    <random>
+        <dialog>Just confirming, you want to send <phrase name="messageType"/> message?</dialog>
+        <dialog>You want to send <phrase name="messageType"/> message. Is that correct?</dialog>
+    </random>
+</cat>

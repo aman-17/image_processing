@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#RequestIntroduction">
+    <meta name="description" value="General reading request introduction"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="requestContext" type="messages.ReadingRequestDialogContext" description="Contains context about overall reading request"/>
+        
+        <parameter name="conversations" type="messages.Group[]" description=""/>
+
+        <parameter name="containsOnlyUnreadMessages" type="dialog.Boolean" description=""/>
+        <parameter name="containsOnlyReadMessages" type="dialog.Boolean" description=""/>
+        <parameter name="areAnyConversationsGroups" type="dialog.Boolean" description=""/>
+    </parameters>
+
+</cat>

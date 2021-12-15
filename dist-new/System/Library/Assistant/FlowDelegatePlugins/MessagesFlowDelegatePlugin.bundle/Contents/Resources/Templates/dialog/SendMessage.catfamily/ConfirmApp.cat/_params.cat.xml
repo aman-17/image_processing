@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ConfirmApp">
+
+    <meta name="description" value="CAT for confirming app suggested by app resolution."/>
+    <meta name="category" value="Confirm"/>
+    <meta name="readyForLoc" value="true"/>
+    
+    <parameters>
+        <parameter name="app" type="messages.App" description="The app which is suggested by SEAS."/>
+    </parameters>
+    
+</cat>

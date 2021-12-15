@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="listShortcuts#pinlockResponse">
+    <meta name="description" value="When secure intents are invoked from the locked screen."/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="isCarplay" type="dialog.Boolean"/>
+        <parameter name="userAssignedDeviceName" type="dialog.String" description="The user assigned device name"/>
+    </parameters>
+</cat>

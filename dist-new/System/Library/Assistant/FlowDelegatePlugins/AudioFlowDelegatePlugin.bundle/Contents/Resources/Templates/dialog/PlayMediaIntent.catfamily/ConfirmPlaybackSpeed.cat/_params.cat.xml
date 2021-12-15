@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#ConfirmPlaybackSpeed">
+    <meta name="description" value="Dialog for confirming a slot value"/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="playbackSpeed" type="dialog.Number" description="Playback speed (half, normal, double)"/>
+        <parameter name="app" type="audio.App" description="App"/>
+    </parameters>
+</cat>

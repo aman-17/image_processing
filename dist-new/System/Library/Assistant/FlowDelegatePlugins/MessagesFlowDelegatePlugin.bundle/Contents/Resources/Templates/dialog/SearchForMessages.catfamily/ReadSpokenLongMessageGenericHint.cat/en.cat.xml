@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadSpokenLongMessageGenericHint" locale="en">
+        <first>
+            <dialog><break time="1000ms"/>I won’t reed out longer messages automatically. If you want to hear what it says, say, ’Reed it.’</dialog>
+        </first>
+</cat>

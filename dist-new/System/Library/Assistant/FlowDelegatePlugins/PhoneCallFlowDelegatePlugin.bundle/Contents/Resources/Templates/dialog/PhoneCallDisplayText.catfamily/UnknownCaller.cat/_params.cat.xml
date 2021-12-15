@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PhoneCallDisplayText#UnknownCaller">
+    <meta name="description" value="Display text for unknown caller"/>
+    <meta name="category" value="UsedForSnippet"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+    </parameters>
+
+</cat>

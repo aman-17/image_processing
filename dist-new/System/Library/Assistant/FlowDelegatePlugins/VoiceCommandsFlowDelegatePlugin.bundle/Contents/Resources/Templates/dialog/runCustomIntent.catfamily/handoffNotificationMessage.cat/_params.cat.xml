@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.4" id="runCustomIntent#handoffNotificationMessage">
+    <meta name="description" value="Shows up in the notification box in the device that the session is to be handed off to. The handoff initiation device is always going to be HomePod for now."/>
+    <meta name="category" value="UsedForSnippet"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+    </parameters>
+</cat>

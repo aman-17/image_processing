@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#ConfirmSlotValue" locale="en">
+    <random>
+        <dialog>Just confirming, that’s <var name="parameter"/>?</dialog>
+        <dialog>Confirming that you want <var name="parameter"/>?</dialog>
+        <dialog>No value to confirm for <var name="parameter"/>.</dialog>
+    </random>
+</cat>

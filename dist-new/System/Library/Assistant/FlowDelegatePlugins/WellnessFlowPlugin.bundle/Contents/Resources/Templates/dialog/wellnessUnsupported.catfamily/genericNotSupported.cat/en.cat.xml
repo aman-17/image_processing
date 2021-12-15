@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="wellnessUnsupported#genericNotSupported" locale="en">
+  <first>
+    <dialog>I can’t help you with that.</dialog>
+  </first>
+</cat>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#ConfirmPlaybackRepeatMode">
+    <meta name="description" value="Dialog for confirming a slot value"/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="repeatMode" type="dialog.String" description="Repeat mode"/>
+        <parameter name="app" type="audio.App" description="App"/>
+    </parameters>
+</cat>
+

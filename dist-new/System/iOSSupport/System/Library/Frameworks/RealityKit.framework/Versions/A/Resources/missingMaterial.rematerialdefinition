@@ -1,0 +1,26 @@
+{
+    "Name": "MissingMaterial",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Techniques": [
+        {
+            "Name": "Missing",
+            "VertexShader": {
+                "Entry": "vsMissing"
+            },
+            "PixelShader": {
+                "Entry": "fsMissing"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "Greater"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "Opaque": "Missing",
+        "OpaqueAR": "Missing",
+        "OpaqueDynamicLighting": "Missing",
+        "OpaqueARDynamicLighting" : "Missing"
+    }
+}

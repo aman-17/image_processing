@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#CannotDetermineSenders" locale="en">
+  <all>
+      <dialog>Whoops, I’m not sure who sent that.</dialog>
+  </all>
+</cat>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadSpokenGenericCountableComponent">
+
+    <meta name="description" value="Read the type of the countable message component and its quantity in spoken messages mode. These components are countable because they represent generic message types."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="componentType" type="dialog.String" description="The type of the components represented as an enum."/>
+        <parameter name="componentCount" type="dialog.Number" description="The number of message items represented by this component."/>
+        
+        <parameter name="sender" type="dialog.Person" description="The sender of the components."/>
+        <parameter name="effect" type="dialog.String" description="The effect on the message."/>
+
+        <parameter name="componentContext" type="messages.MessageComponentDialogContext" description="Context used for dialoging about given message component"/>
+        <parameter name="spokenContext" type="messages.SpokenDialogContext" description="Spoken messages context used for dialoging."/>
+    </parameters>
+
+</cat>

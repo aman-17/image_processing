@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayNonSubscriberRadioFallback" locale="en">
+    <conditions>
+        <condition name="attributionWithDialogMemory" note="attribution required using dialog memory">
+            <and>
+                <expression name="app.localizedName" op="nonempty"/>
+                <expression name="isAppAttributionRequired"/>
+                <expression name="useDialogMemoryForAppAttribution"/>
+            </and>
+        </condition>
+        <condition name="appSpecified">
+            <expression name="app.localizedName" op="nonempty"/>
+        </condition>
+        <condition name="providerAttributionRequired">
+            <expression name="providerName" op="nonempty"/>
+        </condition>
+        <condition name="areSpeakerNamesPresent">
+            <or>
+                <expression name="wha.firstSpeakerName"/>
+                <expression name="wha.secondSpeakerName"/>
+            </or>
+        </condition>
+        <condition name="areSpeakerRoomsPresent">
+            <or>
+                <expression name="wha.firstSpeakerRoom"/>
+                <expression name="wha.secondSpeakerRoom"/>
+            </or>
+        </condition>
+        <condition name="areBothPermanentNamesPresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+            </and>
+        </condition>
+        <condition name="isPermanentNameAndRoomNamePresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <expression name="wha.firstRoomNameFromSpokenEntities"/>
+                <or>
+                    <not>
+                        <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+                </or>
+            </and>
+        </condition>
+        <condition name="isOnlyFirstPermanentNamePresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <or>
+                    <not>
+                        <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+                </or>
+                <or>
+                    <not>
+                        <expression name="wha.firstRoomNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.firstRoomNameFromSpokenEntities" op="empty"/>
+                </or>
+            </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="groupsDialog">
+            <text condition="areBothPermanentNamesPresent">, on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and <var name="wha.secondPermanentNameFromSpokenEntities"/></text>
+            <text condition="isPermanentNameAndRoomNamePresent">, on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and in the <var name="wha.firstRoomNameFromSpokenEntities"/></text>
+            <text condition="isOnlyFirstPermanentNamePresent">, on the <var name="wha.firstPermanentNameFromSpokenEntities"/></text>
+            <text></text>
+        </first>
+        <first phrase="whaDialog">
+            <text condition="wha.isAllSpeakers">, playing everywhere</text>
+            <text condition="wha.hasThreeOrMoreRooms">, in multiple rooms</text>
+            <text condition="wha.hasGroups"><phrase name="groupsDialog"/></text>
+            <text condition="areSpeakerNamesPresent">, on the <var name="wha.firstSpeakerName"/><opt> and <var name="wha.secondSpeakerName"/></opt></text>
+            <text condition="areSpeakerRoomsPresent">, in the <var name="wha.firstSpeakerRoom"/><opt> and <var name="wha.secondSpeakerRoom"/></opt></text>
+            <text></text>
+        </first>
+        <first phrase="MUI" note="Multi User Introduction">
+            <text condition="isGrounding">OK, <var name="user.groundingIfNeeded"/>, </text>
+            <text/>
+        </first>
+        <first phrase="cannotFind">
+            <text><phrase name="MUI"/>I couldn’t find any <transform mode="upperFirst"><var name="genre"/></transform> in your library.</text>
+        </first>
+        <first phrase="stationTitle">
+            <text>
+                <print>‘<var name="radioStationName"/>’</print>
+                <speak><say-as interpret-as="music"><var name="spokenRadioStationName"/></say-as></speak>
+            </text>
+        </first>
+        <first phrase="appIfSpecified">
+            <text condition="attributionWithDialogMemory"><opt> <var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="appSpecified"><opt> <var name="app.localizedName"/></opt></text>
+            <text/>
+        </first>
+        <first phrase="onAppIfSpecified">
+            <text condition="attributionWithDialogMemory"><opt> on <var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="appSpecified"><opt> on <var name="app.localizedName"/></opt></text>
+            <text/>
+        </first>
+    </phrases>
+    <first>
+        <first condition="isPlaybackQueueLocationNext">
+            <dialog condition="isMultiplyStation"><phrase name="cannotFind"/> So <phrase name="stationTitle"/> is next in your queue instead…</dialog>
+            <dialog condition="providerAttributionRequired"><phrase name="cannotFind"/> So <phrase name="stationTitle"/> is next in your queue instead. Provided by <var name="providerName"/>…</dialog>
+            <dialog><phrase name="cannotFind"/> So <phrase name="stationTitle"/> is next in your<phrase name="appIfSpecified"/> queue instead…</dialog>
+        </first>
+        <first condition="isPlaybackQueueLocationLater" phrase="">
+            <dialog condition="isMultiplyStation"><phrase name="cannotFind"/> So <phrase name="stationTitle"/> is now in your queue instead…</dialog>
+            <dialog condition="providerAttributionRequired"><phrase name="cannotFind"/> So <phrase name="stationTitle"/> is now in your queue instead. Provided by <var name="providerName"/>…</dialog>
+            <dialog><phrase name="cannotFind"/> So <phrase name="stationTitle"/> is next in your<phrase name="appIfSpecified"/> queue instead…</dialog>
+        </first>
+        <dialog condition="isMultiplyStation"><phrase name="cannotFind"/> So here’s <phrase name="stationTitle"/> instead<phrase name="whaDialog"/>…</dialog>
+        <dialog condition="providerAttributionRequired"><phrase name="cannotFind"/> So instead, here’s <phrase name="stationTitle"/><phrase name="whaDialog"/>. Provided by <var name="providerName"/>…</dialog>
+        <dialog><phrase name="cannotFind"/> So instead, here’s <phrase name="stationTitle"/><phrase name="onAppIfSpecified"/><phrase name="whaDialog"/>…</dialog>
+    </first>
+</cat>

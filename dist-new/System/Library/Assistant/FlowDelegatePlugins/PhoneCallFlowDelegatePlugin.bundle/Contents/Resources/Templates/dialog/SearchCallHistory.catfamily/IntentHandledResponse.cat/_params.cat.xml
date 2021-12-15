@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#IntentHandledResponse">
+  <meta name="category" value="Handled"/>
+  <meta name="description" value="A summary of the request after it was handled by the app."/>
+  <meta name="readyForLoc" value="true"/>
+  
+  <parameters>
+      <parameter name="callRecordCount" type="dialog.Number"/>
+      <parameter name="totalCallRecordCount" type="dialog.Number"/>
+      <parameter name="device" type="sirikit.DeviceState"/>
+      <parameter name="intent" type="phone.SearchCallHistoryIntent"/>
+      <parameter name="isFirstPartyApp" type="dialog.Boolean"/>
+      <parameter name="appName" type="dialog.String"/>
+  </parameters>
+</cat>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#IntentConfirmationCancelledResponse" locale="en">
+    
+    <random>
+        <dialog>OK, I won’t send it.</dialog>
+        <dialog>Okay, let me know if there’s anything else you need.</dialog>
+        <dialog>
+            <print>OK, then.</print>
+            <speak>OK then.</speak>
+        </dialog>
+    </random>
+    
+</cat>

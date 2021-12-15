@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+  <phrases>
+      <switch phrase="phoneLabelAndType" value="requestedHandleLabelEnum">
+          <text case="'com.apple.intents.PersonHandleLabel.Home'">home number</text>
+          <text case="'com.apple.intents.PersonHandleLabel.Work'">work number</text>
+          <text case="'com.apple.intents.PersonHandleLabel.Mobile'">mobile number</text>
+          <text case="'com.apple.intents.PersonHandleLabel.iPhone'">iPhone number</text>
+          <text case="'com.apple.intents.PersonHandleLabel.Main'">main number</text>
+          <text case="'com.apple.intents.PersonHandleLabel.Home_Fax'">home fax</text>
+          <text case="'com.apple.intents.PersonHandleLabel.Work_Fax'">work fax</text>
+          <text case="'com.apple.intents.PersonHandleLabel.Pager'">pager</text>
+          <text case="'com.apple.intents.PersonHandleLabel.Other'">other number</text>
+          <text case="'com.apple.intents.PersonHandleLabel.School'">school number</text>
+          <text><var name="requestedHandle.label.lowercase"/> number</text>
+      </switch>
+  </phrases>
+  <first>
+      <dialog>Whose <phrase name="phoneLabelAndType"/> should I look for?</dialog>
+      <dialog>Whose phone number should I look for?</dialog>
+  </first>
+</cat>

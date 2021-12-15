@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <conditions>
+      <condition name="isFaceTime">
+          <expression name="intent.preferredCallProvider" op="eq" value="'FACETIME_PROVIDER'"/>
+      </condition>
+    </conditions>
+    <phrases>
+      <first phrase="callType">
+        <text condition="isFaceTime">FaceTime call</text>
+        <text>call</text>
+      </first>
+      <first phrase="restrictedContactsListForCall">
+        <text><var list="and" itemformat="{toString}" name="contacts.list"/></text>
+      </first>
+    </phrases>
+    <first>
+        <dialog>Sorry, I can’t make a <phrase name="callType"/> to <phrase name="restrictedContactsListForCall"/> during Downtime.</dialog>
+        <dialog>Sorry, I can’t make a <phrase name="callType"/> during Downtime.</dialog>
+    </first>
+</cat>

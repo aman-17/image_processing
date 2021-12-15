@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#UnsupportedMediaItemsSubscriptionRequired" locale="en">
+    <conditions>
+       <condition name="isNoGrounding" note="attribution required with a fallback user">
+           <expression name="user.groundingIfNeeded" op="nonempty"/>
+       </condition>
+    </conditions>
+    <first>
+        <dialog condition="isMultiUserDisabled">You’ll need to update your <var name="app.localizedName"/> subscription to allow me to do that for you.</dialog>
+        <dialog condition="isUserRecognized">Sorry<opt>, <var name="user.groundingIfNeeded"/></opt>
+            , to do that, you’ll need to update your <var name="app.localizedName"/> subscription.</dialog>
+        <dialog>To do that, <var name="fallbackUsername" inflect="genitive"/> <var name="app.localizedName"/> subscription needs to be updated.</dialog>
+        <dialog>To do that, your <opt><var name="app.localizedName"/></opt> subscription needs to be updated.</dialog>
+    </first>
+</cat>

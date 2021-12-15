@@ -1,0 +1,123 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "cam.scnz"
+  },
+  "emoji" : "🤯",
+  "identifier" : "exploding_head",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 0.92912369966506958,
+    "browOuterUp_L" : 1,
+    "browOuterUp_R" : 1,
+    "eyeWide_L" : 0.61605215072631836,
+    "eyeWide_R" : 0.68419069051742554,
+    "jawOpen" : 0.97780042886734009,
+    "mouthFrown_L" : 0.20895731449127197,
+    "mouthFrown_R" : 0.22007296979427338,
+    "mouthUpperUp_L" : 0.19008266925811768,
+    "mouthUpperUp_R" : 0.15426996350288391,
+    "neckOrientation" : [
+      0,
+      0,
+      0,
+      1
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "image" : "../../../shared/exploding_head/cloud.heic",
+      "position" : {
+        "x" : 0,
+        "y" : 0.12,
+        "z" : 0
+      },
+      "shaders" : [
+        {
+          "file" : "cloud_tint_surface.metal",
+          "modifier" : "surface"
+        }
+      ]
+    },
+    {
+      "image" : "../../../shared/exploding_head/shockwave.heic",
+      "position" : {
+        "x" : 0,
+        "y" : 0.14999999999999999,
+        "z" : 1
+      },
+      "scale" : 0.69999999999999996,
+      "shaders" : [
+        {
+          "file" : "cloud_tint_surface.metal",
+          "modifier" : "surface"
+        }
+      ]
+    },
+    {
+      "position" : {
+        "x" : 0,
+        "y" : 5,
+        "z" : 0
+      },
+      "scene" : "../../shared/exploding_head/shards.scnz",
+      "shaders" : [
+        {
+          "file" : "color1_surface.metal",
+          "geometry" : "mindBlownShard_02",
+          "modifier" : "surface"
+        },
+        {
+          "file" : "color2_surface.metal",
+          "geometry" : "mindBlownShard_01",
+          "modifier" : "surface"
+        }
+      ]
+    }
+  ],
+  "shaders" : [
+    {
+      "file" : "../../../shared/exploding_head/vertex_fracture.metal",
+      "geometry" : "head",
+      "modifier" : "vertex",
+      "properties" : [
+        {
+          "name" : "vertical_offsetv",
+          "type" : "float",
+          "value" : 1.01
+        }
+      ]
+    },
+    {
+      "file" : "../../../shared/exploding_head/fragment_fracture.metal",
+      "forceDoubleSided" : true,
+      "geometry" : "head",
+      "modifier" : "fragment",
+      "properties" : [
+        {
+          "name" : "mask_texture",
+          "type" : "texture",
+          "value" : "../../../shared/exploding_head/mask.heic"
+        },
+        {
+          "name" : "maskshadow_texture",
+          "type" : "texture",
+          "value" : "../../../shared/exploding_head/maskshadow.heic"
+        },
+        {
+          "name" : "vertical_offsetf",
+          "type" : "float",
+          "value" : 1.01
+        }
+      ]
+    }
+  ]
+}

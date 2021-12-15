@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedOutgoingMessageType">
+
+    <meta name="description" value="Executed when the message type (text/audio) is unsupported by the app."/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+    
+    <parameters>
+        <parameter name="app" type="messages.App" description="The App object."/>
+        <parameter name="outgoingMessageType" type="dialog.String" description="The type of message (audio or text). See INOutgoingMessageType.typeValue"/>
+    </parameters>
+ 
+</cat>
+

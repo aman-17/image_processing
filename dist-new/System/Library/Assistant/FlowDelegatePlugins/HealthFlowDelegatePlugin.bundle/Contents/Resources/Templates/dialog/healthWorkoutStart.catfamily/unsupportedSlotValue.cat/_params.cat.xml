@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutStart#unsupportedSlotValue">
+    <meta name="category" value="UsedForSnippet"/>
+    <meta name="static" value="true"/>
+    <meta name="readyForLoc" value="true"/>
+    <meta name="description" value="Executed when the first party health app is launched."/>
+    <parameters>
+        <parameter name="appName" type="dialog.String"/>
+        <parameter name="slot" type="dialog.String"/>
+        <parameter name="isOpenEnded" type="dialog.Boolean"/>
+    </parameters>
+</cat>

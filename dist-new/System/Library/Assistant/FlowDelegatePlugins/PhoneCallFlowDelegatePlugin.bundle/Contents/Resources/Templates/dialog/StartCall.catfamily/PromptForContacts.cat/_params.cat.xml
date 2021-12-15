@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#PromptForContacts">
+  <meta name="description" value="Prompt for the contacts to call"/>
+  <meta name="category" value="Prompt"/>
+  <meta name="readyForLoc" value="true"/>
+  <parameters>
+    <parameter name="isFaceTime" type="dialog.Boolean" description="Whether this is a FaceTime call or not"/>
+  </parameters>
+</cat>

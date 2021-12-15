@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#ConfirmContacts">
+  <meta name="description" value="Confirm contacts to call"/>
+  <meta name="category" value="Confirm"/>
+  <meta name="readyForLoc" value="true"/>
+  <parameters>
+      <parameter name="isFaceTime" type="dialog.Boolean"/>
+      <parameter name="contactToConfirm" type="dialog.Person"/>
+      <parameter name="isTopMatchConfirmation" type="dialog.Boolean" description="Whether this is a confirmation from a top match"/>
+      <parameter name="isFoundInAppConfirmation" type="dialog.Boolean" description="Whether this is a confirmation from a found in App"/>
+  </parameters>
+</cat>

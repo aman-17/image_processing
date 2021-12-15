@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="Messages#NoMeCard" locale="en">
+    <first>
+        <all condition="deviceState.isMac">
+            <dialog>I don’t know who you are! But you can tell me…</dialog>
+            <dialog>In the Contacts app, create a card with your contact information. Then choose, “Make This My Card” from the Card menu.</dialog>
+        </all>
+        <all condition="deviceState.isWatch">
+            <dialog>I don’t know who you are.</dialog>
+            <dialog>You can update ‘My Information’ in Siri Settings.</dialog>
+        </all>
+        <dialog condition="deviceState.isCarPlay">
+            <speak>
+                I don’t know who you are! But you can tell me…
+                <break time="500ms"/>
+                In Siri Settings, tap on ‘My Info’ and then choose yourself from your contacts.
+            </speak>
+        </dialog>
+        <all>
+            <dialog>I don’t know who you are! But you can tell me…</dialog>
+            <dialog>In Siri Settings, tap on ‘My Info’ and then choose yourself from your contacts.</dialog>
+        </all>
+    </first>
+</cat>

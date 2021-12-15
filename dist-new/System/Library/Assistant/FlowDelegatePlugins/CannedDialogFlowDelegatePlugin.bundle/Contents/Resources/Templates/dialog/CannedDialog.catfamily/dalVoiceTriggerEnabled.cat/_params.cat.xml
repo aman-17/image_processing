@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalVoiceTriggerEnabled" xmlns="urn:apple:names:siri:cat:1.0">
+	<meta name="description" value="User said the voice trigger and voice trigger is enabled. This is more of a placeholder as the user gets a phatic or beep response only"/>
+	<meta name="category" value="Prompt"/>
+      <meta name="readyForLoc" value="false"/>
+      <meta name="listenAfterSpeaking" value="false"/>
+</cat>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadSenderInformation">
+    <meta name="description" value="Tells user about who sent the last read message(s)"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="sender" type="dialog.Person" description="Person who sent the last read message"/>
+    </parameters>
+</cat>

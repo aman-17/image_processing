@@ -1,0 +1,29 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\partightenfactor0
+
+\f0\b\fs24 \cf0 How do I contact my users and make my Certificate Authority available?
+\b0 \
+After Certificate Assistant has created your Certificate Authority, use the \'93Mail Invitation\'85\'94 button to compose an email with configuration file included as an attachment. You must provide the email addresses of users who will request certificates from you.\
+\
+
+\b What is the Certificate Authority folder?
+\b0 \
+This folder contains files that make up your Certificate Authority. They include the configuration file and certificates that make up the Certificate Authority. \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\b \cf0 How do I provide my users with the Certificate Authority certificates?
+\f1\b0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\partightenfactor0
+
+\f0 \cf0 In order for your users to successfully use their certificates, you need to provide them with the Certificate Authority certificates you have created. The Certificate Assistant will automatically create a PEM (.pem) file that contains these certificates. This file is located in the Certificate Authority folder. You should provide this .pem file to your users in a secure location. For added security, do not send them this file using email. Make it available on secure file server, an LDAP repository, or use removable disks. When the user opens the .pem file, Keychain Access will help them mark the Certificate Authority certificates as \'93trusted.\'94 Untrusted certificates will be displayed as \'93This root certificate is not trusted.\'94\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\partightenfactor0
+
+\b \cf0 How will I issue new certificates to users before their certificates expire?
+\b0 \
+When you get a certificate signing request (CSR) email from a user, make sure you save that email in order to renew that user\'92s certificate in the future. Click the attachment in the email to issue a new certificate. Issue new certificates before the certificate\'92s expiration date so your users don\'92t need to worry about requesting a new certificate from you.}

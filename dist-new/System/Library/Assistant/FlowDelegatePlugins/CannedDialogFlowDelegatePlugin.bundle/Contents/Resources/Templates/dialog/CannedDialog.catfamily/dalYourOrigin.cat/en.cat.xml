@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalYourOrigin" xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <random>
+        <dialog>I was designed by Apple in California.</dialog>
+        <dialog>I think I first arrived as a burst of inspiration during a good long walk.</dialog>
+        <dialog>Like it says on the box…<break time="500ms"/> I was designed by Apple in California.</dialog>
+    </random>
+</cat>

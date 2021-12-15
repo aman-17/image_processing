@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadTapbackComponent">
+
+    <meta name="description" value="Read the tapback component."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="senders" type="dialog.Person[]" description="The senders of the tapback."/>
+
+        <parameter name="tapbackContext" type="messages.TapbackComponentDialogContext" description="Context used for dialoging about given tapback component"/>
+
+        <parameter name="dialogContext" type="messages.DialogContext" description="Conversational context used for dialoging about component. Contains context about the conversation and overall reading request"/>
+    </parameters>
+
+</cat>

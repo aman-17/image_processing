@@ -1,0 +1,55 @@
+{
+    Name = "PropertyList";
+    AppleEventCode = "pliz";
+
+    UsedFeatures = (UnnamedArguments); 
+    Classes = {
+        PropertyListItem = {
+            AppleEventCode = "plii";
+            Superclass = "NSCoreSuite.AbstractObject";
+            ToManyRelationships = {
+                plistItems = {
+                    AppleEventCode = "plii";
+					LocationRequiredToCreate = "NO";
+                    ReadOnly = "NO";
+                    Type = "PropertyListItem";
+                };
+            };
+			DefaultSubcontainerAttribute = "text";
+            Attributes = {
+                name = {
+                    AppleEventCode = "pnam";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                kind = {
+                    AppleEventCode = "kind";
+                    ReadOnly = "YES";
+                    Type = "NSNumber<TypeCode>";
+                };
+                value = {
+                    AppleEventCode = "valL";
+                    ReadOnly = "NO";
+                    Type = "NSObject";
+                };
+                text = {
+                    AppleEventCode = "ctxt";
+                    ReadOnly = "NO";
+                    Type = "NSString";
+                };
+            };
+        };
+        PropertyListFile = {
+            AppleEventCode = "plif";
+            Superclass = "DiskFolderFile.File";
+			DefaultSubcontainerAttribute = "contents";
+            Attributes = {
+                contents = {
+                    AppleEventCode = "pcnt";
+                    ReadOnly = "NO";
+                    Type = "PropertyListItem";
+                };
+            };
+        };
+    };
+}

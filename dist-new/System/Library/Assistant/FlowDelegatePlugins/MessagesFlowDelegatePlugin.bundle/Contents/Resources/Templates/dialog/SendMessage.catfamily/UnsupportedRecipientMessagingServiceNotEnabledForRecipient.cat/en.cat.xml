@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedRecipientMessagingServiceNotEnabledForRecipient" locale="en">
+    
+    <conditions>
+        <condition name="appContainsMessagOrMesseng">
+            <or>
+                <expression name="app.name" op="contains" value="'messag'"/>
+                <expression name="app.name" op="contains" value="'messeng'"/>
+            </or>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="recipientName">
+            <text condition="recipient"><var name="recipient"/></text>
+            <text>the recipient</text>
+        </first>
+    </phrases>
+    
+    <first>
+        <dialog condition="app.isDesignedByApple">Hmm, it looks like <phrase name="recipientName"/> hasn’t turned on iMessage.</dialog>
+        <first condition="app.name">
+            <dialog condition="appContainsMessagOrMesseng">Hmm, it looks like <phrase name="recipientName"/> hasn’t turned on <var name="app.name"/>.</dialog>
+            <dialog>Hmm, it looks like <phrase name="recipientName"/> doesn’t have <var name="app.name"/> messages enabled.</dialog>
+        </first>
+        <dialog>Hmm, it looks like <phrase name="recipientName"/> hasn’t turned on the app.</dialog>
+    </first>
+    
+</cat>
+

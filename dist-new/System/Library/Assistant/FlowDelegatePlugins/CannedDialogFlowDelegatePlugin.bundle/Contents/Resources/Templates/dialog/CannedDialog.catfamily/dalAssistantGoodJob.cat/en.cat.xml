@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalAssistantGoodJob">
+    <all>
+        <random>
+            <dialog>It’s nice to be appreciated.</dialog>
+            <dialog>It’s nice to have one’s work appreciated.</dialog>
+            <dialog>Thanks. Glad to help.</dialog>
+            <dialog>Glad to be of help.</dialog>
+            <dialog>Whatever I can do to help.</dialog>
+            <dialog>Aw, shucks.</dialog>
+        </random>
+    </all>
+</cat>

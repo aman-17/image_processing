@@ -1,0 +1,9 @@
+{
+    "MaterialDefinition": "postProcessCombined.rematerialdefinition",
+    "FunctionConstants" : {
+        "re::tonemapPass" : "false",
+        "re::bloomPass" : "true",
+        "re::vignettePass" : "true",
+        "re::gzVisualization" : "false"
+    }
+}

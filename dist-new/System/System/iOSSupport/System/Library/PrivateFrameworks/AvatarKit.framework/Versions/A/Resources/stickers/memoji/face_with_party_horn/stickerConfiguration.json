@@ -1,0 +1,89 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../shared/cam.scnz"
+  },
+  "emoji" : "🥳",
+  "identifier" : "face_with_party_horn",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 0.56836050748825073,
+    "browOuterUp_L" : 0.77920800447463989,
+    "browOuterUp_R" : 0.77903085947036743,
+    "cheekPuff" : 1,
+    "cheekSquint_L" : 1,
+    "cheekSquint_R" : 1,
+    "eyeBlink_L" : 1,
+    "eyeBlink_R" : 1,
+    "eyeSquint_L" : 1,
+    "eyeSquint_R" : 1,
+    "jawOpen" : 0.3478965163230896,
+    "mouthPucker" : 1,
+    "mouthSmile_L" : 0.40050375461578369,
+    "mouthSmile_R" : 0.40554162859916687,
+    "neckOrientation" : [
+      -0.011932680383324623,
+      0.25240007042884827,
+      0.004551903810352087,
+      0.96753865480422974
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "pose-adjustments" : {
+    "facewear" : [
+      {
+        "pose" : {
+          "cheekPuff" : 0
+        },
+        "value" : "pleatedMask"
+      },
+      {
+        "pose" : {
+          "cheekPuff" : 0
+        },
+        "value" : "seamMask"
+      }
+    ]
+  },
+  "props" : [
+    {
+      "adjustments" : {
+        "facewear" : [
+          {
+            "position" : {
+              "x" : 35,
+              "y" : 0,
+              "z" : 0
+            },
+            "value" : "pleatedMask"
+          },
+          {
+            "position" : {
+              "x" : 35,
+              "y" : 0,
+              "z" : 0
+            },
+            "value" : "seamMask"
+          }
+        ]
+      },
+      "scene" : "party_horn.scnz"
+    },
+    {
+      "image" : "confetti.heic",
+      "position" : {
+        "x" : 0,
+        "y" : 0,
+        "z" : 15
+      },
+      "scale" : 0.80000000000000004
+    }
+  ]
+}

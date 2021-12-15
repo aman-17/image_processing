@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ConfirmAttribute" locale="en">
+    <phrases>
+        <first phrase="attributeValue">
+            <switch value="valueToConfirm">
+                <text case="'READ'">past </text>
+                <text case="'UNREAD'">unread </text>
+                <text case="'FLAGGED'">flagged </text>
+                <text case="'UNFLAGGED'">unflagged </text>
+                <text case="'PLAYED'">played </text>
+                <text></text>
+            </switch>
+        </first>
+    </phrases>
+    <dialog><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>To confirm, do you want to read <phrase name="attributeValue"/>messages?</dialog>
+</cat>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalSing" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<first phrase="">
+			<random condition="is_HomePod" phrase="">
+				<dialog>I’m really more of a speaker than a singer.</dialog>
+				<dialog>Sure! Absolutely. Ahem. OK, here I go. Ahem. Hang on, let me just clear my…<break time="400ms"/> Gosh. Singing is harder than I thought.</dialog>
+				<dialog>I don’t write rhymes, I write checks. Actually, I don’t write those either, but I can play you a song. Just ask.</dialog>
+			</random>
+		</first>
+		<random phrase="">
+			<dialog>Sure! Absolutely. Ahem. OK, here I go. Ahem. Hang on, let me just clear my…<break time="400ms"/> Gosh. Singing is harder than I thought.</dialog>
+			<dialog>I’d rather leave that to the professionals.</dialog>
+			<all phrase="">
+				<dialog condition="text-to-speech_enabled">OK, if you insist…<break time="1000ms"/></dialog>
+				<dialog>I could while away the hours, <break time="100ms"/>conferring with the flowers, <break time="100ms"/>consulting with the rain…<break time="750ms"/></dialog>
+				<dialog>And my head I’d be scratching, <break time="100ms"/>while my thoughts were busy hatching, <break time="100ms"/>if I only had a… <break time="500ms"/>hey, wait a second!</dialog>
+			</all>
+		</random>
+	</all>
+	<conditions>
+		<condition name="text-to-speech_enabled">
+			<expression name="device.isTextToSpeechEnabled"/>
+		</condition>
+		<condition name="is_HomePod">
+			<expression name="device.isHomePod"/>
+		</condition>
+	</conditions>
+	<phrases/>
+</cat>

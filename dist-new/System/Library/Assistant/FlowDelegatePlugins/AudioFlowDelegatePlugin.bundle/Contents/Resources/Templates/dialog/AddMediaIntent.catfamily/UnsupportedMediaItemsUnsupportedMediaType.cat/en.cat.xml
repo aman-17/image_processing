@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AddMediaIntent#UnsupportedMediaItemsUnsupportedMediaType" locale="en">
+    <phrases>
+        <switch value="mediaType" phrase="mediaKind">
+            <text case="'Song'">songs</text>
+            <text case="'Album'">albums</text>
+            <text case="'Artist'">artists</text>
+            <text case="'Genre'">genres</text>
+            <text case="'Playlist'">playlists</text>
+            <text case="'PodcastShow'">podcast shows</text>
+            <text case="'PodcastEpisode'">podcast episodes</text>
+            <text case="'PodcastPlaylist'">podcast playlists</text>
+            <text case="'MusicStation'">music stations</text>
+            <text case="'AudioBook'">audio books</text>
+            <text case="'Movie'">movies</text>
+            <text case="'TvShow'">tv shows</text>
+            <text case="'TvShowEpisode'">tv show episodes</text>
+            <text case="'MusicVideo'">music videos</text>
+            <text case="'PodcastStation'">podcast stations</text>
+            <text case="'RadioStation'">radio stations</text>
+            <text case="'Station'">stations</text>
+            <text case="'Music'">music</text>
+            <text >that</text>
+        </switch>
+    </phrases>
+    
+    <all>
+        <dialog><var name="app.localizedName"/> doesn’t support adding <phrase name="mediaKind"/>.</dialog>
+    </all>
+</cat>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+  <conditions>
+      <condition name="mediaTypeNotEmpty">
+          <not>
+              <expression name="mediaType" op="empty"/>
+          </not>
+      </condition>
+      <condition name="mediaItemNotEmpty">
+          <not>
+              <expression name="mediaItem" op="empty"/>
+          </not>
+      </condition>
+      <condition name="mediaTypeSong">
+          <expression name="mediaType" op="eq" value="'song'"/>
+      </condition>
+      <condition name="mediaTypeAlbum">
+          <expression name="mediaType" op="eq" value="'album'"/>
+      </condition>
+      <condition name="mediaTypeArtist">
+          <expression name="mediaType" op="eq" value="'artist'"/>
+      </condition>
+  </conditions>
+
+  <phrases>
+      <first phrase="mediaItemString">
+          <text condition="mediaTypeSong"><say-as interpret-as="music">that song</say-as></text>
+          <text condition="mediaTypeAlbum"><say-as interpret-as="music">that album</say-as></text>
+          <first condition="mediaTypeArtist">
+              <text condition="mediaItemNotEmpty"><say-as interpret-as="music"> some <var name="mediaItem"/></say-as></text>
+              <text><say-as interpret-as="music">that artist</say-as></text>
+            </first>
+          <text condition="mediaItemNotEmpty"><say-as interpret-as="music">'<var name="mediaItem"/>'</say-as></text>
+          <text>that</text>
+      </first>
+  </phrases>
+
+  <first>
+      <dialog>OK. You'll need to open Apple Music before I can play <phrase name="mediaItemString"/>.</dialog>
+  </first>
+
+</cat>

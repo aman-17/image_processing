@@ -1,0 +1,33 @@
+{
+    "Name": "VideoMaterial",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Textures": {
+            "textureLuma": "fallback.black",
+            "textureChroma": "fallback.gray"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "Video",
+        "VertexShader": {
+            "Entry": "vsVideoPlayback"
+        },
+        "PixelShader": {
+            "Entry": "fsVideoPlayback"
+        },
+        "State" : {
+            "AlphaBlend"                : false,
+            "WriteDepth"                : true,
+            "DepthCompareFunction"      : "Greater"
+        },
+        "FunctionConstants" : {
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque" : "Video",
+        "OpaqueAR": "Video",
+        "OpaqueDynamicLighting": "Video",
+        "OpaqueARDynamicLighting" : "Video"
+    }
+}

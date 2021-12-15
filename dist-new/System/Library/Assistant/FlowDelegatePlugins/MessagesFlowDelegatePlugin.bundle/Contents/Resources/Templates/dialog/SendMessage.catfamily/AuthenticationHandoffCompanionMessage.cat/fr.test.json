@@ -1,0 +1,16 @@
+{
+    "context": {
+        "request": {
+            "grounding": true,
+            "multiuser": true,
+            "pluginName": "phonePlugin",
+            "voiceGender": "female",
+            "parameters": {},
+            "globalParameters": {},
+            "test": true
+        }
+    },
+    "assertions": [{
+        "contains": "Le HomePod souhaite envoyer des messages."
+    }]
+}

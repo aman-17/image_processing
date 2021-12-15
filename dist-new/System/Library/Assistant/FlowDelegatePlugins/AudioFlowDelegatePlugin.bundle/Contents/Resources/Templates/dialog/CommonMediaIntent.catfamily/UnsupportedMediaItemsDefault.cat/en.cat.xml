@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#UnsupportedMediaItemsDefault" locale="en">
+    <phrases>
+        <first phrase="multiUserIntroduction">
+            <text condition="isGrounding">Sorry, <var name="user.groundingIfNeeded"/>, </text>
+            <text></text>
+        </first>
+        <first phrase="playOrFind">
+            <text condition="isPlay">play</text>
+            <text>find</text>
+        </first>
+    </phrases>
+    <all>
+        <dialog condition="isPodcast">Sorry, I couldn’t find a relevant podcast to follow.</dialog>
+        <dialog><phrase name="multiUserIntroduction"/>I couldn’t <phrase name="playOrFind"/> that on <var name="app.localizedName"/>.</dialog>
+    </all>
+</cat>

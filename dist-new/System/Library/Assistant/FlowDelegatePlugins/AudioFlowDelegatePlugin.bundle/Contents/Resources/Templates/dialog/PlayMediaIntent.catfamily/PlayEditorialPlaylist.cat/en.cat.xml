@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayEditorialPlaylist" locale="en">
+    <conditions>
+        <condition name="isArtist">
+            <and>
+                <expression name="artist" op="nonempty"/>
+                <expression name="artistSpecified" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="hasArtistAndTitle">
+            <and>
+                <expression name="artist" op="nonempty"/>
+                <expression name="title" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="hasArtistOnly">
+            <and>
+                <expression name="artist" op="nonempty"/>
+                <expression name="title" op="empty"/>
+            </and>
+        </condition>
+        <condition name="attributionWithFallbackUsername" note="attribution required with a fallback user">
+            <and>
+                <expression name="isAppAttributionRequired"/>
+                <expression name="fallbackUsername" op="nonempty"/>
+                <expression name="app.localizedName" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="attributionWithDialogMemory" note="attribution required using dialog memory">
+            <and>
+                <expression name="isAppAttributionRequired"/>
+                <expression name="useDialogMemoryForAppAttribution"/>
+                <expression name="app.localizedName" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="app">
+            <and>
+                <expression name="app.localizedName" op="nonempty"/>
+                <or>
+                    <expression name="isAppAttributionRequired"/>
+                    <expression name="isAppSpecified"/>
+                </or>
+            </and>
+        </condition>
+        <condition name="next">
+            <expression name="isPlaybackQueueLocationNext"/>
+        </condition>
+        <condition name="later">
+            <expression name="isPlaybackQueueLocationLater"/>
+        </condition>
+        <condition name="isUserPlaylistThatMentionsPlaylist">
+            <and>
+                <expression name="isUserPlaylist"/>
+                <or>
+                    <expression name="title" op="contains" value="'playlist'"/>
+                    <expression name="title" op="contains" value="'Playlist'"/>
+                </or>
+            </and>
+        </condition>
+        <condition name="notOnShuffle">
+            <not>
+                <expression name="isOnShuffle"/>
+            </not>
+        </condition>
+        <condition name="areSpeakerNamesPresent">
+            <or>
+                <expression name="wha.firstSpeakerName"/>
+                <expression name="wha.secondSpeakerName"/>
+            </or>
+        </condition>
+        <condition name="areSpeakerRoomsPresent">
+            <or>
+                <expression name="wha.firstSpeakerRoom"/>
+                <expression name="wha.secondSpeakerRoom"/>
+            </or>
+        </condition>
+        <condition name="areBothPermanentNamesPresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+            </and>
+        </condition>
+        <condition name="isPermanentNameAndRoomNamePresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <expression name="wha.firstRoomNameFromSpokenEntities"/>
+                <or>
+                    <not>
+                        <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+                </or>
+            </and>
+        </condition>
+        <condition name="isOnlyFirstPermanentNamePresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <or>
+                    <not>
+                        <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+                </or>
+                <or>
+                    <not>
+                        <expression name="wha.firstRoomNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.firstRoomNameFromSpokenEntities" op="empty"/>
+                </or>
+            </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="modTitle">
+            <text>
+                <print>‘<var name="title"/>’</print>
+                <speak><say-as interpret-as="music"><var name="title"/></say-as></speak>
+            </text>
+        </first>
+        <first phrase="title">
+            <text condition="isTopGenre">top <var name="title"/> songs</text>
+            <text condition="isDecadeStation"><var name="title"/></text>
+            <text condition="isAlgorithmicRadioStation"><phrase name="modTitle"/></text>
+            <text condition="isUserPlaylistThatMentionsPlaylist">your <phrase name="modTitle"/></text>
+            <text condition="isUserPlaylist">your playlist <phrase name="modTitle"/></text>
+            <text><phrase name="modTitle"/></text>
+        </first>
+        <first phrase="isAre">
+            <text condition="isTopGenre">are</text>
+            <text>is</text>
+        </first>
+        <first phrase="artist">
+            <text><say-as interpret-as="music"><var name="artist"/></say-as></text>
+        </first>
+        <first phrase="appSpecifiedOn">
+            <text condition="attributionWithFallbackUsername"><opt> from <var name="fallbackUsername" inflect="genitive"/> <var name="app.localizedName"/></opt></text>
+            <text condition="attributionWithDialogMemory"><opt> on <var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="app"><opt> on <var name="app.localizedName"/></opt></text>
+            <text></text>
+        </first>
+        <first phrase="appSpecifiedBy">
+            <text condition="attributionWithFallbackUsername"><opt> by <var name="fallbackUsername" inflect="genitive"/> <var name="app.localizedName"/></opt></text>
+            <text condition="attributionWithDialogMemory"><opt> by <var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="app"><opt> by <var name="app.localizedName"/></opt></text>
+            <text></text>
+        </first>
+        <first phrase="appSpecifiedFrom">
+            <text condition="attributionWithFallbackUsername"><opt> from <var name="fallbackUsername" inflect="genitive"/> <var name="app.localizedName"/></opt></text>
+            <text condition="attributionWithDialogMemory"><opt> from <var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="app"><opt> from <var name="app.localizedName"/></opt></text>
+            <text></text>
+        </first>
+        <first phrase="appSpecifiedYour">
+            <text condition="attributionWithFallbackUsername"><opt><var name="fallbackUsername" inflect="genitive"/> <var name="app.localizedName"/></opt></text>
+            <text condition="app"><opt>your <var name="app.localizedName"/></opt></text>
+            <text>your</text>
+        </first>
+        <first phrase="MUI" note="Multi User Introduction">
+            <text condition="isGrounding">OK, <var name="user.groundingIfNeeded"/>, </text>
+            <text></text>
+        </first>
+        <first phrase="OKMUI" note="Multi User Introduction">
+            <text condition="isGrounding">OK, <var name="user.groundingIfNeeded"/>, </text>
+            <text>OK, </text>
+        </first>
+        <first phrase="groupsDialog">
+            <text condition="areBothPermanentNamesPresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and <var name="wha.secondPermanentNameFromSpokenEntities"/></text>
+            <text condition="isPermanentNameAndRoomNamePresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and in the <var name="wha.firstRoomNameFromSpokenEntities"/></text>
+            <text condition="isOnlyFirstPermanentNamePresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/></text>
+            <text></text>
+        </first>
+        <first phrase="whaDialog">
+            <text condition="wha.isAllSpeakers"> everywhere</text>
+            <text condition="wha.hasThreeOrMoreRooms"> in multiple rooms</text>
+            <text condition="wha.hasGroups"><phrase name="groupsDialog"/></text>
+            <text condition="areSpeakerNamesPresent"> on the <var name="wha.firstSpeakerName"/><opt> and <var name="wha.secondSpeakerName"/></opt></text>
+            <text condition="areSpeakerRoomsPresent"> in the <var name="wha.firstSpeakerRoom"/><opt> and <var name="wha.secondSpeakerRoom"/></opt></text>
+            <text></text>
+        </first>
+    </phrases>
+    <first note="Designs: https://quip-apple.com/SIUEAsjfdutz">
+        <first condition="isAlgorithmicRadioStation">
+            <random condition="hasArtistAndTitle">
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">here’s</transform> a station inspired by <phrase name="title"/> by <phrase name="artist"/><phrase name="appSpecifiedOn"/><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">here’s</transform> some music like <phrase name="title"/> by <phrase name="artist"/><phrase name="appSpecifiedFrom"/><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing music similar to <phrase name="title"/> by <phrase name="artist"/><phrase name="appSpecifiedFrom"/><phrase name="whaDialog"/>…</dialog>
+            </random>
+            <random condition="hasArtistOnly">
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing <phrase name="artist"/> radio<phrase name="appSpecifiedOn"/><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="MUI"/><phrase name="artist"/> radio now playing<phrase name="appSpecifiedOn"/><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="OKMUI"/>here’s <phrase name="artist"/> radio<phrase name="appSpecifiedOn"/><phrase name="whaDialog"/>…</dialog>
+            </random>
+            <random>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing <phrase name="title"/> radio<phrase name="appSpecifiedOn"/><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="MUI"/><phrase name="title"/> radio now playing<phrase name="appSpecifiedOn"/><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="OKMUI"/>here’s <phrase name="title"/> radio<phrase name="appSpecifiedOn"/><phrase name="whaDialog"/>…</dialog>
+            </random>
+        </first>
+        <first condition="next">
+            <first condition="app">
+                <random condition="isOnRepeat">
+                    <dialog condition="isOnShuffle"><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> coming up next on shuffle and repeat<opt><phrase name="appSpecifiedFrom"/></opt>…</dialog>
+                    <dialog condition="isOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> next in your queue on shuffle and repeat<opt><phrase name="appSpecifiedFrom"/></opt>…</dialog>
+                    <dialog condition="notOnShuffle"><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> coming up next on repeat<opt><phrase name="appSpecifiedFrom"/></opt>…</dialog>
+                    <dialog condition="notOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> next in <phrase name="appSpecifiedYour"/> queue on repeat…</dialog>
+                </random>
+                <random condition="isOnShuffle">
+                    <dialog><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> coming up next on shuffle<opt><phrase name="appSpecifiedFrom"/></opt>…</dialog>
+                    <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> next in your queue on shuffle<opt><phrase name="appSpecifiedFrom"/></opt>…</dialog>
+                </random>
+                <random condition="isArtist">
+                    <dialog><phrase name="OKMUI"/><phrase name="artist"/> <phrase name="isAre"/> coming up next<opt><phrase name="appSpecifiedOn"/></opt>…</dialog>
+                    <dialog><phrase name="MUI"/><phrase name="artist"/> <phrase name="isAre"/> next in <phrase name="appSpecifiedYour"/> queue…</dialog>
+                </random>
+                <random>
+                    <dialog><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> coming up next<opt><phrase name="appSpecifiedOn"/></opt>…</dialog>
+                    <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> next in <phrase name="appSpecifiedYour"/> queue…</dialog>
+                </random>
+            </first>
+            <random condition="isOnRepeat">
+                <dialog condition="isOnShuffle"><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> coming up next on shuffle and repeat…</dialog>
+                <dialog condition="isOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> next in your queue on shuffle and repeat…</dialog>
+                <dialog condition="notOnShuffle"><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> coming up next on repeat…</dialog>
+                <dialog condition="notOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> next in your queue on repeat…</dialog>
+            </random>
+            <random condition="isOnShuffle">
+                <dialog><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> coming up next on shuffle…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> next in your queue on shuffle…</dialog>
+            </random>
+            <random condition="isArtist">
+                <dialog><phrase name="OKMUI"/><phrase name="artist"/> <phrase name="isAre"/> coming up next…</dialog>
+                <dialog><phrase name="MUI"/><phrase name="artist"/> <phrase name="isAre"/> next in your queue…</dialog>
+            </random>
+            <random>
+                <dialog><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> coming up next…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> next in your queue…</dialog>
+            </random>
+        </first>
+        <first condition="later">
+            <first condition="app">
+                <random condition="isOnRepeat">
+                    <dialog condition="isOnShuffle"><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> now in <phrase name="appSpecifiedYour"/> queue on shuffle and repeat…</dialog>
+                    <dialog condition="isOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up soon on shuffle and repeat<opt><phrase name="appSpecifiedFrom"/></opt>…</dialog>
+                    <dialog condition="isOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up later on shuffle and repeat<opt><phrase name="appSpecifiedFrom"/></opt>…</dialog>
+                    <dialog condition="notOnShuffle"><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> now in <phrase name="appSpecifiedYour"/> queue on repeat…</dialog>
+                    <dialog condition="notOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up soon on repeat<opt><phrase name="appSpecifiedFrom"/></opt>…</dialog>
+                    <dialog condition="notOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up later on repeat<opt><phrase name="appSpecifiedFrom"/></opt>…</dialog>
+                </random>
+                <random condition="isOnShuffle">
+                    <dialog><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> now in <phrase name="appSpecifiedYour"/> queue on shuffle…</dialog>
+                    <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up soon on shuffle<opt><phrase name="appSpecifiedFrom"/></opt>…</dialog>
+                    <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up later on shuffle<opt><phrase name="appSpecifiedFrom"/></opt>…</dialog>
+                </random>
+                <random condition="isArtist">
+                    <dialog><phrase name="OKMUI"/><phrase name="artist"/> <phrase name="isAre"/> now in <phrase name="appSpecifiedYour"/> queue…</dialog>
+                    <dialog><phrase name="MUI"/><phrase name="artist"/> <phrase name="isAre"/> coming up soon<opt><phrase name="appSpecifiedOn"/></opt>…</dialog>
+                    <dialog><phrase name="MUI"/><phrase name="artist"/> <phrase name="isAre"/> coming up later<opt><phrase name="appSpecifiedOn"/></opt>…</dialog>
+                </random>
+                <random>
+                    <dialog><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> now in <phrase name="appSpecifiedYour"/> queue…</dialog>
+                    <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up soon<opt><phrase name="appSpecifiedOn"/></opt>…</dialog>
+                    <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up later<opt><phrase name="appSpecifiedOn"/></opt>…</dialog>
+                </random>
+            </first>
+            <random condition="isOnRepeat">
+                <dialog condition="isOnShuffle"><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> now in your queue on shuffle and repeat…</dialog>
+                <dialog condition="isOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up soon on shuffle and repeat…</dialog>
+                <dialog condition="isOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up later on shuffle and repeat…</dialog>
+                <dialog condition="notOnShuffle"><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> now in your queue on repeat…</dialog>
+                <dialog condition="notOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up soon on repeat…</dialog>
+                <dialog condition="notOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up later on repeat…</dialog>
+            </random>
+            <random condition="isOnShuffle">
+                <dialog><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> now in your queue on shuffle…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up soon on shuffle…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up later on shuffle…</dialog>
+            </random>
+            <random condition="isArtist">
+                <dialog><phrase name="OKMUI"/><phrase name="artist"/> <phrase name="isAre"/> now in your queue…</dialog>
+                <dialog><phrase name="MUI"/><phrase name="artist"/> <phrase name="isAre"/> coming up soon…</dialog>
+                <dialog><phrase name="MUI"/><phrase name="artist"/> <phrase name="isAre"/> coming up later…</dialog>
+            </random>
+            <random>
+                <dialog><phrase name="OKMUI"/><phrase name="title"/> <phrase name="isAre"/> now in your queue…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up soon…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> <phrase name="isAre"/> coming up later…</dialog>
+            </random>
+        </first>
+        <first condition="app">
+            <random condition="isOnRepeat">
+                <dialog condition="isOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> shuffling <phrase name="title"/> on repeat<opt><phrase name="appSpecifiedFrom"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog condition="isOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now shuffling on repeat<opt><phrase name="appSpecifiedFrom"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog condition="isOnShuffle"><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/> shuffled on repeat<opt><phrase name="appSpecifiedFrom"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog condition="notOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing <phrase name="title"/> on repeat<opt><phrase name="appSpecifiedFrom"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog condition="notOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now playing on repeat<opt><phrase name="appSpecifiedFrom"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog condition="notOnShuffle"><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/> on repeat<opt><phrase name="appSpecifiedFrom"/></opt><phrase name="whaDialog"/>…</dialog>
+            </random>
+            <random condition="isOnShuffle">
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> shuffling <phrase name="title"/><opt><phrase name="appSpecifiedOn"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now shuffling<opt><phrase name="appSpecifiedOn"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/> on shuffle<opt><phrase name="appSpecifiedFrom"/></opt><phrase name="whaDialog"/>…</dialog>
+            </random>
+            <random condition="isPersonalized">
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing <phrase name="title"/><opt><phrase name="appSpecifiedOn"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now playing<opt><phrase name="appSpecifiedOn"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/><opt><phrase name="appSpecifiedOn"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing <phrase name="title"/>, picked just for you<opt><phrase name="appSpecifiedBy"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now playing, personalized<opt><phrase name="appSpecifiedBy"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/>, personalized for you<opt><phrase name="appSpecifiedBy"/></opt><phrase name="whaDialog"/>…</dialog>
+            </random>
+            <random>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing <phrase name="title"/><opt><phrase name="appSpecifiedOn"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now playing<opt><phrase name="appSpecifiedOn"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/><opt><phrase name="appSpecifiedOn"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog condition="isArtist"><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing <phrase name="artist"/><opt><phrase name="appSpecifiedOn"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog condition="isArtist"><phrase name="MUI"/><phrase name="artist"/> now playing<opt><phrase name="appSpecifiedOn"/></opt><phrase name="whaDialog"/>…</dialog>
+                <dialog condition="isArtist"><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="artist"/><opt><phrase name="appSpecifiedOn"/></opt><phrase name="whaDialog"/>…</dialog>
+            </random>
+        </first>
+        <random condition="isOnRepeat">
+            <dialog condition="isOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> shuffling <phrase name="title"/> on repeat<phrase name="whaDialog"/>…</dialog>
+            <dialog condition="isOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now shuffling on repeat<phrase name="whaDialog"/>…</dialog>
+            <dialog condition="isOnShuffle"><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/> shuffled on repeat<phrase name="whaDialog"/>…</dialog>
+            <dialog condition="notOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing <phrase name="title"/> on repeat<phrase name="whaDialog"/>…</dialog>
+            <dialog condition="notOnShuffle"><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now playing on repeat<phrase name="whaDialog"/>…</dialog>
+            <dialog condition="notOnShuffle"><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/> on repeat<phrase name="whaDialog"/>…</dialog>
+        </random>
+        <random condition="isOnShuffle">
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> shuffling <phrase name="title"/><phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now shuffling<phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/> on shuffle<phrase name="whaDialog"/>…</dialog>
+        </random>
+        <random condition="isPersonalized">
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing <phrase name="title"/><phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now playing<phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/><phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now playing, picked just for you<phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/>, picked just for you<phrase name="whaDialog"/>…</dialog>
+        </random>
+        <random>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing <phrase name="title"/><phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence"><phrase name="title"/></transform> now playing<phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="title"/><phrase name="whaDialog"/>…</dialog>
+            <dialog condition="isArtist"><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing <phrase name="artist"/><phrase name="whaDialog"/>…</dialog>
+            <dialog condition="isArtist"><phrase name="MUI"/><phrase name="artist"/> now playing<phrase name="whaDialog"/>…</dialog>
+            <dialog condition="isArtist"><phrase name="OKMUI"/><transform mode="capitalizeSentence">here’s</transform> <phrase name="artist"/><phrase name="whaDialog"/>…</dialog>
+        </random>
+    </first>
+</cat>

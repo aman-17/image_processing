@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#DisambiguateContactsPartialList">
+  <meta name="description" value="Disambiguate among a partial list of options - the Phone extension decided to filter out lesser options"/>
+  <meta name="category" value="Disambiguate"/>
+  <meta name="readyForLoc" value="true"/>
+</cat>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedRecipientNotAMemberOfConversation" locale="en">
+    <first>
+        <dialog>Sorry, it doesn't look like you're in that group anymore.</dialog>
+    </first>
+</cat>
+

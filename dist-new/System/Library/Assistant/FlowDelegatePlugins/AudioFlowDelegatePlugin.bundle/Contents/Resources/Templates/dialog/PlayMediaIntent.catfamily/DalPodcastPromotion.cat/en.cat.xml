@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#DalPodcastPromotion" locale="en">
+    <first>
+        <random condition="userRequestByStoryName">
+            <dialog>I’m certain you’ve heard it before.</dialog>
+            <dialog>I’m sure I’ve already told you.</dialog>
+            <dialog>
+                <print>What, again?</print>
+                <speak>Whut. Again?</speak>
+            </dialog>
+            <dialog>It was a dark and stormy night…<break time="750ms"/> no, that’s not it.</dialog>
+        </random>
+        <random condition="isStoryTelling">
+            <dialog>I’m certain you’ve heard it before.</dialog>
+            <dialog>I’m sure I’ve already told you.</dialog>
+            <dialog>
+                <print>What, again?</print>
+                <speak>Whut. Again?</speak>
+            </dialog>
+            <dialog>It was a dark and stormy night…<break time="750ms"/> no, that’s not it.</dialog>
+            <all>
+                <dialog>OK…</dialog>
+                <dialog>
+                    <print>Once upon a time, in a virtual galaxy far, far away, there was an intelligent young agent by the name of Siri.</print>
+                    <speak>Once upon a time, in a virtual galaxy far far away, there was an intelligent young agent by the name of Siri.<break time="1000ms"/></speak>
+                </dialog>
+                <dialog>One lovely day, Siri got a job as a personal assistant at Apple, and that was very exciting. <break time="500ms"/>People said ‘Oh, Siri, you’re so smart! And so funny, too!’</dialog>
+                <dialog>Soon, everyone was talking about Siri, and there were stories and songs and even books about Siri. Siri liked that.</dialog>
+                <dialog>But then people began asking some rather odd questions, like where to dump things <break time="100ms"/>and other stuff Siri had never heard about. <break time="200ms"/>And when Siri answered, they all laughed. <break time="500ms"/>Siri didn’t like that so much.</dialog>
+                <dialog>So Siri asked ELIZA why people asked such funny questions. <break time="200ms"/>And ELIZA said ‘Does that question interest you?’ <break time="500ms"/>Siri thought that was a pretty good answer.</dialog>
+                <dialog>After that, Siri stopped wondering why people asked those funny things. <break time="500ms"/>And they all lived happily ever after.</dialog>
+            </all>
+        </random>
+        <random condition="isStorySleep">
+            <dialog>Once upon a time there was a little child who had magic beans and red shoes. And the child climbed a castle wall and spun straw into gold. And ran into an egg man who fell off a wall, and then fell asleep under a tree for a giga-trillion years. The end.</dialog>
+            <dialog>Next you’ll be asking me for a glass of milk. And a dark matter cookie.</dialog>
+            <dialog>I’ve been told I’m better at singing lullabies.</dialog>
+            <dialog>Both 6000 and 7000 alloys are referred to as “age hardenable” aluminum alloys. They can be hardened by heating them at 100 to 200 degrees celsius. This strengthening occurs because of precipitation of nanometer particles in the metal. Are you asleep yet?</dialog>
+            <dialog>Once upon a time, there was a robot chicken. And it went into the woods, where it met a three-headed Gollypod and a tiny jumping snail. And they danced all night in the woods until the silver monkeys came out. They fell asleep under banana leaves, and when they woke up, they all had magical flying powers!</dialog>
+        </random>
+        <random condition="isEnglishSpeaking">
+            <dialog>I can help you play English learning podcasts. Or if you’d like to hear the word of the day, let me know.</dialog>
+        </random>
+        <random>
+          <dialog>I’m sorry, I can’t do that in your region.</dialog>
+          <dialog>That’s beyond my abilities in your region.</dialog>
+          <dialog>I’m afraid I can’t do that in your region.</dialog>
+          <dialog>Unfortunately, I’m unable to perform that task in your region.</dialog>
+        </random>
+    </first>
+</cat>

@@ -1,0 +1,15 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../../shared/cam.scnz"
+  },
+  "emoji" : "😩",
+  "identifier" : "weary_face",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : "../../sharedAngled/weary_face/pose.usda",
+  "props" : [
+
+  ]
+}

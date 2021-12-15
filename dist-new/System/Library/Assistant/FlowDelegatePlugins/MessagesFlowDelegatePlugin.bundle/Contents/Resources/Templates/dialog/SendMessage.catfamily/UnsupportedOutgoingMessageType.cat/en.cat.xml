@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedOutgoingMessageType" locale="en">
+
+    <conditions>
+        <condition name="isAudioMessage">
+            <expression name="outgoingMessageType" op="eq" value="'audio'"/>
+        </condition>
+        <condition name="isTextMessage">
+            <expression name="outgoingMessageType" op="eq" value="'text'"/>
+        </condition>
+    </conditions>
+
+    <phrases>
+        <first phrase="appName">
+            <text condition="app.name"><var name="app.name"/></text>
+            <text>The app</text>
+        </first>
+        
+        <first phrase="needsGrounding">
+            <text><opt>Sorry, <var name="user.groundingIfNeeded"/>. </opt></text>
+        </first>
+    </phrases>
+    
+    <first>
+        <dialog condition="isAudioMessage">
+            <phrase name="needsGrounding"/><phrase name="appName"/> can’t send audio messages at this time.
+        </dialog>
+        <dialog condition="isTextMessage">
+            <phrase name="needsGrounding"/><phrase name="appName"/> can’t send text messages at this time.
+        </dialog>
+        <dialog note="this case is an error, we should never hit it, if we do, there is a bug">
+            <phrase name="needsGrounding"/><phrase name="appName"/> can’t send unknown messages at this time.
+        </dialog>
+    </first>
+</cat>

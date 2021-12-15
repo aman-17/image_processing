@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayBestAndWorstAlbum">
+    <meta name="description" value="Best and Worst album dialog for rendering PlayMediaIntent success cases"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="isDialogDriven" type="dialog.Boolean" description="if interaction type is dialog driven"/>
+        <parameter name="isBest" type="dialog.Boolean" description="if sort is best"/>
+        <parameter name="isWorst" type="dialog.Boolean" description="if sort is worst"/>
+        <parameter name="title" type="dialog.String" description="Title of the content" profanityFilter="yes"/>
+        <parameter name="artist" type="dialog.String" description="Artist for the content"/>
+        <parameter name="artistSpecified" type="dialog.String" description="Artist specified in the intent"/>
+        <parameter name="isAppSpecified" type="dialog.Boolean" description="if user specified app"/>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="isGrounding" type="dialog.Boolean" description="if user grounding is required"/>
+        <parameter name="isAppAttributionRequired" type="dialog.Boolean" description="if app attribution is required"/>
+        <parameter name="useDialogMemoryForAppAttribution" type="dialog.Boolean" description="should app attribution use dialog memory"/>
+        <parameter name="fallbackUsername" type="dialog.String" description="Fallback Username for multiuser"/>
+        <parameter name="isPlaybackQueueLocationNext" type="dialog.Boolean" description="If the playback queue location is next"/>
+        <parameter name="isPlaybackQueueLocationLater" type="dialog.Boolean" description="If the playback queue location is later"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+        <parameter name="wha" type="audio.WholeHouseAudio" description="WHA Params"/>
+    </parameters>
+</cat>

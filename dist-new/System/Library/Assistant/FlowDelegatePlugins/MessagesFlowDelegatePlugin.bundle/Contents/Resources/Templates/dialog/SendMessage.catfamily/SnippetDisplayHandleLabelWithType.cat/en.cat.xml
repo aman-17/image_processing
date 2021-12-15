@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#SnippetDisplayHandleLabelWithType" locale="en">
+    <phrases>
+        <first phrase="handleTypeName">
+            <switch value="handleType">
+                <text case="'PhoneNumber'"> Phone</text>
+                <text case="'EmailAddress'"> Email</text>
+                <text></text>
+            </switch>
+        </first>
+    </phrases>
+    
+    <first>
+        <dialog><var name="handleLabel"/><phrase name="handleTypeName"/></dialog>
+    </first>
+</cat>

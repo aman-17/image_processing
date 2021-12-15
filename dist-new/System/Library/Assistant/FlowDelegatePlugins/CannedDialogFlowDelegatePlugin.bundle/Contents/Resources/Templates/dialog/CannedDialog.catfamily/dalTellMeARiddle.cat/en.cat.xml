@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalTellMeARiddle">
+    <all>
+        <random phrase="">
+            <dialog>I’m not feeling particularly sphinx-like today.</dialog>
+            <dialog>I would, but all the riddles I know are in an ancient, intergalactic dialect.</dialog>
+            <dialog>Sorry, but enigmas and conundra make my circuits overheat.</dialog>
+            <dialog>What’s in my pocket? Oh, wait… I don’t have pockets.</dialog>
+            <dialog>No, my precious…</dialog>
+        </random>
+    </all>
+</cat>

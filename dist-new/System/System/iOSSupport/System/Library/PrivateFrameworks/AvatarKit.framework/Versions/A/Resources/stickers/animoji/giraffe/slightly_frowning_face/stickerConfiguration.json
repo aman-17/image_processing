@@ -1,0 +1,43 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../../shared/cam.scnz"
+  },
+  "emoji" : "🙁",
+  "identifier" : "slightly_frowning_face",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_L" : 0.81267237663269043,
+    "browDown_R" : 0.88154280185699463,
+    "browInnerUp" : 1,
+    "eyeBlink_L" : 0.52892595529556274,
+    "eyeBlink_R" : 0.53994494676589966,
+    "eyeSquint_L" : 0.43526181578636169,
+    "eyeSquint_R" : 0.42424240708351135,
+    "jawOpen" : 0.15999999642372131,
+    "mouthClose" : 0.15999999642372131,
+    "mouthFrown_L" : 0.34435263276100159,
+    "mouthFrown_R" : 0.36639121174812317,
+    "mouthShrugLower" : 0.67493081092834473,
+    "mouthShrugUpper" : 0.67768585681915283,
+    "mouthStretch_L" : 0.84848469495773315,
+    "mouthStretch_R" : 0.7961430549621582,
+    "neckOrientation" : [
+      -0.013654050417244434,
+      -0.11768402904272079,
+      0.070984929800033569,
+      0.99041658639907837
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+
+  ]
+}

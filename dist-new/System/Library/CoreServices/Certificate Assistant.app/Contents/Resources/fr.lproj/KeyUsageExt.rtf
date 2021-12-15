@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw12240\paperh15840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Qu\'92est-ce que l\'92extension d\'92utilisation de cl\'e9\'a0?
+\f1\b0 \
+L\'92extension d\'92utilisation de cl\'e9 (KUE, Key Usage Extension) d\'e9termine la fa\'e7on dont un certificat peut \'eatre utilis\'e9. Vous pouvez utiliser une extension d\'92utilisation de cl\'e9 pour limiter les op\'e9rations que peut effectuer la cl\'e9 publique dans un certificat. Un certificat peut, par exemple, \'eatre cr\'e9\'e9 pour signer des e-mails, mais pas pour les chiffrer. L\'92utilisation de cl\'e9 \'e9tendue (EKU, Extended Key Usage) est similaire \'e0 la KUE, mais elle d\'e9finit un certificat en termes de \'ab\'a0but\'a0\'bb (par exemple, pour signer des r\'e9ponses OCSP, identifier un client SSL, etc.). L\'92EKU est plus r\'e9cente et plus souple que la KUE\'a0; elle est donc consid\'e9r\'e9e comme \'ab\'a0le\'a0\'bb m\'e9canisme de restriction d\'92utilisation par excellence. Vous pourrez configurer l\'92extension d\'92utilisation de cl\'e9 \'e9tendue ult\'e9rieurement dans cet assistant.\
+\
+Vous pouvez utiliser les extensions d\'92utilisation de cl\'e9 suivantes\'a0:\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \ul \ulc0 Signature\'a0:\ulnone  s\'e9lectionnez cette extension lorsque la cl\'e9 publique du certificat est utilis\'e9e comme m\'e9canisme de signature num\'e9rique pour la prise en charge des services de s\'e9curit\'e9 autres que la signature de certificat.\
+\
+\ul Non-r\'e9pudiation\'a0:\ulnone  s\'e9lectionnez cette extension lorsque la cl\'e9 publique du certificat est utilis\'e9e pour v\'e9rifier les signatures num\'e9riques utilis\'e9es pour offrir un service de non-r\'e9pudiation qui prot\'e8ge contre le faux refus d\'92une action. La non-r\'e9pudiation garantit qu\'92en cas de litige l\'92une des parties ne puisse pas r\'e9pudier ou r\'e9futer la validit\'e9 d\'92un accord ou d\'92un contrat.\
+\
+\ul Chiffrement de cl\'e9\'a0:\ulnone  s\'e9lectionnez cette extension lorsque la cl\'e9 publique du certificat est utilis\'e9e pour chiffrer une cl\'e9 pour quelque raison que ce soit. Le chiffrement de cl\'e9 est utilis\'e9 pour le transport ou la gestion des cl\'e9s.\
+\
+\ul Chiffrement de donn\'e9es\'a0:\ulnone  s\'e9lectionnez cette extension lorsque la cl\'e9 publique du certificat est utilis\'e9e pour chiffrer des donn\'e9es utilisateur autres que des cl\'e9s cryptographiques.\
+\
+\ul Accord de la cl\'e9\'a0:\ulnone  s\'e9lectionnez cette extension lorsque la cl\'e9 publique du certificat est utilis\'e9e pour l\'92accord de la cl\'e9. Le protocole d\'92accord de la cl\'e9 (\'e9galement appel\'e9 protocole d\'92\'e9change de cl\'e9s) est utilis\'e9 lorsque deux parties s\'92accordent sur la cl\'e9 \'e0 utiliser dans un syst\'e8me cryptographique \'e0 cl\'e9 secr\'e8te o\'f9 les cl\'e9s peuvent \'eatre partag\'e9es librement et de mani\'e8re s\'e9curis\'e9e sur n\'92importe quel support non s\'e9curis\'e9. (Par exemple, si des cl\'e9s Diffie-Hellman sont utilis\'e9es pour la gestion des cl\'e9s, cette extension est d\'e9finie.)\
+\
+\ul Signature de certificat\'a0:\ulnone  s\'e9lectionnez cette extension lorsque la cl\'e9 publique du certificat est utilis\'e9e pour v\'e9rifier une signature sur les certificats \'e0 cl\'e9 publique. Les certificats dot\'e9s de cette extension sont des certificats issus d\'92une Autorit\'e9 de certification (AC).\'a0Si cette extension est affect\'e9e \'e0 un certificat, l\'92option \'ab\'a0Utiliser ce certificat comme autorit\'e9 de certification\'a0\'bb doit \'e9galement \'eatre d\'e9finie dans l\'92extension des contraintes \'e9l\'e9mentaires (BCE). La BCE est pr\'e9sent\'e9e plus loin dans cet assistant.\
+\
+\ul Signature CRL\'a0:\ulnone  s\'e9lectionnez cette extension lorsque la cl\'e9 publique du certificat est utilis\'e9e pour v\'e9rifier une signature sur une liste de r\'e9vocation de certificat (CRL, Certificate Revocation List).\
+\
+\ul Chiffrer seulement\'a0:\ulnone  s\'e9lectionnez cette extension uniquement lorsque l\'92extension Accord de la cl\'e9 est \'e9galement d\'e9finie. Elle indique que la cl\'e9 publique du certificat peut \'eatre utilis\'e9e pour chiffrer des donn\'e9es tout en effectuant l\'92accord de la cl\'e9.\
+\
+\ul D\'e9chiffrer seulement\'a0:\ulnone \'a0 s\'e9lectionnez cette extension lorsque l\'92extension Accord de la cl\'e9 est \'e9galement d\'e9finie. Elle indique que la cl\'e9 publique du certificat peut \'eatre utilis\'e9e pour d\'e9chiffrer des donn\'e9es tout en effectuant l\'92accord de la cl\'e9.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\b \cf0 Que signifie \'ab\'a0Cette extension est critique\'a0\'bb\'a0?
+\f1\b0 \
+On parle \'e9galement d\'92\'ab\'a0indicateur de criticalit\'e9\'a0\'bb. Il s\'92agit d\'92un indicateur qui annonce au logiciel utilisant le certificat s\'92il peut ignorer en toute s\'e9curit\'e9 l\'92extension d\'92utilisation de cl\'e9 au cas o\'f9 il ne la reconna\'eetrait pas. Un certificat sera rejet\'e9 si le logiciel ne reconna\'eet pas une \'ab\'a0extension critique\'a0\'bb.}

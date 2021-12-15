@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ErrorWithCodeMessageLocationNotAllowed">
+
+    <meta name="description" value="Executed when the extension did not get permission to use the phone's location."/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="app" type="messages.App" description="The app object used to send the message."/>
+    </parameters>
+  
+</cat>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadSpokenShortMessageReplyHint" locale="en">
+        <first>
+            <dialog><break time="1000ms"/>By the way, if you want to text back, you can say “Reply”.</dialog>
+        </first>
+</cat>

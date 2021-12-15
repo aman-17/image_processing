@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#UnsupportedMediaItemsCellularDataSettings" locale="en">
+    <all>
+        <dialog>To do that, you’ll need to either connect to Wi-Fi, or enable streaming with cellular data in your <var name="app.localizedName"/> Settings.</dialog>
+    </all>
+</cat>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#IntentConfirmationPrompt">
+    <meta name="description" value="Executed when a given Intent needs to be confirmed by the user"/>
+    <meta name="category" value="Confirm"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+    </parameters>
+</cat>

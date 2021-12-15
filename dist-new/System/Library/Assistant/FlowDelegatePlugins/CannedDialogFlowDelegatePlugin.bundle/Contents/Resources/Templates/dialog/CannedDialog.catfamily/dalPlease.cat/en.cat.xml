@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalPlease" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<first>
+			<dialog condition="familyHasBeenUsedWithinOneMinute" id="pleaseWhat#listenAfterSpeaking">Please? Please what?</dialog>
+			<dialog>Sorry, I didn’t catch that.</dialog>
+		</first>
+	</all>
+	<conditions>
+		<condition name="familyHasBeenUsedWithinOneMinute">
+			<expression name="dialogState.familyMinsSinceLastUse" op="le" value="1"/>
+		</condition>
+	</conditions>
+</cat>

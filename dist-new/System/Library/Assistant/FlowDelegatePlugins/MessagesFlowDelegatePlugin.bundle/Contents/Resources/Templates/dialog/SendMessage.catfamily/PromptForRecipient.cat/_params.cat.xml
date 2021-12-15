@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#PromptForRecipient">
+
+    <meta name="description" value="Prompting for a value for recipient."/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="isReply" type="dialog.Boolean" description="Was the message sending request initiated with reply"/>
+    </parameters>
+</cat>

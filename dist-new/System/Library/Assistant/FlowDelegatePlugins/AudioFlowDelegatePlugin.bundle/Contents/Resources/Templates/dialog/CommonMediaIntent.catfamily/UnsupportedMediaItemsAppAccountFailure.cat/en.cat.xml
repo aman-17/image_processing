@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#UnsupportedMediaItemsAppAccountFailure" locale="en">
+    <first>
+        <dialog id="AccountFailureUnknownUser" condition="isLowConfidenceUser">Sorry, the <var name="app.localizedName"/> account isn’t set up correctly.</dialog>
+        <dialog id="AccountFailureKnownUser">Sorry, <opt><var name="user.groundingIfNeeded"/>,</opt> your <var name="app.localizedName"/> account isn’t set up correctly. <opt>Check the <var name="app.localizedName" ground="Once"/> app.</opt></dialog>
+    </first>
+</cat>

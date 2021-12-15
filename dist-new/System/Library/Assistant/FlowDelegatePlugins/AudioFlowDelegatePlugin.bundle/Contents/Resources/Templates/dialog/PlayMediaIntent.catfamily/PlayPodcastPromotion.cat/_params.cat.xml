@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayPodcastPromotion">
+    <meta name="description" value="Playing predefined podcasts for story telling, with special dialogs."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="title" type="dialog.String" description="Title of the content" profanityFilter="yes"/>
+        <parameter name="artist" type="dialog.String" description="Artist for the content"/>
+        <parameter name="userRequestByStoryName" type="dialog.Boolean" description="The type of the of podcast promotion"/>
+        <parameter name="isStoryTelling" type="dialog.Boolean" description="The type of the of podcast promotion"/>
+        <parameter name="isStorySleep" type="dialog.Boolean" description="The type of the of podcast promotion"/>
+        <parameter name="isWordOfTheDay" type="dialog.Boolean" description="The type of the of podcast promotion"/>
+        <parameter name="isNight" type="dialog.Boolean" description="The type of the of podcast promotion"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+        <parameter name="wha" type="audio.WholeHouseAudio" description="WHA Params"/>
+    </parameters>
+</cat>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#UnsupportedMediaItemsAppNotAvailable" locale="en">
+    <all>
+        <first>
+            <dialog><var name="app.localizedName"/> hasn’t added support for that with Siri.</dialog>
+            <dialog>The app hasn’t added support for that with Siri.</dialog>
+        </first>
+    </all>
+</cat>

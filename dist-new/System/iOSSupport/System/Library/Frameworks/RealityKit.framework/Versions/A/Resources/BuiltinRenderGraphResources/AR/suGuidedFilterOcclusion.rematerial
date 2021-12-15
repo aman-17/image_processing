@@ -1,0 +1,4 @@
+{
+    "Name" : "SUGuidedFilterOcclusion",
+    "MaterialDefinition": "suGuidedFilterOcclusion.rematerialdefinition"
+}

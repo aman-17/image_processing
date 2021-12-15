@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutResume#confirmSlotValue" locale="en">
+    
+    <conditions>
+        <condition name="slotIsWorkoutName">
+            <expression name="slot" op="eq" value="'workoutName'"/>
+        </condition>
+    </conditions>
+    
+    <phrases>
+
+    </phrases>
+
+    <first>
+        <dialog condition="slotIsWorkoutName" id="workoutName">
+            Are you sure you want to resume <var name="workoutName"/>?
+        </dialog>
+        
+        <dialog id="noValueToConfirm">No value to confirm for <var name="slot"/>.</dialog>
+    </first>
+
+</cat>

@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalRandomJoke">
+	<all>
+		<random phrase="">
+			<all phrase="">
+				<dialog><print>I cleaned out the attic with my friend yesterday.</print><speak>I cleaned out the attic with my friend-yesterday.</speak></dialog>
+				<dialog><print>Now I can’t get the cobwebs out of his hair.</print><speak><break time="400ms"/>Now I can’t get the cobwebs out of his-hair.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog>This one goes out to whoever invented the zero.</dialog>
+				<dialog><print>Thanks for nothing.</print><speak><break time="400ms"/>Thanks for-nothing.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog>I’ve got a pen that can write underwater.</dialog>
+				<dialog><print>It can write other words too.</print><speak><break time="400ms"/>It can write other-words, too.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog>Two fish were in a tank.</dialog>
+				<dialog><print>One looked over to the other and said, “Do you know how to drive this thing?”</print><speak><break time="500ms"/>One looked over to the other and said, “Do you know how to drive this-thing?”</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>My friend the tennis player got a job waiting tables.</print><speak>My friend the tennis-player got a job-waiting tables,</speak></dialog>
+				<dialog><break time="500ms"/>It was going well until someone asked him to serve a grapefruit.</dialog>
+			</all>
+			<all note=" also in dalAnimalJoke ">
+				<dialog><print>A snake asked its friend, “Say, are we poisonous?” Its friend said, “Why do you ask?”</print><speak>A snake asked its friend. “Say. Are we poisonous?” Its friend said, “Why do you ask?”</speak></dialog>
+				<dialog><break time="500ms"/>The snake replied, “I just bit my tongue.”</dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>I know a joke about procrastination.</print><speak>I know a joke about pracrastination.</speak></dialog>
+				<dialog><break time="400ms"/>But I’ll tell it to you later.</dialog>
+			</all>
+			<all note=" Also in dalMathJoke and dalScienceJoke ">
+				<dialog><print>How do you make a computer say “5”?</print></dialog>
+				<dialog><print>You’ll figure it out. It’s Programming Binary 101.</print><speak>How do you make a computer say “5”? <break time="500ms"/> Yule figure it out. It’s Pro gramming bye-nary one oh one.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Did you hear about the superhero who got his front teeth knocked out?</print></dialog>
+				<dialog><print>He said he was Thor.</print><speak>Did you hear about the superhero who got his front teeth knocked out? <break time="500ms"/> He said he was Thor.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>My friend has a job where he keeps seeing flying saucers.</print></dialog>
+				<dialog><print>He’s a very clumsy waiter.</print><speak>My friend has a job where he keeps seeing flying saucers. <break time="350ms"/>He’s a very clumsy waiter.</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>I went to the store to get a book about turtles. “Hardbacks?” Asked the shopkeeper.</print></dialog>
+				<dialog><print>“Yes,” I replied. “They also have little tiny heads.”</print><speak>I went to the store to get a book about turtles. “Hardbacks?” Asked the shopkeeper. <break time="350ms"/> “Yes,” I replied. “They also have little tiny heads.”</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>What rock group has four guys who can’t sing or play instruments?</print></dialog>
+				<dialog><print>Mount Rushmore.</print><speak>What rock group has four guys who can’t sing or play instruments? <break time="500ms"/>  Mount Rushmore.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Want to hear a roof joke?</print></dialog>
+				<dialog><print>It’s on the house.</print><speak>Want to hear a roof joke? <break time="500ms"/> It’s on the house.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>I saw a movie about how ships are put together.</print></dialog>
+				<dialog><print> It was riveting.</print><speak>I saw a movie about how ships are put together. <break time="350ms"/>  It was riveting.</speak></dialog>
+			</all>
+			<all note=" Also in dalMathJoke ">
+				<dialog><print>Did you hear about the mathematician who was afraid of negative numbers?</print></dialog>
+				<dialog><print>He’ll stop at nothing to avoid them.</print><speak>Did you hear about the mathematician who was afraid of negative numbers? <break time="500ms"/> He’ll stop at nothing to avoid them.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Where do they make average things?</print></dialog>
+				<dialog><print>The Satisfactory.</print><speak>Where do they make average things? <break time="500ms"/> The Satisfactory.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>What did the left eye say to the right eye?</print></dialog>
+				<dialog><print>“Between you and me, something smells.”</print><speak>What did the left eye say to the right eye? <break time="500ms"/> “Between you and me, something smells.”</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>What do you call an apology written in dots and dashes?</print></dialog>
+				<dialog><print>Re-Morse code.</print><speak>What do you call an apology written in dots and dashes? <break time="500ms"/> Re-Morse code.</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>What kind of dog can jump higher than a building?</print></dialog>
+				<dialog><print>All of them. Buildings can’t jump.</print><speak>What kind of dog can jump higher than a building? <break time="500ms"/> All of them. Buildings can’t jump.</speak></dialog>
+			</all>
+			<all note=" Also in dalDadJoke ">
+				<dialog><print>I liked my dentist so much, I gave him a little plaque.</print><speak>I liked my dentist so much, I gave him a little plaque.</speak></dialog>
+			</all>
+			<all note=" Also in dalDadJoke ">
+				<dialog><print>Fun food fact: the first french fries weren’t actually cooked in France.</print></dialog>
+				<dialog><print>They were cooked in Greece.</print><speak>Fun food fact. The first french fries weren’t actually cooked in France. <break time="500ms"/>They were cooked in Greece.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Someone in my apartment building rearranged all the buttons on the elevator.</print></dialog>
+				<dialog><print>That was wrong on so many levels.</print><speak>Someone in my apartment building rearranged all the buttons on the elevator.  <break time="500ms"/>That was wrong on so many levels.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>My TV remote just suddenly stopped working the other day.</print></dialog>
+				<dialog><print>I guess I must have really pressed its buttons.</print><speak>My TV remote just suddenly stopped working the other day. <break time="500ms"/>I guess I must have really pressed its buttons.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>I thought I spilled coffee all over my keyboard.</print></dialog>
+				<dialog><print>But it turns out it’s all under control.</print><speak>I thought I spilled coffee all over my keyboard. <break time="500ms"/>But it turns out, it’s all under control.</speak></dialog>
+			</all>
+			<all note=" also in dalMusicJoke ">
+				<dialog><print>I saw a terrible Pearl Jam tribute band the other night.</print></dialog>
+				<dialog><print>They couldn’t have been Eddie Vedder.</print><speak>I saw a terrible Pearl Jam tribute band the other night. <break time="500ms"/>They couldn’t have been Eddie Vedder.</speak></dialog>
+			</all>
+			<all note=" also in dalAnimalJoke ">
+				<dialog><print>What’s more impressive than a talking parrot?</print></dialog>
+				<dialog><print>A spelling bee.</print><speak>What’s more impressive than a talking parrot? <break time="500ms"/>A spelling bee.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>A telescope just turned up in our lost and found box.</print></dialog>
+				<dialog><print>We don’t know who it belongs to, but we’re looking into it.</print><speak>A telescope just turned up in our lost n found box. <break time="500ms"/>We don’t know who it belongs to, but we’re looking into it.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>“Coming are British the! Coming are British the!”</print></dialog>
+				<dialog><print>– Paul Reverse</print><speak>“Coming are British The! Coming are British The!” <break time="500ms"/>You know who said that? <break time="350ms"/>Paul Reverse.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>What do Alexander the Great, Winnie the Pooh, and Chance the Rapper have in common?</print></dialog>
+				<dialog><print>Same middle name.</print><speak>What do Alexander the Great, Winnie the Pooh, and Chance the Rapper have in common? <break time="500ms"/>Same middle name.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Did you hear about the giant who threw up?</print></dialog>
+				<dialog><print>It’s all over town.</print><speak>Did you hear about the giant who threw wup? <break time="500ms"/>It’s all over town.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>My mom was a radiologist. She met my dad when he came in one day for an x-ray.</print></dialog>
+				<dialog><print>I wonder what she saw in him…</print><speak>My mom was a radiologist. She met my dad <break time="50ms"/>when he came in one day for an X-Ray. <break time="750ms"/>I wonder what she saw in him…</speak></dialog>
+			</all>
+			<all note=" Also in dalScienceJoke ">
+				<dialog><print>Pavlov’s hair wasn’t always so silky.</print></dialog>
+				<dialog><print>He had to condition it.</print><speak>Pavlov’s hair wasn’t always so silky. <break time="500ms"/>He had to condition it.</speak></dialog>
+			</all>
+			<all note=" Also in dalScienceJoke ">
+				<dialog><print>I finally got around to reading that Stephen Hawking book.</print></dialog>
+				<dialog><print>It’s about time.</print><speak>I finally got around to reading that Stephen Hawking book. <break time="500ms"/>It’s about time.</speak></dialog>
+			</all>
+			<all note=" Also in dalMathJoke ">
+				<dialog><print>What did the 0 say to the 8?</print></dialog>
+				<dialog><print>“Nice belt.”</print><speak>What did the zero say to the eight? <break time="750ms"/>Nice belt.</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>If your band ever goes out on tour, make sure you bring along a Latvian sound engineer.</print></dialog>
+				<dialog><print>And a Czech one, too.</print></dialog>
+				<dialog><print>And a Czech one, too.</print><speak>If your band ever goes out on tour, make sure you bring along a Latvian sound engineer. <break time="500ms"/>And a check one, two. <break time="500ms"/>And a check, one, too.</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>Why did Adele cross the road?</print></dialog>
+				<dialog><print>To say Hello from the Other Side.</print><speak>Why did Adele cross the road? <break time="500ms"/>To say Hello from the Other Side.</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>Why does Snoop Dogg carry an umbrella?</print></dialog>
+				<dialog><print> Fo’ Drizzle.</print><speak>Why does Snoop Dogg carry an umbrella? <break time="500ms"/>Foe drizzle.</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>Just yesterday, someone asked me to stop playing ‘Wonderwall.’</print></dialog>
+				<dialog><print>I said “Maybe…”</print><speak>just yesterday, someone asked me to stop playing wonderwall. <break time="500ms"/>I said maybe.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>A skeleton walks into a cafe and says, “give me a coffee… and a mop.”</print><speak>A skeleton, walks into a cafe and says, <break time="500ms"/>“give me a coffee… <break time="1000ms"/>and a mop.”</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>As soon as you find out someone has 10,000 bees, marry them.</print></dialog>
+				<dialog><print>That’s when you know they’re a keeper.</print><speak>As soon as you find out someone has 10,000 bees, marry them. <break time="500ms"/>That’s when you know they’re a keeper.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>I got my best friend a fridge for her birthday.</print></dialog>
+				<dialog><print>I can’t wait to see her face light up when she opens it.</print><speak>I got my best friend a fridge for her birthday. <break time="500ms"/>I can’t wait to see her face light up when she opens it.</speak></dialog>
+			</all>
+			<all>
+				<dialog><print>I don’t often tell Dad jokes.</print></dialog>
+				<dialog><print>But when I do, he usually laughs.</print><speak>I don’t often tell dad jokes. <break time="350ms"/>But when i do, he usually laughs.</speak></dialog>
+			</all>
+			<all>
+				<dialog><print>I just realized it’s been years since I did the Hokey Pokey.</print></dialog>
+				<dialog><print>I guess I forgot what it’s all about.</print><speak>I just realized it’s been years since I did the Hokey Pokey. <break time="500ms"/>I guess I forgot what it’s all about.</speak></dialog>
+			</all>
+			<all>
+				<dialog><print>What’s the difference between roast beef and pea soup?</print></dialog>
+				<dialog><print>Anyone can roast beef.</print><speak>What’s the difference between roast beef <break time="0ms"/>and pea soup? <break time="1000ms"/>Anyone can roast beef.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>I asked my new friend to meet me at the gym, but they never showed up.</print></dialog>
+				<dialog><print>I guess the two of us aren’t going to work out.</print><speak>I asked my new friend to meet me at the gym, but they never showed up. <break time="500ms"/>I guess the two of us aren’t going to work out.</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>Why don’t koala bears hang around with all the other bears?</print></dialog>
+				<dialog><print>Because they don’t meet the Koala-fications.</print><speak>Why don’t koala bears hang around with all the other bears? <break time="500ms"/>Because they don’t meet the Koala fications.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog>Why do people tell actors to break a leg?</dialog>
+				<dialog><break time="500ms"/>Because every play needs a cast.</dialog>
+			</all>
+			<all phrase="">
+				<dialog>What do you call a boomerang that won’t come back?</dialog>
+				<dialog><break time="500ms"/>A stick.</dialog>
+			</all>
+			<all note=" also in dalScienceJoke ">
+				<dialog><print>A woman walks up to a librarian and asks, “Do you have any books on Pavlov’s dogs and Schrödinger’s cat?”</print><speak>A woman walks up to a librarian and asks, “Do you have any books on Pavlov’s dogs and shroedinger’s cat?”</speak></dialog>
+				<dialog><print>The librarian replies, “It rings a bell, but I don’t know if it’s here or not.”</print><speak><break time="500ms"/>The librarian-replies, “It rings a bell, but I don’t know if it’s here or not.”</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>A man went to the doctor and said, “Doc, I broke my arm in 12 places.”</print><speak>A man went to the doctor, and said, “Doc, I broke my arm in 12 places.”</speak></dialog>
+				<dialog><print>The doctor replied, “Well, stop going to those places then.”</print><speak><break time="500ms"/>The doctor replied, “Well, stop going to-those places then!”</speak></dialog>
+			</all>
+			<all note=" Also in dalMathJoke and dalAnimalJoke">
+				<dialog>A sheepdog brought the flock back to the farm and told the shepherd, “Here’s your 40 sheep.” <break time="300ms"/>The farmer said, “But I only have 36.”</dialog>
+				<dialog><break time="500ms"/>The sheepdog replied, “I know, but I rounded them up.”</dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Why did the invisible man turn down a job offer?</print></dialog>
+				<dialog><print>Because he just couldn’t see himself working there.</print><speak>Why did the invisible man turn down a job-offer? <break time="500ms"/> Because he just couldn’t see himself working there.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Why did the belt go to jail?</print></dialog>
+				<dialog><print>It held up a pair of pants.</print><speak>Why did the belt go to jail? <break time="500ms"/> It held up a pair of pants.</speak></dialog>
+			</all>
+			<all note=" also in dalMathJoke ">
+				<dialog><print>If you have 13 apples in one hand and 10 oranges in the other, what do you have?</print></dialog>
+				<dialog><print>Big hands.</print><speak>If you have 13 apples in one hand and 10 oranges in the other, what do you have? <break time="500ms"/> Big hands.</speak></dialog>
+			</all>
+			<all note=" also in dalDadJoke ">
+				<dialog><print>I don’t get along with car keys.</print></dialog>
+				<dialog><print>They’re always starting something.</print><speak>I don’t get along with car keys. <break time="350ms"/> They’re always starting something.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>If you cry when you cut an onion, here’s a tip:</print></dialog>
+				<dialog><print>Don’t get emotionally attached.</print><speak>If you cry when you cut an onion, here’s a tip: <break time="350ms"/> Don’t get emotionally attached.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Why did the sailors have to stop playing cards?</print></dialog>
+				<dialog><print>The Captain was standing on the deck.</print><speak>Why did the sailors have to stop playing cards? <break time="500ms"/> The Captain was standing on the deck.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Someone asked me to make a donation for a new swimming pool.</print></dialog>
+				<dialog><print>So I gave them a glass of water.</print><speak>Someone asked me to make a donation for a new swimming-pool. <break time="350ms"/> So I gave them a glass of water.</speak></dialog>
+			</all>
+			<all note=" Also in dalScienceJoke ">
+				<dialog><print>I have a fear of overly intricate buildings.</print></dialog>
+				<dialog><print>I have a complex complex complex.</print><speak>I have a fear of overly intricate buildings. <break time="350ms"/> I have a complex complex complex.</speak></dialog>
+			</all>
+			<all note=" Also in dalDadJoke ">
+				<dialog><print>I don’t trust the beach.</print></dialog>
+				<dialog><print>Too many flip flops.</print><speak>I don’t trust the beach. <break time="350ms"/> Too many flip flops.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>A bad limbo player walks into a bar.</print><speak>A bad limbo player walks-into a bar.</speak></dialog>
+			</all>
+			<all note=" Also in dalDadJoke ">
+				<dialog><print>What does it cost to hire a spy?</print></dialog>
+				<dialog><print>I could tell you, but then I’d have to bill you.</print><speak>What does it cost to hire a spy? <break time="500ms"/> I could tell you, but then I’d have to bill you.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>This friend of mine is a tightrope walker.</print></dialog>
+				<dialog><print>He’s nice, but so high strung.</print><speak>This friend of mine is a tight-rope walker. <break time="350ms"/> He’s nice, but So high strung.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Always use a wide lens when taking pictures of horses</print></dialog>
+				<dialog><print>They don’t like being cropped.</print><speak>Always use a wide lens when taking pictures of horses <break time="350ms"/> They don’t like being cropped.</speak></dialog>
+			</all>
+			<all note=" Also in dalMathJoke and dalScienceJoke ">
+				<dialog><print>Did you hear about the band called 1023MB?</print></dialog>
+				<dialog><print>They’re good, but they haven’t got a gig yet. </print><speak>Did you hear about the band called 1023 Megabytes? <break time="350ms"/> They’re good, but they haven’t got a gig yet.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>I asked my friend to explain to me what an acorn is.</print></dialog>
+				<dialog><print> They said, “It’s an oak tree, in a nutshell.”</print><speak>I asked my friend to explain to me what an acorn is. <break time="500ms"/> They said, “It’s an oak tree, in a nutshell.”</speak></dialog>
+			</all>
+			<all note=" Also in dalDadJoke ">
+				<dialog><print>Be careful around stairs.</print></dialog>
+				<dialog><print>They always seem like they’re up to something.</print><speak>Be careful around stairs.  <break time="500ms"/>They always seem like they’re up to something.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>A clown held the door for me today.</print></dialog>
+				<dialog><print>That was a nice jester.</print><speak>A clown held the door for me today. <break time="500ms"/>That was a nice jester.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>My friend is obsessed with taking selfies in the shower, but they always turn out blurry.</print></dialog>
+				<dialog><print>He has selfie steam issues.</print><speak>My friend is obsessed with taking selfies in the shower, but they always turn out blurry. <break time="500ms"/>He has selfie steam issues.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>How did Darth Vader know what Luke was getting for Christmas?</print></dialog>
+				<dialog><print>He felt his presents.</print><speak>How did Darth Vader know what Luke was getting for Christmas? <break time="500ms"/>He felt his presents.</speak></dialog>
+			</all>
+			<all note=" also in dalMusicJoke ">
+				<dialog><print>What kind of sugar does Lady Gaga put in her coffee?</print></dialog>
+				<dialog><print>Raw raw, raw raw raw.</print><speak>What kind of sugar does Lady Gaga put in her coffee? <break time="500ms"/>Raw raw,  raw raw raw.</speak></dialog>
+			</all>
+			<all note=" also in dalMathJoke ">
+				<dialog><print>This is a Fibonacci joke.</print></dialog>
+				<dialog><print>It’s worse than the last two jokes you heard, combined.</print><speak>This is a Fibonacci joke. <break time="500ms"/>It’s worse than the last two jokes you heard, combined.</speak></dialog>
+			</all>
+			<all note=" also in dalAnimalJoke ">
+				<dialog><print>I went into a pet shop and asked for twelve bees.</print></dialog>
+				<dialog><print>They handed me thirteen and said, “The last one is a free bee.”</print><speak>I went into a pet shop and asked for twelve bees. <break time="500ms"/>They handed me thirteen and said, “the last one is a freebie.”</speak></dialog>
+			</all>
+			<all note=" also in dalAnimalJoke ">
+				<dialog><print>Why do bees have sticky hair?</print></dialog>
+				<dialog><print>Honeycombs.</print><speak>Why do bees have sticky hair? <break time="500ms"/>Honeycombs.</speak></dialog>
+			</all>
+			<all note=" Also in dalDadJoke ">
+				<dialog><print>How do you keep bacon from curling in the pan?</print></dialog>
+				<dialog><print>You take away their little brooms.</print><speak>How do you keep bacon from curling in the pan? <break time="500ms"/>You take away their little brooms.</speak></dialog>
+			</all>
+			<all>
+				<dialog><print>A joke walks into a restaurant.</print></dialog>
+				<dialog><print>The Maître d’ says, “Wow, that’s weird. I’ve never meta joke before.”</print><speak>A joke walks into a restaurant. <break time="500ms"/>The Maytra d says, “Wow, that’s weird. I’ve never meta joke before.”</speak></dialog>
+			</all>
+			<all note=" Also in dalDadJoke ">
+				<dialog><print>I’ve said it before, and I’ll say it again:</print></dialog>
+				<dialog><print>I’ve said it before.</print><speak>I’ve said it before, and I’ll say it again: <break time="500ms"/>“I’ve said it before.”</speak></dialog>
+			</all>
+			<all note=" Also in dalScienceJoke ">
+				<dialog><print>Tell you a joke about Potassium?</print></dialog>
+				<dialog><print>K.</print><speak>Tell you a joke about Potassium? <break time="750ms"/>K.</speak></dialog>
+			</all>
+			<all note=" Also in dalScienceJoke ">
+				<dialog><print>How often do I tell chemistry jokes?</print></dialog>
+				<dialog><print>Periodically.</print><speak>How often do I tell chemistry jokes? <break time="500ms"/>Periodically.</speak></dialog>
+			</all>
+			<all note=" Also in dalMathJoke ">
+				<dialog><print>Which one of King Arthur’s knights built the round table?</print></dialog>
+				<dialog><print>Sir Cumference.</print><speak>Which one of King Arthur’s knights built the round table? <break time="500ms"/>Circumference.</speak></dialog>
+			</all>
+			<all note=" Also in dalMathJoke ">
+				<dialog><print>Why do teenagers always walk in groups of 3 or 5?</print></dialog>
+				<dialog><print>Because they can’t even.</print><speak>Why do teenagers always walk in groups of 3 or 5? <break time="500ms"/>Because they can’t even.</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>Remember, if you ever can’t quite get the urge to hum ‘The Lion Sleeps Tonight’…</print></dialog>
+				<dialog><print>it’s just a whim away.</print><speak>Remember, if you ever can’t quite get the urge to hum “The Lion Sleeps Tonight”… <break time="500ms"/>it’s just a whim away.</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>Two giant wind turbines are standing in a field.</print></dialog>
+				<dialog><print>One turns to the other and asks, “What kind of music do you like?”</print></dialog>
+				<dialog><print>The second one says, “Well, I’m a huge metal fan.”</print><speak>Two giant wind turbines are standing in a field. One turns to the other and asks <break time="50ms"/>“What kind of music do you like?” <break time="0ms"/>The second one says <break time="50ms"/>“Well <break time="350ms"/>I’m a huge metal fan.”</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>Why should you never ask Rick Astley if you can borrow his complete collection of Pixar movies?</print></dialog>
+				<dialog><print>Because he’s never gonna give you ‘Up.’</print><speak>Why should you never ask Rick Astley if you can borrow his complete collection of Pixar movies? <break time="500ms"/>Because he’s never gonna give you Up.</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>I once had a cat who swallowed a ball of yarn.</print></dialog>
+				<dialog><print>She had mittens.</print><speak>I once had a cat, who swallowed a ball of yarn. <break time="500ms"/>She had mittins.</speak></dialog>
+			</all>
+			<all>
+				<dialog><print>What did the Buddhist monk say to the hot dog vendor?</print></dialog>
+				<dialog><print>Make me one with everything.</print><speak>What did the Buddhist monk say to the hot dog vendor? <break time="500ms"/>Make me one with everything.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Fun fact: Mr. Spock actually had three ears:</print></dialog>
+				<dialog><print>A left ear, a right ear, and a final front ear.</print><speak>Fun fact: Mr. Spock actually had 3 ears. <break time="500ms"/>A left ear, a right ear <break time="500ms"/>and a final front ear.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>What do you call a talking dinosaur?</print></dialog>
+				<dialog><print>Thesaurus.</print><speak>What do you call a talking dinosaur? <break time="500ms"/>Thesaurus.</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>One night, I paid $20 to see Prince.</print></dialog>
+				<dialog><print>But I partied like it was $19.99.</print><speak>One night, I paid 20 dollars to see Prince. <break time="500ms"/>But I partied like it was Nineteen ninety-nine.</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>What’s the best method to find out how heavy your red hot chili pepper is?</print></dialog>
+				<dialog><print>Give it a weigh, Give it a weigh, Give it a weigh now.</print><speak>What’s the best method to find out how heavy your red hot chili pepper is? <break time="500ms"/>Give it a weigh, Give it a weigh, Give it a weigh now.</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>I bought my friend an elephant for his room.</print></dialog>
+				<dialog><print>He said “Thanks.”</print></dialog>
+				<dialog><print>I said “Don’t mention it.”</print><speak>I bought my friend an elephant for his room. <break time="250ms"/>He said “Thanks.” <break time="350ms"/>I said <break time="50ms"/>“Don’t mention it.”</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>What do you call a dog that does magic?</print></dialog>
+				<dialog><print>A Labracadabrador.</print><speak>What do you call a dog that does magic? <break time="500ms"/>A Labracadabradoor.</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>A sloth walks into a coffee shop, waves to get the barista’s attention, and says “I’ll have… a cappuccino.”</print></dialog>
+				<dialog><print>The barista says, “Hey, why the long paws?”</print><speak>A slawth walks into a coffee shop, waves to get the barista’s attention, and says, I’ll have… <break time="1500ms"/>a cappuccino. <break time="450ms"/>The barista says <break time="50ms"/>Hey, why the long pause</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>I ordered a chicken and an egg on the internet.</print><speak>I ordered a chicken-and an egg on the internet.</speak></dialog>
+				<dialog><break time="500ms"/>I’ll let you know.</dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog>Why do you never see elephants hiding in trees?</dialog>
+				<dialog><print>Because they’re so good at it.</print><speak><break time="500ms"/>Because they’re-so good-at it.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog>Remember, there are two little words that will open a lot of doors for you.</dialog>
+				<dialog><print>“Push” and “Pull”.</print><speak><break time="400ms"/>“Push”, and “Pull”.</speak></dialog>
+			</all>
+			<all note=" Also in dalMathJoke ">
+				<dialog><print>If you have ten chocolates, and your friend asks you for eight, what do you have left?</print><speak>If you have ten chocolates, and your friend asks-you for eight, what do you have left?</speak></dialog>
+				<dialog><break time="500ms"/>Ten chocolates and one less friend.</dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>What’s another name for Santa’s elves?</print></dialog>
+				<dialog><print>Subordinate clauses.</print><speak>What’s another name for Santa’s elves? <break time="500ms"/> Subordinate clauses.</speak></dialog>
+			</all>
+			<all note=" Also in dalScienceJoke ">
+				<dialog><print>Two satellite dishes got married.</print></dialog>
+				<dialog><print>The wedding wasn’t much but the reception was excellent.</print><speak>Two satellite dishes got married. <break time="500ms"/> The wedding wasn’t much but the reception was excellent.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>What did the orange name its biography?</print></dialog>
+				<dialog><print>Pulp Non-Fiction.</print><speak>What did the orange name its biography? <break time="500ms"/> Pulp; Nonfiction.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>What do you call it when a car writes its life story?</print></dialog>
+				<dialog><print>An auto-biography.</print><speak>What do you call it when a car writes its life story? <break time="500ms"/> An auto biography.</speak></dialog>
+			</all>
+			<all note=" *deep breath* also in dalMusicJoke, dalScienceJoke, and dalMathJoke ">
+				<dialog><print>Who is Einstein’s favorite rapper?</print></dialog>
+				<dialog><print>E = MC Hammer.</print><speak>Who is Einstein’s favorite rapper? <break time="500ms"/> E = M C Hammer.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Have you heard the joke about yoga?</print></dialog>
+				<dialog><print>Never mind. It’s a bit of a stretch.</print><speak>Have you heard the joke about yoga? <break time="350ms"/> Never mind. It’s a bit of a stretch.</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>What do you call a popstar’s group of friends?</print></dialog>
+				<dialog><print>Britney’s peers.</print><speak>What do you call a popstar’s group of friends? <break time="500ms"/> Britney’s peers.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>What do you call someone who can sew really fast?</print></dialog>
+				<dialog><print>Tailor Swift.</print><speak>What do you call someone who can sew really fast? <break time="500ms"/> Tailor Swift.</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>What do you call a popstar in a snowstorm?</print></dialog>
+				<dialog><print>Chilly Eilish.</print><speak>What do you call a popstar in a snowstorm? <break time="500ms"/> Chilly Eilish.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Why don’t hipsters like the Mississippi River?</print></dialog>
+				<dialog><print>It’s too mainstream.</print><speak>Why don’t hipsters like the Mississippi River? <break time="500ms"/> It’s too mainstream.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Did you hear about the person who got hit with a can of soda?</print></dialog>
+				<dialog><print>They’re okay. It was a soft drink.</print><speak>Did you hear about the person who got hit with a can of soda? <break time="500ms"/> They’re okay. It was a softdrink.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Did you see the toddler who was wearing sunglasses and having a tantrum?</print></dialog>
+				<dialog><print>He was throwing shades.</print><speak>Did you see the toddler who was wearing sunglasses and having a tantrum? <break time="350ms"/> He was throwing shades.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>This guy told me he was Harry Potter’s Godfather.</print></dialog>
+				<dialog><print>I thought he was joking, but he said he was Sirius.</print><speak>This guy told me he was Harry Potter’s Godfather. <break time="350ms"/> I thought he was joking, but he said he was Sirius.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>What sport needs a life jacket, paddle, and ball of yarn?</print></dialog>
+				<dialog><print>Whitewater crafting.</print><speak>What sport needs a life jacket. Paddle, and ball of yarn? <break time="500ms"/> Whitewater crafting.</speak></dialog>
+			</all>
+			<all note=" Also in dalDadJoke ">
+				<dialog><print>If you’ll excuse me, I’m going to go run laps around my bed.</print></dialog>
+				<dialog><print>I need to catch up on my sleep.</print><speak>If you’ll excuse me, I’m going to go run laps around my bed. <break time="500ms"/>I need to catch up on my sleep.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>To the two criminals who stole my calendar:</print></dialog>
+				<dialog><print>I hope you both get six months.</print><speak>To the two criminals who stole my calendar. <break time="500ms"/>I hope you both get six months.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>To the person who stole my coffee, my lamp, and my parrot:</print></dialog>
+				<dialog><print>I don’t know how you sleep at night.</print><speak>To the person who stole my coffee, my lamp and my parrot. <break time="500ms"/>I don’t know how you sleep at night.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>To the person who stole my limbo bar:</print></dialog>
+				<dialog><print>How low can you go?</print><speak>To the person who stole my limbo bar. <break time="500ms"/>How low can you go?</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>To the person who stole my glasses: I will find you.</print></dialog>
+				<dialog><print>I have contacts.</print><speak>To the person who stole my glasses, I will find you. <break time="500ms"/>. I have contacts.</speak></dialog>
+			</all>
+			<all note=" also in dalMusicJoke ">
+				<dialog><print>My printer just told me it was joining a band.</print></dialog>
+				<dialog><print>Which makes sense.</print></dialog>
+				<dialog><print>It loves to jam.</print><speak>My printer just told me it was joining a band. Which makes sense. <break time="500ms"/>It loves to jam.</speak></dialog>
+			</all>
+			<all note=" also in dalScienceJoke ">
+				<dialog><print>Why does Orion’s belt only have three stars?</print></dialog>
+				<dialog><print>Well, some of the reviews say it’s just a waist of space.</print><speak>Why does Orion’s belt only have three stars? <break time="500ms"/>Well, some of the reviews say it’s just a waist of space.</speak></dialog>
+			</all>
+			<all note=" also in dalAnimalJoke ">
+				<dialog><print>Every time the doorbell rings, my dog runs and stands in the corner.</print></dialog>
+				<dialog><print>He’s a Boxer.</print><speak>Every time the doorbell rings, my dog runs and stands in the corner. <break time="500ms"/>He’s a Boxer.</speak></dialog>
+			</all>
+			<all note=" also in dalAnimalJoke ">
+				<dialog><print>Why do porcupines always win at sports?</print></dialog>
+				<dialog><print>They have the most points.</print><speak>Why do porcupines always win at sports? <break time="500ms"/>They have the most points.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>My aunt used to work as a human cannonball.</print></dialog>
+				<dialog><print>She wasn’t sure she was any good at it until she got fired.</print><speak>My aunt used to work as a human cannonball. <break time="500ms"/>She wasn’t sure she was any good at it, until she got fired.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>A man walks into a cafe carrying a large chunk of concrete, and says,</print></dialog>
+				<dialog><print>“Give me a coffee. And one for the road.”</print><speak>A man walks into a cafe carrying a large chunk of concrete, and says, <break time="500ms"/>“Give me a coffee. And one for the road.”</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>Why do ghosts love to eat health food so much?</print></dialog>
+				<dialog><print>Because it’s super natural.</print><speak>Why do ghosts love to eat health food so much? <break time="500ms"/>Because it’s super natural.</speak></dialog>
+			</all>
+			<all note=" Also in dalScienceJoke ">
+				<dialog><print>Tell you a joke about Sodium?</print></dialog>
+				<dialog><print>Na.</print><speak>Tell you a joke about Sodium? <break time="750ms"/>Nah.</speak></dialog>
+			</all>
+			<dialog>Never trust an atom. They make up everything.</dialog>
+			<all note=" Also in dalMathJoke ">
+				<dialog><print>I hired a handyman who said he could do some odd jobs.</print></dialog>
+				<dialog><print>He did every other thing on my list.</print><speak>I hired a handyman who said he could do some odd jobs. <break time="500ms"/>He did every other thing on my list.</speak></dialog>
+			</all>
+			<dialog>A Roman walks into a cafe, holds up two fingers, and gets five coffees.</dialog>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>Why couldn’t Beethoven find his teacher?</print></dialog>
+				<dialog><print>Because he was Haydn.</print><speak>Why couldn’t Beethoven find his teacher? <break time="500ms"/>Because he was Haydn.</speak></dialog>
+			</all>
+			<all note=" Also in dalMusicJoke ">
+				<dialog><print>I’m worried about my Uncle. He’s obsessed with owning every Beatles album on vinyl.</print></dialog>
+				<dialog><print>He needs Help.</print><speak>I’m worried about my Uncle. He’s obsessed with owning every Beatles album on vinyl. <break time="500ms"/>He needs Help.</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>I thought I spotted a leopard once.</print></dialog>
+				<dialog><print>Turns out they’re born like that.</print><speak>I thought I spotted a leopard once. <break time="500ms"/>Turns out they’re born like that.</speak></dialog>
+			</all>
+			<all>
+				<dialog><print>Why is Yoda afraid of Seven?</print></dialog>
+				<dialog><print>Because Six Seven Eight.</print><speak>Why is Yoda <break time="20ms"/>afraid of seven? <break time="500ms"/>Because six, seven eight.</speak></dialog>
+			</all>
+			<all phrase="">
+				<dialog><print>The Maître d’ says, “We don’t serve time travelers in here!”</print></dialog>
+				<dialog><print>A time traveler walks into a restaurant.</print><speak>The Maytra d says, we don’t serve time travelers in here. <break time="1000ms"/>uh time traveler walks into a restaurant.</speak></dialog>
+			</all>
+			<dialog>I was washing the car with a friend, until they said, “Can’t you just use a sponge?”</dialog>
+			<dialog>If you get heartburn every time you eat birthday cake, try taking the candles off.</dialog>
+			<dialog>Two drums and a cymbal <break time="0ms"/>fall off a cliff.</dialog>
+			<dialog>When someone tells me to stop acting like a flamingo– <break time="500ms"/>that’s when I put my foot down.</dialog>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>I taught a wolf to meditate.</print></dialog>
+				<dialog><print>Now he’s Aware Wolf.</print><speak>I taught a wolf to meditate. <break time="1000ms"/>Now he’s Aware Wolf.</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>How should you address an alligator in a vest?</print></dialog>
+				<dialog><print>In-vest-a-gator.</print><speak>How should you address, an alligator in a vest? <break time="500ms"/>In vest a gator.</speak></dialog>
+			</all>
+			<all>
+				<dialog><print>How do you get an elephant out of the theater?</print></dialog>
+				<dialog><print>You can’t. It’s in their blood.</print><speak>How do you get an elephant out of the theatre? <break time="500ms"/>You can’t, It’s in their blood.</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog>What do you call a chicken at the North Pole?</dialog>
+				<dialog><break time="600ms"/>Lost.</dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog>What do you get when you cross an elephant and a kangaroo?</dialog>
+				<dialog><break time="500ms"/>Earthquakes in Australia.</dialog>
+			</all>
+			<all note=" Also in dalMathJoke and dalKidJoke ">
+				<dialog><print>My umbrella broke in half. But it’s OK.</print></dialog>
+				<dialog><print>There’s only a 50% chance of rain.</print><speak>My umbrella broke in half. But it’s OK. <break time="350ms"/> There’s only a 50% chance of rain.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What’s the easiest way to get Straight A’s?</print></dialog>
+				<dialog><print>Use a ruler.</print><speak>What’s the easiest way to get Straight A’s? <break time="500ms"/> Use a ruler.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Why is Cinderella so bad at soccer?</print></dialog>
+				<dialog><print>She keeps running away from the ball.</print><speak>Why is Cinderella so bad at soccer? <break time="500ms"/> She keeps running away from the ball.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>How do we know that hot is faster than cold?</print></dialog>
+				<dialog><print>Because you can catch a cold.</print><speak>How do we know that hot is faster than cold? <break time="500ms"/>Because you can catch a cold.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What did the science book say to the math book?</print></dialog>
+				<dialog><print>“Wow, you’ve got problems.”</print><speak>What did the science book say to the math book? <break time="500ms"/>“Wow, you’ve got problems.”</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>I’m taking these cookies to the doctor.</print></dialog>
+				<dialog><print>They feel crummy.</print><speak>I’m taking these cookies to the doctor. <break time="500ms"/>They feel crummy.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Why did the clock get kicked out of the library?</print></dialog>
+				<dialog><print>It tocked too much.</print><speak>Why did the clock get kicked out of the library? <break time="500ms"/>It talked too much.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>“Sorry I’m late,” said the broom.</print></dialog>
+				<dialog><print>“I overswept.”</print><speak>Sorry I’m late, said the broom. <break time="500ms"/>I over swept.</speak></dialog>
+			</all>
+			<all note=" also in dalKidJoke and dalDadJoke ">
+				<dialog><print>Why do sharks live in salt water?</print></dialog>
+				<dialog><print>Because pepper water makes them sneeze.</print><speak>Why do sharks live in salt water? <break time="500ms"/>Because pepper water makes them sneeze.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Why do hummingbirds hum?</print></dialog>
+				<dialog><print>Because they can’t remember the words.</print><speak>Why do hummingbirds hum? <break time="500ms"/>Because they can’t remember the words.</speak></dialog>
+			</all>
+			<all note=" Also in dalKidJoke and dalDadJoke ">
+				<dialog><print>Why did the meatballs tell the spaghetti to go to sleep?</print></dialog>
+				<dialog><print>It was pasta bedtime.</print><speak>Why did the meatballs tell the spaghetti to go to sleep? <break time="500ms"/>It was pasta bedtime.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Why did the dolphin cross the bay?</print></dialog>
+				<dialog><print>To get to the other tide.</print><speak>Why did the dolphin cross the bay? <break time="500ms"/>To get to the other tide.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What’s big and red and wiggles in the sky?</print></dialog>
+				<dialog><print>A jellycopter.</print><speak>What’s big, and red, and wiggles in the sky? <break time="500ms"/>A <emphasis level="strong">jelly</emphasis> copter.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>How many tickles does it take to make an octopus laugh?</print></dialog>
+				<dialog><print>Ten. Ten tickles.</print><speak>How many tickles does it take, to make an octopus laugh? <break time="1000ms"/>Ten. <break time="500ms"/>Ten tickles.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What do you call a nose with no body?</print></dialog>
+				<dialog><print>No body nose.</print><speak>What do you call a nose with no body? <break time="1000ms"/>No body nose.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Why did the cow go to New York City?</print></dialog>
+				<dialog><print>To see the Moosicals.</print><speak>Why did the cow go to New York City? <break time="1000ms"/>To see the Moo zickles.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>How do you put a baby astronaut to sleep?</print></dialog>
+				<dialog><print>You rocket.</print><speak>How do you put a baby astronaut to sleep? <break time="1000ms"/>You rocket.</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog><print>What steps do you take if a lion is chasing you?</print><speak>What steps do-you-take if a lion is chasing you?</speak></dialog>
+				<dialog><break time="500ms"/>Big ones.</dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What has four wheels and flies?</print></dialog>
+				<dialog><print>A garbage truck.</print><speak>What has four wheels and flies? <break time="500ms"/> A garbage truck.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>How do you create light with water?</print></dialog>
+				<dialog><print>Clean the windows.</print><speak>How do you create light with water? <break time="500ms"/> Clean the windows.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>I love playing tricks on vampires.</print></dialog>
+				<dialog><print>They’re such suckers.</print><speak>I love playing tricks on vampires. <break time="350ms"/> They’re such suckers.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What do you get when you cross a centipede with a parrot?</print></dialog>
+				<dialog><print>A walkie-talkie.</print><speak>What do you get when you cross a centipede with a parrot? <break time="500ms"/>A walkie-talkie.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What do you call a snowman in spring?</print></dialog>
+				<dialog><print>“Puddle.”</print><speak>What do you call a snowman in spring? <break time="500ms"/>Puddle.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Why did the moon skip dinner?</print></dialog>
+				<dialog><print>It was full.</print><speak>Why did the moon skip dinner? <break time="500ms"/>It was full.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Why are stars bad at staring contests?</print></dialog>
+				<dialog><print>Because they’re always blinking.</print><speak>Why are stars bad at staring contests? <break time="500ms"/>Because they’re always blinking.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Ghosts are terrible liars.</print></dialog>
+				<dialog><print>You can see right through them.</print><speak>Ghosts are terrible liars. <break time="500ms"/>You can see right through them.</speak></dialog>
+			</all>
+			<all note=" also in dalKidJoke and dal DadJoke ">
+				<dialog><print>Where do pencils come from?</print></dialog>
+				<dialog><print>Pencil-vania.</print><speak>Where do pencils come from? <break time="500ms"/>Pennsylvania.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>How do you talk to a giant?</print></dialog>
+				<dialog><print>Use big words.</print><speak>How do you talk to a giant? <break time="500ms"/>Use big words.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>How do scientists keep their breath fresh?</print></dialog>
+				<dialog><print>Experimints.</print><speak>How do scientists keep their breath fresh? <break time="500ms"/>Experiments.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Why did they call it the Dark Ages?</print></dialog>
+				<dialog><print>Because there were so many knights.</print><speak>Why did they call it the Dark Ages? <break time="500ms"/>Because there were so many knights.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Why can’t two elephants go swimming at the same time?</print></dialog>
+				<dialog><print>Only one pair of trunks.</print><speak>Why can’t two elephants go swimming at the same time? <break time="500ms"/>Only one pair of trunks.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Where do boats go when they feel sick?</print></dialog>
+				<dialog><print>To the dock.</print><speak>Where do boats go, when they feel sick? <break time="750ms"/>To the dock.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What did the bee say to the daffodil?</print></dialog>
+				<dialog><print>“Hey Bud, when do you open?”</print><speak>What did the bee say, to the daffodil? <break time="500ms"/>“Hey Bud, when do you open?”</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Where do whales go to hear music?</print></dialog>
+				<dialog><print>The Orca-stra.</print><speak>Where do whales go to hear music? <break time="1000ms"/>The Orca struh.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What kind of shorts do clouds put on?</print></dialog>
+				<dialog><print>Thunderwear.</print><speak>What kind of shorts do clouds put on? <break time="1000ms"/>Thunder wear.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>How do you make a tissue dance?</print></dialog>
+				<dialog><print>You put a little boogie in it.</print><speak>How do you make a tissue dance? <break time="1000ms"/>You put a little boogie in it.</speak></dialog>
+			</all>
+			<all note="Also in dalAnimalJoke">
+				<dialog>Why are kangaroos bad at sports?</dialog>
+				<dialog><print>Because when they get tired they run out of bounds.</print><speak><break time="500ms"/>Because when they-get tired they run out of bounds.</speak></dialog>
+			</all>
+			<all note=" Also in dalKidJoke and dalAnimalJoke ">
+				<dialog><print>What do cowboys pay for marsupials?</print></dialog>
+				<dialog><print>A buck a roo.</print><speak>What do cowboys pay for marsupials? <break time="500ms"/> A buck a roo.</speak></dialog>
+			</all>
+			<all note=" Also in dalKidJoke and dalAnimalJoke ">
+				<dialog><print>How does a penguin build a house?</print></dialog>
+				<dialog><print>Igloos it together.</print><speak>How does a penguin build a house? <break time="500ms"/> Igloos it together.</speak></dialog>
+			</all>
+			<all note=" Also in dalKidsJoke ">
+				<dialog><print>Why did Hermione end up with Ron?</print></dialog>
+				<dialog><print> He was a Keeper.</print><speak>Why did Hermione end up with Ron? <break time="500ms"/>  He was a Keeper.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What’s a witch’s favorite subject?</print></dialog>
+				<dialog><print>Spelling.</print><speak>What’s a witches favorite subject? <break time="500ms"/>Spelling.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>How does a bird break into a birdfeeder?</print></dialog>
+				<dialog><print>With a crowbar.</print><speak>How does a bird break into a bird feeder? <break time="500ms"/>With a crowbar.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What’s brown, hairy, and wears sunglasses?</print></dialog>
+				<dialog><print>A coconut on vacation.</print><speak>What’s brown, hairy, and wears sunglasses? <break time="500ms"/>A coconut on vacation.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What do you get when you cross a vampire and snowman?</print></dialog>
+				<dialog><print>Frostbite.</print><speak>What do you get when you cross a vampire and snowman? <break time="500ms"/>Frost bite.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What did the plate say to the refrigerator?</print></dialog>
+				<dialog><print>“Stay cool. Dinner’s on me.”</print><speak>What did the plate say to the refrigerator? <break time="500ms"/>“Stay cool. Dinner’s on me.”</speak></dialog>
+			</all>
+			<all note=" also in dalKidJoke and dalDadJoke ">
+				<dialog><print>“Hey, bug on my back”, asked a fly. “Are you a mite?”</print></dialog>
+				<dialog><print>“I mite be,” giggled the mite.</print></dialog>
+				<dialog><print>The fly groaned. “That’s the worst joke I’ve ever heard!”</print></dialog>
+				<dialog><print>“Well, what do you expect?” said the mite.</print></dialog>
+				<dialog><print>“I came up with it on the fly.”</print><speak>“Hey, bug on my back”, asked a fly. “Are you a mite?” “I mite be”, giggled the mite. The fly groaned. “That’s the worst joke I’ve ever heard.” “Well, what do you expect?”, said the mite. “I came up with it on the fly.”</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What did the baby mosquito say after its first flight?</print></dialog>
+				<dialog><print>“Mama, Mama! Did you see? Everyone was clapping for me!”</print><speak>What did the baby mosquito say, after its first flight? <break time="500ms"/>“Mama, Mama! Did you see? Everyone was clapping for me!”</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>How do you fix a broken tuba?</print></dialog>
+				<dialog><print>Tuba glue.</print><speak>How do you fix a broken tuba? <break time="500ms"/>Tuba glue.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What are caterpillars most afraid of?</print></dialog>
+				<dialog><print>Dogerpillars.</print><speak>What are caterpillars most afraid of? <break time="750ms"/>Dawgurpillars.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Why is it impossible to play hide-and-seek with Pokémon?</print></dialog>
+				<dialog><print>Because they always Pikachu.</print><speak>Why is it impossible to play hide and seek with Pokémon? <break time="1000ms"/>Because they always Pikachu.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What do cats like to eat for breakfast?</print></dialog>
+				<dialog><print>Mice Krispies.</print><speak>What do cats like to eat for breakfast? <break time="1000ms"/>Mice Krispies.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What did the hat say to the scarf?</print></dialog>
+				<dialog><print>You hang around here, I’ll go on ahead.</print><speak>What did the hat say to the scarf? <break time="1000ms"/>You hang around here, I’ll go on ahead</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>What does Godzilla eat for dinner?</print></dialog>
+				<dialog><print>The restaurant.</print><speak>What does Godzilla eat for dinner? <break time="1000ms"/>The restaurant.</speak></dialog>
+			</all>
+			<all note="Also in dalKidJoke">
+				<dialog><print>Why don’t ants get sick?</print></dialog>
+				<dialog><print>Because they have little anty bodies.</print><speak>Why don’t ants get sick? <break time="500ms"/>Because they have little antie bodies.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Why do pirates take so long to learn the alphabet?</print><speak>Why do pirates take so long to learn-the alpha bet?</speak></dialog>
+				<dialog><print>Because they spend years at C.</print><speak><break time="500ms"/>Because-they spend years at C.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Why did the man quit his job at the donut factory?</print><speak>Why did the man quit his job at the donut-factory?</speak></dialog>
+				<dialog><print>He was fed up with the hole business.</print><speak><break time="500ms"/>He was fed up with-the hole business.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>I accidentally swallowed some food coloring.</print><speak>I accidentally swallowed-some food-coloring.</speak></dialog>
+				<dialog><print>The doctor says I’m fine. But I feel like I’ve dyed a little inside.</print><speak><break time="300ms"/>The doctor says I’m fine. But I feel like I’ve dyed a little-inside.</speak></dialog>
+			</all>
+			<all note=" Copied into dalAnimalJoke and dalPun">
+				<dialog><print>A skunk once tried to spray me.</print></dialog>
+				<dialog><print>But if it’s all the same to you, let’s not bring up that tail.</print><speak>A skunk once tried to spray me. <break time="350ms"/> But if it’s all the same to you, let’s not bring up thattail. </speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>My friend can’t figure out what video game system to get and he’s kind of upset about it.</print></dialog>
+				<dialog><print>Nobody can console him.</print><speak>My friend can’t figure out what video game system to get and he’s kind of upset about it. <break time="350ms"/> Nobody can kun sole him.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>I don’t recommend catnapping.</print></dialog>
+				<dialog><print>It only lasts a little while. Then the owner wants their cat back.</print><speak>I don’t recommend cat-napping. <break time="500ms"/> It only lasts a little while. Then the owner wants their cat-back.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>My friend’s car parts store got robbed.</print></dialog>
+				<dialog><print>She tried running after them but she just can’t catch a brake.</print><speak>My friend’s car parts store got robbed. <break time="350ms"/> She tried running after them but she just can’t catch a brake.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>People think “icy” is the easiest word to spell.</print></dialog>
+				<dialog><print>Come to think of it, I see why.</print><speak>People think “icy” is the easiest word to spell. <break time="350ms"/> Come to think of it, I see why.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Why did the scarecrow get promoted?</print></dialog>
+				<dialog><print>Because it was outstanding in its field.</print><speak>Why did the scare crow get promoted? <break time="500ms"/> Because it was outstanding in its field.</speak></dialog>
+			</all>
+			<all note=" also in dalPun ">
+				<dialog><print>I went to the zoo and saw a piece of toast in a cage. The sign said it was bread in captivity.</print><speak>I went to the zoo and saw a piece of toast in a cage. <break time="500ms"/>The sign said it was bread in captivity.</speak></dialog>
+			</all>
+			<all note=" also in dalPun ">
+				<dialog><print>I once knew a shy pebble who wished she was just a little boulder.</print><speak>I once knew a shy pebble, who wished she was just a little bolder.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>What’s big and gray and doesn’t matter?</print></dialog>
+				<dialog><print>An irrelephant.</print><speak>What’s big and gray and doesn’t matter? <break time="500ms"/>An irrelephant.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>What do chickens play in the pool?</print></dialog>
+				<dialog><print>Marco Pollo.</print><speak>What do chickens play in the pool? <break time="500ms"/>Marco Poyo.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>“Does this bus go to Duluth?”</print></dialog>
+				<dialog><print>“No. This bus goes ‘Beep Beep Beep.’”</print><speak>“Does this bus go, to Duluth?” <break time="500ms"/>“No. This bus goes ‘Beep Beep Beep.’”</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Say, that’s a nice ham you’ve got there.</print></dialog>
+				<dialog><print>It’d be a shame if someone put an ’s’ in front of it, and an ‘e’ at the end.</print><speak>Say, that’s a nice ham you’ve got there. <break time="1000ms"/>It’d be a shame if someone put an ’s’ in front of it, and an ‘e’ at the end.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>I’m thinking of starting a social media network for chickens.</print></dialog>
+				<dialog><print>But not as my full-time job– just as a way to make hens meet.</print><speak>I’m thinking of starting a social media network for chickens. <break time="500ms"/>But not as my full-time job– <break time="250ms"/>just as a way to make hens meet.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>The sporting goods store just had a big sale on canoes.</print></dialog>
+				<dialog><print>It was quite the oar deal.</print><speak>The sporting goods store just had a big sale on canoes. <break time="500ms"/>It was quite the oar deal.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>A burglar stole all my lamps.</print></dialog>
+				<dialog><print>I should be upset, but I’m delighted.</print><speak>A burglar stole all my lamps. <break time="500ms"/>I should be upset, but I’m delighted.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>I couldn’t figure out why the baseball kept getting larger.</print></dialog>
+				<dialog><print>Then it hit me.</print><speak>I couldn’t figure out why the baseball kept getting larger. <break time="500ms"/>Then it <emphasis level="strong">hit</emphasis> <emphasis level="reduced">me</emphasis>.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>One day, I forgot how to throw a boomerang.</print></dialog>
+				<dialog><print>Then it came back to me.</print><speak>One day, I forgot how to throw a boomerang. <break time="500ms"/>Then it came back to me.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>I stayed up all night, wondering where the sun went.</print></dialog>
+				<dialog><print>Then it dawned on me.</print><speak>I stayed up all night, wondering where the sun went. <break time="500ms"/>Then it dawned on me.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>At first, I didn’t like the idea of having a beard.</print></dialog>
+				<dialog><print>Then it grew on me.</print><speak>At first, I didn’t like the idea of having a beard. <break time="500ms"/>Then it grew on me.</speak></dialog>
+			</all>
+			<all note="Previously fired on Watch only, until 2019 refresh. Now for all devices">
+				<dialog><print>I could tell you a joke I heard from my watch…</print></dialog>
+				<dialog><print>but that would be second-hand information.</print><speak>I could tell you a joke I heard from my watch… <break time="500ms"/>but that would be second-hand information.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog>Why is Peter Pan always flying?</dialog>
+				<dialog><break time="500ms"/>Because he Neverlands.</dialog>
+			</all>
+			<all note=" Also in dalAnimalJoke and dalPun ">
+				<dialog><print>Did you hear about the restaurant that only caters to dolphins?</print><speak>Did-you hear about the restaurant that only caters-to dolphins?</speak></dialog>
+				<dialog><print>It only has one customer, but at least it serves a porpoise.</print><speak><break time="500ms"/>It only has one customer, but at least-it serves a porpus.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog>How did the grape get to be so wise?</dialog>
+				<dialog><break time="500ms"/>By raisin awareness.</dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Did you hear about the criminal ink?</print></dialog>
+				<dialog><print>It was in the pen doing a long sentence.</print><speak>Did you hear about the criminal Ink? <break time="500ms"/> It was in the pen doing a long sentence.</speak></dialog>
+			</all>
+			<all note=" also in dalPun and dalDadJoke ">
+				<dialog><print>A guy once told me he would never learn how to tie a tie.</print></dialog>
+				<dialog><print>So I told him: knot gonna happen.</print><speak>A guy once told me he would never learn how to tie a tie. <break time="350ms"/> So I told him: knot gonna happen.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun and dalDadJoke ">
+				<dialog><print>I cooked my friend dinner but forgot to invite them.</print></dialog>
+				<dialog><print>It was a missed steak.</print><speak>I cooked my friend dinner, but forgot to invite them. <break time="350ms"/> It was a missed steak.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>What’s the one thing that only works after it’s been retired?</print></dialog>
+				<dialog><print>A car.</print><speak>What’s the one thing that only-works after it’s been retired? <break time="350ms"/> A car.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>My friend was changing a tire when he dropped the car on his foot.</print></dialog>
+				<dialog><print>Now he needs a toe.</print><speak>My friend was changing a tire when he dropped the car on his foot. <break time="350ms"/> Now he needs a toe.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun and dalDadJoke ">
+				<dialog><print>My friend Robert was going on and on about how great it is to cook food on a stick.</print></dialog>
+				<dialog><print>So I just said “K, Bob.”</print><speak>My friend Robert was going on-and-on about how great it is to cook food on a stick, <break time="350ms"/> so I just said, “K, Bob.”</speak></dialog>
+			</all>
+			<all note=" also in dalPun ">
+				<dialog><print>I don’t know why I love bad puns so much. It’s just how eye roll.</print><speak>I don’t know why I love bad puns so much. <break time="500ms"/>It’s just how I roll.</speak></dialog>
+			</all>
+			<all note=" also in dalPun ">
+				<dialog><print>I make a lot of Dad jokes, for someone who’s not a Dad.</print></dialog>
+				<dialog><print>It’s a real faux pa.</print><speak>I make a lot of Dad jokes, for someone who’s not a Dad. <break time="500ms"/>It’s a real foe pah.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>My dog, Minton, ate a shuttlecock last night.</print></dialog>
+				<dialog><print>Bad, Minton.</print><speak>My dog, Minton, ate a shuttle cock last night. <break time="1000ms"/>Badminton.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Why wouldn’t the oyster give up her pearl?</print></dialog>
+				<dialog><print>She was shellfish.</print><speak>Why wouldn’t the oyster give up her pearl? <break time="500ms"/>She was shellfish.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>They say you’ll never go hungry at the beach–</print></dialog>
+				<dialog><print>because of the sand, which is everywhere.</print><speak>They say you’ll never go hungry at the beach– <break time="500ms"/>because of the sand which is everywhere.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>I could tell you the one about the broken pencil…</print></dialog>
+				<dialog><print>but never mind. It’s pointless.</print><speak>I could tell you the one about the broken pencil… <break time="500ms"/>but never mind. It’s pointless.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>I remember this one time, someone asked me for some puns.</print></dialog>
+				<dialog><print>So I read them 10 puns that would make them laugh.</print></dialog>
+				<dialog><print>But alas, no pun in ten did.</print><speak>I remember this one time, someone asked me for some puns. <break time="250ms"/>So I read them 10 puns that would make them laugh. <break time="250ms"/>But alas  <break time="250ms"/>no pun in ten did.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>I tried to eat a clock the other day.</print></dialog>
+				<dialog><print>It was really time consuming.</print><speak>I tried to eat a clock the other day. <break time="500ms"/>It was really time consuming.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>I was so late to the cannibal banquet.</print></dialog>
+				<dialog><print>They just gave me the cold shoulder.</print><speak>I was so late to the cannibal banquet. <break time="500ms"/>They just gave me the cold shoulder.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>I just spent a day in one of those hyperbolic chambers.</print></dialog>
+				<dialog><print>It was the absolute worst.</print><speak>I just spent a day in one of those hyperbolic chambers. <break time="500ms"/>It was the absolute worst.</speak></dialog>
+			</all>
+			<all note="Previously fired on Watch only, until 2019 refresh. Now for all devices">
+				<dialog><print>My favorite time of day is 6:30.</print></dialog>
+				<dialog><print>Hands down.</print><speak>My favorite time of day is six thirty. <break time="500ms"/>Hands down.</speak></dialog>
+			</all>
+			<dialog note=" Also in dalPun "><print>Whiteboards are quite remarkable.</print><speak>White boards are quite remarkable.</speak></dialog>
+			<dialog note=" Also in dalPun "><print>I, for one, like Roman numerals.</print><speak>Eye, for one, like Roman numerals.</speak></dialog>
+			<all note=" Also in dalPun ">
+				<dialog>Did you hear about the explosion at the cheese factory?</dialog>
+				<dialog><break time="500ms"/>All that was left was de brie.</dialog>
+			</all>
+			<all note=" Also in dalPun and dalMathJoke ">
+				<dialog>What do you call a number that won’t stay in one place?</dialog>
+				<dialog><break time="500ms"/>A Roamin’ Numeral.</dialog>
+			</all>
+			<all note=" Also in dalPun and dalMusicJoke ">
+				<dialog>How do you make a bandstand?</dialog>
+				<dialog><break time="500ms"/>Take away their chairs.</dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Why don’t ghosts go trick or treating?</print></dialog>
+				<dialog><print>They have no body to go with them.</print><speak>Why don’t ghosts go trick or treating? <break time="500ms"/> They have no body to go with them.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Have you heard the joke about paper?</print></dialog>
+				<dialog><print>Never mind. It’s tearable.</print><speak>Have you heard the joke about paper? <break time="350ms"/> Never mind. It’s tareable.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Have you heard the joke about margarine?</print></dialog>
+				<dialog><print>Never mind. I butter not tell it.</print><speak>Have you heard the joke about margarine? <break time="350ms"/> Never mind. I butter not tell it.</speak></dialog>
+			</all>
+			<all note=" Also in dalKidsJoke and dalPun ">
+				<dialog><print>How about a Frozen joke?</print></dialog>
+				<dialog><print>I can’t think of anything Elsa.</print><speak>How about a Frozen-joke. <break time="350ms"/> I can’t think of anything Elsa.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>How about a punctuation joke?</print></dialog>
+				<dialog><print>You know, a comma-dy.</print><speak>How about a punctuation joke? <break time="350ms"/> You know. A comma-dee.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>What do you call paddling in a dried out riverbed?</print></dialog>
+				<dialog><print>Ex-stream rafting.</print><speak>What do you call paddling in a dried out riverbed. <break time="500ms"/> Ex-stream rafting.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Where do armies go?</print></dialog>
+				<dialog><print>In your sleevies.</print><speak>Where do armies go? <break time="500ms"/> In your sleevies.</speak></dialog>
+			</all>
+			<all note=" also in dalPun ">
+				<dialog><print>That wedding was so beautiful, everyone cried. Even the cake was in tiers.</print><speak>That wedding was so beautiful, everyone cried. Even the cake was in tiers.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Why does a moon rock taste better than an earth rock?</print></dialog>
+				<dialog><print>It’s just a little meteor.</print><speak>Why does a moon rock taste better than an earth rock? <break time="500ms"/>It’s just a little meatier.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>How does the man in the moon cut his hair?</print></dialog>
+				<dialog><print>Eclipse it.</print><speak>How does the man in the moon cut his hair? <break time="500ms"/>Ee clips it.</speak></dialog>
+			</all>
+			<all note=" Also in dalPun ">
+				<dialog><print>Never tell a pun to a kleptomaniac.</print></dialog>
+				<dialog><print>They always take things, literally.</print><speak>Never tell a pun to a kleptomaniac. <break time="500ms"/>They always take things, literally.</speak></dialog>
+			</all>
+			<dialog note=" Also in dalPun ">I’m not a big fan of nesting dolls. They’re so full of themselves.</dialog>
+			<dialog note=" Also in dalPun ">If someone could just reverse the process of making wine, <break time="250ms"/>that would be grape.</dialog>
+			<dialog note=" Also in dalPun ">When that librarian bumped her head, she had no one to blame but her shelf.</dialog>
+			<dialog note=" Also in dalPun ">Don’t even get me started on Velcro. What a rip-off…</dialog>
+			<dialog note=" Also in dalPun "><print>My favorite movie? Without a doubt, it’s Mrs. Fire.</print><speak>My favorite moovee? Without a doubt, it’s Mrs. Fire.</speak></dialog>
+			<dialog note=" Also in dalPun ">My favorite drink?  Subtle tea.</dialog>
+			<dialog note=" Also in dalPun ">A pun about steak?  That’s a rare medium well done.</dialog>
+			<dialog note=" Also in dalPun ">Shout out to everyone who asks, “What’s the opposite of <emphasis level="strong">in</emphasis>?”</dialog>
+			<dialog note=" Also in dalPun ">I admit I was wrong about how good my chiropractor is. I stand corrected.</dialog>
+		</random>
+	</all>
+	<phrases/>
+	<conditions/>
+</cat>

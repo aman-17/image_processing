@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayWithAppCorrection">
+    <meta name="description" value="Dialog for app correction on play"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="isDialogDriven" type="dialog.Boolean" description="if interaction type is dialog driven"/>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="fallbackUsername" type="dialog.String" description="Fallback Username for multiuser"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+    </parameters>
+</cat>

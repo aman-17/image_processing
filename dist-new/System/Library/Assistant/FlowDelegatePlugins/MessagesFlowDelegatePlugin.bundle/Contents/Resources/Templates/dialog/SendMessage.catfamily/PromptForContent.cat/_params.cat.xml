@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#PromptForContent">
+
+    <meta name="description" value="Prompting for a value for content."/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+    
+    <parameters>
+        <parameter name="group" type="messages.Group" description="The group object."/>
+        <parameter name="outgoingMessageType" type="dialog.String" description="Type of message (audio or text). See INOutgoingMessageType.typeValue"/>
+    </parameters>
+   
+ </cat>

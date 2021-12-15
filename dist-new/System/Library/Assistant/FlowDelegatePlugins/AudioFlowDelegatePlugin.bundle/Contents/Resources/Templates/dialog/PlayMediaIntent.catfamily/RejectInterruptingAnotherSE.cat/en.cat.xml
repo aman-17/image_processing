@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#RejectInterruptingAnotherSE" locale="en">
+    <first>
+        <random condition="isClearRejection">
+            <dialog>OK, I won't.</dialog>
+            <dialog>No problem. I won't.</dialog>
+            <dialog>I will not, then.</dialog>
+        </random>
+        <random>
+            <dialog>Sorry…</dialog>
+            <dialog>Sorry, I didn't quite get that.</dialog>
+            <dialog>Sorry, I missed what you said.</dialog>
+            <dialog>Sorry, I missed that.</dialog>
+        </random>
+    </first>
+</cat>

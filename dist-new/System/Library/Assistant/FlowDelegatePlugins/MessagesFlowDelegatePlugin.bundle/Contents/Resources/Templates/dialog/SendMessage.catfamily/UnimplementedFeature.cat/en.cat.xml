@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnimplementedFeature" locale="en">
+    <all>
+        <random>
+            <dialog>Sorry, I can’t do that.</dialog>
+            <dialog>I’m sorry, I’m afraid I can’t do that.</dialog>
+        </random>
+    </all>
+</cat>

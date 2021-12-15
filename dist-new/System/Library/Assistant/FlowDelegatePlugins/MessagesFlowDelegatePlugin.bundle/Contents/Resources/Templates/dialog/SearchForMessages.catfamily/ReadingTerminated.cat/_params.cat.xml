@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadingTerminated">
+    <meta name="description" value="Used after user responds to a message reading prompt from Siri to reject or cancel an operation."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+</cat>

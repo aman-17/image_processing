@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ReadNewVoiceMailRecord">
+    <meta name="description" value="Read new voiceMail record"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="callRecord" type="phone.CallRecord"/>
+        <parameter name="intent" type="phone.SearchCallHistoryIntent"/>
+        <parameter name="isSingleDateRequest" type="dialog.Boolean"/>
+        <parameter name="isTimeRangeRequest" type="dialog.Boolean"/>
+        <parameter name="voiceMailPosition" type="dialog.String"/>
+        <parameter name="newRecordsCount" type="dialog.Number"/>
+        <parameter name="savedRecordsCount" type="dialog.Number"/>
+    </parameters>
+
+</cat>

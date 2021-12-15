@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutResume#intentHandledResponse">
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <meta name="description" value="Workout resumes."/>
+    <parameters>
+        <parameter name="isPunchingOut" type="dialog.Boolean"/>
+        <parameter name="appName" type="dialog.String"/>
+    </parameters>
+</cat>

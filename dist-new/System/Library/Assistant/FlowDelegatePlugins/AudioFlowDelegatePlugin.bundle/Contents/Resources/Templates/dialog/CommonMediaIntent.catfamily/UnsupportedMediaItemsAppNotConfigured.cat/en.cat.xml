@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#UnsupportedMediaItemsAppNotConfigured" locale="en">
+    <dialog>To do that, go to the <opt><var name="app.localizedName"/> </opt>app and add it to your Home.</dialog>
+</cat>

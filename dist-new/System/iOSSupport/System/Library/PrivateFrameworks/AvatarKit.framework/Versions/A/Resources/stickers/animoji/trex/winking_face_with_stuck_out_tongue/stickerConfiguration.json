@@ -1,0 +1,49 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../sharedAngled/winking_face_with_stuck_out_tongue/cam.scnz"
+  },
+  "emoji" : "😜",
+  "identifier" : "winking_face_with_stuck_out_tongue",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_R" : 0.45001330971717834,
+    "browInnerUp" : 0.1334858238697052,
+    "browOuterUp_L" : 0.40000000596046448,
+    "cheekSquint_L" : 0.25999999046325684,
+    "cheekSquint_R" : 1,
+    "eyeBlink_L" : 0.077465243637561798,
+    "eyeBlink_R" : 1,
+    "eyeLookDown_L" : 0.059999998658895493,
+    "eyeLookDown_R" : 0.059999998658895493,
+    "eyeLookIn_R" : 0.15999999642372131,
+    "eyeLookOut_L" : 0.15999999642372131,
+    "eyeSquint_L" : 0.23000000417232513,
+    "eyeSquint_R" : 0.96108216047286987,
+    "jawOpen" : 0.50717175006866455,
+    "mouthDimple_L" : 0.60000002384185791,
+    "mouthDimple_R" : 0.97000002861022949,
+    "mouthLeft" : 0.34999999403953552,
+    "mouthSmile_L" : 0.90723913908004761,
+    "mouthSmile_R" : 1,
+    "neckOrientation" : [
+      -0.062192138284444809,
+      -0.12529128789901733,
+      0.086607567965984344,
+      0.98637396097183228
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ],
+    "noseSneer_R" : 0.21253287792205811,
+    "tongueOut" : 1
+  },
+  "props" : [
+
+  ]
+}

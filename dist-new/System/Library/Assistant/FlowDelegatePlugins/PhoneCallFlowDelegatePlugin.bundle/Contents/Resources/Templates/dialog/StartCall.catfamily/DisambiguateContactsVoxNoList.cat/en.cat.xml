@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#DisambiguateContactsVoxNoList" locale="en">
+<first>
+    <dialog id="SameGivenName" condition="personsToDisambiguate.allSameGivenName">
+        <opt>Ok, <var name="user.groundingIfNeeded"/>. </opt>You have <var name="personsToDisambiguate.list.length" number="asWords"/> contacts named <var name="personsToDisambiguate.list[0].givenName"/>. Could you be more specific?
+    </dialog>
+    <dialog id="DialogDrivenWithoutReadingList">
+        <opt>Ok, <var name="user.groundingIfNeeded"/>. </opt>I found <var name="personsToDisambiguate.list.length" number="asWords"/> matching contacts. Could you be more specific?
+    </dialog>
+</first>
+</cat>
+

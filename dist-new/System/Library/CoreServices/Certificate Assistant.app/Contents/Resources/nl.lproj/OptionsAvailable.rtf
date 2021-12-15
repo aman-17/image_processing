@@ -1,0 +1,36 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Wat is een digitale identiteit?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 Een digitale identiteit is een elektronische manier om iemand te identificeren. Een digitale identiteit bestaat uit een geheim deel (je "private sleutel") en een ander deel dat vrij wordt gepubliceerd (je "publieke sleutel"). Met de private sleutel kun je elektronische documenten ondertekenen, waarna de handtekening alleen kan worden gecontroleerd door gebruikers die over je publieke sleutel beschikken. Op dezelfde manier kun je met je private sleutel documenten ontsleutelen die door anderen zijn versleuteld met je publieke sleutel.
+\f0\b \
+\
+Wat is een digitaal certificaat?\
+
+\f1\b0 Een digitaal certificaat is een elektronisch document waarmee je digitale identiteit wordt gekoppeld aan andere gegevens, zoals je naam, e-mailadres of bedrijf. Een certificaat bestaat uit het publieke gedeelte van je digitale identiteit, de identiteit van de organisatie ("certificaatautoriteit" of CA) die het certificaat heeft ondertekend en eventuele andere gegevens die aan de identiteit zijn gekoppeld. Een certificaat is meestal alleen geschikt voor bepaalde toepassingen, zoals digitale handtekeningen, encryptie, gebruik met webservers, enzovoort. Dit worden de beperkingen van het "sleutelgebruik" van een certificaat genoemd. Het is niet mogelijk een certificaat voor andere doeleinden te gebruiken. Hoewel het niet ongebruikelijk is \'e9\'e9n identiteit (en \'e9\'e9n certificaat) aan te maken met verschillende toepassingen, is het af te raden \'e9\'e9n identiteit te maken voor alle mogelijke toepassingen. Het defini\'ebren van een certificaat voor verschillende toepassingen is ook minder veilig. Een certificaat is slechts gedurende een bepaalde tijd geldig. Als de vervaldatum van een certificaat is verstreken, is het certificaat niet meer geldig en moet het worden vervangen door een nieuwere versie. De certificaatautoriteit kan een certificaat ook v\'f3\'f3r de vervaldatum ongeldig verklaren ("intrekken"). De geldigheid van een certificaat kan elektronisch worden gecontroleerd met behulp van de "infrastructuur voor publieke sleutels" of PKI.
+\f0\b \
+\
+Hoe kom ik in het bezit van een certificaat?\
+
+\f1\b0 Je kunt in het bezit komen van een geldig certificaat door een certificaataanvraag op te stellen en deze te verzenden naar een certificaatautoriteit. Als de aanvraag wordt geaccepteerd, wordt er een certificaat aangemaakt en krijg je dit toegestuurd. Je kunt Certificaatassistent gebruiken of de website van een commerci\'eble certificaatautoriteit gebruiken om een certificaataanvraag aan te maken. Je kunt certificaten aanvragen en in bezit hebben die zijn ondertekend door verschillende CA's. Deze certificaten zijn afzonderlijk te gebruiken en kunnen verschillende toepassingen hebben. Je kunt bijvoorbeeld een certificaat gebruiken voor het ondertekenen van e-mail en een ander certificaat voor het identificeren van jezelf in Berichten.
+\f0\b \
+\
+Waar bewaar ik mijn certificaten?\
+
+\f1\b0 Digitale identiteiten, inclusief certificaten, worden opgeslagen in je sleutelhanger. Zo zijn de identiteiten direct beschikbaar voor alle apps, zoals Mail en Safari. Certificaten voor andere gebruikers (e-mailcorrespondenten, websites, enzovoort) worden ook bewaard in je sleutelhanger zodra ze zijn ontvangen door je computer. Via Sleutelhangertoegang (in de map 'Apps' > 'Hulpprogramma's') kun je certificaten bekijken en manipuleren. Aangezien certificaten geen persoonlijke of geheime informatie bevatten, kun je ze zonder problemen verplaatsen en kopi\'ebren (in tegenstelling tot de bijbehorende private sleutel). Het is dan ook geen probleem als je verschillende kopie\'ebn van een certificaat hebt. Als je een certificaat naar iemand anders moet sturen, kun je het exporteren via Sleutelhangertoegang en vervolgens beveiligd per e-mail of op een andere manier verzenden. Als iemand anders je een certificaat stuurt, kun je het toevoegen aan je sleutelhanger door het certificaat naar Sleutelhangertoegang te slepen of het met 'Archief' > 'Importeer onderdelen' in Sleutelhangertoegang te importeren.
+\f0\b \
+\
+Wat is een certificaatautoriteit?\
+
+\f1\b0 Een certificaatautoriteit (CA) is een digitale identiteit die certificaten ondertekent, waardoor het geldige elektronische documenten worden. Aangezien CA's zelf digitale identiteiten zijn, kunnen ze ook worden gecontroleerd door een andere CA. Op deze manier kan er een "certificaatketen" ontstaan. Een certificaat is alleen geldig als de ondertekenende CA geldig is, maar ook de CA die weer een stapje hoger in de keten staat. Dit wordt automatisch gecontroleerd door de systeemsoftware wanneer een certificaat wordt ge\'ebvalueerd.
+\f0\b \
+\
+Waarom certificaten evalueren?\
+
+\f1\b0 Met Certificaatassistent evalueer je een ontvangen certificaat en stel je vast of het certificaat geldig is. Veilige apps, zoals Safari en Mail, controleren certificaten alvorens ze te gebruiken. Als je bijvoorbeeld met Safari online aankopen doet, controleert Safari het certificaat van de website en geeft aan of het certificaat geldig is. Certificaatassistent biedt je gedetailleerdere informatie en geeft je meer invloed op het gebruik van certificaten.}

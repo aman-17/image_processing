@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#IntentConfirmationWithRestrictedContacts">
+  <meta name="description" value="Intent level confirmation with restricted contacts"/>
+  <meta name="category" value="Confirm"/>
+  <meta name="readyForLoc" value="true"/>
+  <parameters>
+    <parameter name="intent" type="phone.StartCallIntent"/>
+    <parameter name="allowedContacts" type="phone.PersonList"/>
+    <parameter name="restrictedContacts" type="phone.PersonList"/>
+  </parameters>
+</cat>

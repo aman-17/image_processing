@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthUnsupported#multipleGoalsUnsupported" locale="en">
+  <first>
+    <dialog>My apologies. I can’t start a workout with multiple goals.</dialog>
+  </first>
+</cat>

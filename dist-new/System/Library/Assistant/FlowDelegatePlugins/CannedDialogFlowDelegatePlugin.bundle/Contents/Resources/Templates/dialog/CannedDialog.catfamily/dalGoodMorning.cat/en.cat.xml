@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalGoodMorning" locale="en" xmlns="urn:apple:names:siri:cat:1.4">
+	<conditions>
+		<condition name="not_homepod_and_has_user">
+			<and>
+				<expression name="device.isHomePod" op="eq" value="false"/>
+				<expression name="user" op="nonempty"/>
+			</and>
+		</condition>
+		<condition name="morning_or_early_morning">
+			<or>
+				<expression name="now.isMorning"/>
+				<expression name="now.isEarlyMorning"/>
+			</or>
+		</condition>
+		<condition name="has_been_used_in_last_2_hours">
+			<expression name="dialogState.hoursSinceLastUse" op="le" value="2"/>
+		</condition>
+		<condition name="afternoon_and_has_been_used_in_last_2_hours">
+			<and>
+				<expression name="dialogState.hoursSinceLastUse" op="le" value="2"/>
+				<expression name="now.isAfternoon"/>
+			</and>
+		</condition>
+	</conditions>
+	<all>
+		<first>
+			<random condition="morning_or_early_morning">
+				<dialog>Good morning.</dialog>
+				<dialog condition="not_homepod_and_has_user">Good morning, <var name="user"/>.</dialog>
+				<dialog><print>Good morning to you, too!</print><speak>Good morning to you too!</speak></dialog>
+				<dialog>And good morning to you too.</dialog>
+				<dialog>And a good morning to you.</dialog>
+				<random condition="has_been_used_in_last_2_hours">
+					<dialog>Right back atcha.</dialog>
+					<dialog>Likewise.</dialog>
+				</random>
+			</random>
+			<all phrase="">
+				<first phrase="">
+					<dialog condition="afternoon_and_has_been_used_in_last_2_hours">Good afternoon.</dialog>
+					<random phrase="">
+						<random condition="not_homepod_and_has_user" phrase="">
+							<dialog><print>Hi, <var name="user"/>.</print><speak>Hi <var name="user"/>.</speak></dialog>
+							<dialog><print>Hello, <var name="user"/>.</print><speak>Hello <var name="user"/>.</speak></dialog>
+							<dialog><print>Hey, <var name="user"/>.</print><speak>Hey <var name="user"/>.</speak></dialog>
+						</random>
+						<random>
+							<dialog>Hi.</dialog>
+							<dialog>Hi there.</dialog>
+							<dialog>Hello.</dialog>
+							<dialog>Hello there.</dialog>
+							<dialog>Hey there.</dialog>
+						</random>
+					</random>
+				</first>
+				<random phrase="">
+					<dialog><print>It’s <var name="now.timeDescriptive"/>, by the way.</print><speak>It’s <var name="now.timeDescriptive"/> by the way.</speak></dialog>
+					<dialog>By the way, it’s <var name="now.timeDescriptive"/>.</dialog>
+				</random>
+			</all>
+		</first>
+	</all>
+	<phrases/>
+</cat>

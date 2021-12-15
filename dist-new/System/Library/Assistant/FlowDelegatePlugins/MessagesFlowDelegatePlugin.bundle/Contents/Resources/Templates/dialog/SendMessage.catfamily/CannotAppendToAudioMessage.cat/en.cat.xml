@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#CannotAppendToAudioMessage" locale="en">
+    <dialog>Sorry, I can’t add to the end of audio messages. Send the message or re-record?</dialog>
+</cat>

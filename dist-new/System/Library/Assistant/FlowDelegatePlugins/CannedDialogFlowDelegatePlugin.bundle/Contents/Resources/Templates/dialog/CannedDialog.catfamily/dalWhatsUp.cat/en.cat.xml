@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalWhatsUp" xmlns="urn:apple:names:siri:cat:1.4" locale="en">
+    <conditions>
+        <condition name="familyFirstUseAndEmptyUserAndNotHomePod">
+            <and>
+                <expression name="dialogState.familyUsageCount" op="le" value="1"/>
+                <expression name="user" op="empty"/>
+                <expression name="device.isHomePod" op="eq" value="false"/>
+            </and>
+        </condition>
+        <condition name="familyFirstUseHasUser">
+            <and>
+                <expression name="dialogState.familyUsageCount" op="le" value="1"/>
+                <expression name="user" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="familyNotUsedInLastFiveHoursAndHasUser">
+            <and>
+                <expression name="dialogState.familyHoursSinceLastUse" op="gt" value="5"/>
+                <expression name="user" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="hasUser">
+            <expression name="user" op="nonempty"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <random phrase="greeting">
+            <text>Hi. It’s nice to meet you, <var name="user"/>.</text>
+            <text>Hello there, <var name="user"/>.</text>
+        </random>
+        <random phrase="howCanIHelp">
+            <text condition="now.isMorning">Good morning, <var name="user"/>. How can I help?</text>
+            <text condition="now.isAfternoon">Good afternoon, <var name="user"/>. How can I help?</text>
+            <text condition="now.isEvening">Good evening, <var name="user"/>. How can I help?</text>
+        </random>
+        <random phrase="hiHello">
+            <text>Hi</text>
+            <text>Hello</text>
+        </random>
+    </phrases>
+    <first>
+        <dialog condition="familyFirstUseAndEmptyUserAndNotHomePod">Hello! I don’t think we’ve been introduced.</dialog>
+        <dialog condition="familyFirstUseHasUser"><phrase name="greeting"/></dialog>
+        <dialog condition="familyNotUsedInLastFiveHoursAndHasUser" id="howCanIHelp#listenAfterSpeaking"><phrase name="howCanIHelp"/></dialog>
+        <dialog condition="hasUser" id="hiHello#listenAfterSpeaking"><phrase name="hiHello"/>, <var name="user"/>. How can I help?</dialog>
+        <random>
+            <dialog id="hiThere#listenAfterSpeaking">Hi there. How can I help?</dialog>
+            <dialog id="hello#listenAfterSpeaking">Hello. How can I help?</dialog>
+        </random>
+    </first>
+</cat>

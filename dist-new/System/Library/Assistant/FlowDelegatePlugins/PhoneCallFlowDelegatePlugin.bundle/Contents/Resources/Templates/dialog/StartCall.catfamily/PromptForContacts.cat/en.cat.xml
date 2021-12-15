@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#PromptForContacts" locale="en">
+  <phrases>
+    <first phrase="callVerb" note="Use an appropriate verb to call/FaceTime someone">
+      <text condition="isFaceTime">FaceTime with</text>
+      <text>call</text>
+     </first>
+  </phrases>
+
+  <first note="Ask the user who they want to call/FaceTime">
+    <dialog>Ok, <var name="user.groundingIfNeeded"/>, who would you like to <phrase name="callVerb"/>?</dialog>
+    <dialog>Who would you like to <phrase name="callVerb"/>?</dialog>
+  </first>
+</cat>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalOkayFollowup" xmlns="urn:apple:names:siri:cat:1.0">
+	<meta name="description" value="'OK' and variants when used as a follow-up, but not explicitly agreeing to anything"/>
+	<meta name="category" value="Can't Understand"/>
+	<meta name="readyForLoc" value="false"/>
+	<meta name="listenAfterSpeaking" value="false"/>
+</cat>

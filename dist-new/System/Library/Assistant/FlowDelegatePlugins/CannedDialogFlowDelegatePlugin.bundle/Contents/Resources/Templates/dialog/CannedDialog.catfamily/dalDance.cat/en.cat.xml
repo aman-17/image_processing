@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalDance" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<random phrase="">
+			<dialog>Hmm. I’d rather sit this one out.</dialog>
+			<dialog>I’m never gonna dance again. These guilty feet have got no rhythm. Wait, I don’t have feet.</dialog>
+			<dialog>I do a pretty mean robot.</dialog>
+			<dialog>I enjoy a little square root dancing now and then.</dialog>
+			<random condition="device.isHomePod">
+				<dialog>I prefer to DJ.</dialog>
+				<dialog>There’s plenty of dance music in here. Just ask.</dialog>
+			</random>
+		</random>
+	</all>
+	<conditions/>
+</cat>

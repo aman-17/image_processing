@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayLikeWhatsPlaying">
+    <meta name="description" value="Create radio station from now playing ('Play Atmosphere Like What’s Playing Now' in spec)"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="isGrounding" type="dialog.Boolean" description="if user grounding is required"/>
+        <parameter name="isAppAttributionRequired" type="dialog.Boolean" description="if app attribution is required"/>
+        <parameter name="isAppSpecified" type="dialog.Boolean" description="user specified the app"/>
+        <parameter name="useDialogMemoryForAppAttribution" type="dialog.Boolean" description="should app attribution use dialog memory"/>
+        <parameter name="fallbackUsername" type="dialog.String" description="Fallback Username for multiuser"/>
+        <parameter name="isUnsupportedType" type="dialog.Boolean" description="Asking to create station from unsupported type"/>
+        <parameter name="title" type="dialog.String" description="Title of the content" profanityFilter="yes"/>
+        <parameter name="isNext" type="dialog.Boolean" description="Did user specify 'next'"/>
+        <parameter name="isLater" type="dialog.Boolean" description="Did user specify 'later'"/>
+        <parameter name="hasTasteProfileAndPersonalized" type="dialog.Boolean" description="has taste profile and request is personalized"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+        <parameter name="wha" type="audio.WholeHouseAudio" description="WHA Params"/>
+    </parameters>
+</cat>

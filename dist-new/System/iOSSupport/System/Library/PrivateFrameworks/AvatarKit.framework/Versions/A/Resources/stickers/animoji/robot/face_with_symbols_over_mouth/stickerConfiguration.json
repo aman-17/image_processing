@@ -1,0 +1,53 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../../shared/cam.scnz"
+  },
+  "emoji" : "🤬",
+  "identifier" : "face_with_symbols_over_mouth",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_L" : 0.8796423077583313,
+    "browDown_R" : 1,
+    "browInnerUp" : 0.5,
+    "browOuterUp_L" : 1,
+    "browOuterUp_R" : 1,
+    "cheekPuff" : 0.52173918485641479,
+    "eyeBlink_L" : 0.32643628120422363,
+    "eyeBlink_R" : 0.32643628120422363,
+    "eyeWide_L" : 0.27846214175224304,
+    "eyeWide_R" : 0.39345136284828186,
+    "mouthFrown_L" : 0.53994488716125488,
+    "mouthFrown_R" : 0.37190082669258118,
+    "mouthRight" : 0.14600552618503571,
+    "mouthStretch_L" : 0.38016536831855774,
+    "mouthStretch_R" : 0.42148759961128235,
+    "neckOrientation" : [
+      0,
+      0,
+      0,
+      1
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ],
+    "noseSneer_L" : 0.88297969102859497,
+    "noseSneer_R" : 1
+  },
+  "props" : [
+    {
+      "image" : "../../../shared/face_with_symbols_over_mouth/symbols.heic",
+      "position" : {
+        "x" : 0,
+        "y" : 0.074999999999999997,
+        "z" : 15
+      },
+      "scale" : 1.1000000000000001
+    }
+  ]
+}

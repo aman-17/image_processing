@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutEnd#disambiguateSlotValue">
+    <meta name="category" value="Disambiguate"/>
+    <meta name="description" value="Executed when the app needs help resolving an ambiguous slot value."/>
+    <meta name="readyForLoc" value="true"/>
+</cat>

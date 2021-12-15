@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PromptForSlotValue">
+    <meta name="description" value="Executed when the app requires a value for a slot which is missing one"/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="mediaType" type="dialog.String" description="The type of thing the user asked to play"/>
+        <parameter name="parameter" type="dialog.String" description="Parameter name"/>
+    </parameters>
+</cat>

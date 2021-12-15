@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+  <first>
+      <dialog>Sorry, but it looks like <var name="appName"/> can’t find a valid number for the contact you are trying to call.</dialog>
+      <dialog>Sorry, but it looks like the app can’t find a valid number for the contact you are trying to call.</dialog>
+  </first>
+</cat>

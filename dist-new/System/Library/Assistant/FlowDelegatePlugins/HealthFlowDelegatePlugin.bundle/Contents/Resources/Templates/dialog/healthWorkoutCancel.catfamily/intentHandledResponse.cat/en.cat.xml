@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutCancel#intentHandledResponse" locale="en">
+  
+  <first>
+      <first condition="isPunchingOut">
+          <dialog condition="appName" id="punchingOutWithAppName">Canceling your workout in <var name="appName"/>…</dialog>
+          <dialog id="punchingOutWithoutAppName">Taking you to the app…</dialog>
+      </first>
+      <dialog id="notPunchingOut">OK, workout cancelled.</dialog>
+  </first>
+
+</cat>

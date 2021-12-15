@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AddMediaIntent#UnsupportedMediaDestinationPlaylistNameNotFound" locale="en">
+    <conditions>
+        <condition name="isPlaylistPresent" note="Is the playlist name present">
+            <expression name="playlistName" op="nonempty"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="multiUserIntroduction">
+            <text condition="isGrounding">Sorry, <var name="user.groundingIfNeeded"/>, </text>
+            <text></text>
+        </first>
+    </phrases>
+    <first>
+        <dialog condition="isPlaylistPresent"><phrase name="multiUserIntroduction"/>I couldn’t find the playlist named <var name="playlistName"/><opt> on <var name="app.localizedName"/></opt>.</dialog>
+        <dialog><phrase name="multiUserIntroduction"/>I couldn’t find that playlist<opt> on <var name="app.localizedName"/></opt>.</dialog>
+    </first>
+</cat>

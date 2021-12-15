@@ -1,0 +1,12 @@
+{
+    "Name": "Pbr",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "TechniqueMapping": {
+        "Opaque": "Opaque",
+        "OpaqueAR" : "OpaqueAR",
+        "OpaqueDynamicLighting": "OpaqueDynamicLighting",
+        "OpaqueARDynamicLighting" : "OpaqueARDynamicLighting",
+        "Shadow": "Shadow",
+        "SSO_GBuffer":"SSO_GBufferMtl"
+    }
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutStart#confirmSlotValue" locale="en">
+    
+    <conditions>
+        <condition name="isOpenEndedDefined">
+            <expression name="isOpenEnded" op="defined"/>
+        </condition>
+        <condition name="goalTypeIsValid" note="Treat 'unknown' as invalid">
+            <and>
+                <expression name="goalType" op="defined"/>
+                <expression name="goalType" op="ne" value="'unknown'"/>
+            </and>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <switch phrase="goalTypeString" value="goalType">
+            <text case="'unknown'">unknown</text>
+            <text case="'inch'">inches</text>
+            <text case="'meter'">meters</text>
+            <text case="'foot'">feet</text>
+            <text case="'mile'">miles</text>
+            <text case="'yard'">yards</text>
+            <text case="'second'">seconds</text>
+            <text case="'minute'">minutes</text>
+            <text case="'hour'">hours</text>
+            <text case="'joule'">joules</text>
+            <text case="'kilo calorie'">kilo calories</text>
+        </switch>
+    </phrases>
+
+    <first>
+      <switch value="slot">
+        <dialog case="'workoutName'" condition="workoutName" id="workoutName">
+            Are you sure you want to start <var name="workoutName"/>?
+        </dialog>
+        
+        <first case="'goalValue'" condition="goalValue">
+            <dialog condition="duration" id="goalValueWithDuration">Confirming your workout goal value of <var name="duration.duration"/>?</dialog>
+            <dialog id="goalValue">Confirming your workout goal value of <var name="goalValue"/>?</dialog>
+        </first>
+        
+        <first case="'workoutGoalUnitType'" condition="goalTypeIsValid">
+            <dialog id="workoutGoalUnitType">Are you sure you want goal type of <phrase name="goalTypeString"/>?</dialog>
+        </first>
+        
+        <dialog case="'workoutLocationType'" condition="location" id="workoutLocationType">
+            Are you sure you want <var name="location" inflect="withIndefArticle"/> workout?
+        </dialog>
+        
+        <first case="'isOpenEnded'" condition="isOpenEndedDefined">
+            <dialog condition="isOpenEnded" id="isOpenEnded">Are you sure you want an open-ended workout?</dialog>
+            <dialog id="isNotOpenEnded">Are you sure you don't want an open-ended workout?</dialog>
+        </first>
+      </switch>
+      
+      <dialog id="noValueToConfirm">No value to confirm for <var name="slot"/>.</dialog>
+    </first>
+
+</cat>

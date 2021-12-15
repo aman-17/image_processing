@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" locale="en">
+  
+  <phrases>
+      <first phrase="appName">
+          <text condition="app.name"><var name="app.name"/></text>
+          <text>The app</text>
+      </first>
+      
+      <first phrase="needsGrounding">
+          <text><opt>Sorry, <var name="user.groundingIfNeeded"/>, </opt></text>
+      </first>
+      
+      <first phrase="attribute">
+          <switch value="unsupportedAttribute">
+              <text case="'read'">past</text>
+              <text case="'unread'">unread</text>
+              <text case="'flagged'">flagged</text>
+              <text case="'unflagged'">unflagged</text>
+          </switch>
+      </first>
+  </phrases>
+
+  <first>
+      <dialog condition="unsupportedAttribute">
+          <phrase name="needsGrounding"/><phrase name="appName"/> doesn’t support reading <phrase name="attribute"/> messages.
+      </dialog>
+      <dialog>
+          <phrase name="needsGrounding"/><phrase name="appName"/> doesn’t support reading that kind of message.
+      </dialog>
+  </first>
+
+</cat>

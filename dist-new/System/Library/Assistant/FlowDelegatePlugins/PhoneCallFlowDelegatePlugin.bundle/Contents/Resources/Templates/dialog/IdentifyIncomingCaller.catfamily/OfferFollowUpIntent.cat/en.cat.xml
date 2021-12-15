@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="IdentifyIncomingCaller#OfferFollowUpIntent" locale="en">
+
+    <phrases>
+        <switch phrase="followUpOfferResponse" value="followUpOfferType">
+            <text case="'CONFIRM_ANSWER_CALL'">Answer it?</text>
+            <text case="'CONFIRM_CALL_BACK'">Would you like me to call back?</text>
+        </switch>
+    </phrases>
+    
+    <first>
+        <dialog><phrase name="followUpOfferResponse"/></dialog>
+    </first>
+</cat>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#NoAppsResponse" locale="en">
+    <random>
+        <dialog>I don’t see an app for that. You’ll need to download one.</dialog>
+        <dialog>You’ll need an app for me to help you with that.</dialog>
+    </random>
+</cat>

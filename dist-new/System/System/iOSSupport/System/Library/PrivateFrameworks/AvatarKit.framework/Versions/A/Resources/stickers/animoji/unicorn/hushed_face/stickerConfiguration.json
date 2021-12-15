@@ -1,0 +1,39 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../sharedAngled/hushed_face/cam.scnz"
+  },
+  "emoji" : "😯",
+  "identifier" : "hushed_face",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 0.96302855014801025,
+    "browOuterUp_L" : 1,
+    "browOuterUp_R" : 1,
+    "eyeWide_L" : 0.65467339754104614,
+    "eyeWide_R" : 0.68419069051742554,
+    "jawOpen" : 0.91480785608291626,
+    "mouthClose" : 0.25,
+    "mouthFrown_L" : 0.20895731449127197,
+    "mouthFrown_R" : 0.22007296979427338,
+    "mouthFunnel" : 0.25,
+    "mouthPucker" : 0.25,
+    "neckOrientation" : [
+      -0.054292358458042145,
+      0.069780774414539337,
+      0.035172279924154282,
+      0.99546259641647339
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+
+  ]
+}

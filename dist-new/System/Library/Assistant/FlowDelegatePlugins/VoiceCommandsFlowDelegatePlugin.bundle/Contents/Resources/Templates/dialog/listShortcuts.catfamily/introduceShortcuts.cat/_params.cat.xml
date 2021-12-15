@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="listShortcuts#introduceShortcuts">
+    <meta name="description" value="Introduces one or more shortcuts for paginated reading."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="device" type="sirikit.DeviceState"/>
+        <parameter name="shortcutCount" type="dialog.Number" description="The total number of shortcuts we are trying to read"/>
+        <parameter name="hasMultiplePages" type="dialog.Boolean" description="Whether there is more than one page to read"/>
+        <parameter name="pageSize" type="dialog.Number" description="The number of shortcuts per page"/>
+        <parameter name="appTitle" type="dialog.String" description="The app name the user queried about"/>
+    </parameters>
+</cat>

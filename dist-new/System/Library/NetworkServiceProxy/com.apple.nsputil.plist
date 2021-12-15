@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>app</key>
+	<dict>
+		<key>bundle</key>
+		<string>com.apple.nsputil</string>
+		<key>DesignatedRequirement</key>
+		<string>identifier &quot;com.apple.nsputil&quot; and anchor apple</string>
+		<key>ExecutablePath</key>
+		<string>/usr/local/bin/nsputil</string>
+		<key>EnableOptIn</key>
+		<true/>
+		<key>UseCustomProtocol</key>
+		<true/>
+		<key>label</key>
+		<string>nsputil</string>
+		<key>edges</key>
+		<string>pie.v3.hosts</string>
+		<key>DisableDivertDNS</key>
+		<true/>
+		<key>EnableDivertDNSOnly</key>
+		<false/>
+	</dict>
+	<key>direct</key>
+	<dict>
+		<key>DisableFallback</key>
+		<false/>
+		<key>EnableDirectMultipath</key>
+		<false/>
+		<key>EnableDirectTFO</key>
+		<false/>
+		<key>FallbackBufferLimit</key>
+		<integer>128</integer>
+		<key>FallbackCountBeforeImmediateFallback</key>
+		<integer>10</integer>
+		<key>ProxyEvaluationPath</key>
+		<string>/</string>
+		<key>EnableDirectExtendedValidation</key>
+		<true/>
+		<key>DirectTLSPorts</key>
+		<array>
+			<integer>443</integer>
+		</array>
+	</dict>
+	<key>timer</key>
+	<dict>
+		<key>fallback</key>
+		<integer>2500</integer>
+		<key>connection</key>
+		<integer>2000</integer>
+		<key>idle</key>
+		<integer>120</integer>
+	</dict>
+	<key>transport</key>
+	<dict>
+		<key>tfo</key>
+		<false/>
+		<key>mptcp</key>
+		<true/>
+		<key>udp</key>
+		<true/>
+	</dict>
+	<key>enable</key>
+	<dict>
+		<key>Enabled</key>
+		<true/>
+		<key>ratio</key>
+		<integer>1</integer>
+		<key>interval</key>
+		<integer>3600</integer>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#CannotAppendToAudioMessage">
+    <meta name="description" value="User asked to append content to an audio message. Advise the user that we don't support appending to audio messages."/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+</cat>

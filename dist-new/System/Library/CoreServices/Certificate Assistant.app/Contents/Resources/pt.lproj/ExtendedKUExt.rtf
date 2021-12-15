@@ -1,0 +1,23 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\deftab720
+\pard\tx529\pardeftab529\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 \CocoaLigature0 O que significa Extens\'e3o de Uso de Chave Ampliado?
+\b0 \
+A Extens\'e3o de Uso de Chave Ampliado (EKU) \'e9 bastante semelhante \'e0 Extens\'e3o de Uso de Chave (KUE), a n\'e3o ser pelo fato de seus valores serem definidos em termos de \'93objetivos\'94 (por exemplo, assinatura de respostas OCSP, identifica\'e7\'e3o de um cliente SSL e assim por diante) e por serem facilmente ampli\'e1veis. A EKU \'e9 definida com identificadores de objetos chamados OIDs. Se a extens\'e3o EKU for omitida, todas as opera\'e7\'f5es s\'e3o potencialmente v\'e1lidas.\
+\
+
+\b Qual a diferen\'e7a entre KUE e EKU?
+\b0 \
+A EKU \'e9 mais recente e tende a ser considerada \'93o\'94 mecanismo de restri\'e7\'e3o de uso, enquanto a KUE normalmente \'e9 considerada menos flex\'edvel. A KUE \'e9 definida em termos de \'93opera\'e7\'f5es\'94. A EKU \'e9 definida em termos de \'93objetivos\'94. As EKUs normalmente s\'e3o verificadas de modo mais agressivo (por exemplo \'93deve possuir este OID de EKU\'94), enquanto as KUEs normalmente s\'e3o verificadas defensivamente (por exemplo, \'93\CocoaLigature1 necessita possuir um bit de n\'e3o-rep\'fadio e pode possuir somente um bit de criptografia/descriptografia\CocoaLigature0 \'94). Para uma Autoridade de Certifica\'e7\'e3o, a lista de objetivos limita quais tipos de certificados podem ser criados pela autoridade; para ser v\'e1lida, uma opera\'e7\'e3o deve ser inclu\'edda tanto na autoridade quanto nos certificados que ela assina.\
+\
+
+\b O que significa \'93Esta extens\'e3o \'e9 cr\'edtica\'94?
+\b0 \
+Isso tamb\'e9m \'e9 conhecido como \'93indicador de criticalidade\'94. \'c9 um sinalizador que instrui o software que usa o certificado se \'e9 seguro ignorar a Extens\'e3o de Uso de Chave Ampliado, se ele n\'e3o a reconhece. Um certificado ser\'e1 rejeitado se o software n\'e3o reconhecer uma \'93extens\'e3o cr\'edtica\'94.
+\f1\fs26 \CocoaLigature1 \
+}

@@ -1,0 +1,37 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Hvad er Brug af udvidet n\'f8gle?
+\b0 \
+Brug af udvidet n\'f8gle (BUN) definerer, hvordan et certifikat kan bruges. Du kan bruge en udvidet n\'f8gle til at begr\'e6nse, hvilke handlinger den offentlige n\'f8gle i et certifikat kan udf\'f8re. Du kan f.eks. oprette et certifikat til signering af, men ikke til kryptering af e-mail. Udbygget brug af udvidet n\'f8gle (UBUN) er lig BUN, men det definerer et certifikat p\'e5 basis af \'93form\'e5l\'94 (f.eks. for at signere OCSP-svar, identificere en SSL-klient osv.). UBUN er nyere og har flere udvidelsesmuligheder end BUN, s\'e5 det opfattes ofte som \'93selve\'94 mekanismen til brugsbegr\'e6nsninger. Du kan konfigurere Udbygget brug af udvidet n\'f8gle senere i denne assistent..\
+\
+Du kan benytte f\'f8lgende udvidede n\'f8gleudvidelser:\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \ul \ulc0 Signatur:\ulnone  V\'e6lg denne, n\'e5r certifikatets offentlige n\'f8gle bruges med en digital signaturmekanisme til at underst\'f8tte andre sikkerhedstjenester end certifikatsignering.\
+\
+\ul Ikke afvisning:\ulnone  V\'e6lg denne, n\'e5r certifikatets offentlig n\'f8gle bruges til at kontrollere digitale signaturer, der bruges til at levere en ikke afvisende tjeneste, som beskytter mod falske afvisninger af nogle handlinger. Ikke afvisning sikrer, at en part i en tvist ikke kan afvise eller tilbagevise gyldigheden af en udtalelse eller kontrakt.\'a0\
+\
+\ul Kodning af n\'f8gle:\ulnone  V\'e6lg denne, n\'e5r certifikatets offentlig n\'f8gle bruges til kryptering af en n\'f8gle til alle form\'e5l. Kodning af n\'f8gle bruges til n\'f8gletransport og n\'f8glestyring (eller n\'f8gleadministration).\
+\
+\ul Kodning af data:\ulnone  V\'e6lg denne, n\'e5r certifikatets offentlige n\'f8gle bruges til kodning af andre brugerdata end kryptografiske n\'f8gler.\
+\
+\ul Aftale om n\'f8gle:\ulnone  V\'e6lg denne, n\'e5r certifikatets offentlige n\'f8gle bruges til aftale om n\'f8gle. N\'f8gleaftaleprotokollen (ogs\'e5 kaldet n\'f8gleudvekslingsprotokol) bruges, n\'e5r to parter er enige om en n\'f8gle, der skal bruges i et krypteringssystem med hemmelige n\'f8gler, hvor n\'f8gler frit og sikkert kan deles via alle usikre medier. (F.eks. er udvidelsen indstillet, hvis Diffie-Hellman-n\'f8gler bruges til n\'f8gleadministration.)\
+\
+\ul Certifikatsignering:\ulnone  V\'e6lg denne, n\'e5r certifikatets offentlige n\'f8gle bruges til kontrol af en signatur p\'e5 certifikater med offentlige n\'f8gler. Certifikater med denne udvidelse er certifikater fra certifikatmyndigheder. Hvis denne udvidelse tildeles et certifikat, skal \'93Brug dette certifikat som certifikatmyndighed\'94 ogs\'e5 v\'e6re indstillet i Udvidelser af grundl\'e6ggende begr\'e6nsninger. Udvidelser af grundl\'e6ggende begr\'e6nsninger vises senere i denne assistent.\
+\
+\ul CRL-signering:\ulnone  V\'e6lg denne, n\'e5r certifikatets offentlige n\'f8gle bruges til kontrol af en signatur p\'e5 et certifikat p\'e5 en CRL (Certificate Revocation List).\
+\
+\ul Oms\'e6t kun til kode:\ulnone  V\'e6lg kun denne, n\'e5r Aftale om n\'f8gle ogs\'e5 er indstillet. Den angiver, at certifikatets offentlige n\'f8gle kan bruges til at oms\'e6tte data til kode, n\'e5r der udf\'f8res en aftale om n\'f8gle.\
+\
+\ul Dechifrer kun:\ulnone \'a0V\'e6lg denne, n\'e5r Aftale om n\'f8gle ogs\'e5 er indstillet. Den angiver, at certifikatets offentlige n\'f8gle kan bruges til kun at dechifrere data, n\'e5r der udf\'f8res en aftale om n\'f8gle.\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\b \cf0 Hvad betyder \'93Denne udvidelse er kritisk\'94?
+\b0 \
+Det kaldes ogs\'e5 den \'93kritiske indikator\'94. Det er et flag, der fort\'e6ller software, som bruger certifikatet, om det er sikkert at ignorere brug af udvidet n\'f8gle, hvis den ikke genkender den. Et certifikat vil blive afvist, hvis softwaren ikke genkender en \'93kritisk udvidelse\'94.}

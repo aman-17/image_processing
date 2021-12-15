@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#PromptForContent" locale="en">
+    <conditions>
+        <condition name="isGroupMessage">
+            <or>
+                <expression name="group.numberOfMembers" op="gt" value="1"/>
+                <expression name="group.speakableGroupName" op="nonempty"/>
+                <expression name="group.groupName" op="nonempty"/>
+            </or>
+        </condition>
+        <condition name="isAudioMessage">
+            <expression name="outgoingMessageType" op="eq" value="'audio'"/>
+        </condition>
+    </conditions>
+    
+    <first>
+        <dialog condition="isAudioMessage">OK, recording…</dialog>
+        <dialog condition="isGroupMessage"><opt>OK, <var name="user.groundingIfNeeded"/>, </opt>What do you want to say to the group?</dialog>
+        <dialog><opt>OK, <var name="user.groundingIfNeeded"/>, </opt>What do you want to say?</dialog>
+    </first>
+</cat>

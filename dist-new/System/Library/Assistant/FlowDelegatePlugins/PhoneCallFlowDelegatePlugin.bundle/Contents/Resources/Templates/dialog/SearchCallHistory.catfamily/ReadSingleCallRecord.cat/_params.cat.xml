@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ReadSingleCallRecord">
+    <meta name="description" value="A summary of the request when there is only one call record found."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="callRecord" type="phone.CallRecord"/>
+        <parameter name="intent" type="phone.SearchCallHistoryIntent"/>
+        <parameter name="isSingleDateRequest" type="dialog.Boolean"/>
+        <parameter name="isTimeRangeRequest" type="dialog.Boolean"/>
+    </parameters>
+
+</cat>

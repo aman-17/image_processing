@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalFeelingAcknowledge" xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <random phrase="">
+        <dialog>OK. Let me know if you need anything.</dialog>
+        <dialog>All right then. I’m here if you need me.</dialog>
+        <dialog>OK. Let me know if I can help with anything.</dialog>
+    </random>
+</cat>

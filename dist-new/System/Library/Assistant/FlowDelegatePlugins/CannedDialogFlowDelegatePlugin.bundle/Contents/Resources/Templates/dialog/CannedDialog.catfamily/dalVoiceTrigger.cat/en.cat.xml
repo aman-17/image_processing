@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalVoiceTrigger" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+    <conditions>
+        <condition name="not used in the last 5 hours">
+            <expression name="dialogState.hoursSinceLastUse" op="gt" value="5"/>
+        </condition>
+        <condition name="dialog driven (excl. Watch)">
+            <and>
+                <expression name="device.isDialogDriven"/>
+                <not>
+                    <expression name="device.isWatch"/>
+                </not>
+            </and>
+        </condition>
+        <condition name="first ever conversation (excl. HomePod)">
+            <and>
+                <expression name="dialogState.familyUsageCount" op="eq" value="1"/>
+                <not>
+                    <expression name="device.isHomePod"/>
+                </not>
+            </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <random note="should listen after speaking" phrase="offer_to_help">
+            <text>What can I do for you?</text>
+            <text>How can I help?</text>
+        </random>
+        <random phrase="special_greeting">
+            <text condition="now.isMorning">Good morning.</text>
+            <text condition="now.isAfternoon">Good afternoon.</text>
+            <text condition="now.isEvening">Good evening.</text>
+        </random>
+        <random phrase="greeting">
+            <text>Hello.</text>
+            <text>Hello there.</text>
+            <text>Hi.</text>
+            <text>Hi there.</text>
+        </random>
+    </phrases>
+    <all>
+        <first phrase="">
+            <random condition="first ever conversation (excl. HomePod)" note="should listen after speaking" phrase="">
+                <dialog id="firstTime_offer#listenAfterSpeaking">Hi, I’m Siri. How can I help you?</dialog>
+                <dialog id="firstTime_offer#listenAfterSpeaking">Hello there, I’m Siri. What can I do for you?</dialog>
+            </random>
+            <first condition="not used in the last 5 hours" phrase="">
+                <first phrase="">
+                    <dialog condition="dialog driven (excl. Watch)" id="specialGreeting_offer#listenAfterSpeaking"><phrase name="special_greeting"/> <phrase name="offer_to_help"/></dialog>
+                    <dialog><phrase name="special_greeting"/></dialog>
+                </first>
+            </first>
+            <first phrase="">
+                <dialog condition="dialog driven (excl. Watch)" id="greeting_offer#listenAfterSpeaking"><phrase name="greeting"/> <phrase name="offer_to_help"/></dialog>
+                <dialog><phrase name="greeting"/></dialog>
+            </first>
+        </first>
+    </all>
+</cat>

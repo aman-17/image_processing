@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#UnsupportedPodcastSubscriptionRequired" locale="en">
+    <conditions>
+        <condition name="titleTooLong" note="title">
+            <expression name="title.length" op="gt" value="29"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="title">
+            <text>
+                <print>‘<var name="title"/>’</print>
+                <speak><say-as interpret-as="music"><var name="title"/></say-as></speak>
+            </text>
+        </first>
+        <first phrase="content">
+            <text condition="titleTooLong"></text>
+            <text condition="title"> of <phrase name="title"/></text>
+            <text></text>
+        </first>
+    </phrases>
+    <first>
+        <dialog>You've already listened to the free episode<phrase name="content"/>. To subscribe, go to Apple Podcasts.</dialog>
+    </first>
+</cat>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="Gatekeeper#ReadOrSendClarification">
+    <meta name="description" value="Asks users if they want to read messages or create a new message"/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters/>
+</cat>

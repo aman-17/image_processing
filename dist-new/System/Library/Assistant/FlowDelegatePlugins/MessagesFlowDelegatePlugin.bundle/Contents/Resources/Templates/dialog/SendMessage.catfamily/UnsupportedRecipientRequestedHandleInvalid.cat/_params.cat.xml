@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedRecipientRequestedHandleInvalid">
+
+    <meta name="description" value="Executed when the recipient slot is unsupported."/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+    
+    <parameters>
+        <parameter name="personHandle" type="dialog.PersonHandle" description="The recipient person handle with unsupported handle type."/>
+    </parameters>
+
+ </cat>

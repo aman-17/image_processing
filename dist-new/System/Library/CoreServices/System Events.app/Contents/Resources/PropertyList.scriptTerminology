@@ -1,0 +1,41 @@
+{
+    Name = "Property List Suite";
+    Description = "Terms and Events for accessing the content of Property List files";
+
+    Classes = {
+        PropertyListItem = {
+            Name = "property list item";
+            PluralName = "property list items";
+            Description = "A unit of data in Property List format";
+            Attributes = {
+                name = {
+                    Name = "name";
+                    Description = "the name of the property list item ( if any )";
+                };
+                kind = {
+                    Name = "kind";
+                    Description = "the kind of data stored in the property list item: boolean/data/date/list/number/record/string";
+                };
+                value = {
+                    Name = "value";
+                    Description = "the value of the property list item";
+                };
+                text = {
+                    Name = "text";
+                    Description = "the text representation of the property list data";
+                };
+            };
+        };
+        PropertyListFile = {
+            Name = "property list file";
+            PluralName = "property list files";
+            Description = "A file containing data in Property List format";
+            Attributes = {
+                contents = {
+                    Name = "contents";
+                    Description = "the contents of the property list file; elements and properties of the property list item may be accessed as if they were elements and properties of the property list file";
+                };
+            };
+        };
+    };
+}

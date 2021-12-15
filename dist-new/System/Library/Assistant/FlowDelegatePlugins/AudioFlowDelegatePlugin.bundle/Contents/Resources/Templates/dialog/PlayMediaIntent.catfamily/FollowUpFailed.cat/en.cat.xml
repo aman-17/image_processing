@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#FollowUpFailed" locale="en">
+    
+    <conditions>
+        <condition name="artistNotEmpty">
+            <not>
+                <expression name="artist" op="empty"/>
+            </not>
+        </condition>
+        <condition name="hasTwoOrMoreRoomsOrIsAllSpeakers">
+            <and>
+                <expression name="wha.isAllSpeakers"/>
+                <expression name="wha.hasTwoOrMoreRooms"/>
+            </and>
+        </condition>
+        <condition name="fistSpeakerNameNotEmpty">
+            <not>
+                <expression name="wha.firstSpeakerName" op="empty"/>
+            </not>
+        </condition>
+        <condition name="firstSpeakerRoomNotEmpty">
+            <not>
+                <expression name="wha.firstSpeakerRoom" op="empty"/>
+            </not>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="MUI" note="Multi User Introduction">
+            <text condition="isGrounding">Sorry, <var name="user.groundingIfNeeded"/>, </text>
+            <text>Sorry, </text>
+        </first>
+        <first phrase="MUIEnd">
+            <text condition="isGrounding">, <var name="user.groundingIfNeeded"/></text>
+            <text></text>
+        </first>
+        <first phrase="alternateVersionMediaType">
+            <text condition="isSong"> song</text>
+            <text condition="isAlbum"> album</text>
+            <text></text>
+        </first>
+    </phrases>
+
+    <first>
+        <dialog condition="cannotReferencePodcastsAudiobooks">
+            <phrase name="MUI"/>I can only do that when you’re listening to music from your library or Apple Music.
+        </dialog>
+        
+        <dialog condition="noLiveVersion">
+            <phrase name="MUI"/>I couldn’t find a live version of this<phrase name="alternateVersionMediaType"/>.
+        </dialog>
+
+        <dialog condition="noAcousticVersion">
+            <phrase name="MUI"/>I couldn’t find an acoustic version of this<phrase name="alternateVersionMediaType"/>.
+        </dialog>
+
+        <dialog condition="noAlternateArtistVersion">
+            <phrase name="MUI"/>I couldn’t find a <var name="artist"/> version of this<phrase name="alternateVersionMediaType"/>.
+        </dialog>
+
+        <first condition="noMoreResults">
+            <dialog condition="isAlbum">I don’t know any other songs on that album<phrase name="MUIEnd"/>.</dialog>
+            <dialog condition="artistNotEmpty">This is the only song I know by <var name="artist"/><phrase name="MUIEnd"/>.</dialog>
+            <dialog>I don’t know any other songs by this artist<phrase name="MUIEnd"/>.</dialog>
+        </first>
+
+        <dialog condition="referencedMediaMissingMetadata">
+            Sorry, I can’t look that up for you.
+        </dialog>
+
+        <dialog condition="exceptionSearching">
+            <phrase name="MUI"/>I’m having trouble accessing your music. Please try again.
+        </dialog>
+
+        <dialog condition="didntFindSpecificVersion">
+            <phrase name="MUI"/>I can’t play that.
+        </dialog>
+
+        <first condition="nothingPlaying">
+            <dialog condition="hasTwoOrMoreRoomsOrIsAllSpeakers">There’s nothing currently playing<phrase name="MUIEnd"/>.</dialog>
+            <dialog condition="fistSpeakerNameNotEmpty">There’s nothing playing on the <var name="wha.firstSpeakerName"/><phrase name="MUIEnd"/>.</dialog>
+            <dialog condition="firstSpeakerRoomNotEmpty">There’s nothing playing in the <var name="wha.firstSpeakerRoom"/><phrase name="MUIEnd"/>.</dialog>
+            <dialog condition="isTV"><phrase name="MUI"/>I can only do that if you’re playing something.</dialog>
+            <dialog condition="isSEDevice">There’s nothing playing on this device<phrase name="MUIEnd"/>.</dialog>
+            <dialog condition="isHomePod">There’s nothing playing on this HomePod<phrase name="MUIEnd"/>.</dialog>
+            <dialog><phrase name="MUI"/>I can only take that request while you’re listening to music.</dialog>
+        </first>
+        
+        <dialog>
+            <phrase name="MUI"/>I can’t play that.
+        </dialog>
+            
+        
+    </first>
+</cat>

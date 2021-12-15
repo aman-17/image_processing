@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <conditions>
+        <condition name="isFaceTime">
+            <expression name="intent.preferredCallProvider" op="eq" value="'FACETIME_PROVIDER'"/>
+        </condition>
+        <condition name="isFaceTimeAudio" note="Is FT Audio based on user input or based on device type">
+            <and>
+                <expression name="intent.preferredCallProvider" op="eq" value="'FACETIME_PROVIDER'"/>
+                <or>
+                    <expression name="intent.callCapability" op="eq" value="'AUDIO_CALL'"/>
+                    <expression name="device.isHomePod"/>
+                    <expression name="device.isCarDnD"/>
+                    <expression name="device.isCarPlay"/>
+                    <expression name="device.isEyesFree"/>
+                    <expression name="device.isWatch"/>
+                </or>
+            </and>
+        </condition>
+        <condition name="groupFaceTimeCall" note="is this a Group FaceTime call with 2 recipients or more or with message group name?">
+            <and>
+                <expression name="intent.preferredCallProvider" op="eq" value="'FACETIME_PROVIDER'"/>
+                <or>
+                    <expression name="intent.contacts.list.length" op="gt" value="1"/>
+                    <expression name="intent.callGroups.length" op="gt" value="0"/>
+                </or>
+            </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="deviceName">
+            <text condition="device.isHomePod">HomePod</text>
+            <text condition="device.isWatch">Apple Watch</text>
+            <text condition="device.isMac">Mac</text>
+            <text note="This will be 'iPhone' or 'iPad' or 'iPod'"><var name="device.deviceName"/></text>
+        </first>
+    </phrases>
+
+    <first>
+        <dialog id="GroupFaceTime" condition="groupFaceTimeCall">Sorry, Group FaceTime isn’t available on this device.</dialog>
+        <dialog id="FaceTimeAudio" condition="isFaceTimeAudio">Sorry, FaceTime Audio isn’t available here.</dialog>
+        <dialog id="FaceTime" condition="isFaceTime">Sorry, FaceTime isn’t available here.</dialog>
+        <dialog id="NormalWithDevice">Sorry, I can’t make a phone call with your <phrase name="deviceName"/>.</dialog>
+        <dialog id="Normal">Sorry, I can’t make a phone call here.</dialog>
+    </first>
+</cat>

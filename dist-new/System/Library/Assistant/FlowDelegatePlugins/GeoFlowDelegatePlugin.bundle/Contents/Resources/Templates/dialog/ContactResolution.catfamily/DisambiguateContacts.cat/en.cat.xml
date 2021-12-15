@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="ContactResolution#DisambiguateContacts" xmlns="urn:apple:names:siri:cat:1.0" locale="en" >
+    <first>
+        <dialog id="ContactDisambiguation">
+            <opt>Ok, <var name="user.groundingIfNeeded"/>. </opt>Which <var name="recipient.conversationalName"/>?
+        </dialog>
+    </first>
+</cat>
+

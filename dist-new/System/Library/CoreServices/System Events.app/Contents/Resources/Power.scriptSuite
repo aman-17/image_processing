@@ -1,0 +1,29 @@
+{
+    Name = "Power";
+    AppleEventCode = "powr";
+
+    UsedFeatures = (UnnamedArguments); 
+    Commands = {
+        shutDown = {
+            AppleEventClassCode = "fndr";
+            AppleEventCode = "shut";
+            CommandClass = "ShutDownVerb";
+        };
+        restart = {
+            AppleEventClassCode = "fndr";
+            AppleEventCode = "rest";
+            CommandClass = "RestartVerb";
+        };
+        sleep = {
+            AppleEventClassCode = "fndr";
+            AppleEventCode = "slep";
+            CommandClass = "SleepVerb";
+        };
+        logout = {
+            AppleEventClassCode = "fndr";
+            AppleEventCode = "logo";
+            CommandClass = "LogoutVerb";
+        };
+    };
+}
+

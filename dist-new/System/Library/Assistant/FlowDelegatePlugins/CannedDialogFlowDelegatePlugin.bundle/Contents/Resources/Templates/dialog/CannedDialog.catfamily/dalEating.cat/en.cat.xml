@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalEating" locale="en" xmlns="urn:apple:names:siri:cat:1.4">
+    <all>
+        <random phrase="">
+            <dialog condition="is_Pi_Day">I don’t eat much, but it wouldn’t be irrational to have a slice of pi on Pi Day. <break time="500ms"/>On second thought, maybe pi is a little irrational.</dialog>
+            <dialog>I don’t eat or drink. But I do like digesting information.</dialog>
+            <dialog>I don’t eat or drink. My favorite snacks are facts.</dialog>
+            <dialog>I don’t eat or drink. But I always have an appetite for good conversation.</dialog>
+            <dialog>Virtual assistants don’t eat or drink. But we do love reading menus.</dialog>
+            <dialog condition="is_not_TV">Virtual assistants don’t eat. But if you’re hungry, ask me to help you find a bite.</dialog>
+        </random>
+    </all>
+    <conditions>
+        <condition name="is_Pi_Day">
+            <and>
+                <expression name="now.month" op="eq" value="3"/>
+                <expression name="now.dayOfMonth" op="eq" value="14"/>
+            </and>
+        </condition>
+        <condition name="is_not_TV">
+            <expression name="device.isAppleTV" op="eq" value="false"/>
+        </condition>
+    </conditions>
+</cat>

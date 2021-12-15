@@ -1,0 +1,20 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Qu\'92est-ce que l\'92extension d\'92utilisation de cl\'e9 \'e9tendue\'a0?
+\b0 \
+L\'92extension d\'92utilisation de cl\'e9 \'e9tendue (EKU) est similaire \'e0 l\'92extension d\'92utilisation de cl\'e9 (KUE), sauf que les valeurs d\'92EKU sont d\'e9finies en termes de \'ab\'a0but\'a0\'bb (par exemple, signer des r\'e9ponses OCSP, identifier un client SSL, etc.) et sont facilement extensibles.\'a0 L\'92EKU est d\'e9finie \'e0 l\'92aide d\'92identifiants d\'92objet appel\'e9s OID.\'a0 Si l\'92extension EKU est omise, toutes les op\'e9rations sont potentiellement valides.\
+\
+
+\b Quelle est la diff\'e9rence entre KUE et EKU\'a0?
+\b0 \
+L\'92EKU est plus r\'e9cente et est souvent consid\'e9r\'e9e comme LE m\'e9canisme de restriction d\'92utilisation par excellence, tandis que la KUE est g\'e9n\'e9ralement consid\'e9r\'e9e comme moins souple. La KUE est d\'e9finie en termes d\'92\'ab\'a0op\'e9rations\'a0\'bb alors que l\'92EKU est d\'e9finie en termes de \'ab\'a0but\'a0\'bb. En r\'e8gle g\'e9n\'e9rale, les EKU sont v\'e9rifi\'e9es de mani\'e8re offensive (\'ab\'a0je dois obtenir cette OID d\'92EKU\'a0\'bb), tandis que les KUE sont v\'e9rifi\'e9es de mani\'e8re d\'e9fensive (\'ab\'a0j\'92ai besoin d\'92un bit de non-r\'e9pudiation et je peux avoir un bit de chiffrement/d\'e9chiffrement uniquement\'a0\'bb). Pour une autorit\'e9 de certification, la liste des buts limite les types de certificats que l\'92autorit\'e9 peut cr\'e9er. Pour \'eatre valide, une op\'e9ration doit \'eatre incluse \'e0 la fois dans l\'92autorit\'e9 et dans le certificat qu\'92elle signe.\
+\
+
+\b Que signifie \'ab\'a0Cette extension est critique\'a0\'bb\'a0?
+\b0 \
+On parle \'e9galement d\'92\'ab\'a0indicateur de criticalit\'e9\'a0\'bb. Il s\'92agit d\'92un indicateur qui annonce au logiciel utilisant le certificat s\'92il peut ignorer en toute s\'e9curit\'e9 l\'92extension d\'92utilisation de cl\'e9 au cas o\'f9 il ne la reconna\'eetrait pas. Un certificat sera rejet\'e9 si le logiciel ne reconna\'eet pas une \'ab\'a0extension critique\'a0\'bb.}

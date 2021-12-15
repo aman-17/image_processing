@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#DisambiguateDestinationType">
+    <meta name="description" value="Disambiguate destinationType slot. 3P only."/>
+    <meta name="category" value="Disambiguate"/>
+    <meta name="readyForLoc" value="true"/>
+</cat>

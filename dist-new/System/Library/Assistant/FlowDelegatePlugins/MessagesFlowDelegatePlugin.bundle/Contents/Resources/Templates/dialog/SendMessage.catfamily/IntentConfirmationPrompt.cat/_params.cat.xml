@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#IntentConfirmationPrompt">
+  <meta name="description" value="Asks the user to confirm the message"/>
+  <meta name="readyForLoc" value="true"/>
+  <meta name="category" value="Confirm"/>
+  
+  <parameters>
+      <parameter name="content" type="dialog.String" description="Message content"/>
+      <parameter name="recipients" type="dialog.Person[]" description="Message recipients. Empty if message is sent to a named group"/>
+      <parameter name="groupName" type="dialog.String" description="Group name. Set if message is being sent to a named group"/>
+      <parameter name="deviceState" type="sirikit.DeviceState"/>
+      <parameter name="app" type="messages.App" description="The app used to send the message"/>
+      <parameter name="reply" type="dialog.Boolean" description="Indicates that the message to be sent is a reply"/>
+      <parameter name="currentLocationAttachment" type="dialog.Boolean" description="Indicates that message contains a current location attachment"/>      
+      <parameter name="outgoingMessageType" type="dialog.String" description="The type of message (audio or text). See INOutgoingMessageType.typeValue"/>
+  </parameters>
+  
+</cat>

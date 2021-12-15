@@ -1,0 +1,56 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../../shared/cam.scnz"
+  },
+  "emoji" : "😍",
+  "identifier" : "smiling_face_with_heart-shaped_eyes",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 0.38877007365226746,
+    "eyeBlink_L" : 1,
+    "eyeBlink_R" : 1,
+    "jawOpen" : 0.46424591541290283,
+    "mouthDimple_L" : 0.47382906079292297,
+    "mouthDimple_R" : 0.52341580390930176,
+    "mouthSmile_L" : 0.89242082834243774,
+    "mouthSmile_R" : 0.92058825492858887,
+    "neckOrientation" : [
+      0,
+      0,
+      0.068307608366012573,
+      0.99766433238983154
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ],
+    "tongueOut" : 1
+  },
+  "props" : [
+    {
+      "image" : "../../../shared/smiling_face_with_heart-shaped_eyes/heart.heic",
+      "position" : {
+        "x" : -0.27500000000000002,
+        "y" : 0.25,
+        "z" : 20
+      },
+      "rotation" : 0.62,
+      "scale" : 0.90000000000000002
+    },
+    {
+      "image" : "../../../shared/smiling_face_with_heart-shaped_eyes/heart.heic",
+      "position" : {
+        "x" : 0.10000000000000001,
+        "y" : 0.32500000000000001,
+        "z" : 20
+      },
+      "rotation" : -0.27000000000000002,
+      "scale" : 0.90000000000000002
+    }
+  ]
+}

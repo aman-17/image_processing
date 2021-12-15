@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildMachineOSBuild</key>
+	<string>20A241115</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleExecutable</key>
+	<string>AppleProResCodec</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.apple.proapps.AppleProResCodec</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>AppleProResCodec</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>3.6.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleSupportedPlatforms</key>
+	<array>
+		<string>MacOSX</string>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>14465</string>
+	<key>CMClassImplementations</key>
+	<array>
+		<dict>
+			<key>CMClassID</key>
+			<string>com.apple.videotoolbox.videodecoder</string>
+			<key>CMClassImplementationID</key>
+			<string>com.apple.videotoolbox.videodecoder.prores</string>
+			<key>CMClassImplementationName</key>
+			<string>Apple ProRes Decoder</string>
+			<key>CMClassImplementationVersion</key>
+			<integer>1</integer>
+			<key>CMCopyright</key>
+			<string>Copyright (c) 2011-2020 Apple Inc. All rights reserved.</string>
+			<key>CMExecutableArchitectures</key>
+			<array>
+				<string>x86_64</string>
+				<string>arm64e</string>
+			</array>
+			<key>CMFactoryFunction</key>
+			<string>IcpVideoDecoder_CreateInstance</string>
+			<key>CMManufacturer</key>
+			<string>Apple</string>
+			<key>CMMatchingInfo</key>
+			<dict>
+				<key>VTCodecType</key>
+				<array>
+					<string>ap4x</string>
+					<string>ap4h</string>
+					<string>apch</string>
+					<string>apcn</string>
+					<string>apcs</string>
+					<string>apco</string>
+				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>CMClassID</key>
+			<string>com.apple.videotoolbox.videoencoder</string>
+			<key>CMClassImplementationID</key>
+			<string>com.apple.videotoolbox.videoencoder.prores-4444xq</string>
+			<key>CMClassImplementationName</key>
+			<string>Apple ProRes 4444 XQ Encoder</string>
+			<key>CMClassImplementationVersion</key>
+			<integer>1</integer>
+			<key>CMCopyright</key>
+			<string>Copyright (c) 2011-2020 Apple Inc. All rights reserved.</string>
+			<key>CMExecutableArchitectures</key>
+			<array>
+				<string>x86_64</string>
+				<string>arm64e</string>
+			</array>
+			<key>CMFactoryFunction</key>
+			<string>IcpVideoEncoder_CreateInstance</string>
+			<key>CMManufacturer</key>
+			<string>Apple</string>
+			<key>CMMatchingInfo</key>
+			<dict>
+				<key>VTCodecType</key>
+				<string>ap4x</string>
+			</dict>
+			<key>VTCodecName</key>
+			<string>Apple ProRes 4444 XQ</string>
+			<key>VTEncoderName</key>
+			<string>Apple ProRes 4444 XQ</string>
+		</dict>
+		<dict>
+			<key>CMClassID</key>
+			<string>com.apple.videotoolbox.videoencoder</string>
+			<key>CMClassImplementationID</key>
+			<string>com.apple.videotoolbox.videoencoder.prores-4444</string>
+			<key>CMClassImplementationName</key>
+			<string>Apple ProRes 4444 Encoder</string>
+			<key>CMClassImplementationVersion</key>
+			<integer>1</integer>
+			<key>CMCopyright</key>
+			<string>Copyright (c) 2011-2020 Apple Inc. All rights reserved.</string>
+			<key>CMExecutableArchitectures</key>
+			<array>
+				<string>x86_64</string>
+				<string>arm64e</string>
+			</array>
+			<key>CMFactoryFunction</key>
+			<string>IcpVideoEncoder_CreateInstance</string>
+			<key>CMManufacturer</key>
+			<string>Apple</string>
+			<key>CMMatchingInfo</key>
+			<dict>
+				<key>VTCodecType</key>
+				<string>ap4h</string>
+			</dict>
+			<key>VTCodecName</key>
+			<string>Apple ProRes 4444</string>
+			<key>VTEncoderName</key>
+			<string>Apple ProRes 4444</string>
+		</dict>
+		<dict>
+			<key>CMClassID</key>
+			<string>com.apple.videotoolbox.videoencoder</string>
+			<key>CMClassImplementationID</key>
+			<string>com.apple.videotoolbox.videoencoder.prores-422hq</string>
+			<key>CMClassImplementationName</key>
+			<string>Apple ProRes 422 HQ Encoder</string>
+			<key>CMClassImplementationVersion</key>
+			<integer>1</integer>
+			<key>CMCopyright</key>
+			<string>Copyright (c) 2011-2020 Apple Inc. All rights reserved.</string>
+			<key>CMExecutableArchitectures</key>
+			<array>
+				<string>x86_64</string>
+				<string>arm64e</string>
+			</array>
+			<key>CMFactoryFunction</key>
+			<string>IcpVideoEncoder_CreateInstance</string>
+			<key>CMManufacturer</key>
+			<string>Apple</string>
+			<key>CMMatchingInfo</key>
+			<dict>
+				<key>VTCodecType</key>
+				<string>apch</string>
+			</dict>
+			<key>VTCodecName</key>
+			<string>Apple ProRes 422 HQ</string>
+			<key>VTEncoderName</key>
+			<string>Apple ProRes 422 HQ</string>
+		</dict>
+		<dict>
+			<key>CMClassID</key>
+			<string>com.apple.videotoolbox.videoencoder</string>
+			<key>CMClassImplementationID</key>
+			<string>com.apple.videotoolbox.videoencoder.prores-422</string>
+			<key>CMClassImplementationName</key>
+			<string>Apple ProRes 422 Encoder</string>
+			<key>CMClassImplementationVersion</key>
+			<integer>1</integer>
+			<key>CMCopyright</key>
+			<string>Copyright (c) 2011-2020 Apple Inc. All rights reserved.</string>
+			<key>CMExecutableArchitectures</key>
+			<array>
+				<string>x86_64</string>
+				<string>arm64e</string>
+			</array>
+			<key>CMFactoryFunction</key>
+			<string>IcpVideoEncoder_CreateInstance</string>
+			<key>CMManufacturer</key>
+			<string>Apple</string>
+			<key>CMMatchingInfo</key>
+			<dict>
+				<key>VTCodecType</key>
+				<string>apcn</string>
+			</dict>
+			<key>VTCodecName</key>
+			<string>Apple ProRes 422</string>
+			<key>VTEncoderName</key>
+			<string>Apple ProRes 422</string>
+		</dict>
+		<dict>
+			<key>CMClassID</key>
+			<string>com.apple.videotoolbox.videoencoder</string>
+			<key>CMClassImplementationID</key>
+			<string>com.apple.videotoolbox.videoencoder.prores-422lt</string>
+			<key>CMClassImplementationName</key>
+			<string>Apple ProRes 422 LT Encoder</string>
+			<key>CMClassImplementationVersion</key>
+			<integer>1</integer>
+			<key>CMCopyright</key>
+			<string>Copyright (c) 2011-2020 Apple Inc. All rights reserved.</string>
+			<key>CMExecutableArchitectures</key>
+			<array>
+				<string>x86_64</string>
+				<string>arm64e</string>
+			</array>
+			<key>CMFactoryFunction</key>
+			<string>IcpVideoEncoder_CreateInstance</string>
+			<key>CMManufacturer</key>
+			<string>Apple</string>
+			<key>CMMatchingInfo</key>
+			<dict>
+				<key>VTCodecType</key>
+				<string>apcs</string>
+			</dict>
+			<key>VTCodecName</key>
+			<string>Apple ProRes 422 LT</string>
+			<key>VTEncoderName</key>
+			<string>Apple ProRes 422 LT</string>
+		</dict>
+		<dict>
+			<key>CMClassID</key>
+			<string>com.apple.videotoolbox.videoencoder</string>
+			<key>CMClassImplementationID</key>
+			<string>com.apple.videotoolbox.videoencoder.prores-422proxy</string>
+			<key>CMClassImplementationName</key>
+			<string>Apple ProRes 422 Proxy Encoder</string>
+			<key>CMClassImplementationVersion</key>
+			<integer>1</integer>
+			<key>CMCopyright</key>
+			<string>Copyright (c) 2011-2020 Apple Inc. All rights reserved.</string>
+			<key>CMExecutableArchitectures</key>
+			<array>
+				<string>x86_64</string>
+				<string>arm64e</string>
+			</array>
+			<key>CMFactoryFunction</key>
+			<string>IcpVideoEncoder_CreateInstance</string>
+			<key>CMManufacturer</key>
+			<string>Apple</string>
+			<key>CMMatchingInfo</key>
+			<dict>
+				<key>VTCodecType</key>
+				<string>apco</string>
+			</dict>
+			<key>VTCodecName</key>
+			<string>Apple ProRes 422 Proxy</string>
+			<key>VTEncoderName</key>
+			<string>Apple ProRes 422 Proxy</string>
+		</dict>
+	</array>
+	<key>DTCompiler</key>
+	<string>com.apple.compilers.llvm.clang.1_0</string>
+	<key>DTPlatformBuild</key>
+	<string>12E6178j</string>
+	<key>DTPlatformName</key>
+	<string>macosx</string>
+	<key>DTPlatformVersion</key>
+	<string>11.4</string>
+	<key>DTSDKBuild</key>
+	<string>20F67</string>
+	<key>DTSDKName</key>
+	<string>macosx11.4internal</string>
+	<key>DTXcode</key>
+	<string>1240</string>
+	<key>DTXcodeBuild</key>
+	<string>12E6178j</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>11.4</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright (c) 2011-2020 Apple Inc. All rights reserved.</string>
+</dict>
+</plist>

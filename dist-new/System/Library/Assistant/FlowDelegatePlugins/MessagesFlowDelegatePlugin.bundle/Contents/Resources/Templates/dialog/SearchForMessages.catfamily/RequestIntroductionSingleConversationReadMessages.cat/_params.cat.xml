@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#RequestIntroductionSingleConversationReadMessages">
+
+    <meta name="description" value="Reading request introduction when the request contains only messages that have already been marked as Read, in a single conversation."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="conversation" type="messages.Group" description="The single conversation we're dialoguing about"/>
+    </parameters>
+
+</cat>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalVoiceTrigger" xmlns="urn:apple:names:siri:cat:1.0">
+	<meta name="description" value="User says HS and voicetrigger is disabled. In English, the response is identical to dalHello"/>
+	<meta name="category" value="Prompt"/>
+	<meta name="readyForLoc" value="false"/>
+      <meta name="listenAfterSpeaking" value="false"/>
+</cat>

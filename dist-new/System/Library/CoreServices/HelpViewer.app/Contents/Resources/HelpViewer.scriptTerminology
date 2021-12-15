@@ -1,0 +1,62 @@
+{
+
+    "Description" = "Help Viewer specific classes."; 
+    "Name" = "Help Viewer suite"; 
+    
+    "Commands" = {
+        "search" = {
+            "Name" = "search";
+            "Description" = "Search the given help book, or all books, for the given text and display the result";
+            "Arguments" = {
+                "lookingFor" = {
+                    "Name" = "looking for";
+                    "Description" = "The text to search for in Help";
+                };
+            };
+            
+        };
+        "handleurl" = {
+            "Name" = "handle url";
+            "Description" = "Send Help Viewer a URL to process";
+        };
+        "lookupanchor" = {
+            "Name" = "lookup anchor";
+            "Description" = "Tell Help Viewer to look up and display the given anchor";
+            "Arguments" = {
+                "inBook" = {
+                    "Name" = "in book";
+                    "Description" = "Limit lookup scope to the given book";
+                };
+            };
+        };
+        "goback" = {
+            "Name" = "go back";
+            "Description" = "Tell Help Viewer to display the previous page in the history";
+        };
+        "goforward" = {
+            "Name" = "go forward";
+            "Description" = "Tell Help Viewer to display the next page in the history";
+        };
+        "gohome" = {
+            "Name" = "go home";
+            "Description" = "Tell Help Viewer to display home page of the current help book";
+        };
+    };
+    
+    "Classes" = {
+        "HelpApplication" = {
+            Name = "application";
+            Description = "The Help Viewer application";
+            Attributes = {
+                currentURL = {
+                    Description = "the URL currently loaded"; 
+                    Name = "current url"; 
+                };
+                selectedText = {
+                    Description = "string representing the currently selected text";
+                    Name = "selected text";
+                };
+            };
+        };
+    };
+} 

@@ -1,0 +1,464 @@
+{
+    "Name" : "CameraGraph",
+    "Targets" : [
+        {
+            "Name" : "Color0",
+            "Connections" : [
+                {
+                    "ToMember" : ["sampleCount"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["msaaSamples"]
+                }
+            ]
+        },
+        {
+            "Name" : "Depth",
+            "Description" : {
+                "Format" : "Depth32Float_Stencil8"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["sampleCount"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["msaaSamples"]
+                },
+                {
+                    "ToMember" : ["format"],
+                    "FromType" : "DefaultDepthFormatData",
+                    "FromMember" : ["format"]
+                }
+            ]
+        },
+        {
+            "Name" : "ShadowMapAtlas"
+        },
+        {
+            "Name" : "CompositionAlpha",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "Width" : 1,
+                "Height" : 1
+            }
+        },
+        {
+            "Name" : "SUOcclusionMatte",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm",
+                "Width" : 1,
+                "Height" : 1
+            }
+        }
+    ],
+    "Nodes" : [
+        {
+            "CameraSetup" : {
+                "Name" : "CameraSetup",
+                "UpdateSceneMaterialData" : true,
+                "FrustumCulling" : true
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "OcclusionNode",
+                "CullMode" : "CullModeNone",
+                "FillMode" : "Fill",
+                "MaterialPassName" : "Occlusion",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteStencil",
+                            "IsOptional" : true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "OpaqueNode",
+                "CullMode" : "CullModeBack",
+                "FillMode" : "Fill",
+                "MaterialPassName" : "Opaque",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ShadowMapAtlas",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth",
+                            "ForceClear" : false
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteStencil",
+                            "ForceClear" : false,
+                            "IsOptional" : true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "SkyboxNode",
+                "CullMode" : "CullModeNone",
+                "FillMode" : "Fill",
+                "MaterialPassName" : "Skybox",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteStencil",
+                            "IsOptional" : true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Debug" : {
+                "Name" : "DebugNode",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ShadowMapAtlas",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteStencil",
+                            "IsOptional" : true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Text" : {
+                "Name" : "TextNode",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ShadowMapAtlas",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteStencil",
+                            "IsOptional" : true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "TransparentNode",
+                "CullMode" : "CullModeBack",
+                "MaterialPassName" : "Transparent",
+                "SortMode" : "BackToFront",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ShadowMapAtlas",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteStencil",
+                            "IsOptional" : true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "DepthBufferClearNode",
+                "CullMode" : "CullModeBack",
+                "FillMode" : "Fill",
+                "MaterialPassName" : "DepthBufferClear",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth",
+                            "ForceClear" : false
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteStencil",
+                            "ForceClear" : false,
+                            "IsOptional" : true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "DebugMaterials" : {
+                "Name" : "DebugMaterials",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ShadowMapAtlas",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ForceClear" : true
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth",
+                            "ForceClear" : true
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteStencil",
+                            "ForceClear" : true,
+                            "IsOptional" : true
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "Color",
+            "Target": "Color0"
+        },
+        {
+            "Lane" : "Depth",
+            "Target": "Depth"
+        },
+        {
+            "Lane" : "ShadowMapAtlasLane",
+            "Target": "ShadowMapAtlas",
+            "InputOnly" : true,
+            "GraphScopeOverride" : "ShadowMapAtlasScope"
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "Color",
+            "Target" : "Color0"
+        },
+        {
+            "Lane" : "Depth",
+            "Target" : "Depth"
+        },
+        {
+            "Lane" : "CompositionAlphaLane",
+            "Target" : "CompositionAlpha"
+        },
+        {
+            "Lane" : "SUOcclusionMatteLane",
+            "Target" : "SUOcclusionMatte"
+        }
+    ],
+    "Connections" : [
+        {
+            "Name" : "OcclusionNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["TargetWrites", "1", "settings", "forceClear"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["loadStencil"]
+                },
+                {
+                    "ToMember" : ["TargetWrites", "0", "settings", "clearColor"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["clearColor"]
+                },
+                {
+                    "ToMember" : ["EnableVRR"],
+                    "FromType" : "VRRData",
+                    "FromMember" : ["vrrEnabled"]
+                }
+            ]
+        },
+        {
+            "Name" : "OpaqueNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["EnableVRR"],
+                    "FromType" : "VRRData",
+                    "FromMember" : ["vrrEnabled"]
+                }
+            ]
+        },
+        {
+            "Name" : "SkyboxNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["EnableVRR"],
+                    "FromType" : "VRRData",
+                    "FromMember" : ["vrrEnabled"]
+                }
+            ]
+        },
+        {
+            "Name" : "DebugNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["Enabled"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["drawDebug"]
+                },
+                {
+                    "ToMember" : ["EnableVRR"],
+                    "FromType" : "VRRData",
+                    "FromMember" : ["vrrEnabled"]
+                }
+            ]
+        },
+        {
+            "Name" : "TextNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["EnableVRR"],
+                    "FromType" : "VRRData",
+                    "FromMember" : ["vrrEnabled"]
+                }
+            ]
+        },
+        {
+            "Name" : "TransparentNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["EnableVRR"],
+                    "FromType" : "VRRData",
+                    "FromMember" : ["vrrEnabled"]
+                }
+            ]
+        },
+        {
+            "Name" : "DepthBufferClearNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["EnableVRR"],
+                    "FromType" : "VRRData",
+                    "FromMember" : ["vrrEnabled"]
+                }
+            ]
+        },
+        {
+            "Name" : "DebugMaterials",
+            "Connections" : [
+                {
+                    "ToMember" : ["EnableVRR"],
+                    "FromType" : "VRRData",
+                    "FromMember" : ["vrrEnabled"]
+                }
+            ]
+        }
+    ]
+}

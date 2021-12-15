@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalGreetingAsSummons" xmlns="urn:apple:names:siri:cat:1.0">
+	<meta name="description" value="User says 'Hello' or other greetings phrase outside the start of a conversation. Siri treats it as a summons."/>
+	<meta name="category" value="Prompt"/>
+	<meta name="readyForLoc" value="false"/>
+	<meta name="listenAfterSpeaking" value="true"/>
+</cat>

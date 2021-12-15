@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CannedDialog#dalYesAfterPrompt">
+    <meta name="description" value="After Siri prompts the user to say something, if the user says yes, open the mic and let them speak"/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="false"/>
+    <meta name="listenAfterSpeaking" value="true"/>
+</cat>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalOkay" xmlns="urn:apple:names:siri:cat:1.0">
+	<meta name="description" value="User said &quot;never mind&quot; or &quot;whatever&quot;. This duc should have it's name changed to dalNeverMind &lt;rdar://problem/56945007&gt; Change the name of dalOkay to dalNeverMind"/>
+	<meta name="category" value="Can't Understand"/>
+	<meta name="readyForLoc" value="false"/>
+	<meta name="listenAfterSpeaking" value="false"/>
+</cat>

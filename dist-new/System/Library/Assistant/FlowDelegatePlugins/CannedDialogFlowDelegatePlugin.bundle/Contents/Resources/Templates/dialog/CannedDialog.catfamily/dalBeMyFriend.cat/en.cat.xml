@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalBeMyFriend" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+    <all>
+        <random phrase="">
+            <dialog>That’s nice! <break time="500ms"/>I’d like to be your friend.</dialog>
+            <dialog>You’ve been my friend since day one.</dialog>
+            <dialog>I’ll be your friend, in fair weather and foul.</dialog>
+        </random>
+    </all>
+</cat>

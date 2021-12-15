@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "https://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DEFAULT-OPTIONS</key>
+	<dict>
+		<key>Level</key>
+		<dict>
+			<key>Persist</key>
+			<string>Inherit</string>
+			<key>Enable</key>
+			<string>Inherit</string>
+		</dict>
+		<key>Enable-Fault-Crashlogs</key>
+		<true/>
+	</dict>
+	<key>Speed</key>
+	<dict>
+		<key>Signpost-Persisted</key>
+		<true/>
+	</dict>
+	<key>LoadRequestResolution</key>
+	<dict>
+		<key>Enable-Oversize-Messages</key>
+		<true/>
+	</dict>
+	<key>CollectionBuild</key>
+	<dict>
+		<key>Enable-Oversize-Messages</key>
+		<true/>
+	</dict>
+	<key>Kernel</key>
+	<dict>
+		<key>Enable-Oversize-Messages</key>
+		<true/>
+	</dict>
+	<key>Boot</key>
+	<dict>
+		<key>Enable-Oversize-Messages</key>
+		<true/>
+	</dict>
+	<key>ErrorNumber</key>
+	<dict>
+		<key>Enable-Oversize-Messages</key>
+		<true/>
+		<key>Signpost-Backtraces-Enabled</key>
+		<true/>
+		<key>Signpost-Persisted</key>
+		<true/>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,37 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\partightenfactor0
+
+\f0\b\fs24 \cf0 Vad \'e4r en digital identitet?
+\b0 \
+En digital identitet \'e4r en elektronisk metod att identifiera n\'e5gon. Den best\'e5r av en hemlig del som du sj\'e4lv bevarar (din \'94privata nyckel\'94), och en annan del som du fritt delar med dig av (din \'94publika nyckel\'94). Din privata nyckel g\'f6r att du kan signera elektroniska dokument p\'e5 ett s\'e5dant s\'e4tt att alla kan verifiera detta med hj\'e4lp av enbart den publika nyckeln. P\'e5 samma s\'e4tt kan din privata nyckel avsl\'f6ja (\'94avkryptera\'94) hemligheter som dolts (\'94krypterats\'94) av andra med hj\'e4lp av din publika nyckel.\
+\
+
+\b Vad \'e4r ett digitalt certifikat?
+\b0 \
+Ett digitalt certifikat \'e4r ett elektroniskt dokument som kopplar samman din digitala identitet med annan information, exempelvis ditt namn, f\'f6retag eller din e\uc0\u8209 postadress. Ett certifikat best\'e5r av den publika delen av din digitala identitet - det vill s\'e4ga identiteten p\'e5 den organisation (\'94certifikatutf\'e4rdare\'94 eller CA) som signerat ditt certifikat, och de olika uppgifter den har valt att koppla till din identitet. Ett certifikat \'e4r vanligen begr\'e4nsat till specifika syften, exempelvis digital signering, kryptering eller anv\'e4ndning p\'e5 webbservrar. Detta \'e4r en begr\'e4nsning som kallas certifikatets \'94nyckelanv\'e4ndning\'94. Om n\'e5gon f\'f6rs\'f6ker anv\'e4nda certifikatet i n\'e5got annat syfte kommer detta att misslyckas. \'c4ven om det g\'e5r att skapa en identitet (och ett certifikat) f\'f6r flera syften \'e4r det ovanligt att man skapar ett f\'f6r alla t\'e4nkbara syften. Det \'e4r ocks\'e5 mindre s\'e4kert att skapa ett certifikat f\'f6r flera anv\'e4ndningsomr\'e5den. Ett certifikat \'e4r endast giltigt under en begr\'e4nsad tid, och blir d\'e4refter ogiltigt och m\'e5ste ers\'e4ttas med en nyare version. Certifikatutf\'e4rdaren kan ocks\'e5 ogiltigf\'f6rklara (\'94\'e5terkalla\'94) ett certifikat innan det g\'e5r ut. Giltigheten f\'f6r ett certifikat kan verifieras elektroniskt med hj\'e4lp av PKI (public key infrastructure) som \'e4r en infrastruktur f\'f6r publika nycklar.\
+\
+
+\b Hur skaffar jag mig ett certifikat?
+\b0 \
+F\'f6r att kunna f\'e5 ett giltigt certifikat m\'e5ste du utforma en certifikatbeg\'e4ran och skicka den till en certifikatutf\'e4rdare. Om utf\'e4rdaren godtar beg\'e4ran skapar den ett certifikat och skickar det till dig. Du kan anv\'e4nda Certifikatassistenten eller en webbplats som tillh\'f6r en kommersiell certifikatutf\'e4rdare till att skapa en personlig certifikatbeg\'e4ran. Du kan skaffa dig och inneha m\'e5nga olika certifikat signerade av olika utf\'e4rdare som alla \'e4r giltiga, men underst\'e4llda olika regelverk. Du kan exempelvis ha ett certifikat som g\'f6r att du kan signera e\uc0\u8209 post och ett annat som du kan anv\'e4nda f\'f6r att identifiera dig p\'e5 Meddelanden.\
+\
+
+\b Var sparas mina certifikat?
+\b0 \
+Digitala identiteter, inklusive certifikat, sparas i nyckelringen. Det g\'f6r dem omedelbart tillg\'e4ngliga f\'f6r program som Mail och Safari. Certifikat f\'f6r andra syften (e\uc0\u8209 post\'adkorrespondenser, webbplatser mm.) sparas ocks\'e5 i nyckelringen n\'e4r de anl\'e4nder till datorn. Du kan anv\'e4nda Nyckelhanteraren (som du hittar i Program > Verktygsprogram) till att visa och hantera dina certifikat. Du kan flytta och kopiera certifikat (\'e5tskilda fr\'e5n deras associerade privata nyckel) som du vill eftersom de inte inneh\'e5ller n\'e5gra v\'e4rdefulla hemligheter som m\'e5ste skyddas. Du kan mycket v\'e4l ha flera kopior av ett certifikat. Om du beh\'f6ver skicka ett certifikat till n\'e5gon annan kan du exportera det med hj\'e4lp av Nyckelhanteraren och sedan skicka det p\'e5 ett s\'e4kert s\'e4tt, till exempel via e\u8209 post. Om n\'e5gon skickar ett certifikat kan du p\'e5 samma s\'e4tt l\'e4gga till det i din nyckelring genom att sl\'e4ppa det p\'e5 Nyckelhanterare eller anv\'e4nda menyn Arkiv > Importera objekt
+\f1 \'85 
+\f0 i Nyckelhanterare.\
+\
+
+\b Vad \'e4r en certifikatutf\'e4rdare (CA)? 
+\b0 \
+Eftersom en CA i sig \'e4r en digital identitet kan denna ocks\'e5 verifieras av andra CA, vilket skapar en s\'e5 kallad \'94certifikatkedja\'94. F\'f6r att ett certifikat ska bli giltigt m\'e5ste den CA som signerade det ocks\'e5 vara giltig, och s\'e5 vidare, genom hela kedjan. Det h\'e4r kontrolleras automatiskt av systemprogramvaran n\'e4r ett certifikat utv\'e4rderas.\
+\
+
+\b Varf\'f6r ska certifikat utv\'e4rderas?
+\b0 \
+Anv\'e4nd Certifikatassistent till att utv\'e4rdera ett certifikats giltighet och f\'f6r att avg\'f6ra om det \'e4r \'e4kta. S\'e4ker programvara, som Safari eller Mail, utv\'e4rderar certifikat innan de anv\'e4nds. Om du exempelvis anv\'e4nder Safari till att k\'f6pa n\'e5got p\'e5 n\'e4tet, utv\'e4rderar Safari webbplatsens certifikat och l\'e5ter dig veta om det \'e4r giltigt. Certifikatassistent ger dig mer information och st\'f6rre inflytande \'f6ver certifikatanv\'e4ndningen.}

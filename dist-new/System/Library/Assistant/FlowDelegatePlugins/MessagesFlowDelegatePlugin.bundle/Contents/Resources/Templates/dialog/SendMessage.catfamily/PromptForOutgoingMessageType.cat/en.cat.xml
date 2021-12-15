@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#PromptForOutgoingMessageType" locale="en">
+    <random>
+        <dialog>What do you want for message type?</dialog>
+        <dialog>Can you specify the message type?</dialog>
+        <dialog>What message type?</dialog>
+    </random>
+</cat>

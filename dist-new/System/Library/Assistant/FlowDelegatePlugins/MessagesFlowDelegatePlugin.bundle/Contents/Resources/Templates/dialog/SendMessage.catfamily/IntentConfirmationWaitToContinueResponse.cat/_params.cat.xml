@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#IntentConfirmationWaitToContinueResponse">
+
+    <meta name="description" value="Siri asked a confirmation to handle an intent and the user said no (or &quot;not yet&quot;), in a way that should let the user resume the flow later."/>
+    <meta name="category" value="User Declined"/>
+    <meta name="readyForLoc" value="true"/>
+    
+    <parameters>
+        <parameter name="deviceState" type="sirikit.DeviceState"/>
+    </parameters>
+    
+</cat>

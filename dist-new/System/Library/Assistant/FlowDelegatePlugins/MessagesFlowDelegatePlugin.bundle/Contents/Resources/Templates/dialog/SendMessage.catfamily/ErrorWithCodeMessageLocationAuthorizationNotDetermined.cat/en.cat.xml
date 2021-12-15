@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ErrorWithCodeMessageLocationAuthorizationNotDetermined" locale="en">
+    
+    <phrases>
+        <first phrase="appName">
+            <text condition="app.name"><var name="app.name"/></text>
+            <text>The app</text>
+        </first>
+    </phrases>
+    
+    <first>
+        <first condition="app.isDesignedByApple">
+            <dialog condition="deviceState.isCarPlay">You need to give Messages access to your location. Once you’re not driving, open Messages on your iPhone, tap the recipient name, and then info.</dialog>
+            <dialog condition="deviceState.isWatch">You need to give Messages access to your location.  To do that, open Messages on your iPhone, tap the recipient name, and then info.</dialog>
+            <dialog>You need to give Messages access to your location. To do that, open Messages, tap the recipient name, and then info.</dialog>
+        </first>
+        <dialog><phrase name="appName"/> doesn’t have access to your location yet. Open the app to enable Location Services.</dialog>
+    </first>
+    
+</cat>
+

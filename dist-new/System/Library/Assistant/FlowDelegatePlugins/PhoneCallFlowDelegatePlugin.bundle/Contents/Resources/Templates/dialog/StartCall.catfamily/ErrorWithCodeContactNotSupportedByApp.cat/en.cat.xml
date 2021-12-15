@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+  <first>
+      <dialog>Sorry, but it looks like this contact is not supported<opt> by <var name="appName"/></opt>.</dialog>
+  </first>
+</cat>

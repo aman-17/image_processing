@@ -1,0 +1,26 @@
+{
+    "Name": "SUGuidedFilterOcclusion",
+    "OverrideMaterial": "engine:pbr.rematerialdefinition",
+    "Parameters": {
+        "Textures": {
+            "virtualContentDepth" : "rendergraph.virtualContentDepth",
+            "suMeshDepth" : "rendergraph.suMeshDepth"
+        }
+    },
+    "Techniques": [
+        {
+            "Name": "InvisibleTechnique",
+            "VertexShader": {
+                "Entry": "vsGuidedFilterInvisible",
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Never"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "InvisibleTechnique": "InvisibleTechnique"
+    }
+}

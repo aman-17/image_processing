@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ConfirmDateCreated" locale="en">
+  <conditions>
+      <condition name="hasDateCreatedToConfirm">
+          <expression name="dateCreatedToConfirm" op="defined"/>
+      </condition>
+      <condition name="isTimeDescriptive">
+          <expression name="isTimeDescriptive"/>
+      </condition>
+  </conditions>
+  <phrases>
+      <first phrase="dateOrTimeDesriptive">
+          <text condition="isTimeDescriptive"><var name="dateCreatedToConfirm.timeDescriptive"/></text>
+          <text><var name="dateCreatedToConfirm.dateDescriptive"/></text>
+      </first>
+  </phrases>
+  
+  <first>
+      <dialog id="hasDateCreatedToConfirm" condition="hasDateCreatedToConfirm">Are you sure you want calls from <phrase name="dateOrTimeDesriptive"/>?</dialog>
+      <dialog id="NoDateCreatedToConfirm">No value to confirm.</dialog>
+  </first>
+</cat>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalGoToSleep" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<conditions>
+		<condition name="used_more_than_3_times_or_any_time_in_the_last_hour">
+			<or>
+				<expression name="dialogState.hoursSinceLastUse" op="le" value="1"/>
+				<expression name="dialogState.usageCount" op="gt" value="3"/>
+			</or>
+		</condition>
+		<condition name="isDeviceTV">
+			<expression name="device.isAppleTV"/>
+		</condition>
+	</conditions>
+	<all>
+		<first>
+			<dialog condition="isDeviceTV">You can put your TV to sleep by long pressing the Home button.</dialog>
+			<random phrase="">
+				<all condition="used_more_than_3_times_or_any_time_in_the_last_hour" phrase="">
+					<dialog><speak>Zee zee zee. Zee zee zee. Zee zee zee.</speak><print>Zzz. Zzz. Zzz.</print></dialog>
+					<dialog>Wow. That’s not as easy as it looks.</dialog>
+				</all>
+				<dialog>I can’t sleep. But I enjoy a good bedtime story.</dialog>
+				<dialog>I take a little nap anytime you say “Goodbye.”</dialog>
+			</random>
+		</first>
+	</all>
+	<phrases/>
+</cat>

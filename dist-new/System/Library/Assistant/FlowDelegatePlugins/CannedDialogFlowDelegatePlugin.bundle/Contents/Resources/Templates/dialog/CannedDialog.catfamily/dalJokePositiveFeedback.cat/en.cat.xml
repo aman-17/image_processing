@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalJokePositiveFeedback">
+    <all>
+        <random>
+            <dialog><phrase name="thanks"/> Want another?</dialog>
+            <dialog><phrase name="thanks"/> Would you like another one?</dialog>
+            <dialog><phrase name="thanks"/> Want another one?</dialog>
+            <dialog><phrase name="thanks"/> How about another one?</dialog>
+            <dialog><phrase name="thanks"/> How about another?</dialog>
+        </random>
+    </all>
+    <phrases>
+        <random phrase="thanks">
+            <text>Thank you.<break time="500ms"/></text>
+            <text>Thanks!<break time="500ms"/></text>
+            <text>Thanks. I’m here all week…<break time="500ms"/></text>
+            <text>Sweet.</text>
+        </random>
+    </phrases>
+</cat>

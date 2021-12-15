@@ -1,0 +1,223 @@
+{
+    Name = "System Events Suite";
+    Description = "Terms and Events for controlling the System Events application";
+
+    Commands = {
+        beginTransaction = {
+            Name = "begin transaction";
+            Description = "Begin a bounded update session with one or more files.";
+        };
+        endTransaction = {
+            Name = "end transaction";
+            Description = "Apply the results of a bounded update session with one or more files.";
+        };
+        abortTransaction = {
+            Name = "abort transaction";
+            Description = "Discard the results of a bounded update session with one or more files.";
+        };
+	};
+    Classes = {
+        NSApplication = {
+            Name = "application";
+            PluralName = "applications";
+            Description = "The System Events application";
+            Attributes = {
+                currentScreenSaver = {
+                    Name = "current screen saver";
+                    Description = "the currently selected screen saver";
+                };    
+                screenSaverPreferences = {
+                    Name = "screen saver preferences";
+                    Description = "the preferences common to all screen savers";
+                };                
+                networkPref = {
+                    Name = "network preferences";
+                    Description = "the preferences for the current user's network";
+                };                
+                securityPref = {
+                    Name = "security preferences";
+                    Description = "a collection of security preferences";
+                };                
+				digiHubPref = {
+ 					Name = "CD and DVD preferences";
+                    Description = "the preferences for the current user when a CD or DVD is inserted";
+				};
+				exposePref = {
+ 					Name = "expose preferences";
+                    Description = "the preferences for the current user's expose and dashboard key, mouse and corner bindings";
+				};
+				dockPref = {
+ 					Name = "dock preferences";
+                    Description = "the preferences for the current user's dock";
+				};
+                appearancePref = {
+                    Name = "appearance preferences";
+                    Description = "a collection of appearance preferences";
+                };                
+                currentDesktop = {
+                    Name = "current desktop";
+                    Description = "the primary desktop";
+                };
+				quitDelay = {
+					Name = "quit delay";
+					Description = "the time in seconds the application will idle before quitting; if set to zero, idle time will not cause the application to quit";
+				};
+				scriptMenuEnabled = {
+ 					Name = "script menu enabled";
+                    Description = "Is the Script menu installed in the menu bar?";
+                };
+                currentUser = {
+                    Name = "current user";
+                    Description = "the currently logged in user";
+                }; 
+                folderActionsEnabled = {
+ 					Name = "folder actions enabled";
+                    Description = "Are Folder Actions currently being processed?";
+                };
+                uiElementsEnabled = {
+ 					Name = "UI elements enabled";
+                    Description = "Are UI element events currently being processed?";
+                };
+                startupDisk = {
+ 					Name = "startup disk";
+                    Description = "the disk from which Mac OS X was loaded";
+                };
+				domainSystem = {
+ 					Name = "system domain";
+                    Description = "the collection of folders belonging to the System";
+				};
+				domainLocal = {
+ 					Name = "local domain";
+                    Description = "the collection of folders residing on the Local machine";
+				};
+				domainNetwork = {
+ 					Name = "network domain";
+                    Description = "the collection of folders residing on the Network";
+				};
+				domainUser = {
+ 					Name = "user domain";
+                    Description = "the collection of folders belonging to the User";
+				};
+				domainClassic = {
+ 					Name = "Classic domain";
+                    Description = "the collection of folders belonging to the Classic System";
+				};
+                folderApplications = {
+					Name = "applications folder";
+					Description = "The user's Applications folder";
+                };
+                folderApplicationSupport = {
+					Name = "application support folder";
+					Description = "The Application Support folder";
+                };
+                folderDesktop = {
+					Name = "desktop folder";
+					Description = "The user's Desktop folder";
+                };
+                folderDesktopPictures = {
+					Name = "desktop pictures folder";
+					Description = "The Desktop Pictures folder";
+                };
+                folderDocuments = {
+					Name = "documents folder";
+					Description = "The user's Documents folder";
+                };
+                folderDownloads = {
+					Name = "downloads folder";
+					Description = "The user's Downloads folder";
+                };
+                folderFavorites = {
+					Name = "favorites folder";
+					Description = "The user's Favorites folder";
+                };
+                folderFolderActionScripts = {
+					Name = "Folder Action scripts folder";
+					Description = "The user's Folder Action Scripts folder";
+                };
+                folderFonts = {
+					Name = "fonts folder";
+					Description = "The Fonts folder";
+                };
+                folderHome = {
+					Name = "home folder";
+					Description = "The Home folder of the currently logged in user";
+                };
+                folderLibrary = {
+					Name = "library folder";
+					Description = "The Library folder";
+                };
+                folderMovies = {
+					Name = "movies folder";
+					Description = "The user's Movies folder";
+                };
+                folderMusic = {
+					Name = "music folder";
+					Description = "The user's Music folder";
+                };
+                folderPictures = {
+					Name = "pictures folder";
+					Description = "The user's Pictures folder";
+                };
+                folderPreferences = {
+					Name = "preferences folder";
+					Description = "The user's Preferences folder";
+                };
+                folderPublic = {
+					Name = "public folder";
+					Description = "The user's Public folder";
+                };
+                folderScriptingAdditions = {
+					Name = "scripting additions folder";
+					Description = "The Scripting Additions folder";
+                };
+                folderScripts = {
+					Name = "scripts folder";
+					Description = "The user's Scripts folder";
+                };
+                folderSharedDocuments = {
+					Name = "shared documents folder";
+					Description = "The Shared Documents folder";
+                };
+                folderSites = {
+					Name = "sites folder";
+					Description = "The user's Sites folder";
+                };
+                folderSpeakable = {
+					Name = "speakable items folder";
+					Description = "The Speakable Items folder";
+                };
+                folderTemporary = {
+					Name = "temporary items folder";
+					Description = "The Temporary Items folder";
+                };
+                folderTrash = {
+					Name = "trash";
+					Description = "The user's Trash folder";
+                };
+                folderUtilities = {
+					Name = "utilities folder";
+					Description = "The Utilities folder";
+                };
+                folderWorkflows = {
+					Name = "workflows folder";
+					Description = "The Automator Workflows folder";
+                };
+			};
+        };
+        DesktopScriptingWrapper = {
+            Name = "desktop";
+            PluralName = "desktops";
+            Description = "desktop picture settings, extended";
+            Attributes = {
+                displayID = {
+ 					Name = "id";
+                    Description = "unique identifier of the display on which this desktop appears";
+                };
+                name = {
+                    Name = "name";
+                    Description = "the name of the display on which this desktop appears";
+                };
+            };
+		};
+    };
+}

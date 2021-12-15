@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalWhatDoesTheFoxSay" xmlns="urn:apple:names:siri:cat:1.4">
+    <meta name="category" value="Social"/>
+    <meta name="subcategory" value="Passing Time"/>
+    <meta name="description" value="User said 'what does the fox say'"/>
+    <meta name="readyForLoc" value="false"/>
+    <meta name="listenAfterSpeaking" value="false"/>
+</cat>

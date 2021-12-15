@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#RequestIntroduction" locale="en">
+    <conditions>
+        <condition name="isNamedGroup">
+            <and>
+                <expression name="conversations[0].isGroup" op="set"/>
+                <expression name="conversations[0].speakableGroupName" op="defined"/>
+            </and>
+        </condition>
+        
+        <condition name="noGroupConversations">
+            <expression name="areAnyConversationsGroups" op="unset"/>
+        </condition>
+        
+        <condition name="isSingleGroupConversation">
+            <and>
+                <expression name="areAnyConversationsGroups" op="set"/>
+                <expression name="requestContext.conversationCount" op="eq" value="1"/>
+            </and>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="messageAttributes">
+            <text condition="containsOnlyUnreadMessages">new</text>
+            <text condition="containsOnlyReadMessages">some recent</text>
+            <text>recent</text>
+        </first>
+        
+        <first phrase="conversationsDescription">
+            <first condition="isSingleGroupConversation">
+                <text condition="isNamedGroup">in <var name="conversations[0].speakableGroupName"/></text>
+                <switch value="conversations[0].numberOfMembersOtherThanYou">
+                    <text case="1">from <var name="conversations[0].membersOtherThanYou[0]"/></text>
+                    <text case="2">in your group with <var name="conversations[0].membersOtherThanYou[0]"/> and <var name="conversations[0].membersOtherThanYou[1]"/></text>
+                    <text case="3">in your group with <var name="conversations[0].membersOtherThanYou[0]"/>, <var name="conversations[0].membersOtherThanYou[1]"/>, and <var name="conversations[0].membersOtherThanYou[2]"/></text>
+                    <text>in your group with <var name="conversations[0].membersOtherThanYou[0]"/> and <var name="conversations[0].numberOfMembersOtherThanYouMinusOne"/> others</text>
+                </switch>
+            </first>
+            
+            <switch condition="noGroupConversations" value="requestContext.conversationCount">
+                <text case="1">from <var name="conversations[0].membersOtherThanYou[0]"/></text>
+                <text case="2">from <var name="conversations[0].membersOtherThanYou[0]"/> and <var name="conversations[1].membersOtherThanYou[0]"/></text>
+                <text case="3">from <var name="conversations[0].membersOtherThanYou[0]"/>, <var name="conversations[1].membersOtherThanYou[0]"/>, and <var name="conversations[2].membersOtherThanYou[0]"/></text>
+                <text>in <var name="requestContext.conversationCount"/> conversations</text>
+            </switch>
+            
+            <text>in <var name="requestContext.conversationCount"/> conversations</text>
+        </first>
+    </phrases>
+    
+    <all>
+        <dialog>
+            <opt>OK, <var name="user.groundingIfNeeded"/>, </opt>You have <phrase name="messageAttributes"/> messages <phrase name="conversationsDescription"/>…
+        </dialog>
+    </all>
+</cat>

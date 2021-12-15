@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#ConfirmInterruptingAnotherSE">
+    <meta name="description" value="Confirming interruption of another device"/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="reprompt" type="dialog.Boolean" description="Is Siri asking again"/>
+        <parameter name="deviceLocation" type="dialog.String" description="Device name where content playing if same room"/>
+        <parameter name="multipleDevices" type="dialog.Boolean" description="Number of devices where content is playing"/>
+        <parameter name="roomLocation" type="dialog.String" description="Room name where content is playing"/>
+        <parameter name="multipleRooms" type="dialog.Boolean" description="Number of rooms where content is playing"/>
+    </parameters>
+</cat>

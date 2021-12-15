@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutStart#intentHandledResponse" locale="en">
+    
+    <conditions>
+        <condition name="notPunchingOut">
+            <expression name="isPunchingOut" op="unset"/>
+        </condition>
+    </conditions>
+ 
+    <first>
+        <dialog condition="isWatchHandoff" id="watchHandoff">Starting a workout on your Apple Watch…</dialog>
+        <dialog condition="notPunchingOut" id="notPunchingOut">OK, I started your workout.</dialog>
+        <dialog condition="appName" id="punchingOutWithAppName">Starting your workout in <var name="appName"/>…</dialog>
+        <dialog id="punchingOutWithoutAppName">Taking you to the app…</dialog>
+    </first>
+
+</cat>

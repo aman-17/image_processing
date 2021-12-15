@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CannedDialog#dalUnknownStatementAboutSiriCatchall">
+    <meta name="description" value="A CAT to catch generic user-statement utterances about Siri"/>
+    <meta name="category" value="Can't Understand"/>
+    <meta name="readyForLoc" value="false"/>
+    <meta name="listenAfterSpeaking" value="true"/>
+</cat>

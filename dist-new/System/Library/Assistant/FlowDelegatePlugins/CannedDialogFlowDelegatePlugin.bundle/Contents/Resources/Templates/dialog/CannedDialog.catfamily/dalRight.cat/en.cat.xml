@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalRight" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<random phrase="">
+			<dialog>Glad to hear it.</dialog>
+			<dialog>It’s nice to be right.</dialog>
+			<dialog>I aim to please.</dialog>
+		</random>
+	</all>
+</cat>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#UnsupportedMediaItemsLoginRequired" locale="en">
+    <conditions>
+       <condition name="isNoGrounding" note="attribution required with a fallback user">
+           <expression name="user.groundingIfNeeded" op="nonempty"/>
+       </condition>
+    </conditions>
+    <first>
+        <dialog condition="isMultiUserDisabled">To do that, you’ll need to verify your account details in <var name="app.localizedName"/>.</dialog>
+        <dialog condition="isUserRecognized">Sorry<opt>, <var name="user.groundingIfNeeded"/></opt>, to do that, you’ll need to verify your account details in <var name="app.localizedName"/>.</dialog>
+        <dialog>To do that, <var name="fallbackUsername" inflect="genitive"/> <var name="app.localizedName"/> account needs to be updated.</dialog>
+        <dialog>To do that, your <opt><var name="app.localizedName"/></opt> account needs to be updated.</dialog>
+    </first>
+</cat>

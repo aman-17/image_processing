@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutEnd#errorWithCode" locale="en">
+    <conditions>
+        <condition name="noMatchingWorkout">
+            <expression name="errorCode" op="eq" value="5"/>
+        </condition>
+    </conditions>
+ 
+    <first>
+        <first condition="noMatchingWorkout">
+            <dialog condition="appName" id="noMatchingWorkout">Sorry, <var name="appName"/> couldn’t find a matching workout.</dialog>
+            <dialog id="noMatchingWorkoutNoAppName">Sorry, the app couldn’t find a matching workout.</dialog>
+        </first>
+        <dialog condition="device.isCarPlay" id="deviceIsCarPlay">Sorry, there was a problem with the app.</dialog>
+        <dialog id="continueInApp">Sorry, you’ll need to continue in the app.</dialog>
+    </first>
+
+</cat>

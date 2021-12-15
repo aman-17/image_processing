@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ReadSavedVoiceMailRecord" locale="en">
+  <conditions>
+      <condition name="isCallerNeeded">
+          <not><expression name="intent.recipient.list.length" op="gt" value="0"/></not>
+      </condition>
+      
+      <condition name="isDateNeeded">
+          <expression name="callRecord.dateCreated" op="defined"/>
+      </condition>
+      
+      <condition name="isCallerOrDateNeeded">
+          <or>
+              <expression name="callRecord.dateCreated" op="defined"/>
+              <and>
+                  <expression name="callRecord.caller" op="defined"/>
+                  <not><expression name="intent.recipient.list.length" op="gt" value="0"/></not>
+              </and>
+          </or>
+      </condition>
+      <condition name="shouldReadTimeOnly">
+           <and>
+               <expression name="callRecord.dateCreated" op="defined"/>
+               <or>
+                   <expression name="callRecord.dateCreated.isToday"/>
+                   <expression name="isSingleDateRequest"/>
+                   <expression name="isTimeRangeRequest"/>
+               </or>
+           </and>
+       </condition>
+      
+      <condition name="hasMultipleSavedRecords">
+          <expression name="savedRecordsCount" op="gt" value="1"/>
+      </condition>
+      
+      <condition name="hasNewVoicemails">
+          <expression name="newRecordsCount" op="gt" value="0"/>
+      </condition>
+      
+      <condition name="hasOneSavedAndSomeNewVoicemails">
+          <and>
+              <expression name="savedRecordsCount" op="eq" value="1"/>
+              <expression name="newRecordsCount" op="gt" value="0"/>
+          </and>
+      </condition>
+      
+      <condition name="shouldDisplayHereItIs">
+          <not><expression name="isLeadingSavedVoiceMailPostPrompt"/></not>
+      </condition>
+  </conditions>
+
+  <phrases>
+      <first phrase="firstCallRecordSummaryWithCaller">
+          <text condition="hasOneSavedAndSomeNewVoicemails">The saved one is</text>
+          <text condition="hasNewVoicemails">The first saved one is</text>
+          <text condition="hasMultipleSavedRecords">The first one is</text>
+      </first>
+      
+      <first phrase="firstCallRecordSummaryWithDate">
+          <text condition="hasOneSavedAndSomeNewVoicemails">The saved one was left</text>
+          <text condition="hasNewVoicemails">The first saved one was left</text>
+          <text condition="hasMultipleSavedRecords">The first one was left</text>
+      </first>
+      
+      <first phrase="firstCallRecordSummary">
+          <text condition="isCallerNeeded"><phrase name="firstCallRecordSummaryWithCaller"/></text>
+          <text><phrase name="firstCallRecordSummaryWithDate"/></text>
+      </first>
+      
+      
+      <switch phrase="summaryWithRecipientOrDate" value="voiceMailPosition">
+          <text case="'first'"><phrase name="firstCallRecordSummary"/></text>
+          <text case="'last'">And,</text>
+          <text case="'middle'">Next,</text>
+          <text></text>
+      </switch>
+      
+      <switch phrase="summary" value="voiceMailPosition">
+          <text case="'first'">First, a saved voicemail</text>
+          <text case="'last'">And, a saved voicemail</text>
+          <text case="'middle'">Next, a saved voicemail</text>
+          <text></text>
+      </switch>
+      
+      <first phrase="callerInfo">
+          <text condition="isCallerNeeded"> from <var name="callRecord.caller"/></text>
+          <text condition="isCallerNeeded"> from an unknown caller</text>
+      </first>
+      
+      <first phrase="dateTime">
+          <text condition="shouldReadTimeOnly"> <var name="callRecord.dateCreated.timeDescriptiveWithPrefix"/></text>
+          <text condition="isDateNeeded"> <var name="callRecord.dateCreated.dateTimeDescriptiveWithPrefixOn"/></text>
+      </first>
+      
+      <first phrase="hereItIs">
+          <text condition="shouldDisplayHereItIs"> Here it is:</text>
+          <text></text>
+      </first>
+  </phrases>
+
+  <first>
+      <dialog condition="isCallerOrDateNeeded"><phrase name="summaryWithRecipientOrDate"/><opt><phrase name="callerInfo"/></opt><opt><phrase name="dateTime"/></opt>. <opt><phrase name="hereItIs"/></opt></dialog>
+      <dialog><phrase name="summary"/><opt><phrase name="callerInfo"/></opt><opt><phrase name="dateTime"/></opt>. <opt><phrase name="hereItIs"/></opt></dialog>
+  </first>
+
+</cat>

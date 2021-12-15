@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#DigitalTouchNotSupported" locale="en">
+    <first>
+        <dialog condition="deviceState.isMac">Sorry, I can’t help you with digital touch on Mac.</dialog>
+        <dialog condition="deviceState.isCarPlay">I’m not able to help you with digital touch while you’re driving.</dialog>
+        <dialog condition="deviceState.isWatch">You can use digital touch in Messages.</dialog>
+        <dialog>I’m not able to help you with digital touch, but you can do that in Messages.</dialog>
+    </first>
+</cat>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutStart#errorWithCode">
+    <meta name="category" value="Can't Do"/>
+    <meta name="muteIfNeeded" value="false"/>
+    <meta name="notUseful" value="false"/>
+    <meta name="readyForLoc" value="true"/>
+    <meta name="description" value="Executed whenever an code specific error occurs in a non slot-resolution Synapse transaction."/>
+    <parameters>
+        <parameter name="errorCode" type="dialog.Number"/>
+        <parameter name="appName" type="dialog.String"/>
+        <parameter name="device" type="sirikit.DeviceState"/>
+    </parameters>
+</cat>

@@ -1,0 +1,103 @@
+{
+  "minVersion" : 7,
+  "presets" : {
+    "eyewear" : "none",
+    "highlights" : "modern",
+    "facialhairhighlights" : "gradient",
+    "eyebrows" : "even_rounded_thin",
+    "lips" : "oval_medium",
+    "nose" : "medium",
+    "head" : "round_medium",
+    "ears" : "medium",
+    "age" : "adult",
+    "earrings" : "none",
+    "eyelashes" : "natural_thin",
+    "eyeliner" : "none",
+    "facialhair" : "none",
+    "headwear" : "none",
+    "sideburns" : "none",
+    "hair" : "none",
+    "eyes" : "large_straight",
+    "freckles" : "none",
+    "audio" : "none",
+    "blush": "none"
+  },
+  "colors" : {
+    "eyewear" : {
+      "name" : "Black",
+      "variation" : 0
+    },
+    "facialhairhighlights" : {
+      "name" : "Soft Black",
+      "variation" : 0
+    },
+    "eyebrows" : {
+      "name" : "Soft Black",
+      "variation" : 0
+    },
+    "lips" : {
+      "name" : "Natural",
+      "variation" : 0
+    },
+    "head" : {
+      "name" : "Yellow",
+      "variation" : 0
+    },
+    "earrings" : {
+      "name" : "Silver",
+      "variation" : 0
+    },
+    "highlights" : {
+      "name" : "Soft Black",
+      "variation" : 0
+    },
+    "eyelashes" : {
+      "name" : "Black",
+      "variation" : 0
+    },
+    "eyeliner" : {
+      "name" : "Eyeliner Black",
+      "variation" : -1
+    },
+    "facialhair" : {
+      "name" : "Soft Black",
+      "variation" : 0
+    },
+    "headwear" : {
+      "name" : "White",
+      "variation" : 0
+    },
+    "hair" : {
+      "name" : "Soft Black",
+      "variation" : 0
+    },
+    "sideburns" : {
+      "name" : "Soft Black",
+      "variation" : 0
+    },
+    "eyes" : {
+      "name" : "Brown",
+      "variation" : 0
+    },
+    "eyeshadow" : {
+      "name" : "Eyeshadow Stone",
+      "variation" : 0
+    },
+    "audio" : {
+      "name" : "White",
+      "variation" : -1
+    },
+    "blush" : {
+      "name" : "Blush Pink",
+      "variation" : 0
+    }
+  },
+  "secondaryColors" : {
+    "eyewear" : {
+      "name" : "Clear",
+      "variation" : 0
+    }
+  },
+  "class" : 2,
+  "version" : 8
+}

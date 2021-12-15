@@ -1,0 +1,54 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../../shared/cam.scnz"
+  },
+  "emoji" : "🤣",
+  "identifier" : "face_with_tears_of_joy",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_L" : 1,
+    "browDown_R" : 1,
+    "browInnerUp" : 0.67255085706710815,
+    "browOuterUp_L" : 0.2818952202796936,
+    "browOuterUp_R" : 0.27548208832740784,
+    "cheekSquint_L" : 0.93215173482894897,
+    "cheekSquint_R" : 1,
+    "eyeBlink_L" : 1,
+    "eyeBlink_R" : 1,
+    "eyeSquint_L" : 1,
+    "eyeSquint_R" : 0.94561862945556641,
+    "jawOpen" : 0.55184805393218994,
+    "mouthDimple_L" : 1,
+    "mouthDimple_R" : 1,
+    "mouthSmile_L" : 1,
+    "mouthSmile_R" : 1,
+    "mouthUpperUp_L" : 0.61368203163146973,
+    "mouthUpperUp_R" : 0.58904117345809937,
+    "neckOrientation" : [
+      -0.062898218631744385,
+      0,
+      0,
+      0.99801993370056152
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "image" : "../../../shared/face_with_tears_of_joy/tears.heic",
+      "position" : {
+        "x" : 0,
+        "y" : 0.070000000000000007,
+        "z" : 20
+      },
+      "scale" : 1.25
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../shared/cam.scnz"
+  },
+  "emoji" : "🤩",
+  "identifier" : "face_with_starry_eyes",
+  "options" : {
+    "duration" : 1
+  },
+  "physicsState" : {
+    "memoji" : {
+      "lowerBack_DYN" : {
+        "offset" : [
+          -0.026368141174316406,
+          0.026368141174316406,
+          0.8541264533996582
+        ]
+      },
+      "lowerBackLeft_DYN" : {
+        "offset" : [
+          0.40069580078125,
+          0.4534306526184082,
+          0.6039588451385498
+        ]
+      },
+      "lowerBackRight_DYN" : {
+        "offset" : [
+          -0.45343589782714844,
+          -0.40069580078125,
+          0.60396236181259155
+        ]
+      },
+      "lowerFront_DYN" : {
+        "offset" : [
+          -0.026371002197265625,
+          -0.0263671875,
+          0.8541264533996582
+        ]
+      },
+      "lowerFrontLeft_DYN" : {
+        "offset" : [
+          0.40069580078125,
+          0.4534306526184082,
+          -0.6039588451385498
+        ]
+      },
+      "lowerFrontRight_DYN" : {
+        "offset" : [
+          -0.45343303680419922,
+          -0.40069484710693359,
+          -0.60396063327789307
+        ]
+      },
+      "lowerLeft_DYN" : {
+        "offset" : [
+          0.57758998870849609,
+          0.63032770156860352,
+          -2.1175823681357508e-22
+        ]
+      },
+      "lowerRight_DYN" : {
+        "offset" : [
+          -0.63033008575439453,
+          0.5775909423828125,
+          -2.1175823681357508e-22
+        ]
+      }
+    }
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 1,
+    "browOuterUp_L" : 0.934112548828125,
+    "browOuterUp_R" : 0.92706578969955444,
+    "eyeWide_L" : 0.76741957664489746,
+    "eyeWide_R" : 0.6566842794418335,
+    "jawOpen" : 0.90997493267059326,
+    "mouthDimple_L" : 0.47382906079292297,
+    "mouthDimple_R" : 0.52341580390930176,
+    "mouthSmile_L" : 0.95919305086135864,
+    "mouthSmile_R" : 0.88958442211151123,
+    "mouthUpperUp_R" : 0.008264484815299511,
+    "neckOrientation" : [
+      0,
+      0,
+      -0.043619390577077866,
+      0.99904829263687134
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "image" : "../../shared/face_with_starry_eyes/star_left.heic",
+      "position" : 15
+    },
+    {
+      "image" : "../../shared/face_with_starry_eyes/star_right.heic",
+      "position" : 15
+    }
+  ]
+}

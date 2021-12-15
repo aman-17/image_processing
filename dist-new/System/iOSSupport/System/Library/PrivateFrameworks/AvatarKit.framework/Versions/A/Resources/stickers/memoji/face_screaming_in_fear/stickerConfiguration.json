@@ -1,0 +1,45 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../shared/cam.scnz"
+  },
+  "emoji" : "😱",
+  "identifier" : "face_screaming_in_fear",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 1,
+    "browOuterUp_L" : 0.34862390160560608,
+    "browOuterUp_R" : 0.35474014282226562,
+    "cheekSquint_L" : 0.25190836191177368,
+    "cheekSquint_R" : 0.25954198837280273,
+    "eyeWide_L" : 1,
+    "eyeWide_R" : 1,
+    "jawOpen" : 1,
+    "mouthFunnel" : 0.26399999856948853,
+    "neckOrientation" : [
+      0,
+      0,
+      0,
+      1
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "palettes" : [
+        {
+          "material" : "head_MAT",
+          "palette" : "skin"
+        }
+      ],
+      "scene" : "screamingHands.scnz"
+    }
+  ]
+}

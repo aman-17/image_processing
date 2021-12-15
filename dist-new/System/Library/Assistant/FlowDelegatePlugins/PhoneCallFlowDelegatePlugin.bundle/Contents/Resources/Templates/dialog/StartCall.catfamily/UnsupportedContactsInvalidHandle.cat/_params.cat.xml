@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#UnsupportedContactsInvalidHandle">
+    <meta name="description" value="Unsupported dialog for contacts slot"/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+    <meta name="note" value="This is a 3P-only error code"/>
+    <parameters>
+        <parameter name="contacts" type="phone.PersonList"/>
+    </parameters>
+</cat>

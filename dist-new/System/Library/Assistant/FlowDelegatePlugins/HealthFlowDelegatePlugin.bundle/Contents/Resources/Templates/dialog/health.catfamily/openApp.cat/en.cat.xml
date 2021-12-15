@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="health#openApp" locale="en">
+
+  <first>
+    <dialog condition="appName" id="openAppWithAppName">Open <var name="appName"/></dialog>
+    <dialog id="openAppWithoutAppName">Open App</dialog>
+  </first>
+
+</cat>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalQuestionGibberish" xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <first>
+        <dialog>I didn’t get that. Could you try again?</dialog>
+    </first>
+</cat>

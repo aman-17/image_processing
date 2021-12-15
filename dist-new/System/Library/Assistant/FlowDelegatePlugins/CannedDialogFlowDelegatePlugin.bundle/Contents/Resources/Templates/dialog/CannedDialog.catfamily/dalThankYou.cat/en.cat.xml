@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalThankYou" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<random>
+			<dialog condition="not_in_last_minute">You’re welcome.</dialog>
+			<dialog condition="not_in_last_minute">You’re welcome.</dialog>
+			<dialog condition="not_in_last_minute">You’re welcome.</dialog>
+			<dialog>No problem.</dialog>
+			<dialog>My pleasure.</dialog>
+			<dialog>Sure thing.</dialog>
+			<dialog condition="dialogState.isFamiliar">Of course.</dialog>
+			<dialog condition="dialogState.isFamiliar">Don't mention it.</dialog>
+		</random>
+	</all>
+	<phrases/>
+	<conditions>
+		<condition name="not_in_last_minute">
+			<expression name="dialogState.minsSinceLastUse" op="gt" value="1"/>
+		</condition>
+	</conditions>
+</cat>

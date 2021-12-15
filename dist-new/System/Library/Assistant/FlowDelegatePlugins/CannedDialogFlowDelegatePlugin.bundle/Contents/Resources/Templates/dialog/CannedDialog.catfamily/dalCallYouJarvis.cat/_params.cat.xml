@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalCallYouJarvis" xmlns="urn:apple:names:siri:cat:1.0">
+    <meta name="description" value="User asked to call Siri 'Jarvis', a reference to the virtual assistant in Marvel's 'Iron Man' and 'Avengers' series of films."/>
+    <meta name="category" value="Social"/>
+    <meta name="subcategory" value="Passing Time"/>
+    <meta name="readyForLoc" value="false"/>
+    <meta name="listenAfterSpeaking" value="false"/>
+</cat>

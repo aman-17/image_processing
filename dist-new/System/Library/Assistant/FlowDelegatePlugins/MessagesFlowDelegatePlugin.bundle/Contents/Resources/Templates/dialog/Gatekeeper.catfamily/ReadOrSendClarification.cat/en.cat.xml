@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="Gatekeeper#ReadOrSendClarification" locale="en">
+    <conditions>
+        <condition name="highUsageCount">
+            <expression name="dialogState.usageCount" op="gt" value="3"/>
+        </condition>
+    </conditions>
+    
+    <first>
+        <dialog condition="highUsageCount">Want to hear unread messages, or create a new one?</dialog>
+        <random>
+            <dialog>Would you like to hear your unread messages, or create a new one?</dialog>
+            <dialog>Would you like me to read your messages, or compose a new one?</dialog>
+        </random>
+    </first>
+</cat>

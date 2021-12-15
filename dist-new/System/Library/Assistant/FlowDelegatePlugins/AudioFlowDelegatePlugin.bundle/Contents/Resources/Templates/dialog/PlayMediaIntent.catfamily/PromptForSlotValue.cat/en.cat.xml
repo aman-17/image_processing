@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PromptForSlotValue" locale="en">
+    <conditions>
+        <condition name="mediaTypeNotEmpty">
+            <not>
+                <expression name="mediaType" op="empty"/>
+            </not>
+        </condition>
+        <condition name="mediaTypePlaylist">
+            <expression name="mediaType" op="eq" value="'playlist'"/>
+        </condition>
+        <condition name="mediaTypeAlbum">
+            <expression name="mediaType" op="eq" value="'album'"/>
+        </condition>
+        <condition name="mediaTypeArtist">
+            <expression name="mediaType" op="eq" value="'artist'"/>
+        </condition>
+        <condition name="parameterIsMediaItems">
+            <expression name="parameter" op="eq" value="'mediaItems'"/>
+        </condition>
+        <condition name="parameterIsPlayShuffled">
+            <expression name="parameter" op="eq" value="'playShuffled'"/>
+        </condition>
+        <condition name="parameterIsPlaybackRepeatMode">
+            <expression name="parameter" op="eq" value="'playbackRepeatMode'"/>
+        </condition>
+        <condition name="parameterIsPlaybackQueueLocation">
+            <expression name="parameter" op="eq" value="'playbackQueueLocation'"/>
+        </condition>
+        <condition name="parameterIsResumePlayback">
+            <expression name="parameter" op="eq" value="'resumePlayback'"/>
+        </condition>
+        <condition name="parameterIsPlaybackSpeed">
+            <expression name="parameter" op="eq" value="'playbackSpeed'"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="mediaTypeString">
+            <text condition="mediaTypePlaylist"><say-as interpret-as="music">playlist </say-as></text>
+            <text condition="mediaTypeAlbum"><say-as interpret-as="music">album </say-as></text>
+            <text condition="mediaTypeArtist"><say-as interpret-as="music">artist </say-as></text>
+            <text></text>
+        </first>
+    </phrases>
+    <first>
+        <first condition="parameterIsMediaItems">
+            <dialog>What <phrase name="mediaTypeString"/>do you want to play?</dialog>
+        </first>
+        <first condition="parameterIsPlaybackRepeatMode">
+          <dialog>How do you want it repeated?</dialog>
+        </first>
+        <first condition="parameterIsPlaybackQueueLocation">
+          <dialog>Play it next or later?</dialog>
+        </first>
+        <first condition="parameterIsPlaybackSpeed">
+          <dialog>What speed?</dialog>
+        </first>
+        <first condition="parameterIsResumePlayback">
+          <dialog>Do you want it to resume?</dialog>
+        </first>
+        <first condition="parameterIsPlayShuffled">
+          <dialog>Do you want it shuffled?</dialog>
+        </first>
+    </first>
+</cat>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthUnsupported#activityRequestUnsupported" locale="en"> 
+  <first>
+    <dialog condition="device.isPhone" id="phone">I can’t answer that on your <var name="device.deviceName"/>, but you can find it in the Activity app.</dialog>
+    <dialog id="otherDevices">I can’t answer that on your <var name="device"/>, but you can find it in the Activity app on your iPhone or Apple Watch.</dialog>
+  </first>
+</cat>

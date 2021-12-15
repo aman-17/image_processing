@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadSpokenTextComponent" locale="en">
+    <conditions>
+        <condition name="needsPrivateConversationIntroduction">
+            <and>
+                <expression name="spokenContext.conversation.isGroup" op="unset"/>
+                <expression name="spokenContext.conversation.isFirstComponentInConversation" op="set"/>
+                <expression name="spokenContext.shouldSpecifyPrivateConversation" op="unset"/>
+                <expression name="spokenContext.useAppendedConnector" op="unset"/>
+            </and>
+        </condition>
+
+        <condition name="includeGroup">
+            <and>
+                <expression name="spokenContext.conversation.isGroup" op="set"/>
+                <expression name="spokenContext.conversation.isFirstComponentInConversation" op="set"/>
+            </and>
+        </condition>
+
+        <condition name="hasUsableGroupName">
+            <expression name="spokenContext.conversation.group.speakableGroupName" op="defined"/>
+        </condition>
+
+        <condition name="needVerb">
+            <or>
+                <expression name="componentContext.isFirstComponentFromSender" op="set"/>
+                <expression name="componentContext.isPreviousComponentOfSameType" op="unset"/>
+            </or>
+        </condition>
+
+        <condition name="shouldUseSent">
+            <or>
+                <expression name="componentContext.isEmoji" op="set"/>
+                <expression name="content" op="undefined"/>
+            </or>
+        </condition>
+
+        <condition name="needAndConnector" note="Use connector if the previous component has a different type or if we just started reading messages from a sender who's not the first one">
+            <or>
+                <and>
+                    <expression name="componentContext.isFirstComponentFromSender" op="set"/>
+                    <expression name="componentContext.isFirstSender" op="unset"/>
+                </and>
+
+                <and>
+                    <expression name="componentContext.isFirstComponentFromSender" op="unset"/>
+                    <expression name="componentContext.isPreviousComponentOfSameType" op="unset"/>
+                </and>
+            </or>
+        </condition>
+
+        <condition name="hasNoContent">
+            <expression name="content" op="undefined"/>
+        </condition>
+
+        <condition name="needEffect">
+            <and>
+                <expression name="effect" op="defined"/>
+                <expression name="componentContext.isLastMessageFromSenderWithEffect" op="set"/>
+            </and>
+        </condition>
+    </conditions>
+
+    <phrases>
+        <first phrase="componentConnector">
+            <text condition="needAndConnector">and </text>
+            <random condition="spokenContext.useAppendedConnector">
+                <text>and </text>
+                <text>also </text>
+            </random>
+        </first>
+
+        <first phrase="textConnector">
+            <text condition="sender">Also from <var name="sender"/> </text>
+            <text>Also from someone </text>
+        </first>
+
+        <first phrase="privateConversationIntroduction">
+            <first condition="hasNoContent">
+                <text condition="sender"><var name="sender"/> sent </text>
+                <text>Someone sent </text>
+            </first>
+
+            <random>
+                <first>
+                    <text condition="sender">From <var name="sender"/> </text>
+                    <text>From someone </text>
+                </first>
+
+                <first>
+                    <first condition="shouldUseSent">
+                        <text condition="sender"><var name="sender"/> sent </text>
+                        <text>Someone sent </text>
+                    </first>
+
+                    <first>
+                        <text condition="sender"><var name="sender"/> says </text>
+                        <text>Someone says </text>
+                    </first>
+                </first>
+            </random>
+        </first>
+
+        <first condition="needVerb" phrase="verb">
+            <text condition="shouldUseSent">sent </text>
+            <text>said </text>
+        </first>
+
+        <first condition="componentContext.isFirstComponentFromSender" phrase="sender">
+            <text condition="sender"><var name="sender"/> </text>
+            <text>Someone </text>
+        </first>
+
+        <first condition="includeGroup" phrase="referenceGroup">
+            <text condition="hasUsableGroupName">to <var name="spokenContext.conversation.group.speakableGroupName"/> </text>
+            <text condition="spokenContext.shouldShortenGroupMembership">to the group </text>
+            <switch value="spokenContext.conversation.group.numberOfMembersOtherThanYouMinusOne">
+                <text case="1">to you and <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[0]"/> </text>
+                <text case="2">to you, <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[0]"/> and <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[1]"/> </text>
+                <text case="3">to you, <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[0]"/>, <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[1]"/>, and <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[2]"/> </text>
+            </switch>
+            <text>to a group </text>
+        </first>
+
+        <first condition="spokenContext.shouldSpecifyPrivateConversation" phrase="specifyPrivateThread">
+            <text>to you privately</text>
+        </first>
+
+        <first phrase="effect">
+            <switch condition="needEffect" value="effect">
+                <text case="'confetti'">with a confetti effect</text>
+                <text case="'echo'">with an echo effect</text>
+                <text case="'fireworks'">with a fireworks effect</text>
+                <text case="'gentle'">with a gentle effect</text>
+                <text case="'happyBirthday'">with a balloons effect</text>
+                <text case="'heart'">with a love effect</text>
+                <text case="'impact'">with a slam effect</text>
+                <text case="'invisibleInk'">with an invisible ink effect</text>
+                <text case="'lasers'">with a laser effect</text>
+                <text case="'loud'">with a loud effect</text>
+                <text case="'shootingStar'">with a shooting star effect</text>
+                <text case="'sparkles'">with a celebration effect</text>
+                <text case="'spotlight'">with a spotlight effect</text>
+            </switch>
+        </first>
+
+        <first phrase="content">
+            <text condition="hasNoContent">a message</text>
+            <text><break time="400ms"/><say-as interpret-as="sms"><var name="content"/></say-as></text>
+        </first>
+    </phrases>
+
+    <first>
+        <dialog condition="spokenContext.useTextRequestConnector">
+            <phrase name="textConnector"/><opt><phrase name="specifyPrivateThread"/></opt>
+            <opt><phrase name="effect"/></opt>
+            <opt><phrase name="content"/></opt>
+        </dialog>
+
+        <dialog condition="needsPrivateConversationIntroduction">
+            <phrase name="privateConversationIntroduction"/>
+            <opt><phrase name="effect"/></opt>
+            <phrase name="content"/>
+        </dialog>
+
+        <dialog>
+            <opt><phrase name="componentConnector"/></opt>
+            <opt><phrase name="sender"/></opt>
+            <opt><phrase name="verb"/></opt>
+            <opt><phrase name="referenceGroup"/></opt><opt><phrase name="specifyPrivateThread"/></opt>
+            <opt><phrase name="effect"/></opt>
+            <phrase name="content"/>
+        </dialog>
+    </first>
+</cat>

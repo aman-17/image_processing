@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#SnippetDisplayRecipientsTitle" locale="en">
+    <first>
+        <dialog>To:<opt> <var name="recipients"/></opt></dialog>
+    </first>
+</cat>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalGreetingAsSummons" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<first>
+		<random condition="used_in_last_two_hours">
+			<dialog>I’m here…</dialog>
+			<dialog>Go ahead…</dialog>
+		</random>
+		<random>
+			<dialog>Hello?</dialog>
+			<dialog>Hi…</dialog>
+		</random>
+	</first>
+	<conditions>
+		<condition name="used_in_last_two_hours">
+			<expression name="dialogState.hoursSinceLastUse" op="le" value="2"/>
+		</condition>
+	</conditions>
+</cat>

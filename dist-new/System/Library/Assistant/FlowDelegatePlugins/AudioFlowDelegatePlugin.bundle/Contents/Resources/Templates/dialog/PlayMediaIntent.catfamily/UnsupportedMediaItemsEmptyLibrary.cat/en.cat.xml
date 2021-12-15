@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#UnsupportedMediaItemsEmptyLibrary" locale="en">
+    <conditions>
+        <condition name="isPodcastRequest">
+            <expression name="isPodcast"/>
+        </condition>
+        <condition name="hasPodcastTitle">
+            <and>
+                <expression name="title" op="nonempty"/>
+                <expression name="isPodcast"/>
+            </and>
+        </condition>
+    </conditions>
+    <first>
+        <dialog condition="hasPodcastTitle">Sorry, you don’t have any unplayed episodes of <var name="title"/>.</dialog>
+        <dialog condition="isPodcastRequest">Sorry, you don’t have any unplayed episodes.</dialog>
+        <dialog>There’s nothing in your music library.</dialog>
+    </first>
+</cat>

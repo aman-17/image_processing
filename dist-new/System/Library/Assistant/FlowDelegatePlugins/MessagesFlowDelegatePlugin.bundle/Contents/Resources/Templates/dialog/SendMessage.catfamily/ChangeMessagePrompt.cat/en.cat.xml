@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ChangeMessagePrompt" locale="en">
+  
+  <first>
+      <dialog>
+          <print>OK, go ahead…</print>
+          <speak>OK…<break time="500ms"/> go ahead?</speak>
+      </dialog>
+  </first>
+
+</cat>

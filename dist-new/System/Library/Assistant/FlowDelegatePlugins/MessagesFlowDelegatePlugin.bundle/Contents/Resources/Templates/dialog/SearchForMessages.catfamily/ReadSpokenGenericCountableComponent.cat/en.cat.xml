@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadSpokenGenericCountableComponent" locale="en">
+    <conditions>
+        <condition name="needAndConnector" note="Possible cases: 1. Shayan said hi and sent an image 2. Bill sent an image and Daniel sent a contact 3. Dave sent an image and Bill sent a contact and an image">
+            <or>
+                <and>
+                    <expression name="componentContext.isFirstComponentFromSender" op="set"/>
+                    <expression name="componentContext.isFirstSender" op="unset"/>
+                </and>
+                
+                <and>
+                    <expression name="componentContext.isFirstComponentFromSender" op="unset"/>
+                    <or>
+                        <expression name="componentContext.isPreviousComponentOfSameType" op="unset"/>
+                        <expression name="componentContext.isLastComponentFromSender" op="set"/>
+                    </or>
+                </and>
+            </or>
+        </condition>
+        
+        <condition name="needVerb">
+            <or>
+                <expression name="componentContext.isFirstComponentFromSender" op="set"/>
+                <expression name="componentContext.isPreviousComponentOfSameType" op="unset"/>
+            </or>
+        </condition>
+        
+        <condition name="hasEffect">
+            <expression name="effect" op="defined"/>
+        </condition>
+        
+        <condition name="includeGroup">
+            <and>
+                <expression name="spokenContext.conversation.isGroup" op="set"/>
+                <expression name="spokenContext.conversation.isFirstComponentInConversation" op="set"/>
+            </and>
+        </condition>
+        
+        <condition name="hasUsableGroupName">
+            <and>
+                <expression name="spokenContext.conversation.group.speakableGroupName" op="nonempty"/>
+                <expression name="spokenContext.conversation.group.speakableGroupName.length" op="lt" value="36"/>
+            </and>
+        </condition>
+        
+        <condition name="representsMultipleComponents">
+            <expression name="componentCount" op="gt" value="1"/>
+        </condition>
+        
+        <condition name="useAThird">
+            <and>
+                <expression name="spokenContext.sameConsecutiveComponentTypeCount" op="eq" value="2"/>
+                <expression name="componentCount" op="eq" value="1"/>
+            </and>
+        </condition>
+        
+        <condition name="needDeterminer" note="A determiner is another or a third">
+            <expression name="spokenContext.sameConsecutiveComponentTypeCount" op="gt" value="0"/>
+        </condition>
+    </conditions>
+        
+    <phrases>
+        <first phrase="componentConnector">
+            <text condition="needAndConnector">and </text>
+            <random condition="spokenContext.useAppendedConnector">
+                <text>and </text>
+                <text>also </text>
+            </random>
+        </first>
+        
+        <first condition="componentContext.isFirstComponentFromSender" phrase="sender">
+            <text condition="sender"><var name="sender"/> </text>
+            <text>someone </text>
+        </first>
+        
+        <first condition="needVerb" phrase="verb">
+            <text>sent </text>
+        </first>
+        
+        <first condition="needDeterminer" phrase="determiner">
+            <text condition="useAThird">a third</text>
+            <text>another</text>
+        </first>
+                
+        <first phrase="componentType">
+            <text condition="representsMultipleComponents"><opt><phrase name="determiner"/> </opt><var name="componentCount"/> <phrase name="pluralComponentType"/></text>
+            <text><phrase name="singularComponentType"/></text>
+        </first>
+
+        <first phrase="pluralComponentType">
+            <switch value="componentType">
+                <text case="'activitySnippet'">activity messages</text>
+                <text case="'addressCard'">contacts</text>
+                <text case="'animoji'">Animoji</text>
+                <text case="'calendarEvent'">calendar events</text>
+                <text case="'digitalTouch'">digital touch messages</text>
+                <text case="'genericFile'">files</text>
+                <text case="'genericMessage'">messages</text>
+                <text case="'handwriting'">handwritten messages</text>
+                <text case="'image'">images</text>
+                <text case="'location'">locations</text>
+                <text case="'sticker'">stickers</text>
+                <text case="'video'">videos</text>
+                <text case="'walletPass'">wallet passes</text>
+                <text>messages</text>
+            </switch>
+        </first>
+
+        <first phrase="singularComponentType">
+            <switch condition="needDeterminer" value="componentType">
+                <text case="'activitySnippet'"><phrase name="determiner"/> activity message</text>
+                <text case="'addressCard'"><phrase name="determiner"/> contact</text>
+                <text case="'animoji'"><phrase name="determiner"/> Animoji</text>
+                <text case="'calendarEvent'"><phrase name="determiner"/> calendar event</text>
+                <text case="'digitalTouch'"><phrase name="determiner"/> digital touch message</text>
+                <text case="'genericFile'"><phrase name="determiner"/> file</text>
+                <text case="'genericMessage'"><phrase name="determiner"/> message</text>
+                <text case="'handwriting'"><phrase name="determiner"/> handwritten message</text>
+                <text case="'image'"><phrase name="determiner"/> image</text>
+                <text case="'location'"><phrase name="determiner"/> location</text>
+                <text case="'sticker'"><phrase name="determiner"/> sticker</text>
+                <text case="'video'"><phrase name="determiner"/> video</text>
+                <text case="'walletPass'"><phrase name="determiner"/> wallet pass</text>
+                <text><phrase name="determiner"/> message</text>
+            </switch>
+            <switch value="componentType">
+                <text case="'activitySnippet'">an activity message</text>
+                <text case="'addressCard'">a contact</text>
+                <text case="'animoji'">an Animoji</text>
+                <text case="'calendarEvent'">a calendar event</text>
+                <text case="'digitalTouch'">a digital touch message</text>
+                <text case="'genericFile'">a file</text>
+                <text case="'genericMessage'">a message</text>
+                <text case="'handwriting'">a handwritten message</text>
+                <text case="'image'">an image</text>
+                <text case="'location'">a location</text>
+                <text case="'sticker'">a sticker</text>
+                <text case="'video'">a video</text>
+                <text case="'walletPass'">a wallet pass</text>
+                <text>a message</text>
+            </switch>
+        </first>
+        
+        <first phrase="effect">
+            <switch value="effect">
+                <text case="'confetti'">with a confetti effect</text>
+                <text case="'echo'">with an echo effect</text>
+                <text case="'fireworks'">with a fireworks effect</text>
+                <text case="'gentle'">with a gentle effect</text>
+                <text case="'happyBirthday'">with a balloons effect</text>
+                <text case="'heart'">with a love effect</text>
+                <text case="'impact'">with a slam effect</text>
+                <text case="'invisibleInk'">with an invisible ink effect</text>
+                <text case="'lasers'">with a laser effect</text>
+                <text case="'loud'">with a loud effect</text>
+                <text case="'shootingStar'">with a shooting star effect</text>
+                <text case="'sparkles'">with a celebration effect</text>
+                <text case="'spotlight'">with a spotlight effect</text>
+            </switch>
+        </first>
+        
+        <first condition="includeGroup" phrase="referenceGroup">
+            <text condition="hasUsableGroupName">to <var name="spokenContext.conversation.group.speakableGroupName"/></text>
+            <text condition="spokenContext.shouldShortenGroupMembership">to the group </text>
+            <switch value="spokenContext.conversation.group.numberOfMembersOtherThanYouMinusOne">
+                <text case="1">to you and <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[0]"/></text>
+                <text case="2">to you, <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[0]"/> and <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[1]"/></text>
+                <text case="3">to you, <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[0]"/>, <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[1]"/>, and <var name="spokenContext.conversation.group.membersOtherThanYouAndSender[2]"/></text>
+            </switch>
+            <text>to a group </text>
+        </first>
+        
+        <first condition="spokenContext.shouldSpecifyPrivateConversation" phrase="specifyPrivateThread">
+            <text>to you privately</text>
+        </first>
+    </phrases>
+
+    <all>
+        <dialog>
+            <opt><phrase name="componentConnector"/></opt>
+            <opt><phrase name="sender"/></opt>
+            <opt><phrase name="verb"/></opt>
+            <phrase name="componentType"/>
+            <opt><phrase name="effect"/></opt>
+            <opt><phrase name="referenceGroup"/></opt><opt><phrase name="specifyPrivateThread"/></opt>
+        </dialog>
+    </all>
+</cat>

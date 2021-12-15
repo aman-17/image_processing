@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedRecipientScreenTimeRestrictionEnabled">
+
+    <meta name="description" value="Executed when the recipient slot is unsupported because Screen Time is on."/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+  
+</cat>

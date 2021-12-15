@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadSpokenLinkComponent">
+
+    <meta name="description" value="Read the link component in spoken messages mode."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="sender" type="dialog.Person" description="The sender of the message."/>
+        <parameter name="count" type="dialog.Number" description="The number of identical consecutive links sent."/>
+        <parameter name="linkMetadata" type="messages.LinkMetadata" description="Parsed information about the provided URL."/>
+        <parameter name="effect" type ="dialog.String" description="The effect on the message."/>
+        <parameter name="componentContext" type="messages.MessageComponentDialogContext" description="Context used for dialoging about given message component"/>
+        <parameter name="spokenContext" type="messages.SpokenDialogContext" description="Spoken messages context used for dialoging."/>
+    </parameters>
+
+</cat>

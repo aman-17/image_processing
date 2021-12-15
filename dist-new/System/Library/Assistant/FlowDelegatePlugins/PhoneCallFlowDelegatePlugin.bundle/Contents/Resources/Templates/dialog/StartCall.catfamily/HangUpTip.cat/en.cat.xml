@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+  <conditions>
+      <condition name="provideTip">
+          <expression name="dialogState.isFirstTime"/>
+      </condition>
+  </conditions>
+
+  <first note="follow up with more instructions the first time">
+      <dialog condition="provideTip">When you‘re done, just say, ‘Hey Siri hang up‘.</dialog>
+  </first>
+
+</cat>

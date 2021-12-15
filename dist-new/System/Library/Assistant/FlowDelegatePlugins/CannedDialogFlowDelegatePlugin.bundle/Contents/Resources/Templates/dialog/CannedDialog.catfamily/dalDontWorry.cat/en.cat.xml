@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalDontWorry" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+    <all>
+        <random phrase="">
+            <dialog>Alright then.</dialog>
+            <dialog>If you say so.</dialog>
+            <dialog condition="usage_count_is_over_10_and_has_been_used_in_last_8_hours">I am incapable of worry. But thanks anyway.</dialog>
+        </random>
+    </all>
+    <conditions>
+        <condition name="usage_count_is_over_10_and_has_been_used_in_last_8_hours">
+            <and>
+                <expression name="dialogState.usageCount" op="gt" value="10"/>
+                <expression name="dialogState.hoursSinceLastUse" op="le" value="8"/>
+            </and>
+        </condition>
+    </conditions>
+</cat>

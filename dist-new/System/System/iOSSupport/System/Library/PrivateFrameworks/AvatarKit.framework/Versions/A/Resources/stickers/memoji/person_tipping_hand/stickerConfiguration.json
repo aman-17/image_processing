@@ -1,0 +1,68 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "cam.scnz"
+  },
+  "emoji" : "💁‍♂️",
+  "identifier" : "person_tipping_hand",
+  "options" : {
+    "duration" : 1,
+    "morpherOverrides" : [
+      {
+        "geometry" : "hair_*",
+        "morpher" : "variant_stickerTippingHand",
+        "value" : 1
+      },
+      {
+        "geometry" : "headwear_*",
+        "morpher" : "variant_stickerTippingHand",
+        "value" : 1
+      }
+    ]
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 0.40318304300308228,
+    "browOuterUp_L" : 0.40848782658576965,
+    "browOuterUp_R" : 0.40583565831184387,
+    "cheekSquint_L" : 0.16445624828338623,
+    "cheekSquint_R" : 0.18037135899066925,
+    "eyeSquint_L" : 0.15119363367557526,
+    "eyeSquint_R" : 0.1618037074804306,
+    "jawOpen" : 0.47480133175849915,
+    "mouthDimple_L" : 0.25994694232940674,
+    "mouthDimple_R" : 0.25729444622993469,
+    "mouthSmile_L" : 0.7665785551071167,
+    "mouthSmile_R" : 0.76127314567565918,
+    "neckOrientation" : [
+      0,
+      0,
+      0,
+      1
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "palettes" : [
+        {
+          "material" : "head_MAT",
+          "palette" : "skin"
+        },
+        {
+          "material" : "cuffs_MAT",
+          "palette" : "headwear"
+        },
+        {
+          "material" : "hat_MAT",
+          "palette" : "headwear"
+        }
+      ],
+      "scene" : "body.scnz"
+    }
+  ]
+}

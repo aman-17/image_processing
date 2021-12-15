@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayMediaItemsEmpty">
+    <meta name="description" value="Handle the degenerate case where the mediaItems don't have a name we can use"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+        <parameter name="isPlaybackQueueLocationNext" type="dialog.Boolean" description="If the playback queue location is next"/>
+        <parameter name="isPlaybackQueueLocationLater" type="dialog.Boolean" description="If the playback queue location is later"/>
+        <parameter name="isGrounding" type="dialog.Boolean" description="if user grounding is required"/>
+        <parameter name="isDialogDriven" type="dialog.Boolean" description="if interaction type is dialog driven"/>
+        <parameter name="isAppAttributionRequired" type="dialog.Boolean" description="if app attribution is required"/>
+        <parameter name="useDialogMemoryForAppAttribution" type="dialog.Boolean" description="should app attribution use dialog memory"/>
+        <parameter name="fallbackUsername" type="dialog.String" description="Fallback Username for multiuser"/>
+        <parameter name="wha" type="audio.WholeHouseAudio" description="WHA Params"/>
+    </parameters>
+</cat>

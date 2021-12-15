@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalUserQuotedSiri">
+    <all>
+        <random phrase="">
+            <dialog>You certainly have a way with words.</dialog>
+            <dialog>That line sounds familiar!</dialog>
+            <dialog>Couldn’t have said it better myself.</dialog>
+            <dialog><print>Hey, does this thing have an echo?</print><speak>Hey, does this thing have an echo <break time="50ms"/><prosody volume="-6dB">echo </prosody><break time="50ms"/><prosody volume="-12dB">echo </prosody><break time="50ms"/><prosody volume="-18dB">echo </prosody><break time="50ms"/><prosody volume="-24dB">echo </prosody><break time="50ms"/><prosody volume="-30dB">echo…?</prosody></speak></dialog>
+        </random>
+    </all>
+</cat>

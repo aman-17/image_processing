@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ErrorWithApp" locale="en">
+    <conditions>
+        <condition name="messageServiceIssue">
+            <expression name="messageServiceNotAvailable" op="set"/>
+        </condition>
+        
+        <condition name="appNotDesignedByApple">
+            <expression name="app.isDesignedByApple" op="unset"/>
+        </condition>
+        
+        <condition name="isCarplayAndNotDesignedByApple">
+            <and>
+                <expression name="app.isDesignedByApple" op="unset"/>
+                <expression name="deviceState.isCarPlay" op="set"/>
+            </and>
+        </condition>
+    </conditions>
+    
+    <first>
+        <dialog condition="messageServiceIssue">
+            Sorry, <opt><var name="user.groundingIfNeeded"/>, </opt>sending messages isn’t possible right now.
+        </dialog>
+        
+        <first>
+            <dialog condition="isCarplayAndNotDesignedByApple">Sorry, <opt><var name="user.groundingIfNeeded"/>, </opt>there was a problem with the app.</dialog>
+            <dialog condition="appNotDesignedByApple">Sorry, <opt><var name="user.groundingIfNeeded"/>, </opt>you’ll need to continue in the app.</dialog>
+            <random condition="deviceState.isWatch">
+                <dialog>Sorry, something’s wrong. Please try again.</dialog>
+                <dialog>Sorry. Please try again.</dialog>
+                <dialog>Uh oh, something’s wrong. Please try again.</dialog>
+                <dialog>Uh oh, there’s a problem. Please try again.</dialog>
+            </random>
+            <random>
+                <dialog>Sorry, something’s wrong. Please try again.</dialog>
+                <dialog>Sorry, something’s gone wrong. Please try again.</dialog>
+                <dialog>Uh oh, something’s wrong. Please try again.</dialog>
+                <dialog>Uh oh, there’s a problem. Please try again.</dialog>
+                <dialog>Sorry, there’s something wrong. Please try again.</dialog>
+                <dialog>I’m having a bit of trouble here. Please try again.</dialog>
+                <dialog>We’ve had a problem. Please try again.</dialog>
+                <dialog>
+                    <print>Having a wee bit o’ trouble. Please try again.</print>
+                    <speak>Having a wee bit a trouble. Please try again.</speak>
+                </dialog>
+            </random>
+        </first>
+    </first>
+</cat>

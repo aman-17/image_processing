@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#ConfirmDestinationType">
+    <meta name="description" value="Confirm destinationType for call (3P only)"/>
+    <meta name="category" value="Confirm"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="destinationType" type="dialog.String"/>
+    </parameters>
+
+</cat>

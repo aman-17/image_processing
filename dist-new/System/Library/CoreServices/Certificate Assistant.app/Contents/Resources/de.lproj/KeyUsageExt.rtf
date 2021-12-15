@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Was ist die Erweiterung \'84Schl\'fcsselverwendung\'93?
+\f1\b0 \
+Die Erweiterung \'84Schl\'fcsselverwendung\'93 bestimmt, wof\'fcr ein Zertifikat verwendet werden kann. Die Erweiterung \'84Schl\'fcsselverwendung\'93 schr\'e4nkt die Vorg\'e4nge ein, die mit dem \'f6ffentlichen Schl\'fcssel in einem Zertifikat durchgef\'fchrt werden k\'f6nnen. Du kannst z. B. ein Zertifikat erstellen, mit dem du E-Mails signieren, aber nicht verschl\'fcsseln kannst. Die Erweiterung \'84Erweiterte Schl\'fcsselverwendung\'93 \'e4hnelt der Erweiterung \'84Schl\'fcsselverwendung\'93, sie definiert ein Zertifikat jedoch hinsichtlich des \'84Zwecks\'93 (z. B. kannst du es zum Signieren von OCSP-Antworten, Identifizieren von SSL-Clients usw. verwenden.). Die Erweiterung \'84Erweiterte Schl\'fcsselverwendung\'93 ist aktueller und erweiterbarer als die Erweiterung \'84Schl\'fcsselverwendung\'93 und wird deshalb oft als das bevorzugte Verfahren zum Einschr\'e4nken der Verwendung erachtet. Die Erweiterung \'84Erweiterte Schl\'fcsselverwendung\'93 kannst du sp\'e4ter im Zertifikatsassistenten konfigurieren.\
+\
+Es stehen die folgende Typen der Erweiterung \'84Schl\'fcsselverwendung\'93 zur Verf\'fcgung:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 Signatur\ulnone : W\'e4hle diese Option, wenn der \'f6ffentliche Schl\'fcssel des Zertifikats mit einem digitalen Signaturverfahren verwendet wird, um alle anderen Sicherheitsdienste au\'dfer der Zertifikatssignierung zu unterst\'fctzen.\
+\
+\ul Unleugbarkeit\ulnone : W\'e4hle diese Option, wenn mit dem \'f6ffentlichen Schl\'fcssel des Zertifikats digitale Signaturen \'fcberpr\'fcft werden, die einen Unleugbarkeitsdienst bereitstellen, mit dem sichergestellt wird, dass Aktionen nicht f\'e4lschlicherweise abgelehnt werden. Die Unleugbarkeit gew\'e4hrleistet, dass eine Partei in einem Konflikt die G\'fcltigkeit einer Aussage oder eines Vertrags nicht ablehnen oder beanstanden kann.\'a0\
+\
+\ul Verschl\'fcsseln von Schl\'fcsseln\ulnone : W\'e4hle diese Option, wenn mit dem \'f6ffentlichen Schl\'fcssel des Zertifikats ein Schl\'fcssel f\'fcr einen beliebigen Zweck verschl\'fcsselt wird. Das Verschl\'fcsseln von Schl\'fcsseln wird f\'fcr den Schl\'fcsseltransport und Key Wrap (oder die Schl\'fcsselverwaltung) verwendet.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Datenverschl\'fcsselung\ulnone : W\'e4hle diese Option, wenn mit dem \'f6ffentlichen Schl\'fcssel des Zertifikats alle anderen Benutzerdaten au\'dfer den kryptografischen Schl\'fcsseln verschl\'fcsselt werden.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Vereinbaren von Schl\'fcsseln\ulnone : W\'e4hle diese Option, wenn der \'f6ffentliche Schl\'fcssel des Zertifikats f\'fcr das Vereinbaren von Schl\'fcsseln verwendet wird. Das Protokoll \'84Vereinbaren von Schl\'fcsseln\'93 (auch bekannt als \'84Key Exchange Protocol\'93) wird verwendet, wenn zwei Parteien sich auf einen Schl\'fcssel in einem Verschl\'fcsselungssystem mit geheimen Schl\'fcsseln einigen, in dem Schl\'fcssel \'fcber ein beliebiges unsicheres Medium gemeinsam und sicher genutzt werden k\'f6nnen. (Diese Erweiterung wird z. B. festgelegt, wenn Diffie-Hellman-Schl\'fcssel f\'fcr die Schl\'fcsselverwaltung verwendet werden.)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Zertifikatssignierung\ulnone : W\'e4hle diese Option, wenn mit dem \'f6ffentlichen Schl\'fcssel des Zertifikats eine Signatur auf Zertifikaten mit \'f6ffentlichen Schl\'fcsseln \'fcberpr\'fcft wird. Zertifikate mit dieser Erweiterung sind Zertifizierungsinstanzen. Wenn diese Erweiterung einem Zertifikat zugewiesen wird, muss auch die Option \'84Dieses Zertifikat als Zertifizierungsinstanz verwenden\'93 in der Erweiterung \'84Grundlegende Einschr\'e4nkungen\'93 ausgew\'e4hlt sein. Die Erweiterung \'84Grundlegende Einschr\'e4nkungen\'93 wird sp\'e4ter im Assistenten angezeigt.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul CRL-Signierung\ulnone : W\'e4hle diese Option, wenn mit dem \'f6ffentlichen Schl\'fcssel des Zertifikats eine Signatur auf einer \'84Liste f\'fcr Zertifikatswiderrufung\'93 (Certificate Revocation List, CRL) \'fcberpr\'fcft wird.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Nur verschl\'fcsseln\ulnone : W\'e4hle diese Option nur dann, wenn die Option \'84Vereinbaren von Schl\'fcsseln\'93 auch ausgew\'e4hlt ist. Sie zeigt an, dass mit dem \'f6ffentlichen Sch\'fcssel eines Zertifikats Daten w\'e4hrend des Vereinbarens von Schl\'fcsseln verschl\'fcsselt werden k\'f6nnen.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Nur entschl\'fcsseln\ulnone :\'a0W\'e4hle diese Option, wenn \'84Vereinbaren von Schl\'fcsseln\'93 auch ausgew\'e4hlt ist. Sie zeigt an, dass mit dem \'f6ffentlichen Schl\'fcssel eines Zertifikats Daten w\'e4hrend des Vereinbarens von Schl\'fcsseln entschl\'fcsselt werden k\'f6nnen.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Was bedeutet \'84Erweiterung ist kritisch\'93?
+\f1\b0 \
+Auch bekannt als \'84Pr\'fcfindikator\'93. Diese Markierung signalisiert der Software, die das Zertifikat verwendet, ob es sicher ist, die Erweiterung \'84Schl\'fcsselverwendung\'93 zu ignorieren, falls sie diese nicht erkennt. Ein Zertifikat wird abgelehnt, wenn die Software eine \'84kritische Erweiterung\'93 nicht erkennt.}

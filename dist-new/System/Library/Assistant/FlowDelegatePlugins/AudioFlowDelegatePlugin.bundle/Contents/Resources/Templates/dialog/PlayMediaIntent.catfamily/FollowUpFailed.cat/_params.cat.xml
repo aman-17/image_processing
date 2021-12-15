@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#FollowUpFailed">
+<meta name="description" value="Dialog for disambiguating a slot value"/>
+<meta name="category" value="Incomplete"/>
+<meta name="readyForLoc" value="true"/>
+<parameters>
+    <parameter name="isGrounding" type="dialog.Boolean" description="if user grounding is required"/>
+    <parameter name="isPersonalized" type="dialog.Boolean" description="If the resolved content is a personalized entity"/>
+
+    <parameter name="isTV" type="dialog.Boolean" description="If this is TV"/>
+    <parameter name="isHomePod" type="dialog.Boolean" description="If this is HomePod"/>
+    <parameter name="isSEDevice" type="dialog.Boolean" description="If this is SE Device"/>
+    
+    <parameter name="isSong" type="dialog.Boolean" description="If request was for alternative version of a song"/>
+    <parameter name="isAlbum" type="dialog.Boolean" description="If request was for alternative version of an album"/>
+    <parameter name="isSongsOnAlbum" type="dialog.Boolean" description="If request was about song on album"/>
+    <parameter name="artist" type="dialog.String" description="Artist for which song version couldn't be found"/>
+
+    <parameter name="cannotReferencePodcastsAudiobooks" type="dialog.Boolean" description=""/>
+    
+    <parameter name="noLiveVersion" type="dialog.Boolean" description=""/>
+    <parameter name="noAcousticVersion" type="dialog.Boolean" description=""/>
+    
+    <parameter name="noAlternateArtistVersion" type="dialog.Boolean" description=""/>
+    
+    <parameter name="noMoreResults" type="dialog.Boolean" description=""/>
+    
+    <parameter name="referencedMediaMissingMetadata" type="dialog.Boolean" description=""/>
+    
+    <parameter name="exceptionSearching" type="dialog.Boolean" description=""/>
+    
+    <parameter name="didntFindSpecificVersion" type="dialog.Boolean" description=""/>
+    
+    <parameter name="nothingPlaying" type="dialog.Boolean" description=""/>
+    
+    <parameter name="app" type="audio.App" description="App"/>
+    <parameter name="wha" type="audio.WholeHouseAudio" description="WHA Params"/>
+    <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+</parameters>
+</cat>

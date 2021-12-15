@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ErrorSiriAndAppNeedLocationAccess">
+
+    <meta name="description" value="Message shown when Siri and the app need precise location access to complete the task."/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="app" type="messages.App" description="The app object used to send the message."/>
+        <parameter name="deviceState" type="sirikit.DeviceState" description="The device state."/>
+        <parameter name="isSettingInherited" type="dialog.Boolean"
+            description="Whether the location setting on watch is inherited from iPhone."/>
+    </parameters>
+
+</cat>

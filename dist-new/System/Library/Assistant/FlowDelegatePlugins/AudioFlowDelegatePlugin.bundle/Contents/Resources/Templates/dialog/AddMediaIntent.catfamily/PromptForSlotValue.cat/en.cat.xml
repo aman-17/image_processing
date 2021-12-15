@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AddMediaIntent#PromptForSlotValue" locale="en">
+    <conditions>
+       <condition name="attributionWithDialogMemory" note="attribution required using dialog memory">
+           <and>
+               <expression name="isAppAttributionRequired"/>
+               <expression name="useDialogMemoryForAppAttribution"/>
+           </and>
+       </condition>
+       <condition name="parameterIsMediaItems">
+           <expression name="parameter" op="eq" value="'mediaItems'"/>
+       </condition>
+       <condition name="parameterIsMediaDestination">
+           <expression name="parameter" op="eq" value="'mediaDestination'"/>
+       </condition>
+       <condition name="attributionRequired" note="attribution required by explicitly for HomePod usecase or if we are non-HomePod third party">
+           <or>
+               <expression name="isAppAttributionRequired"/>
+               <and>
+                   <expression name="app.localizedName" op="nonempty"/>
+                   <not><expression name="app.isFirstParty"/></not>
+               </and>
+           </or>
+       </condition>
+    </conditions>
+    <phrases>
+        <first phrase="onAppSpecified">
+            <text condition="attributionWithDialogMemory"><opt> on <var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="parameterIsMediaItems"> on <var name="app.localizedName"/></text>
+            <text condition="parameterIsMediaDestination"> on <var name="app.localizedName"/></text>
+            <text condition="attributionRequired"> on <var name="app.localizedName"/></text>
+            <text/>
+        </first>
+        <first phrase="appSpecified">
+            <text condition="attributionWithDialogMemory"><opt> <var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="parameterIsMediaItems"> <var name="app.localizedName"/></text>
+            <text condition="parameterIsMediaDestination"> <var name="app.localizedName"/></text>
+            <text condition="attributionRequired"> <var name="app.localizedName"/></text>
+            <text/>
+        </first>
+        <first phrase="multiUserIntroduction">
+            <text condition="isGrounding">OK, <var name="user.groundingIfNeeded"/>, </text>
+            <text></text>
+        </first>
+    </phrases>
+    <phrases>
+        <first phrase="mediaItemsDialog">
+            <text condition="isDestinationPlaylist">What do you want to add to your playlist<phrase name="onAppSpecified"/>?</text>
+            <text condition="isDestinationLibrary">What do you want to add to your library<phrase name="onAppSpecified"/>?</text>
+            <text>What do you want to add<phrase name="onAppSpecified"/>?</text>
+        </first>
+    </phrases>
+    <switch value="parameter">
+        <dialog case="'mediaItems'"><phrase name="multiUserIntroduction"/><phrase name="mediaItemsDialog"/></dialog>
+        <dialog case="'mediaDestination'"><phrase name="multiUserIntroduction"/>Which of your <phrase name="appSpecified"/> playlists do you want to add it to?</dialog>
+        <dialog><phrase name="multiUserIntroduction"/>What do you want to add<phrase name="onAppSpecified"/>?</dialog>
+    </switch>
+</cat>

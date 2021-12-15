@@ -1,0 +1,30 @@
+{
+    "Name": "DebugAREmitterClusterAABBDefinition",
+    "Parameters": {
+        "Constants" : {
+            "projFromView" : "view.viewToProj"
+        },
+        "Buffers" : {
+            "clusterAABBs" : "rendergraph.clusterAABBs",
+            "clusterConstants" : "rendergraph.clusterConstants"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "DrawClusterAABB",
+        "VertexShader": {
+            "Entry": "vsDrawClusterAABB"
+        },
+        "PixelShader": {
+            "Entry": "fsDrawClusterAABB"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : false,
+            "DepthCompareFunction" : "Greater"
+        }
+    }],
+    "TechniqueMapping": {
+        "DebugClusterAABB": "DrawClusterAABB"
+    }
+}

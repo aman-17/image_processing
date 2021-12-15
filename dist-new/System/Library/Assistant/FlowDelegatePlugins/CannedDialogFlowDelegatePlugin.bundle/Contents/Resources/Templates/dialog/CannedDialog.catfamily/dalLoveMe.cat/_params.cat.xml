@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CannedDialog#dalLoveMe">
+	<meta name="description" value="User asked “Do you love me?”"/>
+	<meta name="category" value="Social"/>
+	<meta name="subcategory" value="Sensitive Topics"/>
+	<meta name="readyForLoc" value="false"/>
+	<meta name="listenAfterSpeaking" value="false"/>
+</cat>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadLinkComponent" locale="en">
+    
+    <conditions>
+        <condition name="isSingle">
+            <expression name="count" op="eq" value="1"/>
+        </condition>
+
+        <condition name="isMultiple">
+            <expression name="count" op="gt" value="1"/>
+        </condition>
+
+        <condition name="needGroupIntroduction" note="Read groupIntro if: we haven't already done so in summary, is group, and isFirstComponent in conversation">
+            <and>
+                <or>
+                    <expression name="dialogContext.readingRequest.didReadRequestIntroduction" op="unset"/>
+                    <expression name="dialogContext.readingRequest.conversationCount" op="gt" value="1"/>
+                </or>
+                <expression name="dialogContext.conversation.isGroup" op="set"/>
+                <expression name="dialogContext.conversation.isFirstComponentInConversation" op="set"/>
+            </and>
+        </condition>
+
+        <condition name="hasUsableGroupName">
+            <expression name="dialogContext.conversation.group.speakableGroupName" op="defined"/>
+        </condition>
+
+        <condition name="needConversationConnector">
+            <and>
+                <expression name="dialogContext.conversation.isFirstComponentInConversation" op="set"/>
+                <expression name="dialogContext.readingRequest.conversationCount" op="gt" value="2"/>
+                <or>
+                    <and>
+                        <expression name="dialogContext.conversation.isLast" op="set"/>
+                        <expression name="componentContext.isAppended" op="unset"/>
+                    </and>
+                    <expression name="dialogContext.conversation.isFirst" op="set"/>
+                    <expression name="dialogContext.conversation.isSecond" op="set"/>
+                </or>
+            </and>
+        </condition>
+
+        <condition name="needLastConversationConnector">
+            <and>
+                <expression name="dialogContext.conversation.isLast" op="set"/>
+                <expression name="componentContext.isAppended" op="unset"/>
+            </and>
+        </condition>
+
+        <condition name="needAndConnector">
+            <or>
+                <and>
+                    <expression name = "componentContext.isFirstComponentFromSender" op="set"/>
+                    <expression name = "componentContext.isFirstSender" op="unset"/>
+                    <expression name = "componentContext.isLastSender" op="set"/>
+                </and>
+                <and>
+                    <expression name = "componentContext.isFirstComponentFromSender" op="unset"/>
+                    <expression name = "componentContext.isLastComponentFromSender" op="set"/>
+                </and>
+            </or>
+        </condition>
+
+        <condition name="needVerb" note="Include verb (Shayan sent) if: a) First component and we did not read verb in intro b) Read more than one component of different types.">
+            <or>
+                <and>
+                    <expression name="componentContext.isFirstComponentFromSender" op="set"/>
+                    <expression name="dialogContext.readingRequest.didReadSingleSenderUnreadMessagesIntro" op="unset"/>
+                </and>
+                <and>
+                    <expression name="componentContext.isPreviousComponentOfSameType" op="unset"/>
+                    <expression name="componentContext.isFirstComponentFromSender" op="unset"/>
+                </and>
+            </or>
+        </condition>
+
+        <condition name="hasEffect">
+            <expression name="effect" op="defined"/>
+        </condition>
+        
+        <condition name="needGrounding">
+            <and>
+                <expression name="dialogContext.readingRequest.didReadRequestIntroduction" op="unset"/>
+                <expression name="dialogContext.conversation.isFirstComponentInRequest" op="set"/>
+            </and>
+        </condition>
+        
+        <condition name="includeSender">
+            <and>
+                <expression name="componentContext.isFirstComponentFromSender" op="set"/>
+                <expression name="dialogContext.readingRequest.didReadSingleSenderUnreadMessagesIntro" op="unset"/>
+            </and>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first condition="needGrounding" phrase="multiuserGrounding" note="This will never be printed, it is only used on HomePod.">
+            <text><opt>OK, <var name="user.groundingIfNeeded"/>, </opt></text>
+        </first>
+        
+        <first condition="needConversationConnector" phrase="conversationConnector">
+            <text condition="dialogContext.conversation.isFirst">First, </text>
+            <text condition="dialogContext.conversation.isSecond">Next, </text>
+            <text>And finally, </text>
+        </first>
+        
+        <first phrase="capitalizeIn">
+            <text condition="needConversationConnector">in</text>
+            <text>In</text>
+        </first>
+
+        <first condition="needGroupIntroduction" phrase="groupIntroduction">
+            <text condition="hasUsableGroupName"><phrase name="capitalizeIn"/> <var name="dialogContext.conversation.group.speakableGroupName"/>, </text>
+            <switch value="dialogContext.conversation.group.numberOfMembersOtherThanYou">
+                <text case="2"><phrase name="capitalizeIn"/> your group with <var name="dialogContext.conversation.group.membersOtherThanYou[0]"/> and <var name="dialogContext.conversation.group.membersOtherThanYou[1]"/>, </text>
+                <text case="3"><phrase name="capitalizeIn"/> your group with <var name="dialogContext.conversation.group.membersOtherThanYou[0]"/>, <var name="dialogContext.conversation.group.membersOtherThanYou[1]"/>, and <var name="dialogContext.conversation.group.membersOtherThanYou[2]"/>, </text>
+                <text><phrase name="capitalizeIn"/> your group with <var name="dialogContext.conversation.group.membersOtherThanYou[0]"/> and <var name="dialogContext.conversation.group.numberOfMembersOtherThanYouMinusOne"/> others, </text>
+            </switch>
+        </first>
+
+        <first phrase="sender">
+            <text condition="includeSender"><var name="sender"/> </text>
+        </first>
+        
+        <first phrase="verb">
+            <text condition="needVerb">sent </text>
+        </first>
+
+        <first phrase="andConnector">
+            <text condition="needAndConnector">and </text>
+        </first>
+
+        <first phrase="effect">
+            <switch value="effect">
+                <text case="'confetti'">with a confetti effect</text>
+                <text case="'echo'">with an echo effect</text>
+                <text case="'fireworks'">with a fireworks effect</text>
+                <text case="'gentle'">with a gentle effect</text>
+                <text case="'happyBirthday'">with a balloons effect</text>
+                <text case="'heart'">with a love effect</text>
+                <text case="'impact'">with a slam effect</text>
+                <text case="'invisibleInk'">with an invisible ink effect</text>
+                <text case="'lasers'">with a laser effect</text>
+                <text case="'loud'">with a loud effect</text>
+                <text case="'shootingStar'">with a shooting star effect</text>
+                <text case="'sparkles'">with a celebration effect</text>
+                <text case="'spotlight'">with a spotlight effect</text>
+            </switch>
+        </first>
+
+        <first phrase="readLinkType">
+            <switch condition="isSingle" value="linkMetadata.linkMediaType">
+              <text case="'song'">a song</text>
+              <text case="'album'">an album</text>
+              <text case="'musicVideo'">a music video</text>
+              <text case="'artist'">an artist</text>
+              <text case="'playlist'">a playlist</text>
+              <text case="'radio'">a radio station</text>
+              <text case="'software'">an app</text>
+              <text case="'book'">a book</text>
+              <text case="'audioBook'">an audio book</text>
+              <text case="'podcast'">a podcast</text>
+              <text case="'podcastEpisode'">a podcast episode</text>
+              <text case="'tvEpisode'">a TV episode</text>
+              <text case="'tvSeason'">a TV season</text>
+              <text case="'movie'">a movie</text>
+              <text case="'tvShow'">a TV show</text>
+              <text case="'movieBundle'">a movie bundle</text>
+              <text case="'appleTV'">a link to the Apple TV app</text>
+              <text>a link</text>
+            </switch>
+            
+            <switch condition="isMultiple" value="linkMetadata.linkMediaType">
+              <text case="'song'"><var name="count"/> links to a song</text>
+              <text case="'album'"><var name="count"/> links to an album</text>
+              <text case="'musicVideo'"><var name="count"/> links to a music video</text>
+              <text case="'artist'"><var name="count"/> links to an artist</text>
+              <text case="'playlist'"><var name="count"/> links to a playlist</text>
+              <text case="'radio'"><var name="count"/> links to a radio station</text>
+              <text case="'software'"><var name="count"/> links to an app</text>
+              <text case="'book'"><var name="count"/> links to a book</text>
+              <text case="'audioBook'"><var name="count"/> links to an audio book</text>
+              <text case="'podcast'"><var name="count"/> links to a podcast</text>
+              <text case="'podcastEpisode'"><var name="count"/> links to a podcast episode</text>
+              <text case="'tvEpisode'"><var name="count"/> links to a TV episode</text>
+              <text case="'tvSeason'"><var name="count"/> links to a TV season</text>
+              <text case="'movie'"><var name="count"/> links to a movie</text>
+              <text case="'tvShow'"><var name="count"/> links to a TV show</text>
+              <text case="'movieBundle'"><var name="count"/> links to a movie bundle</text>
+              <text case="'appleTV'"><var name="count"/> links to the Apple TV app</text>
+              <text><var name="count"/> links</text>
+            </switch>
+        </first>
+
+
+        <first phrase="readLinkDescription">
+            <switch value="linkMetadata.linkMediaType">
+              <text case="'song'"><opt>: '<var name="linkMetadata.songTitle"/>'<opt>, by <var name="linkMetadata.songArtist"/></opt></opt></text>
+              <text case="'album'"><opt>: '<var name="linkMetadata.albumName"/>'<opt>, by <var name="linkMetadata.albumArtist"/></opt></opt></text>
+              <text case="'musicVideo'"><opt>: '<var name="linkMetadata.musicVideoName"/>'<opt>, by <var name="linkMetadata.musicVideoArtist"/></opt></opt></text>
+              <text case="'artist'"><opt>: <var name="linkMetadata.artistName"/></opt></text>
+              <text case="'playlist'"><opt>: '<var name="linkMetadata.playlistName"/>'<opt>, by <var name="linkMetadata.playlistCurator"/></opt></opt></text>
+              <text case="'radio'"><opt>: '<var name="linkMetadata.radioName"/>'<opt>, by <var name="linkMetadata.radioCurator"/></opt></opt></text>
+              <text case="'software'"><opt>: <var name="linkMetadata.softwareName"/></opt></text>
+              <text case="'book'"><opt>: '<var name="linkMetadata.bookName"/>'<opt>, by <var name="linkMetadata.bookAuthor"/></opt></opt></text>
+              <text case="'audioBook'"><opt>: '<var name="linkMetadata.audioBookName"/>'<opt>, by <var name="linkMetadata.audioBookAuthor"/></opt></opt></text>
+              <text case="'podcast'"><opt>: '<var name="linkMetadata.podcastName"/>'<opt>, by <var name="linkMetadata.podcastArtist"/></opt></opt></text>
+              <text case="'podcastEpisode'"><opt>: '<var name="linkMetadata.podcastEpisodeName"/>'<opt>, from the podcast <var name="linkMetadata.podcastEpisodePodcastName"/></opt></opt></text>
+              <text case="'tvEpisode'"><opt>: '<var name="linkMetadata.tvEpisodeEpisodeName"/>'<opt>, from <var name="linkMetadata.tvEpisodeSeasonName"/></opt></opt></text>
+              <text case="'tvSeason'"><opt>: <var name="linkMetadata.tvSeasonName"/></opt></text>
+              <text case="'movie'"><opt>: <var name="linkMetadata.movieName"/></opt></text>
+              <text case="'tvShow'"><opt>: <var name="linkMetadata.tvShowName"/></opt></text>
+              <text case="'movieBundle'"><opt>: <var name="linkMetadata.movieBundleName"/></opt></text>
+              <text case="'appleTV'"><opt>: <var name="linkMetadata.appleTvTitle"/></opt></text>
+              <text><opt> to <var name="linkMetadata.siteName"/><opt>: '<var name="linkMetadata.title"/>'</opt></opt></text>
+            </switch>
+        </first>
+    </phrases>
+
+    <all>
+        <dialog>
+            <speak>
+                <opt><phrase name="multiuserGrounding"/></opt>
+                <opt><phrase name="conversationConnector"/></opt>
+                <opt><phrase name="groupIntroduction"/></opt>
+                <opt><phrase name="andConnector"/></opt>
+                <opt><phrase name="sender"/></opt>
+                <opt><phrase name="verb"/></opt>
+                <phrase name="readLinkType"/>
+                <opt><phrase name="readLinkDescription"/></opt>
+                <opt> <phrase name="effect"/></opt>
+            </speak>
+
+            <print>
+                <opt><phrase name="conversationConnector"/></opt>
+                <opt><phrase name="groupIntroduction"/></opt>
+                <var name="sender"/> sent <phrase name="readLinkType"/>…
+            </print>
+        </dialog>
+    </all>
+</cat>

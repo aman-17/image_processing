@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="IdentifyIncomingCaller#IntentHandledResponse" locale="en">
+    <conditions>
+        <condition name="hasNoIncomingCall">
+            <expression name="incomingCallConcept.incomingCall" op="eq" value="false"/>
+        </condition>
+        <condition name="hasIncomingKnownCaller">
+            <and>
+                <expression name="incomingCallConcept.incomingCall" op="eq" value="true"/>
+                <expression name="incomingCallConcept.latestCallRecord" op="defined"/>
+                <expression name="incomingCallConcept.unknownCaller" op="eq" value="false"/>
+            </and>
+        </condition>
+        <condition name="hasIncomingUnknownCaller">
+            <and>
+                <expression name="incomingCallConcept.incomingCall" op="eq" value="true"/>
+                <expression name="incomingCallConcept.latestCallRecord" op="defined"/>
+                <expression name="incomingCallConcept.unknownCaller" op="eq" value="true"/>
+            </and>
+        </condition>
+        <condition name="hasCaller">
+            <and>
+                <expression name="incomingCallConcept.latestCallRecord" op="defined"/>
+                <expression name="incomingCallConcept.unknownCaller" op="eq" value="false"/>
+            </and>
+        </condition>
+        <condition name="hasUnknownCaller">
+            <and>
+                <expression name="incomingCallConcept.latestCallRecord" op="defined"/>
+                <expression name="incomingCallConcept.unknownCaller" op="eq" value="true"/>
+            </and>
+        </condition>
+        <condition name="isThirdPartyCall">
+            <expression name="incomingCallConcept.latestCallRecord.callProvider.preferredCallProvider" op="eq" value="'THIRD_PARTY_PROVIDER'"/>
+        </condition>
+    </conditions>
+    
+    
+    <first>
+        <first condition="hasIncomingKnownCaller">
+            <dialog condition="isThirdPartyCall">
+                It’s <var name="incomingCallConcept.latestCallRecord.caller"/><opt> on <var name="incomingCallConcept.latestCallRecord.callProvider.providerName"/></opt>.
+            </dialog>
+            <dialog>
+                It’s <var name="incomingCallConcept.latestCallRecord.caller"/>.
+            </dialog>
+        </first>
+        <first condition="hasIncomingUnknownCaller">
+            <dialog condition="isThirdPartyCall">There’s no caller ID<opt> on <var name="incomingCallConcept.latestCallRecord.callProvider.providerName"/></opt>.</dialog>
+            <dialog>There’s no caller ID.</dialog>
+        </first>
+
+        <all condition="hasNoIncomingCall">
+            <dialog id="NoCallHistory" note="Always lead with this line if there is no incoming call">
+                There’s nobody calling right now<opt>, <var name="user.groundingAlwaysIfMultiUser"/></opt>.
+            </dialog>
+            <dialog id="JustMissedCall" condition="hasCaller">
+                Your most recent call was from <var name="incomingCallConcept.latestCallRecord.caller"/><opt> <var name="incomingCallConcept.latestCallRecord.dateCreated.timeDescriptiveWithPrefix"/></opt>.
+            </dialog>
+            <dialog id="JustMissedUnknownCall" condition="hasUnknownCaller">
+                Your most recent call was from an unknown caller<opt> <var name="incomingCallConcept.latestCallRecord.dateCreated.timeDescriptiveWithPrefix"/></opt>.
+            </dialog>
+        </all>
+    </first>
+</cat>

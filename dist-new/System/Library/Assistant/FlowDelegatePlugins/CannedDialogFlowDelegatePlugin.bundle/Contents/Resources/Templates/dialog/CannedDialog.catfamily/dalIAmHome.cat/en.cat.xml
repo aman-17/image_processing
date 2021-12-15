@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalIAmHome" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<random phrase="">
+			<dialog>Welcome home!</dialog>
+			<dialog>Home sweet home.</dialog>
+			<dialog>Indeed you are.</dialog>
+			<dialog>Home is where the <var name="device.deviceName"/> is.</dialog>
+		</random>
+	</all>
+</cat>

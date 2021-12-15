@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#ContinueInAppResponse" locale="en">
+    <first>
+        <dialog condition="isCarPlay">Sorry, I can’t do that while you’re in the car.</dialog>
+        <dialog>You’ll need to continue in <var name="app.localizedName"/>.</dialog>
+    </first>
+</cat>

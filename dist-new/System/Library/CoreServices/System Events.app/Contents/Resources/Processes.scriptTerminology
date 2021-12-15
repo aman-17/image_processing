@@ -1,0 +1,498 @@
+{
+    Name = "Processes Suite";
+    Description = "Terms and Events for controlling Processes";
+
+    Commands = {
+        perform = {
+            Description = "cause the target process to behave as if the action were applied to its UI element";
+            Name = "perform";
+			UnnamedArgument = {
+				Description = "The action to be performed.";
+			};
+        };
+        click = {
+            Description = "cause the target process to behave as if the UI element were clicked";
+            Name = "click";
+			UnnamedArgument = {
+				Description = "The UI element to be clicked.";
+			};
+            Arguments = {
+                atPosition = {
+                    Name = "at";
+                    Description = "when sent to a \"process\" object, the { x, y } location at which to click, in global coordinates";
+                };
+            };
+        };
+        select = {
+            Description = "set the selected property of the UI element";
+            Name = "select";
+			UnnamedArgument = {
+				Description = "The UI element to be selected.";
+			};
+        };
+        keycode = {
+            Description = "cause the target process to behave as if key codes were entered";
+            Name = "key code";
+			UnnamedArgument = {
+				Description = "The key code(s) to be sent. May be a list.";
+			};
+            Arguments = {
+                using = {
+                    Name = "using";
+                    Description = "modifiers with which the key codes are to be entered";
+                };
+            };
+        };
+        keystroke = {
+            Description = "cause the target process to behave as if keystrokes were entered";
+            Name = "keystroke";
+			UnnamedArgument = {
+				Description = "The keystrokes to be sent.";
+			};
+            Arguments = {
+                using = {
+                    Name = "using";
+                    Description = "modifiers with which the keystrokes are to be entered";
+                };
+            };
+        };
+    };
+    Classes = {
+        Process = {
+            Name = "process";
+            PluralName = "processes";
+            Description = "A process running on this computer";
+            Attributes = {
+                name = {
+                    Name = "name";
+                    Description = "the name of the process";
+                };
+                uniqueID = {
+                    Name = "id";
+                    Description = "The unique identifier of the process";
+                };
+                unixID = {
+                    Name = "unix id";
+                    Description = "The Unix process identifier of a process running in the native environment, or -1 for a process running in the Classic environment";
+                };
+                displayedName = {
+                    Name = "displayed name";
+                    Description = "the name of the file from which the process was launched, as displayed in the User Interface";
+                };
+                shortName = {
+                    Name = "short name";
+                    Description = "the short name of the file from which the process was launched";
+                };
+                backgroundOnly = {
+                    Name = "background only";
+                    Description = "Does the process run exclusively in the background?";
+                };
+                visible = {
+                    Name = "visible";
+                    Description = "Is the process' layer visible?";
+                };
+                frontmost = {
+                    Name = "frontmost";
+                    Description = "Is the process the frontmost process";
+                };
+                file = {
+                    Name = "file";
+                    Description = "the file from which the process was launched";
+                };
+                fileType = {
+                    Name = "file type";
+                    Description = "the OSType of the file type of the process";
+                };
+                creatorType = {
+                    Name = "creator type";
+                    Description = "the OSType of the creator of the process (the signature)";
+                };
+                acceptsHighLevelEvents = {
+                    Name = "accepts high level events";
+                    Description = "Is the process high-level event aware (accepts open application, open document, print document, and quit)?";
+                };
+                acceptsRemoteEvents = {
+                    Name = "accepts remote events";
+                    Description = "Does the process accept remote events?";
+                };
+                hasScriptingTerminology = {
+                    Name = "has scripting terminology";
+                    Description = "Does the process have a scripting terminology, i.e., can it be scripted?";
+                };
+                totalPartitionSize = {
+                    Name = "total partition size";
+                    Description = "the size of the partition with which the process was launched";
+                };
+                partitionSpaceUsed = {
+                    Name = "partition space used";
+                    Description = "the number of bytes currently used in the process' partition";
+                };
+                classic = {
+                    Name = "Classic";
+                    Description = "Is the process running in the Classic environment?";
+                };
+                bundleIdentifier = {
+                    Name = "bundle identifier";
+                    Description = "the bundle identifier of the process' application file";
+                };
+                architecture = {
+                    Name = "architecture";
+                    Description = "the architecture in which the process is running";
+                };
+            };
+        };
+        ApplicationProcess = {
+            Name = "application process";
+            PluralName = "application processes";
+            Description = "A process launched from an application file";
+            Attributes = {
+                applicationFile = {
+                    Name = "application file";
+                    Description = "a reference to the application file from which this process was launched";
+                };
+            };
+        };
+        DeskAccessoryProcess = {
+            Name = "desk accessory process";
+            PluralName = "desk accessory processes";
+            Description = "A process launched from an desk accessory file";
+            Attributes = {
+                deskAccessoryFile = {
+                    Name = "desk accessory file";
+                    Description = "a reference to the desk accessory file from which this process was launched";
+                };
+            };
+        };
+        UIElement = {
+            Name = "UI element";
+            PluralName = "UI elements";
+            Description = "A piece of the user interface of a process";
+            Attributes = {
+                name = {
+                    Name = "name";
+                    Description = "the name of the UI Element, which identifies it within its container";
+                };
+                classCode = {
+                    Name = "class";
+                    Description = "the class of the UI Element, which identifies it function";
+                };
+                role = {
+                    Name = "role";
+                    Description = "an encoded description of the UI element and its capabilities";
+                };
+                roleDescription = {
+                    Name = "role description";
+                    Description = "a more complete description of the UI element's role";
+                };
+                subrole = {
+                    Name = "subrole";
+                    Description = "an encoded description of the UI element and its capabilities";
+                };
+				axDescription = {
+                    Name = "accessibility description";
+                    Description = "a more complete description of the UI element and its capabilities";
+                };
+                scriptingDescription = {
+                    Name = "description";
+                    Description = "the accessibility description, if available; otherwise, the role description";
+                };
+                help = {
+                    Name = "help";
+                    Description = "an elaborate description of the UI element and its capabilities";
+                };
+                title = {
+                    Name = "title";
+                    Description = "the title of the UI element as it appears on the screen";
+                };
+                value = {
+                    Name = "value";
+                    Description = "the current value of the UI element";
+                };
+                minimumValue = {
+                    Name = "minimum value";
+                    Description = "the minimum value that the UI element can take on";
+                };
+                maximumValue = {
+                    Name = "maximum value";
+                    Description = "the maximum value that the UI element can take on";
+                };
+                enabled = {
+                    Name = "enabled";
+                    Description = "Is the UI element enabled? ( Does it accept clicks? )";
+                };
+                focused = {
+                    Name = "focused";
+                    Description = "Is the focus on this UI element?";
+                };
+                position = {
+                    Name = "position";
+                    Description = "the position of the UI element";
+                };
+                size = {
+                    Name = "size";
+                    Description = "the size of the UI element";
+                };
+                orientation = {
+                    Name = "orientation";
+                    Description = "the orientation of the UI element";
+                };
+                selected = {
+                    Name = "selected";
+                    Description = "Is the UI element selected?";
+                };
+                entireContents = {
+                    Name = "entire contents";
+                    Description = "a list of every UI element contained in this UI element and its child UI elements, to the limits of the tree";
+                };
+            };
+        };
+        UIWindow = {
+            Name = "window";
+            PluralName = "windows";
+            Description = "A window belonging to a process";
+        };
+        UISheet = {
+            Name = "sheet";
+            PluralName = "sheets";
+            Description = "A sheet displayed over a window";
+        };
+        UIDrawer = {
+            Name = "drawer";
+            PluralName = "drawers";
+            Description = "A drawer that may be extended from a window";
+        };
+        UIGrowArea = {
+            Name = "grow area";
+            PluralName = "grow areas";
+            Description = "A grow area belonging to a window";
+        };
+        UIImage = {
+            Name = "image";
+            PluralName = "images";
+            Description = "An image belonging to a static text field";
+        };
+        UIButton = {
+            Name = "button";
+            PluralName = "buttons";
+            Description = "A button belonging to a window or scroll bar";
+        };
+        UIRadioButton = {
+            Name = "radio button";
+            PluralName = "radio buttons";
+            Description = "A radio button belonging to a window";
+        };
+        UICheckBox = {
+            Name = "checkbox";
+            PluralName = "checkboxes";
+            Description = "A checkbox belonging to a window";
+        };
+        UIPopover = {
+            Name = "pop over";
+            PluralName = "pop overs";
+            Description = "A pop over belonging to a window";
+        };
+        UIPopUpButton = {
+            Name = "pop up button";
+            PluralName = "pop up buttons";
+            Description = "A pop up button belonging to a window";
+        };
+        UIMenuButton = {
+            Name = "menu button";
+            PluralName = "menu buttons";
+            Description = "A menu button belonging to a window";
+        };
+        UITabGroup = {
+            Name = "tab group";
+            PluralName = "tab groups";
+            Description = "A tab group belonging to a window";
+        };
+        UITable = {
+            Name = "table";
+            PluralName = "tables";
+            Description = "A table belonging to a window";
+        };
+        UIColumn = {
+            Name = "column";
+            PluralName = "columns";
+            Description = "A column belonging to a table";
+        };
+        UIRow = {
+            Name = "row";
+            PluralName = "rows";
+            Description = "A row belonging to a table";
+        };
+        UIOutline = {
+            Name = "outline";
+            PluralName = "outlines";
+            Description = "A outline belonging to a window";
+        };
+        UIBrowser = {
+            Name = "browser";
+            PluralName = "browsers";
+            Description = "A browser belonging to a window";
+        };
+        UIScrollArea = {
+            Name = "scroll area";
+            PluralName = "scroll areas";
+            Description = "A scroll area belonging to a window";
+        };
+        UIScrollBar = {
+            Name = "scroll bar";
+            PluralName = "scroll bars";
+            Description = "A scroll bar belonging to a window";
+        };
+        UIRadioGroup = {
+            Name = "radio group";
+            PluralName = "radio groups";
+            Description = "A radio button group belonging to a window";
+        };
+        UIList = {
+            Name = "list";
+            PluralName = "lists";
+            Description = "A list belonging to a window";
+        };
+        UIGroup = {
+            Name = "group";
+            PluralName = "groups";
+            Description = "A group belonging to a window";
+        };
+        UIValueIndicator = {
+            Name = "value indicator";
+            PluralName = "value indicators";
+            Description = "A value indicator ( thumb or slider ) belonging to a scroll bar";
+        };
+        UIComboBox = {
+            Name = "combo box";
+            PluralName = "combo boxes";
+            Description = "A combo box belonging to a window";
+        };
+        UISlider = {
+            Name = "slider";
+            PluralName = "sliders";
+            Description = "A slider belonging to a window";
+        };
+        UIIncrementor = {
+            Name = "incrementor";
+            PluralName = "incrementors";
+            Description = "A incrementor belonging to a window";
+        };
+        UIBusyIndicator = {
+            Name = "busy indicator";
+            PluralName = "busy indicators";
+            Description = "A busy indicator belonging to a window";
+        };
+        UIProgressIndicator = {
+            Name = "progress indicator";
+            PluralName = "progress indicators";
+            Description = "A progress indicator belonging to a window";
+        };
+        UIRelevanceIndicator = {
+            Name = "relevance indicator";
+            PluralName = "relevance indicators";
+            Description = "A relevance indicator belonging to a window";
+        };
+        UIToolBar = {
+            Name = "tool bar";
+            PluralName = "tool bars";
+            Description = "A tool bar belonging to a window";
+        };
+        UITextField = {
+            Name = "text field";
+            PluralName = "text fields";
+            Description = "A text field belonging to a window";
+        };
+        UITextArea = {
+            Name = "text area";
+            PluralName = "text areas";
+            Description = "A text area belonging to a window";
+        };
+        UIStaticText = {
+            Name = "static text";
+            PluralName = "static texts";
+            Description = "A static text field belonging to a window";
+        };
+        UIMenuBar = {
+            Name = "menu bar";
+            PluralName = "menu bars";
+            Description = "A menu bar belonging to a process";
+        };
+        UIMenuBarItem = {
+            Name = "menu bar item";
+            PluralName = "menu bar items";
+            Description = "A menu bar item belonging to a menu bar";
+        };
+        UIMenu = {
+            Name = "menu";
+            PluralName = "menus";
+            Description = "A menu belonging to a menu bar item";
+        };
+        UIMenuItem = {
+            Name = "menu item";
+            PluralName = "menu items";
+            Description = "A menu item belonging to a menu";
+        };
+        UISplitterGroup = {
+            Name = "splitter group";
+            PluralName = "splitter groups";
+            Description = "A splitter group belonging to a window";
+        };
+        UISplitter = {
+            Name = "splitter";
+            PluralName = "splitters";
+            Description = "A splitter belonging to a window";
+        };
+        UIColorWell = {
+            Name = "color well";
+            PluralName = "color wells";
+            Description = "A color well belonging to a window";
+        };
+        UIAttribute = {
+            Name = "attribute";
+            PluralName = "attributes";
+            Description = "An named data value associated with the UI element";
+            Attributes = {
+                name = {
+                    Name = "name";
+                    Description = "the name of the attribute";
+                };
+                value = {
+                    Name = "value";
+                    Description = "the current value of the attribute";
+                };
+                settable = {
+                    Name = "settable";
+                    Description = "Can the attribute be set?";
+                };
+            };
+        };
+        UIAction = {
+            Name = "action";
+            PluralName = "actions";
+            Description = "An action that can be performed on the UI element";
+            Attributes = {
+                name = {
+                    Name = "name";
+                    Description = "the name of the action";
+                };
+                actionDescription = {
+                    Name = "description";
+                    Description = "what the action does";
+                };
+            };
+        };
+    };
+	Enumerations = {
+        ModifierKeyStates = {
+			OptionDown = {Description = "option down"; Name = "option down"; };
+			CommandDown = {Description = "command down"; Name = "command down"; };
+			ControlDown = {Description = "control down"; Name = "control down"; };
+			ShiftDown  = {Description = "shift down"; Name = "shift down"; };
+        };
+        ModifierKeys = {
+			Option = {Description = "option"; Name = "option"; };
+			Command = {Description = "command"; Name = "command"; };
+			Control = {Description = "control"; Name = "control"; };
+			Shift  = {Description = "shift"; Name = "shift"; };
+        };
+    };
+}

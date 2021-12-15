@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#UnsupportedParameterValue">
+    <meta name="description" value="Dialog for rendering PlayMediaIntent unsuported parameter response"/>
+    <meta name="category" value="Incomplete"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="isDialogDriven" type="dialog.Boolean" description="if interaction type is dialog driven"/>
+        <parameter name="title" type="dialog.String" description="Title of the content" profanityFilter="yes"/>
+        <parameter name="artist" type="dialog.String" description="Artist for the content"/>
+        <parameter name="parameter" type="dialog.String" description="Unsupported parameter name"/>
+        <parameter name="isAppAttributionRequired" type="dialog.Boolean" description="if app attribution is required"/>
+        <parameter name="useDialogMemoryForAppAttribution" type="dialog.Boolean" description="should app attribution use dialog memory"/>
+        <parameter name="isPersonalized" type="dialog.Boolean" description="If the resolved content is a personalized entity"/>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+        <parameter name="space" type="dialog.String" description="A space to work around phrases and conditions not having grounding."/>
+    </parameters>
+</cat>

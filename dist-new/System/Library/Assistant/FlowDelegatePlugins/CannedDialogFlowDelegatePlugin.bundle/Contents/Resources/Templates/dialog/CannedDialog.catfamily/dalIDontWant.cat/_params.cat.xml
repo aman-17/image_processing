@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalIDontWant" xmlns="urn:apple:names:siri:cat:1.0">
+    <meta name="category" value="Can't Understand"/>
+    <meta name="description" value="User said 'I don't want (something)'. "/>
+    <meta name="readyForLoc" value="false"/>
+    <meta name="listenAfterSpeaking" value="false"/>
+</cat>

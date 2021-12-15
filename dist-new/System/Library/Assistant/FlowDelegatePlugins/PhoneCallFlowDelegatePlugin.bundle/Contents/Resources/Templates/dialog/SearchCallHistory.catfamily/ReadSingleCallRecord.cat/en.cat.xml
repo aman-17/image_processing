@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ReadSingleCallRecord" locale="en">
+  <conditions>
+      <condition name="shouldMentionMissed" note="We should only mention missed if any of these conditions are true">
+          <and>
+              <not><expression name="intent.isRequestForMissed"/></not>
+              <expression name="callRecord.callRecordType" op="eq" value="'MISSED'"/>
+          </and>
+      </condition>
+      
+      <condition name="shouldMentionLatestMissed" note="We should only mention missed if any of these conditions are true">
+          <and>
+              <not><expression name="intent.isRequestForMissed"/></not>
+              <expression name="callRecord.callRecordType" op="eq" value="'MISSED'"/>
+              <expression name="intent.isRequestForLatest"/>
+          </and>
+      </condition>
+      
+      <condition name="hasMultipleCalls" note="check whether number of calls in a call record are more than one">
+          <expression name="callRecord.numberOfCalls" op="gt" value="1"/>
+      </condition>
+      
+      <condition name="isCallerNeeded">
+          <and>
+          <expression name="callRecord.caller" op="defined"/>
+          <not><expression name="intent.recipient.list.length" op="gt" value="0"/></not>
+          </and>
+      </condition>
+      
+      <condition name="isDateNeeded">
+          <expression name="callRecord.dateCreated" op="defined"/>
+      </condition>
+      
+      <condition name="shouldReadTimeOnly">
+          <and>
+              <expression name="callRecord.dateCreated" op="defined"/>
+              <or>
+                  <expression name="callRecord.dateCreated.isToday"/>
+                  <expression name="isSingleDateRequest"/>
+                  <expression name="isTimeRangeRequest"/>
+              </or>
+          </and>
+      </condition>
+  </conditions>
+
+  <phrases>
+      <first phrase="summary">
+          <text condition="shouldMentionLatestMissed">your most recent missed call was</text>
+          <text condition="intent.isRequestForLatest">your most recent call was</text>
+          <text condition="shouldMentionMissed">I found one missed call</text>
+          <text>I found one call</text>
+      </first>
+      
+      <first phrase="summaryWithOptionalGrounding">
+          <text>Ok, <var name="user.groundingIfNeeded"/>, <phrase name="summary"/></text>
+          <text><transform mode="capitalizeFirst"><phrase name="summary"/></transform></text>
+      </first>
+      
+      <switch phrase="contactRole" value="callRecord.callRecordType">
+          <text case="'VOICEMAIL'"> from </text>
+          <text case="'RECEIVED'"> from </text>
+          <text case="'MISSED'"> from </text>
+          <text case="'OUTGOING'"> to </text>
+          <text > with </text>
+      </switch>
+      
+      <first phrase="callerName">
+          <text><var name="callRecord.caller"/></text>
+          <text>an unknown caller</text>
+      </first>
+      
+      <first phrase="callerInfo">
+          <text condition="isCallerNeeded"><phrase name="contactRole"/><phrase name="callerName"/></text>
+      </first>
+      
+      <first phrase="dateTime">
+          <text condition="shouldReadTimeOnly"> <var name="callRecord.dateCreated.timeDescriptiveWithPrefix"/></text>
+          <text condition="isDateNeeded"> <var name="callRecord.dateCreated.dateTimeDescriptiveWithPrefixOn"/></text>
+      </first>
+  </phrases>
+
+  <first>
+      <dialog><phrase name="summaryWithOptionalGrounding"/><opt><phrase name="callerInfo"/></opt><opt><phrase name="dateTime"/></opt>.</dialog>
+  </first>
+</cat>

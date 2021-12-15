@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadEmojiToken">
+    <meta name="description" value="Read an emoji or text token"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="isEmoji" type ="dialog.Boolean" description="Is the first token an emoji"/>
+        
+        <parameter name="abridgedEmojiList" type ="dialog.String[]" description=""/>
+        <parameter name="unabridgedEmojiList" type ="dialog.String[]" description=""/>
+        <parameter name="numberOfDistinctEmojiInToken" type ="dialog.Number" description="Distinct emoji glyph count"/>
+        
+        <parameter name="isLast" type ="dialog.Boolean" description="Is first token"/>
+        <parameter name="isFirst" type ="dialog.Boolean" description="Is last token"/>
+        
+        <parameter name="totalNumberOfTokens" type ="dialog.Number" description="Number of emoji tokens"/>
+        <parameter name="text" type ="dialog.String" description="Text description of the emoji"/>
+        <parameter name="isPreviousTokenEmoji" type ="dialog.Boolean" description="Is the previous token an emoji"/>
+
+    </parameters>
+
+</cat>

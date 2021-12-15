@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ReadVoiceMailHistoryIntroduction" locale="en">
+  <conditions>
+      <condition name="hasNewRecords">
+          <expression name="newRecordsCount" op="gt" value="0"/>
+      </condition>
+      
+      <condition name="hasSavedRecords">
+          <expression name="savedRecordsCount" op="gt" value="0"/>
+      </condition>
+      
+      <condition name="hasNoSavedRecords">
+          <expression name="savedRecordsCount" op="eq" value="0"/>
+      </condition>
+      
+      <condition name="hasZeroRecords">
+          <and>
+              <expression name="savedRecordsCount" op="eq" value="0"/>
+              <expression name="newRecordsCount" op="eq" value="0"/>
+          </and>
+      </condition>
+      
+      <condition name="hasRecipient" note="does the intent have a recipient">
+        <expression name="intent.recipient.list.length" op="gt" value="0"/>
+      </condition>
+      
+  </conditions>
+
+  <phrases>
+      <first phrase="optionalGrounding">
+          <text>Ok, <var name="user.groundingIfNeeded"/>, </text>
+      </first>
+      
+      <first phrase="newVoicemailQuantity">
+          <text><var name="newRecordsCount" number="asWords"/>
+              <quantity value="newRecordsCount" includeValue="false">
+                  <one>new voicemail</one>
+                  <other>new voicemails</other>
+              </quantity></text>
+      </first>
+      <first phrase="savedVoicemailQuantity">
+          <text><var name="savedRecordsCount" number="asWords"/>
+              <quantity value="savedRecordsCount" includeValue="false">
+                  <one>saved voicemail</one>
+                  <other>saved voicemails</other>
+              </quantity></text>
+      </first>
+      <first phrase="savedMessagesQuantity">
+          <text><var name="savedRecordsCount" number="asWords"/>
+              <quantity value="savedRecordsCount" includeValue="false">
+                  <one>saved message</one>
+                  <other>saved messages</other>
+              </quantity></text>
+      </first>
+      
+      <first phrase="summaryWithNewRecords">
+          <text condition="hasNoSavedRecords">you have <phrase name="newVoicemailQuantity"/></text>
+          <text condition="hasSavedRecords">you have <phrase name="newVoicemailQuantity"/>, and <phrase name="savedVoicemailQuantity"/></text>
+      </first>
+      
+      <first phrase="summaryWithNoNewRecords">
+          <text condition="hasNoSavedRecords">you don’t have any new voicemails</text>
+          <text condition="hasSavedRecords">you don’t have any new voicemail, but you do have <phrase name="savedMessagesQuantity"/></text>
+      </first>
+      
+      <first phrase="summary">
+          <text condition="hasNewRecords"><phrase name="summaryWithNewRecords"/></text>
+          <text><phrase name="summaryWithNoNewRecords"/></text>
+      </first>
+      
+      <first phrase="contactsNames">
+          <text condition="hasZeroRecords"><var name="intent.recipient.list" list="or" /></text>
+          <text><var name="intent.recipient.list" list="and"/></text>
+      </first>
+      
+      <first phrase="recipientSummary">
+          <text condition="hasRecipient"> from <phrase name="contactsNames"/></text>
+      </first>
+      
+  </phrases>
+  <first>
+      <dialog><transform mode="capitalizeFirst"><opt><phrase name="optionalGrounding"/></opt><phrase name="summary"/><opt><phrase name="recipientSummary"/></opt>.</transform></dialog>
+  </first>
+
+</cat>

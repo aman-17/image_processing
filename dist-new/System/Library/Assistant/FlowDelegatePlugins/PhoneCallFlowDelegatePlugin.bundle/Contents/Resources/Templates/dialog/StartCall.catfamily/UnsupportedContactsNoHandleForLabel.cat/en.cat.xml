@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <conditions>
+        <condition name="isFaceTime">
+            <expression name="intent.preferredCallProvider" op="eq" value="'FACETIME_PROVIDER'"/>
+        </condition>
+        <condition name="hasContactWithHandle">
+            <and>
+                <expression name="unsupportedHandle" op="defined"/>
+                <expression name="unsupportedHandle.label" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="hasContactWithPhoneNumber">
+            <or>
+                <expression name="unsupportedHandle.type" op="eq" value="'PhoneNumber'"/>
+                <expression name="unsupportedHandle.type" op="eq" value="'Unknown'"/>
+            </or>
+        </condition>
+        <condition name="hasContactWithEmailAddress">
+            <expression name="unsupportedHandle.type" op="eq" value="'EmailAddress'"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <switch phrase="phoneLabelAndType" value="unsupportedPersonHandleLabel">
+            <text case="'com.apple.intents.PersonHandleLabel.Home'">home number</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Work'">work number</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Mobile'">mobile number</text>
+            <text case="'com.apple.intents.PersonHandleLabel.iPhone'">iPhone number</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Main'">main number</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Home_Fax'">home fax</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Work_Fax'">work fax</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Pager'">pager</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Other'">other number</text>
+            <text case="'com.apple.intents.PersonHandleLabel.School'">school number</text>
+            <text><var name="unsupportedHandle.label.lowercase"/> number</text>
+        </switch>
+        <switch phrase="emailLabelAndType" value="unsupportedPersonHandleLabel">
+            <text case="'com.apple.intents.PersonHandleLabel.Home'">home email</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Work'">work email</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Mobile'">mobile email</text>
+            <text case="'com.apple.intents.PersonHandleLabel.iPhone'">iPhone email</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Main'">main email</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Home_Fax'">home fax</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Work_Fax'">work fax</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Pager'">pager</text>
+            <text case="'com.apple.intents.PersonHandleLabel.Other'">other email</text>
+            <text case="'com.apple.intents.PersonHandleLabel.School'">school email</text>
+            <text><var name="unsupportedHandle.label.lowercase"/> email</text>
+        </switch>
+    </phrases>
+    <first>
+        <dialog id="FaceTime" condition="isFaceTime">Sorry,<opt> <var name="user.groundingIfNeeded"/>,</opt> I don’t have a phone number or email address for <var name="unsupportedPerson"/>.</dialog>
+        <first condition="hasContactWithHandle">
+            <dialog id="PhoneNumber" condition="hasContactWithPhoneNumber">Sorry,<opt> <var name="user.groundingIfNeeded"/>,</opt> I don’t have <span inflect="withIndefArticle"><phrase name="phoneLabelAndType"/></span> for <var name="unsupportedPerson"/>.</dialog>
+            <dialog id="EmailAddress" condition="hasContactWithEmailAddress">Sorry,<opt> <var name="user.groundingIfNeeded"/>,</opt> I don’t have <span inflect="withIndefArticle"><phrase name="emailLabelAndType"/></span> for <var name="unsupportedPerson"/>.</dialog>
+        </first>
+        <dialog id="Generic">I don’t have a phone number for this contact.</dialog>
+    </first>
+</cat>

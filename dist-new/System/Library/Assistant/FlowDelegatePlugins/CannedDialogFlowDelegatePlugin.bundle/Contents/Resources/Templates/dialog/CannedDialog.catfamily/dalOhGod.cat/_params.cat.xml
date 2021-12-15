@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CannedDialog#dalOhGod">
+    <meta name="description" value="Users reacted to something and said Oh my god or similar phrases to Siri."/>
+    <meta name="category" value="Can't Understand"/>
+    <meta name="readyForLoc" value="false"/>
+    <meta name="listenAfterSpeaking" value="false"/>
+</cat>

@@ -1,0 +1,75 @@
+{
+    Name = "HelpViewer"; 
+    AppleEventCode = "help";
+    
+     "Commands" = {
+        "search" = {
+            "CommandClass" = "SearchScriptCommand";
+            "Type" = "";
+            "AppleEventClassCode" = "help";
+            "AppleEventCode" = "srch"; 
+            "Arguments" = {
+                lookingFor = {AppleEventCode = "sstr";  Type = "NSString";}; 
+            };
+            
+        };
+        "handleurl" = {
+            "CommandClass" = "HandleURLScriptCommand";
+            "Type" = "";
+            "AppleEventClassCode" = "GURL";
+            "AppleEventCode" = "GURL";
+        };
+        "lookupanchor" = {
+            "CommandClass" = "LookupAnchorScriptCommand";
+            "Type" = "";
+            "AppleEventClassCode" = "help";
+            "AppleEventCode" = "sanc";
+            "Arguments" = {
+                inBook = {AppleEventCode = "sstr";	Type = "NSString";	Optional = "YES";}; 
+            };
+        };
+        "goback" = {
+            "CommandClass" = "GoBackScriptCommand";
+            "Type" = "";
+            "AppleEventClassCode" = "help";
+            "AppleEventCode" = "BACK";
+        };
+        "goforward" = {
+            "CommandClass" = "GoForwardScriptCommand";
+            "Type" = "";
+            "AppleEventClassCode" = "help";
+            "AppleEventCode" = "FORW";
+        };
+        "gohome" = {
+            "CommandClass" = "GoHomeScriptCommand";
+            "Type" = "";
+            "AppleEventClassCode" = "help";
+            "AppleEventCode" = "HOME";
+        };
+    };
+    
+    "Classes" = {
+        HelpApplication = {
+            AppleEventCode = "capp";
+            Superclass = "NSCoreSuite.NSApplication";
+            SupportedCommands = {
+                "HelpViewer.search" = "doSearchScriptCommand:";
+                "HelpViewer.goback" = "goBackScriptCommand:";
+                "HelpViewer.goforward" = "goForwardScriptCommand:";
+                "HelpViewer.gohome" = "goHomeScriptCommand:";
+            };
+            Attributes = {
+                currentURL = {
+                    AppleEventCode = "curl";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                selectedText = {
+                    AppleEventCode = "STEX";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+            };
+        };
+    };
+}

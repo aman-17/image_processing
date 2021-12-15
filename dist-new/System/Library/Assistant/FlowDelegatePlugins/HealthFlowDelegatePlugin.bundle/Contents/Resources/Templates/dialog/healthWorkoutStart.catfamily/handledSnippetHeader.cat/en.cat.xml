@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutStart#handledSnippetHeader" locale="en">
+
+    <first>
+        <dialog condition="workoutName" id="workoutName"><var name="workoutName"/> Started</dialog>
+        <dialog id="noWorkoutName">Workout Started</dialog>
+    </first>
+
+</cat>

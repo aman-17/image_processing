@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutCancel#unsupportedSlotValue" locale="en">
+    
+    <first>
+        <dialog condition="appName" id="workoutNameWithAppName">Sorry, <var name="appName"/> doesn't support workout names.</dialog>
+        <dialog id="workoutName">Sorry, the app doesn't support workout names.</dialog>
+    </first>
+
+</cat>

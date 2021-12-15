@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#IntentHandledResponseEmergency">
+  <meta name="category" value="Handled"/>
+  <meta name="description" value="Provide a summary of the call request after it was handled by the app."/>
+  <meta name="readyForLoc" value="true"/>
+
+  <parameters>
+    <parameter name="intent" type="phone.StartCallIntent"/>
+    <parameter name="noCountdownPresented" type="dialog.Boolean"/>
+    <parameter name="device" type="sirikit.DeviceState"/>
+  </parameters>
+</cat>
+

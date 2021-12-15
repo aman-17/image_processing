@@ -1,0 +1,596 @@
+{
+    "Name": "PbrCommon",
+    "OverrideMaterial": "engine:engineDefaults.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "baseColorTint"                   : "[1,1,1,1]",
+            "subsurface"                      : "0",
+            "metallicScale"                   : "0",
+            "specularScale"                   : "0.5",
+            "roughnessScale"                  : "1",
+            "emissiveColor"                   : "[0,0,0]",
+            "emissiveScale"                   : "1",
+            "detailBaseColorIntensity"        : "0.0",
+            "detailNormalIntensity"           : "0.0",
+            "detailMetallicIntensity"         : "0.0",
+            "detailRoughnessIntensity"        : "0.0",
+            "detailSpecularIntensity"         : "0.0",
+            "lightmapIntensityLV"             : "0.0",
+            "uvTransform"                     : "[1,0,0,1]",
+            "uvOffset"                        : "[0, 0]",
+            "clearcoatScale"                  : "1.0",
+            "clearcoatRoughnessScale"         : "0.01",
+            "opacityThreshold"                : "0.0",
+            "partDebugColor"                  : "[1,1,1]",
+            "crunchingDistance"               : "0.02",
+            "clippingOrigin"                  : "[0, 0, 0]",
+            "clippingExtentX"                 : "[0, 0, 0]",
+            "clippingExtentY"                 : "[0, 0, 0]",
+            "clippingExtentZ"                 : "[0, 0, 0]",
+            "clippingEnabled"                 : "0.0",
+            "fadingDistance"                  : "0.001",
+            "sheenColor"                      : "[0.04, 0.04, 0.04]",
+            "customBlendMode"                 : "0",
+            "vibrancyBlendMode1"              : "7",
+            "vibrancyBlendColor1"             : "[0, 0, 0, 0]",
+            "vibrancyBlendMode2"              : "7",
+            "vibrancyBlendColor2"             : "[0, 0, 0, 0]",
+            "vibrancyBlendMode3"              : "7",
+            "vibrancyBlendColor3"             : "[0, 0, 0, 0]",
+            "vibrancyBlendMode4"              : "7",
+            "vibrancyBlendColor4"             : "[0, 0, 0, 0]",
+            "ssoSamplingRadius"               : "0.1",
+            "ssoSamplingBias"                 : "0.0025"            
+        },
+        "Buffers": {
+            "lightConstants"              : "light.lightBuffer",
+            "iblConstants"                : "light.iblConstants",
+            "specMaxEssAvgTable"          : "brdf.specMaxEssAvgTable",
+            "samplerIndexMap"             : "samplers.dynamicSamplers",
+            "clusterConstants"            : "rendergraph.clusterConstants",
+            "clusterIndexTable"           : "rendergraph.clusterIndexTable",
+            "clusterResultTable"          : "rendergraph.clusterResultTable",
+            "arEnvProbeConstants"         : "rendergraph.arEnvProbeConstants",
+            "ssaoConstants"              : "light.lightBuffer"
+        },
+        "Textures": {
+            "textureBrdf"                : "brdf.brdfMap",
+            "textureClothBrdf"           : "brdf.clothBrdfMap",
+            "textureSpecMaxEss"          : "brdf.specMaxEssMap",
+            "texturePrefilteredDiffuse"  : "scene.prefilteredDiffuseMap",
+            "texturePrefilteredSpecular" : "scene.prefilteredSpecularMap",
+            "textureAreaLightMaps"       : "scene.areaLightMaps",
+            "textureBaseColor"           : "fallback.white",
+            "textureAmbientOcclusion"    : "fallback.white",
+            "textureEmissive"            : "fallback.black",
+            "textureMetallic"            : "fallback.white",
+            "textureRoughness"           : "fallback.white",
+            "textureSpecular"            : "fallback.white",
+            "textureNormal"              : "fallback.lightBlue",
+            "textureOpacity"             : "fallback.white",
+            "textureClearcoatRoughness"  : "fallback.white",
+            "textureRMAS"                : "fallback.white",
+            "textureClearcoat"           : "fallback.white",
+            "textureSheenColor"          : "fallback.white",
+            "arEnvLocalizedProbeTextures[0]" : "rendergraph.arEnvLocalizedProbeTextures[0]",
+            "arEnvLocalizedProbeTextures[1]" : "rendergraph.arEnvLocalizedProbeTextures[1]",
+            "arEnvLocalizedProbeTextures[2]" : "rendergraph.arEnvLocalizedProbeTextures[2]",
+            "arEnvLocalizedProbeTextures[3]" : "rendergraph.arEnvLocalizedProbeTextures[3]",
+            "arEnvLocalizedProbeTextures[4]" : "rendergraph.arEnvLocalizedProbeTextures[4]",
+            "arEnvLocalizedProbeTextures[5]" : "rendergraph.arEnvLocalizedProbeTextures[5]",
+            "arEnvLocalizedProbeTextures[6]" : "rendergraph.arEnvLocalizedProbeTextures[6]",
+            "arEnvLocalizedProbeTextures[7]" : "rendergraph.arEnvLocalizedProbeTextures[7]",
+            "arEnvGlobalProbeTextures[0]"    : "rendergraph.arEnvGlobalProbeTextures[0]",
+            "arEnvGlobalProbeTextures[1]"    : "rendergraph.arEnvGlobalProbeTextures[1]",
+            "texturePasstroughColor"         : "rendergraph.texturePasstroughColor",
+            "ssoGBufferPosition"             : "rendergraph.SSO_GBuffer_Position",
+            "ssoGBufferNormal"               : "rendergraph.SSO_GBuffer_Normal",
+            "ssoNoiseTexture"                : "fallback.black"
+        },
+        "TextureBlocks": {
+            "__placeholder": {
+                "Texture": "fallback.white",
+                "Sampler": "__placeholder",
+                "SamplerArray": "dynamicSamplers"
+            }
+        },
+        "Samplers": {
+            "__placeholder": {}
+        }
+    },
+    "DebugMappings": [
+        {
+            "Name": "PbrDebug",
+            "Mappings": {
+                "NoDebug": 0,
+                "BaseColorTexture": 1,
+                "RoughnessTexture": 2,
+                "MetallicTexture": 3,
+                "AmbientOcclusionTexture": 4,
+                "SpecularTexture": 5,
+                "EmissiveTexture": 6,
+                "OpacityTexture": 7,
+                "RMASTexture": 8,
+                "ClearCoatTexture": 9,
+                "ClearCoatRoughnessTexture": 10,
+                "ClothSheenTexture": 11,
+                "NormalTexture": 12,
+                "BaseColorMipLevel": 13,
+                "RoughnessMipLevel": 14,
+                "MetallicMipLevel": 15,
+                "AmbientOcclusionMipLevel": 16,
+                "SpecularMipLevel": 17,
+                "EmissiveMipLevel": 18,
+                "OpacityMipLevel": 19,
+                "RMASMipLevel": 20,
+                "ClearCoatMipLevel": 21,
+                "ClearCoatRoughnessMipLevel": 22,
+                "ClothSheenMipLevel": 23,
+                "NormalMipLevel": 24,
+                "VertexUV": 25,
+                "VertexNormal": 26,
+                "VertexTangent": 27,
+                "VertexBitangent": 28,
+                "VertexColor": 29,
+                "DerivedNormal": 30,
+                "DerivedTangent": 31,
+                "DerivedBitangent": 32,
+                "DerivedBaseColor": 33,
+                "DerivedRoughness": 34,
+                "DerivedMetallic": 35,
+                "DerivedAmbientOcclusion": 36,
+                "DerivedSpecular": 37,
+                "DerivedEmissive": 38,
+                "DerivedClearcoat": 39,
+                "DerivedClearcoatRoughness": 40,
+                "IlluminationDiffuse": 41,
+                "IlluminationSpecular": 42,
+                "FinalColor": 43,
+                "FinalAlpha": 44
+            }
+        }
+    ],
+    "Techniques": [
+        {
+            "Name": "Transparent",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater",
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableSingleRMAS"      : "false",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "EnableTransparency"    : "true",
+                "EnableOpacityMap"      : "false",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "EnableDynamicLighting" : "false",
+                "EnableSSAO"            : "false",
+                "EnableSSDO"            : "false"
+            },
+            "DebugMapping": "PbrDebug"
+        },
+        {
+            "Name": "TransparentAR",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater",
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableSingleRMAS"      : "false",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "EnableTransparency"    : "true",
+                "EnableOpacityMap"      : "false",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "EnableAREnvProbe"      : "true",
+                "EnableDynamicLighting" : "false",
+                "EnableSSAO"            : "false",
+                "EnableSSDO"            : "false"
+            },
+            "DebugMapping": "PbrDebug"
+        },
+        {
+            "Name": "TransparentDynamicLighting",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater",
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableSingleRMAS"      : "false",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "EnableTransparency"    : "true",
+                "EnableOpacityMap"      : "false",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "EnableDynamicLighting" : "true",
+                "EnableSSAO"            : "false",
+                "EnableSSDO"            : "false"
+            },
+            "DebugMapping": "PbrDebug"
+        },
+        {
+            "Name": "TransparentTiledForward",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "GreaterEqual",
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableSingleRMAS"      : "false",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "EnableTransparency"    : "true",
+                "EnableOpacityMap"      : "false",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "EnableDynamicLighting" : "true",
+                "EnablePerTileLightCulling" : "true",
+                "EnableSSAO"            : "false",
+                "EnableSSDO"            : "false"
+            },
+            "DebugMapping": "PbrDebug"
+        },
+        {
+            "Name": "TransparentARDynamicLighting",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater",
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableSingleRMAS"      : "false",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "EnableTransparency"    : "true",
+                "EnableOpacityMap"      : "false",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "EnableAREnvProbe"      : "true",
+                "EnableDynamicLighting" : "true",
+                "EnableSSAO"            : "false",
+                "EnableSSDO"            : "false"
+            },
+            "DebugMapping": "PbrDebug"
+        },
+        {
+            "Name": "Opaque",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "GreaterEqual"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableSingleRMAS"      : "false",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "UseBaseColorMapAsTintMask" : "false",
+                "EnableDynamicLighting" : "false",
+                "EnableCloth"           : "false",
+                "EnableSSAO"            : "false",
+                "EnableSSDO"            : "false"
+            },
+            "DebugMapping": "PbrDebug"
+        },
+        {
+            "Name": "OpaqueTiledForward",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "GreaterEqual"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableSingleRMAS"      : "false",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "UseBaseColorMapAsTintMask" : "false",
+                "EnableDynamicLighting" : "true",
+                "EnablePerTileLightCulling" : "true"
+            },
+            "DebugMapping": "PbrDebug"
+        },
+        {
+            "Name": "OpaqueAR",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "GreaterEqual"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableSingleRMAS"      : "false",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "UseBaseColorMapAsTintMask" : "false",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "EnableAREnvProbe"      : "true",
+                "EnableDynamicLighting" : "false",
+                "EnableCloth"           : "false",
+                "EnableSSAO"            : "false",
+                "EnableSSDO"            : "false"
+            },
+            "DebugMapping": "PbrDebug"
+        },
+        {
+            "Name": "OpaqueDynamicLighting",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "GreaterEqual"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableSingleRMAS"      : "false",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "UseBaseColorMapAsTintMask" : "false",
+                "EnableDynamicLighting" : "true",
+                "EnableCloth"           : "false",
+                "EnableSSAO"            : "false",
+                "EnableSSDO"            : "false"
+            },
+            "DebugMapping": "PbrDebug"
+        },
+        {
+            "Name": "OpaqueARDynamicLighting",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "GreaterEqual"
+            },
+            "FunctionConstants" : {
+                "EnableBaseColorMap"    : "true",
+                "EnableNormalMap"       : "true",
+                "EnableEmissiveMap"     : "true",
+                "EnableAreaLight"       : "true",
+                "EnableSeparateRMAS"    : "true",
+                "EnableSingleRMAS"      : "false",
+                "EnableRoughnessMap"    : "true",
+                "EnableMetallicMap"     : "true",
+                "EnableAOMap"           : "true",
+                "EnableSpecularMap"     : "true",
+                "UseBaseColorMapAsTintMask" : "false",
+                "EnableClearcoat"       : "false",
+                "VertexColorOption"     : "0",
+                "EnableIBL"             : "true",
+                "EnableAREnvProbe"      : "true",
+                "EnableDynamicLighting" : "true",
+                "EnableCloth"           : "false",
+                "EnableSSAO"            : "false",
+                "EnableSSDO"            : "false"
+            },
+            "DebugMapping": "PbrDebug"
+        },
+        {
+            "Name": "Shadow",
+            "VertexShader": {
+                "Entry": "vsShadow"
+            },
+            "PixelShader": {
+                "Entry": "fsShadow"
+            },
+            "State" : {
+                "ColorWriteMask" : "None"
+            }
+        },
+        {
+            "Name": "StandardDepthPrepass",
+            "VertexShader": {
+                "Entry": "vsDepthPrepass"
+            },
+            "PixelShader": {
+                "Entry": "fsDepthPrepass"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "Greater"
+            },
+            "FunctionConstants" : {
+            }
+        },
+        {
+            "Name": "TransparentDepthPrepass",
+            "VertexShader": {
+                "Entry": "vsDepthPrepass"
+            },
+            "PixelShader": {
+                "Entry": "fsTransparentDepthPrepass"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Greater"
+            },
+            "FunctionConstants" : {
+            }
+        },
+        {
+            "Name": "SSO_GBufferMtl",
+            "VertexShader": {
+              "Entry": "vsSSO_GBuffer"
+            },
+            "PixelShader": {
+              "Entry": "fsSSO_GBuffer"
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : true,
+                "DepthCompareFunction" : "GreaterEqual"
+            },
+        }
+    ]
+}

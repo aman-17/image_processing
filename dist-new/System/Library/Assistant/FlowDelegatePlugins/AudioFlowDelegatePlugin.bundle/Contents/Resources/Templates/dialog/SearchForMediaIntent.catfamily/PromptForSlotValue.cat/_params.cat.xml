@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchForMediaIntent#PromptForSlotValue">
+    <meta name="description" value="Dialog for rendering SearchForMediaIntent prompt for missing parameter value"/>
+    <meta name="category" value="Prompt"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="parameter" type="dialog.String" description="Name of parameter being prompted"/>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="isGrounding" type="dialog.Boolean" description="if user grounding is required"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+    </parameters>
+</cat>

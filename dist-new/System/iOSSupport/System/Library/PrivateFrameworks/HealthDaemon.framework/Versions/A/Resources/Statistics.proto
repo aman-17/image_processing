@@ -1,0 +1,80 @@
+
+syntax = "proto2";
+
+option cpp_namespace = "statistics";
+
+message RawQuantitySample {
+    optional double value = 1;
+    optional double startTime = 2;
+    optional double endTime = 3;
+    optional int64 sourceID = 4;
+
+    optional bool hasContributedToSource = 10;
+    optional bool hasContributedToOverall = 11;
+    optional bool hasContributedToSourceID = 12;
+}
+
+message Interval {
+    optional double start = 1;
+    optional double end = 2;
+}
+
+message Statistics {
+    optional RawQuantitySample mostRecentDatum = 1;
+    optional int64 count = 2;
+    optional double sum = 3;
+    optional double mean = 4;
+    optional double min = 5;
+    optional double max = 6;
+
+    optional double weightTotal = 7;
+    optional double weightedMean = 8;
+
+    optional double frozenMean = 9;
+    optional int64  frozenBucketCount = 10;
+    optional double freezeTimestamp = 11;
+    optional int64  unfrozenCount = 12;
+    optional double  unfrozenMean = 13;
+    
+    repeated Interval intervals = 14;
+
+    optional RawQuantitySample unfinishedDatum = 15;
+
+    optional int64 sourceID = 100;
+    optional string bundleIdentifier = 101;
+
+    optional Statistics primaryStatistics = 1000;
+    optional Statistics auxiliaryStatistics = 1001;
+}
+
+message StatisticsEngine {
+    message StatisticsBucket {
+        optional double bucketStartTime = 1;
+        optional double bucketEndTime = 2;
+        optional double mergeGranularity = 3;
+
+        optional bool shouldCombineSources = 10;
+        optional bool shouldComputePerSourceIDStatistics = 11;
+        optional bool shouldComputePerBundleIDStatistics = 12;
+
+        optional bool inclusiveEndTimeBoundary = 13;
+
+        optional double dataStartTime = 20;
+        optional double dataEndTime = 21;
+        optional double mergePoint = 22;
+
+        repeated RawQuantitySample remainders = 30;
+
+        optional Statistics statistics = 40;
+        repeated Statistics statisticsBySourceID = 41;
+        repeated Statistics statisticsByBundleIdentifier = 42;
+        repeated Statistics statisticsByCanonicalSourceID = 43;
+
+        repeated Interval maskedIntervals = 50;
+    }
+
+    optional int64 currentBucketIndex = 1;
+    optional StatisticsBucket currentBucket = 2;
+    repeated RawQuantitySample remainders = 3;
+
+}

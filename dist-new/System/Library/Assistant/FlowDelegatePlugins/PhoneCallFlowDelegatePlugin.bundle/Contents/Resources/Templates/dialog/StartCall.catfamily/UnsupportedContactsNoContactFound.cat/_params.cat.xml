@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#UnsupportedContactsNoContactFound">
+    <meta name="description" value="Unsupported dialog for contacts slot"/>
+    <meta name="category" value="Incomplete"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="contact" type="dialog.Person"/>
+        <parameter name="appName" type="dialog.String"/>
+        <parameter name="isFirstPartyApp" type="dialog.Boolean"/>
+    </parameters>
+</cat>

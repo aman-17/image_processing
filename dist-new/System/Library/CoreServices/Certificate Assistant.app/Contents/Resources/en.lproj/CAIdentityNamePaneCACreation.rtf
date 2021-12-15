@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 What is a self-signed root CA?\
+
+\b0 A CA that does not rely on another CA for its validation is called a \'93root\'94 (or \'93anchor\'94) CA. A CA that does rely on another CA for its validation is called an \'93intermediate CA\'94. Trust in such a root CA must be established by means other than a certificate. Your computer\'92s system software contains a list of acceptable root CA identities that have been pre-qualified by Apple. You can add other CAs to this list using the Keychain Access application, or your administrator can do this for you.\
+\
+
+\b What is an intermediate certificate authority?\
+
+\b0 A certificate authority (CA) that relies on another CA for its validation is called an Intermediate CA. An intermediate CA depends on the CA that issued it for its validity, and can be invalidated, or revoked, by it. Intermediate CAs are commonly used by their issuing CA to delegate authority for a subset of its operation, such as a particular usage or class of users. If you or your system trusts an intermediate CA\'92s issuer, it will also trust the intermediate CA, unless you explicitly override this. You can also directly assign trust to an intermediate CA without trusting its issuer; however, this circumvents validity checks based on the issuer\'92s authority. When creating an intermediate CA with the Certificate Assistant, an existing root or intermediate CA (along with their corresponding private key) must be present to sign it.\
+\
+
+\b What does \'93Make this CA the default\'94 mean?\
+
+\b0 When accepting certificate signing requests from users, the default CA will be automatically selected in the popup menu of available Certificate Authorities. When you click \'93Make this CA the default\'94, the CA name you have specified above will become the default CA.\
+\
+
+\b How is \'93E-Mail from\'94 used?\
+
+\b0 After Certificate Assistant has created your Certificate Authority, you will be able to create an invitation file for users to request a certificate from your Certificate Authority. A user can double-click on this invitation file and the Certificate Assistant will guide them through the process of requesting a certificate. The certificate request is sent to the e-mail address provided here.}

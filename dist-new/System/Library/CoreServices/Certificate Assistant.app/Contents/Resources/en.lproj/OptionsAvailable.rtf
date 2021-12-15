@@ -1,0 +1,35 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\partightenfactor0
+
+\f0\b\fs24 \cf0 What is a digital identity?\
+
+\b0 A digital identity is an electronic means of identifying someone. It consists of a secret you keep (your \'93private key\'94), and another part you publish freely (your \'93public key\'94). Your private key allows you to sign electronic documents whose signature everyone can verify using only your public key. Likewise, your private key can reveal (\'93decrypt\'94) secrets that were concealed (\'93encrypted\'94) by others using your public key.\
+\
+
+\b What is a digital certificate?
+\b0 \
+A digital certificate is an electronic document that associates your digital identity with other information, such as your name, email address, or business. A certificate consists of the public part of your digital identity, the identity of the organization (\'93certificate authority\'94 or CA) that signed your certificate, and whatever other data it chose to associate with your identity. A certificate is usually restricted for particular uses, such as digital signatures, encryption, use with web servers, etc. This is called the \'93key use\'94 restriction on a certificate. Attempts to use a certificate for other purposes will fail. While it is possible to make one identity (and one certificate) with multiple uses, it is unusual  to make one for all possible uses. Making a certificate for multiple uses is also less secure. A certificate is only valid for a limited amount of time, after which it becomes invalid and must be replaced with a newer version. The certificate authority can also invalidate (\'93revoke\'94) a certificate before it expires. The validity of a certificate can be verified electronically, using the \'93public key infrastructure\'94 or PKI.\
+\
+
+\b How do I get a certificate?
+\b0 \
+To obtain a valid certificate, create a certificate request and send it to a certificate authority. If the authority agrees, it will make your certificate and return it to you. You can use Certificate Assistant or the web site of a commercial certificate authority to create your certificate request. You can obtain and hold many certificates signed by different CAs that are each valid separately and subject to different policies. For example, you may have one certificate that allows you to sign email, and another that allows you to identify yourself on Messages.\
+\
+
+\b Where do I keep my certificates?\
+
+\b0 Digital identities, including certificates, are stored in your keychain. This makes them available for use by applications such as Mail and Safari. Certificates for others (mail correspondents, web sites, etc.) are also stored in your keychain as your computer obtains them for you. You can use Keychain Access (located in Applications > Utilities) to view and manipulate your certificates. You can freely move and copy certificates (as distinct from their associated private key) because they don\'92t contain personal or private information that you need to protect. It is fine to have several copies of one certificate. If you need to send a certificate to someone else, you can export it using Keychain Access and send it safely through email or by other means. Likewise, if someone sends you a certificate, you can add it to your keychain by dropping it onto Keychain Access, or using File > Import Items\'85 menu in Keychain Access.\
+
+\b \
+What is a Certificate Authority?
+\b0 \
+A certificate authority (CA) is a digital identity that signs certificates and makes them valid electronic documents. Since CAs are digital identities themselves, they can also be validated by another CA, forming what is called a \'93certificate chain.\'94 For a certificate to be valid, the CA that signed it must be valid, and so on up the chain. This is automatically determined by system software when it evaluates a certificate.\
+\
+
+\b Why evaluate certificates?\
+
+\b0 Use Certificate Assistant to evaluate the validity of a certificate and determine if it\'92s genuine. Secure software, such as Safari or Mail, evaluates certificates before using them. For example, if you use Safari to purchase something online, Safari evaluates the web site\'92s certificate and lets you know if it\'92s valid. Certificate Assistant provides more detail and offers you more control over the use of certificates.}

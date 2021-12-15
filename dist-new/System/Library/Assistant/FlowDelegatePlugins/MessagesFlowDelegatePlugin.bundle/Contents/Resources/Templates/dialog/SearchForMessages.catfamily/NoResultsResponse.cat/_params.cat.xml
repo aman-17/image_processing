@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#NoResultsResponse">
+    <meta name="description" value="Response when there are no messages to read."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+</cat>
+

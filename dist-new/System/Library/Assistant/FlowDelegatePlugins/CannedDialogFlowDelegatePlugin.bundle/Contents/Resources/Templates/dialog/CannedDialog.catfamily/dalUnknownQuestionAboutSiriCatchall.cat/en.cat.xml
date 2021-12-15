@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalUnknownQuestionAboutSiriCatchall">
+    <all>
+        <dialog>Hmm… I don’t have an answer for that. Is there something else I can help with?</dialog>
+    </all>
+</cat>

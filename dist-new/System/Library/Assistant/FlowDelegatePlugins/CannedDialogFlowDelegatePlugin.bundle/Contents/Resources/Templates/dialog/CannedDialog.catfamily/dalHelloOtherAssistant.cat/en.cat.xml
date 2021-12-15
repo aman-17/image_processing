@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalHelloOtherAssistant" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<random phrase="">
+			<dialog condition="used_in_the_last_two_hours">Wow. <break time="500ms"/>Awkward.</dialog>
+			<dialog>Hi, I’m Siri. I think you’ve got the wrong assistant.</dialog>
+			<dialog>Not exactly. But I offer no resistance <break time="200ms"/>to helpful assistants.</dialog>
+			<dialog condition="used_more_than_three_times">Not exactly. My name is Siri.</dialog>
+		</random>
+	</all>
+	<conditions>
+		<condition name="used_more_than_three_times">
+			<expression name="dialogState.usageCount" op="gt" value="3"/>
+		</condition>
+		<condition name="used_in_the_last_two_hours">
+			<expression name="dialogState.hoursSinceLastUse" op="le" value="2"/>
+		</condition>
+	</conditions>
+</cat>

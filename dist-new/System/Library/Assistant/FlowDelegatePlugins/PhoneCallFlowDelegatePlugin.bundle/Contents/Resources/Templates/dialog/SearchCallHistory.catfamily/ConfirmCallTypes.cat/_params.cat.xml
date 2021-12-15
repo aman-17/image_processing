@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ConfirmCallTypes">
+    <meta name="description" value="Confirm callTypes slot."/>
+    <meta name="category" value="Confirm"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="callTypeToConfirm" type="dialog.String"/>
+        <parameter name="callTypesCount" type="dialog.Number"/>
+    </parameters>
+</cat>

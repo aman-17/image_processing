@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#DigitalTouchNotSupported">
+
+    <meta name="description" value="Tells the user that sending digital touch is not supported"/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="deviceState" type="sirikit.DeviceState" description="The device state"/>
+    </parameters>
+
+</cat>

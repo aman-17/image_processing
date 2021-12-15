@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="Labels#ButtonOpenApp">
+    <meta name="description" value="Open 'app' button label"/>
+    <meta name="category" value="UsedForSnippet"/>
+    <meta name="readyForLoc" value="true"/>
+    
+    <parameters>
+        <parameter name="app" type="messages.App" description="The app to open."/>
+    </parameters>
+</cat>

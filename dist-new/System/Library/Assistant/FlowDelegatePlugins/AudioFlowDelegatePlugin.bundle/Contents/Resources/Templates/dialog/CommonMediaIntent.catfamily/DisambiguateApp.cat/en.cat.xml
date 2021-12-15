@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#DisambiguateApp" locale="en">
+    <conditions>
+      <condition name="firstAppSelectionPlay">
+        <and>
+          <expression name="isPlay"/>
+          <expression name="appSelectionUses" op="eq" value="1"/>
+        </and>
+      </condition>
+    </conditions>
+    <first>
+        <dialog condition="firstAppSelectionPlay">I’m learning how to choose the right audio apps for you. Which one do you want to use to listen to this?</dialog>
+        <dialog condition="isPlay">Which app do you want to listen to this on?</dialog>
+        <dialog>Which app would you like to use?</dialog>
+    </first>
+</cat>

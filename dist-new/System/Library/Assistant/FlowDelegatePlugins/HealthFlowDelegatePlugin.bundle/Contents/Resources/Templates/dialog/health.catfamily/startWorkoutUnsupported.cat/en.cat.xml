@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="health#startWorkoutUnsupported" locale="en">
+  <first>
+      <dialog condition="device.isWatch">I’m not able to start the given workout. My apologies.</dialog>
+      <random>
+        <dialog>I cannot start Workouts on this device.</dialog>
+        <dialog>I can’t start Workouts on your <var name="device.deviceName"/>, but I can on an Apple Watch.</dialog>
+        <dialog>I can’t start Workouts on your <var name="device.deviceName"/>, but ask me on an Apple Watch.</dialog>
+      </random>
+  </first>
+</cat>

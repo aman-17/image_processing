@@ -1,0 +1,56 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "cam.scnz"
+  },
+  "emoji" : "🙅‍♂️",
+  "identifier" : "person_gesturing_no",
+  "options" : {
+    "duration" : 1,
+    "morpherOverrides" : [
+      {
+        "geometry" : "hair_*",
+        "morpher" : "variant_stickerGesturingNo",
+        "value" : 1
+      },
+      {
+        "geometry" : "headwear_*",
+        "morpher" : "variant_stickerGesturingNo",
+        "value" : 1
+      },
+      {
+        "geometry" : "earrings_*",
+        "morpher" : "variant_stickerGesturingNo",
+        "value" : 1
+      }
+    ]
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "neckOrientation" : [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "palettes" : [
+        {
+          "material" : "head_MAT",
+          "palette" : "skin"
+        },
+        {
+          "material" : "cuffs_MAT",
+          "palette" : "headwear"
+        },
+        {
+          "material" : "hat_MAT",
+          "palette" : "headwear"
+        }
+      ],
+      "scene" : "body.scnz"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchForMediaIntent#IntentHandledResponse" locale="en">
+    <conditions>
+        <condition name="app">
+            <expression name="app.localizedName" op="nonempty"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="multiUserIntroduction">
+            <text condition="isGrounding">OK, <var name="user.groundingIfNeeded"/>, </text>
+            <text></text>
+        </first>
+    </phrases>
+    <first>
+        <dialog condition="isWatch">Searching.</dialog>
+        <first>
+            <dialog condition="app"><phrase name="multiUserIntroduction"/><var name="app.localizedName"/> will search for it.</dialog>
+            <dialog>Searching.</dialog>
+        </first>
+    </first>
+</cat>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="StartCall#Relationship">
+    <first>
+        <switch value="relationship">
+            <dialog case="'mother'">mother</dialog>
+            <dialog case="'father'">father</dialog>
+            <dialog case="'parent'">parent</dialog>
+            <dialog case="'grandmother'">grandmother</dialog>
+            <dialog case="'grandfather'">grandfather</dialog>
+            <dialog case="'grandparent'">grandparent</dialog>
+            <dialog case="'brother'">brother</dialog>
+            <dialog case="'sister'">sister</dialog>
+            <dialog case="'son'">son</dialog>
+            <dialog case="'grandson'">grandson</dialog>
+            <dialog case="'daughter'">daughter</dialog>
+            <dialog case="'granddaughter'">granddaughter</dialog>
+            <dialog case="'child'">child</dialog>
+            <dialog case="'grandchild'">grandchild</dialog>
+            <dialog case="'friend'">friend</dialog>
+            <dialog case="'spouse'">spouse</dialog>
+            <dialog case="'partner'">partner</dialog>
+            <dialog case="'assistant'">assistant</dialog>
+            <dialog case="'manager'">manager</dialog>
+            <dialog case="'sibling'">sibling</dialog>
+            <dialog case="'other'">other</dialog>
+            <dialog case="'family'">family</dialog>
+            <dialog case="'husband'">husband</dialog>
+            <dialog case="'wife'">wife</dialog>
+
+            <dialog case="'uncle_fathers_younger_brother'">uncle (father’s younger brother)</dialog>
+            <dialog case="'uncle_fathers_younger_brother_hindi'">chachaji</dialog>
+
+            <dialog case="'uncle_fathers_elder_brother'">uncle (father’s elder brother)</dialog>
+            <dialog case="'uncle_fathers_elder_brother_hindi'">tauji</dialog>
+
+            <dialog case="'uncle_mothers_sisters_husband'">uncle (mother’s sister’s husband)</dialog>
+            <dialog case="'uncle_mothers_sisters_husband_hindi'">mausaji</dialog>
+
+            <dialog case="'uncle_mothers_brother'">uncle (mother’s brother)</dialog>
+            <dialog case="'uncle_mothers_brother_hindi'">mamaji</dialog>
+
+            <dialog case="'uncle_mothers_younger_brother'">uncle (mother’s younger brother)</dialog>
+            <dialog case="'uncle_mothers_younger_brother_hindi'">chote mamaji</dialog>
+
+            <dialog case="'uncle_mothers_elder_brother'">uncle (mother’s elder brother)</dialog>
+            <dialog case="'uncle_mothers_elder_brother_hindi'">bade maamaji</dialog>
+
+            <dialog case="'uncle_fathers_sisters_husband'">uncle (father’s sister’s husband)</dialog>
+            <dialog case="'uncle_fathers_sisters_husband_hindi'">phuphaji</dialog>
+
+            <dialog case="'aunt_fathers_younger_brothers_wife'">aunt (father’s younger brother’s wife)</dialog>
+            <dialog case="'aunt_fathers_younger_brothers_wife_hindi'">chachiji</dialog>
+
+            <dialog case="'aunt_fathers_elder_brothers_wife'">aunt (father’s elder brother’s wife)</dialog>
+            <dialog case="'aunt_fathers_elder_brothers_wife_hindi'">taiji</dialog>
+
+            <dialog case="'aunt_mothers_sister'">aunt (mother’s sister)</dialog>
+            <dialog case="'aunt_mothers_sister_hindi'">mausiji</dialog>
+
+            <dialog case="'aunt_mothers_younger_sister'">aunt (mother’s younger sister)</dialog>
+            <dialog case="'aunt_mothers_younger_sister_hindi'">chotee mausiji</dialog>
+
+            <dialog case="'aunt_mothers_elder_sister'">aunt (mother’s elder sister)</dialog>
+            <dialog case="'aunt_mothers_elder_sister_hindi'">badee mausiji</dialog>
+
+            <dialog case="'aunt_mothers_brothers_wife'">aunt (mother’s brother’s wife)</dialog>
+            <dialog case="'aunt_mothers_brothers_wife_hindi'">mamiji</dialog>
+
+            <dialog case="'aunt_fathers_sister'">aunt (father’s sister)</dialog>
+            <dialog case="'aunt_fathers_sister_hindi'">buaji</dialog>
+
+            <dialog case="'aunt_fathers_elder_sister'">aunt (father’s elder sister)</dialog>
+            <dialog case="'aunt_fathers_elder_sister_hindi'">badee buaji</dialog>
+
+            <dialog case="'aunt_fathers_younger_sister'">aunt (father’s younger sister)</dialog>
+            <dialog case="'aunt_fathers_younger_sister_hindi'">chotee buaji</dialog>
+
+            <dialog case="'brother-in-law_wifes_brother'">brother-in-law (wife’s brother)</dialog>
+            <dialog case="'brother-in-law_wifes_brother_hindi'">sala</dialog>
+
+            <dialog case="'sister-in-law_wifes_sister'">sister-in-law (wife’s sister)</dialog>
+            <dialog case="'sister-in-law_wifes_sister_hindi'">sali</dialog>
+
+            <dialog case="'sister-in-law_elder_brothers_wife'">sister-in-law (elder brother’s wife)</dialog>
+            <dialog case="'sister-in-law_elder_brothers_wife_hindi'">bhabhiji</dialog>
+
+            <dialog case="'brother-in-law_elder_sisters_husband'">brother-in-law (elder sister’s husband)</dialog>
+            <dialog case="'brother-in-law_elder_sisters_husband_hindi'">jeejaji</dialog>
+
+            <dialog case="'brother-in-law_husbands_sisters_husband'">brother-in-law (husband’s sister’s husband)</dialog>
+            <dialog case="'brother-in-law_husbands_sisters_husband_hindi'">nandoi</dialog>
+
+            <dialog case="'brother-in-law_younger_sisters_husband'">brother-in-law (younger sister’s husband)</dialog>
+            <dialog case="'brother-in-law_younger_sisters_husband_hindi'">bahnoi</dialog>
+
+            <dialog case="'grandfather_fathers_father'">grandfather (father’s father)</dialog>
+            <dialog case="'grandfather_fathers_father_hindi'">dadaji</dialog>
+
+            <dialog case="'grandfather_mothers_father'">grandfather (mother’s father)</dialog>
+            <dialog case="'grandfather_mothers_father_hindi'">nanaji</dialog>
+
+            <dialog case="'grandmother_fathers_mother'">grandmother (father’s mother)</dialog>
+            <dialog case="'grandmother_fathers_mother_hindi'">dadiji</dialog>
+
+            <dialog case="'grandmother_mothers_mother'">grandmother (mother’s mother)</dialog>
+            <dialog case="'grandmother_mothers_mother_hindi'">naniji</dialog>
+
+            <dialog case="'co_father-in-law'">co-father-in-law</dialog>
+            <dialog case="'co_father-in-law_hindi'">samdhi</dialog>
+
+            <dialog case="'co_mother-in-law'">co-mother-in-law</dialog>
+            <dialog case="'co_mother-in-law_hindi'">samdhin</dialog>
+
+            <dialog case="'son-in-law'">son-in-law</dialog>
+            <dialog case="'son-in-law_hindi'">damaad</dialog>
+
+            <dialog case="'daughter-in-law'">daughter-in-law</dialog>
+            <dialog case="'daughter-in-law_hindi'">bahu</dialog>
+
+            <dialog case="'mother-in-law'">mother-in-law</dialog>
+            <dialog case="'mother-in-law_hindi'">saas</dialog>
+
+            <dialog case="'father-in-law'">father-in-law</dialog>
+            <dialog case="'father-in-law_hindi'">sasur</dialog>
+        </switch>
+        <dialog><var name="relationship"/></dialog>
+    </first>
+</cat>
+

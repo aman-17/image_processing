@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalHello" locale="en" xmlns="urn:apple:names:siri:cat:1.4">
+	<conditions>
+		<condition name="evening">
+			<and>
+				<expression name="now.isEvening" op=""/>
+				<expression name="dialogState.familyHoursSinceLastUse" op="gt" value="5"/>
+			</and>
+		</condition>
+		<condition name="afternoon">
+			<and>
+				<expression name="now.isAfternoon" op=""/>
+				<expression name="dialogState.familyHoursSinceLastUse" op="gt" value="5"/>
+			</and>
+		</condition>
+		<condition name="morning">
+			<and>
+				<expression name="now.isMorning" op=""/>
+				<expression name="dialogState.familyHoursSinceLastUse" op="gt" value="5"/>
+			</and>
+		</condition>
+		<condition name="dialog_driven_not_Watch">
+			<and>
+				<expression name="device.isDialogDriven"/>
+				<not>
+					<expression name="device.isWatch"/>
+				</not>
+			</and>
+		</condition>
+		<condition name="first_ever_conversation_not_HomePod">
+			<and>
+				<expression name="dialogState.familyUsageCount" op="eq" value="1"/>
+				<not>
+					<expression name="device.isHomePod"/>
+				</not>
+			</and>
+		</condition>
+	</conditions>
+	<phrases>
+		<first phrase="greeting">
+			<random condition="first_ever_conversation_not_HomePod" phrase="">
+				<text>Hi, I’m Siri.</text>
+				<text>Hello there, I’m Siri.</text>
+			</random>
+			<text condition="morning">Good morning.</text>
+			<text condition="afternoon">Good afternoon.</text>
+			<text condition="evening">Good evening.</text>
+			<random>
+				<text>Hello.</text>
+				<text>Hi.</text>
+				<text>Hello there.</text>
+				<text>Hi there.</text>
+			</random>
+		</first>
+		<random phrase="offer_to_help">
+			<text>What can I do for you?</text>
+			<text>How can I help?</text>
+		</random>
+	</phrases>
+	<all>
+		<first phrase="">
+			<dialog condition="dialog_driven_not_Watch" id="greeting_offer#listenAfterSpeaking"><phrase name="greeting"/> <phrase name="offer_to_help"/></dialog>
+			<dialog><phrase name="greeting"/></dialog>
+		</first>
+	</all>
+</cat>

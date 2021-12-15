@@ -1,0 +1,48 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../../shared/cam.scnz"
+  },
+  "emoji" : "😉",
+  "identifier" : "winking_face",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_L" : 1.0424878597259521,
+    "browInnerUp" : 0.2312752902507782,
+    "browOuterUp_R" : 0.39944911003112793,
+    "cheekSquint_L" : 0.90804100036621094,
+    "cheekSquint_R" : 0.26446273922920227,
+    "eyeBlink_L" : 0.83764702081680298,
+    "eyeBlink_R" : 0.077465243637561798,
+    "eyeLookDown_L" : 0.060606066137552261,
+    "eyeLookDown_R" : 0.063360877335071564,
+    "eyeLookIn_R" : 0.15977963805198669,
+    "eyeLookOut_L" : 0.15151515603065491,
+    "eyeSquint_L" : 0.96108216047286987,
+    "eyeSquint_R" : 0.22865022718906403,
+    "jawOpen" : 0.45730021595954895,
+    "mouthDimple_L" : 0.96969687938690186,
+    "mouthDimple_R" : 0.61707991361618042,
+    "mouthLeft" : 0.34999999403953552,
+    "mouthSmile_L" : 1,
+    "mouthSmile_R" : 0.66150742769241333,
+    "neckOrientation" : [
+      -0.0063716759905219078,
+      -0.06563238799571991,
+      -0.096178814768791199,
+      0.99317747354507446
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ],
+    "noseSneer_L" : 0.21253287792205811
+  },
+  "props" : [
+
+  ]
+}

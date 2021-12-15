@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#AppSuggestionGrounding" locale="en">
+    <conditions>
+        <condition name="shouldShowAppSuggestion" note="Checks if we should show grounding dialog for suggesting app">
+            <and>
+                <expression name="dialogState.usageCount" op="lt" value="2"/>
+                <expression name="dialogState.hoursSinceLastUse" op="gt" value="24"/>
+            </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="appName">
+            <text condition="app.name"><var name="app.name"/></text>
+            <text>this app</text>
+        </first>
+    </phrases>
+    <all>
+        <dialog condition="shouldShowAppSuggestion">It looks like you usually do this with <phrase name="appName"/>.</dialog>
+    </all>
+</cat>

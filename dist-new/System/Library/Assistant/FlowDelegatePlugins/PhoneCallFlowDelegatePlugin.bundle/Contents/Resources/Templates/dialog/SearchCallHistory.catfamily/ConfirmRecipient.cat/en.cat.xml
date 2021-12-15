@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ConfirmRecipient" locale="en">
+  <conditions>
+      <condition name="hasRecipientToConfirm">
+          <expression name="recipientToConfirm" op="defined"/>
+      </condition>
+      <condition name="hasHandleLabel">
+          <expression name="recipientToConfirm.personHandle.label" op="nonempty"/>
+      </condition>
+  </conditions>
+  <phrases>
+      <first phrase="formattedRecipientToConfirm">
+        <text condition="hasHandleLabel"><var name="recipientToConfirm"/> - <var name="recipientToConfirm.personHandle.label"/></text>
+        <text><var name="recipientToConfirm"/></text>
+      </first>
+  </phrases>
+  
+  <first>
+      <dialog>Did you mean <phrase name="formattedRecipientToConfirm"/>?</dialog>
+      <dialog id="NoRecipientToConfirm">No value to confirm.</dialog>
+  </first>
+</cat>

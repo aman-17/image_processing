@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#DateTimeRangeFormatter">
+    <meta name="description" value=""/>
+    <meta name="category" value="UsedForSnippet"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="startDate" type="dialog.Calendar" description="The start date in dateRange being disambiguated."/>
+        <parameter name="endDate" type="dialog.Calendar" description="The end date in dateRange being disambiguated."/>
+    </parameters>
+</cat>

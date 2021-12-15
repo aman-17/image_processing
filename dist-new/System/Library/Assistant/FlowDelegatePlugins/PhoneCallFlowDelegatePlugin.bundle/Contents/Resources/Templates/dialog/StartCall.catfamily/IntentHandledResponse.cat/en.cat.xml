@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#IntentHandledResponse" locale="en">
+  <conditions>
+    <condition name="audioCall" note="is this an audio call?">
+      <expression name="intent.callCapability" op="eq" value="'AUDIO_CALL'"/>
+    </condition>
+    
+    <condition name="videoCall" note="is this a video call?">
+      <expression name="intent.callCapability" op="eq" value="'VIDEO_CALL'"/>
+    </condition>
+
+    <condition name="groupFaceTimeCallFourOrMore" note="is this a Group FaceTime call with 4 recipients or more?">
+      <and>
+        <expression name="intent.preferredCallProvider" op="eq" value="'FACETIME_PROVIDER'"/>
+        <expression name="intent.contacts.list.length" op="gt" value="3"/>
+      </and>
+    </condition>
+    
+    <condition name="faceTime" note="is this a FaceTime call?">
+      <expression name="intent.preferredCallProvider" op="eq" value="'FACETIME_PROVIDER'"/>
+    </condition>
+
+    <condition name="faceTimeAudio" note="is this a FaceTime Audio call?">
+      <and>
+        <expression name="intent.preferredCallProvider" op="eq" value="'FACETIME_PROVIDER'"/>
+        <expression name="intent.callCapability" op="eq" value="'AUDIO_CALL'"/>
+      </and>
+    </condition>
+    
+    <condition name="isDialogButtonTap" note="TODO Does this work">
+      <expression name="device.inputOrigin" op="eq" value="'dialogButtonTap'"/>
+    </condition>
+
+    <condition name="isRedialOrCallback">
+      <or>
+        <expression name="intent.destinationType" op="eq" value="'REDIAL_DESTINATION'"/>
+        <expression name="intent.destinationType" op="eq" value="'CALL_BACK_DESTINATION'"/>
+      </or>
+    </condition>
+
+    <condition name="showAppName" note="should we show the calling app name?">
+      <and>
+        <expression name="appName" op="defined"/>
+        <or>
+          <not><expression name="isFirstPartyApp"/></not>
+          <expression name="isWalkieTalkie"/>
+        </or>
+      </and>
+    </condition>
+    
+    <condition name="speakerRoute" note="is audio coming out of a speaker?">
+      <and>
+        <not><expression name="device.isHomePod"/></not>
+        <expression name="intent.audioRoute" op="eq" value="'SPEAKERPHONE_AUDIO_ROUTE'"/>
+      </and>
+    </condition>
+    
+    <condition name="haveContacts" note="do we have a non-empty list of contacts?">
+      <expression name="intent.contacts.list.length" op="gt" value="0"/>
+    </condition>
+    
+    <condition name="haveSmsGroupName" note="do we have a non-empty list of smsGroupName?">
+      <expression name="intent.callGroups.length" op="gt" value="0"/>
+    </condition>
+    
+    <condition name="fourOrMoreContacts" note="do we have four or more contacts?">
+      <expression name="intent.contacts.list.length" op="gt" value="3"/>
+    </condition>
+
+    <condition name="isUnnamedPhoneNumber">
+      <expression name="intent.contacts.isUnnamedPhoneNumber"/>
+    </condition>
+    
+    <condition name="hasHandleLabels">
+      <expression name="intent.contacts.hasHandleLabels"/>
+    </condition>
+
+  </conditions>
+ 
+  <phrases>
+    <random phrase="onSpeaker" note="add 'on speaker' if we have a speaker audio route">
+      <text condition="speakerRoute"> on speaker</text>
+    </random>
+    
+    <random phrase="withAppName" note="add calling app name if defined">
+      <text condition="showAppName"> with <var name="appName"/></text>
+    </random>
+
+    <first phrase="contactsListForCall">
+        <text condition="hasHandleLabels"><var list="and" itemformat="{toString} - {personHandle.label}" name="intent.contacts.list"/></text>
+        <text><var list="and" itemformat="{toString}" name="intent.contacts.list"/></text>
+    </first>
+
+    <first phrase="contactsListForCallFaceTime">
+        <text>to <var list="and" itemformat="{toString}" name="intent.contacts.list"/></text>
+    </first>
+    
+    <first phrase="smsGroupNameForFaceTime">
+        <text>to <var name="intent.callGroups[0].groupName"/></text>
+    </first>
+
+    <first phrase="unnamedPhoneNumberForCall">
+        <text condition="isRedialOrCallback"><phrase name="contactsListForCall"/></text>
+        <text condition="device.isDisplayDriven">now</text>
+        <text><phrase name="contactsListForCall"/></text>
+    </first>
+    
+    <first phrase="unnamedPhoneNumberForCallFaceTime">
+        <text condition="isRedialOrCallback"><phrase name="contactsListForCallFaceTime"/></text>
+        <text condition="device.isDisplayDriven">now</text>
+        <text><phrase name="contactsListForCallFaceTime"/></text>
+    </first>
+
+    <first phrase="targetForCall" note="output list of contacts without a 'to' prefix">
+      <text condition="isDialogButtonTap">now</text>
+      <text condition="isUnnamedPhoneNumber"><phrase name="unnamedPhoneNumberForCall"/></text>
+      <text condition="haveContacts"><phrase name="contactsListForCall"/></text>
+      <text>now</text>
+    </first>
+
+    <first phrase="targetForCallFaceTime" note="output list of contacts without a 'to' prefix">
+      <text condition="isDialogButtonTap">now</text>
+      <text condition="haveSmsGroupName"><phrase name="smsGroupNameForFaceTime"/></text>
+      <text condition="isUnnamedPhoneNumber"><phrase name="unnamedPhoneNumberForCallFaceTime"/></text>
+      <text condition="fourOrMoreContacts"></text>
+      <text condition="haveContacts"><phrase name="contactsListForCallFaceTime"/></text>
+      <text>now</text>
+    </first>
+
+  </phrases>
+
+    <first>
+      <dialog condition="faceTimeAudio" id="faceTimeAudioWithGrounding">
+         Ok, <var name="user.groundingIfNeeded"/>, making a FaceTime Audio call <phrase name="targetForCallFaceTime"/><opt><phrase name="onSpeaker"/></opt>…
+      </dialog>
+      <dialog condition="faceTimeAudio" id="faceTimeAudio">
+        Making a FaceTime Audio call <phrase name="targetForCallFaceTime"/><opt><phrase name="onSpeaker"/></opt>…
+      </dialog>
+      
+      <dialog condition="groupFaceTimeCallFourOrMore" id="groupFaceTime">
+        Starting a Group FaceTime call…
+      </dialog>
+
+      <dialog condition="faceTime" id="faceTimeWithGrounding">
+         Ok, <var name="user.groundingIfNeeded"/>, making a FaceTime call <phrase name="targetForCallFaceTime"/>…
+      </dialog>
+      <dialog condition="faceTime" id="faceTime">
+        Making a FaceTime call <phrase name="targetForCallFaceTime"/>…
+      </dialog>
+    
+      <dialog condition="videoCall" id="videoCallWithGrounding">
+        Ok, <var name="user.groundingIfNeeded"/>, making a video call <phrase name="targetForCallFaceTime"/><phrase name="withAppName"/>…
+      </dialog>
+      <dialog condition="videoCall" id="videoCall">
+        Making a video call <phrase name="targetForCallFaceTime"/><phrase name="withAppName"/>…
+      </dialog>
+
+      <dialog condition="audioCall" id="audioCallWithGrounding">
+        Ok, <var name="user.groundingIfNeeded"/>, calling <phrase name="targetForCall"/><opt><phrase name="withAppName"/></opt><opt><phrase name="onSpeaker"/></opt>…
+      </dialog>
+
+      <dialog condition="audioCall" id="audioCall">
+        Calling <phrase name="targetForCall"/><opt><phrase name="withAppName"/></opt><opt><phrase name="onSpeaker"/></opt>…
+      </dialog>
+
+      <dialog id="generic">Calling now…</dialog>
+    </first>
+
+</cat>

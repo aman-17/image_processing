@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayMusicLikeArtist" locale="en">
+    <conditions>
+       <condition name="attributionWithFallbackUsername" note="attribution required with a fallback user">
+           <and>
+               <expression name="isAppAttributionRequired"/>
+               <expression name="fallbackUsername" op="nonempty"/>
+               <not>
+                   <expression name="isPersonalized"/>
+               </not>
+           </and>
+       </condition>
+       <condition name="attributionWithDialogMemory" note="attribution required using dialog memory">
+           <and>
+               <expression name="isAppAttributionRequired"/>
+               <expression name="useDialogMemoryForAppAttribution"/>
+           </and>
+       </condition>
+       <condition name="appSpecifiedOrAttributionRequired">
+           <and>
+               <expression name="app.localizedName" op="nonempty"/>
+               <or>
+                   <expression name="isAppAttributionRequired"/>
+                   <expression name="isAppSpecified"/>
+               </or>
+           </and>
+       </condition>
+       <condition name="isPersonalizedNext">
+           <and>
+               <expression name="isPlaybackQueueLocationNext"/>
+               <expression name="isPersonalized"/>
+           </and>
+       </condition>
+       <condition name="isPersonalizedLater">
+           <and>
+               <expression name="isPlaybackQueueLocationLater"/>
+               <expression name="isPersonalized"/>
+           </and>
+       </condition>
+       <condition name="areSpeakerNamesPresent">
+           <or>
+               <expression name="wha.firstSpeakerName"/>
+               <expression name="wha.secondSpeakerName"/>
+           </or>
+       </condition>
+       <condition name="areSpeakerRoomsPresent">
+           <or>
+               <expression name="wha.firstSpeakerRoom"/>
+               <expression name="wha.secondSpeakerRoom"/>
+           </or>
+       </condition>
+       <condition name="areBothPermanentNamesPresent">
+           <and>
+               <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+               <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+           </and>
+       </condition>
+       <condition name="isPermanentNameAndRoomNamePresent">
+           <and>
+               <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+               <expression name="wha.firstRoomNameFromSpokenEntities"/>
+               <or>
+                   <not>
+                       <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                   </not>
+                   <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+               </or>
+           </and>
+       </condition>
+       <condition name="isOnlyFirstPermanentNamePresent">
+           <and>
+               <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+               <or>
+                   <not>
+                       <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                   </not>
+                   <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+               </or>
+               <or>
+                   <not>
+                       <expression name="wha.firstRoomNameFromSpokenEntities"/>
+                   </not>
+                   <expression name="wha.firstRoomNameFromSpokenEntities" op="empty"/>
+               </or>
+           </and>
+       </condition>
+    </conditions>
+    <phrases>
+        <first phrase="appSpecified">
+            <text condition="attributionWithFallbackUsername"><opt><var name="fallbackUsername" inflect="genitive"/> <var name="app.localizedName"/></opt></text>
+            <text condition="attributionWithDialogMemory"><opt><var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="appSpecifiedOrAttributionRequired"><opt><var name="app.localizedName"/></opt></text>
+            <text/>
+        </first>
+        <first phrase="appSpecifiedFrom">
+            <text condition="appSpecifiedOrAttributionRequired"> from <phrase name="appSpecified"/></text>
+            <text/>
+        </first>
+        <first phrase="appSpecifiedBy">
+            <text condition="appSpecifiedOrAttributionRequired"> by <phrase name="appSpecified"/></text>
+            <text/>
+        </first>
+        <first phrase="appSpecifiedOn">
+            <text condition="appSpecifiedOrAttributionRequired"> on <phrase name="appSpecified"/></text>
+            <text/>
+        </first>
+        <first phrase="appSpecifiedYour">
+            <text condition="attributionWithFallbackUsername"><opt> <var name="fallbackUsername" inflect="genitive"/> <var name="app.localizedName"/></opt></text>
+            <text condition="attributionWithDialogMemory"><opt> your <var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="appSpecifiedOrAttributionRequired"><opt> your <var name="app.localizedName"/></opt></text>
+            <text> your</text>
+        </first>
+        <first phrase="MUI" note="Multi User Introduction">
+            <text condition="isGrounding">OK, <var name="user.groundingIfNeeded"/>, </text>
+            <text/>
+        </first>
+        <first phrase="artist">
+            <text><say-as interpret-as="music"><var name="artist"/></say-as></text>
+        </first>
+        <first phrase="groupsDialog">
+            <text condition="areBothPermanentNamesPresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and <var name="wha.secondPermanentNameFromSpokenEntities"/></text>
+            <text condition="isPermanentNameAndRoomNamePresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and in the <var name="wha.firstRoomNameFromSpokenEntities"/></text>
+            <text condition="isOnlyFirstPermanentNamePresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/></text>
+            <text/>
+        </first>
+        <first phrase="whaDialog">
+            <text condition="wha.isAllSpeakers"> everywhere</text>
+            <text condition="wha.hasThreeOrMoreRooms"> in multiple rooms</text>
+            <text condition="wha.hasGroups"><phrase name="groupsDialog"/></text>
+            <text condition="areSpeakerNamesPresent"> on the <var name="wha.firstSpeakerName"/><opt> and <var name="wha.secondSpeakerName"/></opt></text>
+            <text condition="areSpeakerRoomsPresent"> in the <var name="wha.firstSpeakerRoom"/><opt> and <var name="wha.secondSpeakerRoom"/></opt></text>
+            <text/>
+        </first>
+    </phrases>
+    <first>
+        <random condition="isPersonalizedNext">
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">a</transform> personalized station inspired by <phrase name="artist"/><phrase name="appSpecifiedFrom"/> is coming up next…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">a</transform> personalized station inspired by <phrase name="artist"/> is next in<phrase name="appSpecifiedYour"/> queue…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">music</transform> like <phrase name="artist"/> picked just for you is coming up next<phrase name="appSpecifiedFrom"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">music</transform> like <phrase name="artist"/> picked just for you is next in<phrase name="appSpecifiedYour"/> queue…</dialog>
+        </random>
+        <random condition="isPersonalizedLater">
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">a</transform> personalized station inspired by <phrase name="artist"/> is now in<phrase name="appSpecifiedYour"/> queue…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">music</transform> like <phrase name="artist"/> picked just for you is now in<phrase name="appSpecifiedYour"/> queue…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">a</transform> personalized station inspired by <phrase name="artist"/> is coming up soon<phrase name="appSpecifiedOn"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">a</transform> personalized station inspired by <phrase name="artist"/> is coming up later<phrase name="appSpecifiedOn"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">music</transform> like <phrase name="artist"/> picked just for you is coming up soon<phrase name="appSpecifiedOn"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">music</transform> like <phrase name="artist"/> picked just for you is coming up later<phrase name="appSpecifiedOn"/>…</dialog>
+        </random>
+        <random condition="isPersonalized">
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">here’s</transform> a personalized station inspired by <phrase name="artist"/><phrase name="appSpecifiedFrom"/><phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">here’s</transform> some music like <phrase name="artist"/>, picked just for you<phrase name="appSpecifiedBy"/><phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing music similar to <phrase name="artist"/>, picked just for you<phrase name="appSpecifiedBy"/><phrase name="whaDialog"/>…</dialog>
+        </random>
+        <random condition="isPlaybackQueueLocationNext">
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">a</transform> station inspired by <phrase name="artist"/><phrase name="appSpecifiedOn"/> is coming up next…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">a</transform> station inspired by <phrase name="artist"/> is next in<phrase name="appSpecifiedYour"/> queue…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">music</transform> like <phrase name="artist"/> is coming up next<phrase name="appSpecifiedOn"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">music</transform> like <phrase name="artist"/> is next in<phrase name="appSpecifiedYour"/> queue…</dialog>
+        </random>
+        <random condition="isPlaybackQueueLocationLater">
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">a</transform> station inspired by <phrase name="artist"/> is now in<phrase name="appSpecifiedYour"/> queue…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">music</transform> like <phrase name="artist"/> is coming up later<phrase name="appSpecifiedOn"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">a</transform> station inspired by <phrase name="artist"/> is coming up soon<phrase name="appSpecifiedOn"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">music</transform> like <phrase name="artist"/> is now in<phrase name="appSpecifiedYour"/> queue…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">a</transform> station inspired by <phrase name="artist"/> is coming up later<phrase name="appSpecifiedOn"/>…</dialog>
+        </random>
+        <random>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">here’s</transform> a station inspired by <phrase name="artist"/><phrase name="appSpecifiedOn"/><phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">here’s</transform> some music like <phrase name="artist"/><phrase name="appSpecifiedFrom"/><phrase name="whaDialog"/>…</dialog>
+            <dialog><phrase name="MUI"/><transform mode="capitalizeSentence">now</transform> playing music similar to <phrase name="artist"/><phrase name="appSpecifiedFrom"/><phrase name="whaDialog"/>…</dialog>
+        </random>
+    </first>
+</cat>

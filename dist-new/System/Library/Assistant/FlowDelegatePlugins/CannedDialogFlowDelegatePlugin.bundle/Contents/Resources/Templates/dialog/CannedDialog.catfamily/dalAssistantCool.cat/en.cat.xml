@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalAssistantCool" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<random phrase="">
+			<dialog>Well, you’re sorta cool yourself, <var name="user"/>.</dialog>
+			<dialog>I’ve always wanted to be cool.</dialog>
+			<dialog>Really? Cool!</dialog>
+			<dialog condition="usage_count_over_6">I know.</dialog>
+		</random>
+	</all>
+	<conditions>
+		<condition name="usage_count_over_6">
+			<expression name="dialogState.usageCount" op="gt" value="6"/>
+		</condition>
+	</conditions>
+</cat>

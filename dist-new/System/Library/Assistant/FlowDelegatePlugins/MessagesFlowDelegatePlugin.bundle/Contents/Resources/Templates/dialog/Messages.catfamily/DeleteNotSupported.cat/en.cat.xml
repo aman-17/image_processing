@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="Messages#DeleteNotSupported" locale="en">
+    <random>
+        <dialog>Sorry, I can’t delete messages.</dialog>
+        <dialog>I can’t delete messages. Sorry about that!</dialog>
+    </random>
+</cat>

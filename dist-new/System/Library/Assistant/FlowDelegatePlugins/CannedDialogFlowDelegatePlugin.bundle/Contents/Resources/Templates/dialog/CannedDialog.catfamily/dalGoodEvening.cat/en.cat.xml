@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalGoodEvening" locale="en" xmlns="urn:apple:names:siri:cat:1.4">
+	<conditions>
+		<condition name="not_afternoon">
+			<expression name="now.isAfternoon" op="eq" value="false"/>
+		</condition>
+		<condition name="not_homepod_and_has_user">
+			<and>
+				<expression name="device.isHomePod" op="eq" value="false"/>
+				<expression name="user" op="nonempty"/>
+			</and>
+		</condition>
+		<condition name="afternoon_and_has_not_been_used_in_3_hours">
+			<and>
+				<expression name="now.isAfternoon"/>
+				<expression name="dialogState.hoursSinceLastUse" op="gt" value="3"/>
+			</and>
+		</condition>
+		<condition name="evening_or_night">
+			<or>
+				<expression name="now.isEvening"/>
+				<expression name="now.isNight"/>
+			</or>
+		</condition>
+	</conditions>
+	<phrases/>
+	<all>
+		<first>
+			<random condition="evening_or_night" phrase="">
+				<dialog>Good evening.</dialog>
+				<dialog condition="not_homepod_and_has_user">Good evening, <var name="user"/>.</dialog>
+			</random>
+			<dialog condition="afternoon_and_has_not_been_used_in_3_hours">Good news, it’s only <var name="now.timeDescriptive"/>.</dialog>
+			<all phrase="">
+				<random phrase="">
+					<random condition="not_homepod_and_has_user" phrase="">
+						<dialog><print>Hi, <var name="user"/>.</print><speak>Hi <var name="user"/>.</speak></dialog>
+						<dialog><print>Hello, <var name="user"/>.</print><speak>Hello <var name="user"/>.</speak></dialog>
+						<dialog><print>Hey, <var name="user"/>.</print><speak>Hey <var name="user"/>.</speak></dialog>
+					</random>
+					<random phrase="">
+						<dialog>Hi.</dialog>
+						<dialog>Hi there.</dialog>
+						<dialog>Hello.</dialog>
+						<dialog>Hello there.</dialog>
+						<dialog>Hey there.</dialog>
+					</random>
+				</random>
+				<random condition="not_afternoon" phrase="">
+					<dialog><print>It’s <var name="now.timeDescriptive"/>, by the way.</print><speak>It’s <var name="now.timeDescriptive"/> by the way.</speak></dialog>
+					<dialog>By the way, it’s <var name="now.timeDescriptive"/>.</dialog>
+				</random>
+			</all>
+		</first>
+	</all>
+</cat>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalGoodMorning" xmlns="urn:apple:names:siri:cat:1.4">
+	<meta name="description" value="User said “Good morning” (and it didn’t trigger a Home Automation scene)."/>
+	<meta name="category" value="Social"/>
+	<meta name="subcategory" value="Daily Rituals"/>
+	<meta name="readyForLoc" value="false"/>
+	<meta name="listenAfterSpeaking" value="false"/>
+</cat>

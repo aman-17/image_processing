@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="listShortcuts#introduceShortcuts">
+    <phrases>
+        <first phrase="multiUserIntroduction">
+            <text condition="user.groundingIfNeeded">OK, <var name="user.groundingIfNeeded"/>. </text>
+            <text></text>
+        </first>
+    </phrases>
+    <conditions>
+        <condition name="hasAppTitle" note="User has specified app title">
+            <expression name="appTitle" op="nonempty"/>
+        </condition>
+    </conditions>
+    <all>
+        <first>
+            <dialog condition="hasAppTitle">
+                <phrase name="multiUserIntroduction"/>You have <var name="shortcutCount" number="asWords"/> <var name="appTitle"/> <quantity value="shortcutCount" includeValue="false"><one>shortcut</one><other>shortcuts</other></quantity>.
+            </dialog>
+            <dialog>
+                <phrase name="multiUserIntroduction"/>You have <var name="shortcutCount" number="asWords"/> <quantity value="shortcutCount" includeValue="false"><one>shortcut</one><other>shortcuts</other></quantity>.
+            </dialog>
+        </first>
+        <dialog condition="hasMultiplePages">Here are the first <var name="pageSize" number="asWords"/>:</dialog>
+    </all>
+</cat>

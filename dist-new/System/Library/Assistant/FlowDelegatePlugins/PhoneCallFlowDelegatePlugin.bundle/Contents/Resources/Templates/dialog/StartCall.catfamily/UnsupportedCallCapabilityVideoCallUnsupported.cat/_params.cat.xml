@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#UnsupportedCallCapabilityVideoCallUnsupported">
+    <meta name="description" value="Unsupported dialog for callCapability slot when reason is VIDEO_CALL_UNSUPPORTED"/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+</cat>

@@ -1,0 +1,757 @@
+{
+    "Name" : "CameraGraph",
+    "Targets" : [
+        {
+            "Name" : "Color0",
+            "Connections" : [
+                {
+                    "ToMember" : ["sampleCount"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["msaaSamples"]
+                }
+            ]
+        },
+        {
+            "Name" : "Depth",
+            "Description" : {
+                "Format" : "Depth32Float"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["sampleCount"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["msaaSamples"]
+                }
+            ]
+        },
+        {
+            "Name" : "SegmentationGuideScratchTexture",
+            "Description" : {
+                "Type" : "MemoryManaged"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideScratchWidth"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideScratchHeight"]
+                },
+                {
+                    "ToMember" : ["format"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideFormat"]
+                }
+            ]
+        },
+        {
+            "Name" : "SegmentationGuideTexture",
+            "Description" : {
+                "Type" : "MemoryManaged"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideWidth"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideHeight"]
+                },
+                {
+                    "ToMember" : ["format"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideFormat"]
+                }
+            ]
+        },
+        {
+            "Name" : "SegmentationCoefficientsTextureFG",
+            "Description" : {
+                "Type" : "MemoryManaged"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideWidth"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideHeight"]
+                },
+                {
+                    "ToMember" : ["format"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["coefficientsFormat"]
+                }
+            ]
+        },
+        {
+            "Name" : "SegmentationCoefficientsTextureBG",
+            "Description" : {
+                "Type" : "MemoryManaged"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideWidth"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideHeight"]
+                },
+                {
+                    "ToMember" : ["format"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["coefficientsFormat"]
+                }
+            ]
+        },
+        {
+            "Name" : "DilatedDepthTexture",
+            "Description" : {
+                "Type" : "MemoryManaged"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideWidth"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["guideHeight"]
+                },
+                {
+                    "ToMember" : ["format"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["dilatedFormat"]
+                }
+            ]
+        },
+        {
+            "Name" : "CompositionAlpha",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Format" : "R8Unorm"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["width"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["compositionAlphaWidth"]
+                },
+                {
+                    "ToMember" : ["height"],
+                    "FromType" : "ARSegmentationConnectionData",
+                    "FromMember" : ["compositionAlphaHeight"]
+                }
+            ]
+        },
+        {
+            "Name" : "arProjectiveShadowMap"
+        },
+        {
+            "Name" : "ShadowMapAtlas"
+        }
+    ],
+    "Buffers" : [
+        {
+            "Name" : "BufferClusterAABB",
+            "Description" : {
+                "Type" : "MemoryManaged"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["length"],
+                    "FromType" : "ClusterData",
+                    "FromMember" : ["byteSizeClusterAABBs"]
+                }
+            ]
+        },
+        {
+            "Name" : "IntersectionIndexTable",
+            "Description" : {
+                "Type" : "MemoryManaged"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["length"],
+                    "FromType" : "ClusterData",
+                    "FromMember" : ["byteSizeIntersectionIndexTable"]
+                }
+            ]
+        },
+        {
+            "Name" : "IntersectionResultTable",
+            "Description" : {
+                "Type" : "MemoryManaged"
+            },
+            "Connections" : [
+                {
+                    "ToMember" : ["length"],
+                    "FromType" : "ClusterData",
+                    "FromMember" : ["byteSizeIntersectionResultTable"]
+                }
+            ]
+        },
+        {
+            "Name" : "IntersectionCount",
+            "Description" : {
+                "Type" : "MemoryManaged",
+                "Length" : 4
+            }
+        }
+    ],
+    "Nodes" : [
+        {
+            "CameraSetup" : {
+                "Name" : "CameraSetup",
+                "UpdateSceneMaterialData" : true,
+                "FrustumCulling" : true
+            }
+        },
+        {
+            "GenerateClusterAABBNode" : {
+                "Name" : "GenerateClusterAABB",
+                "Library" : "engine:default.metallib",
+                "ComputeFunction" : "generateClusterAABB",
+                "BufferReads" : [
+                ],
+                "BufferWrites" : [
+                    {
+                        "BufferHandle" : "BufferClusterAABB",
+                        "Settings" : {
+                            "Type" : "WriteCompute"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "FillBuffer" : {
+                "Name" : "MemzeroIntersectionCount",
+                "FillValue" : 0,
+                "BufferWrites" : [
+                    {
+                        "BufferHandle" : "IntersectionCount",
+                        "Settings" : {
+                            "Type" : "WriteBlit"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "ComputeClusterProbeIntersectionNode" : {
+                "Name" : "ComputeClusterProbeIntersection",
+                "Library" : "engine:default.metallib",
+                "ComputeFunction" : "computeClusterProxyIntersection",
+                "BufferReads" : [
+                    {
+                        "BufferHandle" : "BufferClusterAABB"
+                    }
+                ],
+                "BufferWrites" : [
+                    {
+                        "BufferHandle" : "IntersectionIndexTable"
+                    },
+                    {
+                        "BufferHandle" : "IntersectionResultTable"
+                    },
+                    {
+                        "BufferHandle" : "IntersectionCount"
+                    }
+                ]
+            }
+        },
+        {
+            "DebugClusterAABBNode" : {
+                "Name" : "DebugClusterAABB",
+                "Enabled" : false,
+                "Material" : "engine:debugAREmitterClusterAABB.rematerial",
+                "BufferReads" : [
+                    {
+                        "BufferHandle" : "BufferClusterAABB"
+                    }
+                ],
+                "TargetReads" : [
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "ARSegmentationDilationNode" : {
+                "Name" : "ARSegmentationDilationNode",
+                "Library" : "engine:default.metallib",
+                "DilatedDepthTexture" : "DilatedDepthTexture"
+            }
+        },
+        {
+            "ARSegmentationGenerateGuideNode" : {
+                "Name" : "ARSegmentationGenerateGuideNode",
+                "Library" : "engine:default.metallib",
+                "GuideScratchTexture" : "SegmentationGuideScratchTexture",
+                "GuideTexture" : "SegmentationGuideTexture"
+            }
+        },
+        {
+            "ARSegmentationDualGuidedFilterNode" : {
+                "Name" : "ARSegmentationDualGuidedFilterNode",
+                "GuideTexture" : "SegmentationGuideTexture",
+                "CoefficientsTextureFG" : "SegmentationCoefficientsTextureFG",
+                "CoefficientsTextureBG" : "SegmentationCoefficientsTextureBG"
+            }
+        },
+        {
+            "ARSegmentationCompositeNode" : {
+                "Name" : "ARSegmentationCompositeNode",
+                "Material" : "arSegmentationComposite.rematerial",
+                "TechniqueName" : "fullscreen",
+                "TargetReads" : [
+                    { "TargetHandle" : "DilatedDepthTexture" },
+                    { "TargetHandle" : "SegmentationCoefficientsTextureFG" },
+                    { "TargetHandle" : "SegmentationCoefficientsTextureBG" }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ClearColor" : [0.0, 0.0, 0.0, 0.0]
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName" : "dilatedDepthTexture",
+                        "TargetHandle" : "DilatedDepthTexture"
+                    },
+                    {
+                        "BindingName" : "coefficientsTextureFG",
+                        "TargetHandle" : "SegmentationCoefficientsTextureFG"
+                    },
+                    {
+                        "BindingName" : "coefficientsTextureBG",
+                        "TargetHandle" : "SegmentationCoefficientsTextureBG"
+                    }
+                ]
+            }
+        },
+        {
+            "ARSegmentationCompositeNode" : {
+                "Name" : "ARSegmentationCompositeAlphaNode",
+                "Material" : "arSegmentationComposite.rematerial",
+                "Enabled" : false,
+                "TechniqueName" : "fullscreen_alpha",
+                "TargetReads" : [
+                    { "TargetHandle" : "SegmentationCoefficientsTextureFG" },
+                    { "TargetHandle" : "SegmentationCoefficientsTextureBG" }
+                ],
+                "TargetWrites" : [
+                    {
+                    "TargetHandle" : "CompositionAlpha",
+                    "Settings" : {
+                        "AttachmentIndex" : 0,
+                        "ClearColor" : [0.0, 0.0, 0.0, 0.0]
+                    }
+                }
+                ],
+                "RenderGraphTextureCommands" : [
+                    {
+                        "BindingName" : "coefficientsTextureFG",
+                        "TargetHandle" : "SegmentationCoefficientsTextureFG"
+                    },
+                    {
+                        "BindingName" : "coefficientsTextureBG",
+                        "TargetHandle" : "SegmentationCoefficientsTextureBG"
+                    }
+                ]
+           }
+        },
+        {
+            "Mesh" : {
+                "Name" : "OcclusionNode",
+                "CullMode" : "CullModeNone",
+                "FillMode" : "Fill",
+                "MaterialPassName" : "Occlusion",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ClearColor" : [0.0, 0.0, 0.0, 0.0]
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "OpaqueNode",
+                "CullMode" : "CullModeBack",
+                "FillMode" : "Fill",
+                "MaterialPassName" : "OpaqueAR",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ShadowMapAtlas",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ClearColor" : [0.0, 0.0, 0.0, 0.0]
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ],
+                "BufferReads" : [
+                    {
+                        "BufferHandle" : "IntersectionIndexTable"
+                    },
+                    {
+                        "BufferHandle" : "IntersectionResultTable"
+                    },
+                    {
+                        "BufferHandle" : "IntersectionCount"
+                    }
+                ]
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "ProjectiveShadowReceiverNode",
+                "CullMode" : "CullModeBack",
+                "FillMode" : "Fill",
+                "MaterialPassName" : "ShadowReceiverPlaneTechnique",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "arProjectiveShadowMap",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0,
+                            "ClearColor" : [0.0, 0.0, 0.0, 0.0]
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "SkyboxNode",
+                "CullMode" : "CullModeNone",
+                "FillMode" : "Fill",
+                "MaterialPassName" : "Skybox",
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Debug" : {
+                "Name" : "DebugNode",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ShadowMapAtlas",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Mesh" : {
+                "Name" : "TransparentNode",
+                "CullMode" : "CullModeBack",
+                "MaterialPassName" : "TransparentAR",
+                "SortMode" : "BackToFront",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ShadowMapAtlas",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Text" : {
+                "Name" : "TextNode",
+                "TargetReads" : [
+                    {
+                        "TargetHandle" : "ShadowMapAtlas",
+                        "Settings" : {
+                            "IsOptional" : true
+                        }
+                    }
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "Resolve" : {
+                "Name" : "ResolveNode",
+                "TargetReads" : [
+                ],
+                "TargetWrites" : [
+                    {
+                        "TargetHandle" : "Color0",
+                        "Settings" : {
+                            "AttachmentIndex" : 0
+                        }
+                    },
+                    {
+                        "TargetHandle" : "Depth",
+                        "Settings" : {
+                            "Type" : "WriteDepth"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "Inputs" : [
+        {
+            "Lane" : "Color",
+            "Target": "Color0"
+        },
+        {
+            "Lane" : "Depth",
+            "Target": "Depth"
+        },
+        {
+            "Lane" : "ShadowMapAtlasLane",
+            "Target": "ShadowMapAtlas",
+            "InputOnly" : true,
+            "GraphScopeOverride" : "ShadowMapAtlasScope"
+        },
+        {
+            "Lane" : "projectiveShadowMapLane",
+            "Target": "arProjectiveShadowMap",
+            "InputOnly" : true,
+            "GraphScopeOverride" : "projectiveShadowMapScope"
+        }
+    ],
+    "Outputs" : [
+        {
+            "Lane" : "Color",
+            "Target" : "CompositionAlpha"
+        },
+        {
+            "Lane" : "Color",
+            "Target" : "Color0"
+        },
+        {
+            "Lane" : "Depth",
+            "Target" : "Depth"
+        },
+        {
+            "Lane" : "CompositionAlphaLane",
+            "Target" : "CompositionAlpha"
+        }
+    ],
+    "Connections" : [
+        {
+            "Name" : "ARSegmentationCompositeNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["TargetWrites", "1", "settings", "depthResolveFilter"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["depthResolveFilter"]
+                }
+            ]
+        },
+        {
+            "Name" : "OcclusionNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["TargetWrites", "1", "settings", "depthResolveFilter"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["depthResolveFilter"]
+                }
+            ]
+        },
+        {
+            "Name" : "OpaqueNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["TargetWrites", "1", "settings", "depthResolveFilter"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["depthResolveFilter"]
+                }
+            ]
+        },
+        {
+            "Name" : "ProjectiveShadowReceiverNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["TargetWrites", "1", "settings", "depthResolveFilter"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["depthResolveFilter"]
+                }
+            ]
+        },
+        {
+            "Name" : "SkyboxNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["TargetWrites", "1", "settings", "depthResolveFilter"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["depthResolveFilter"]
+                }
+            ]
+        },
+        {
+            "Name" : "DebugNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["TargetWrites", "1", "settings", "depthResolveFilter"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["depthResolveFilter"]
+                }
+            ]
+        },
+        {
+            "Name" : "TransparentNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["TargetWrites", "1", "settings", "depthResolveFilter"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["depthResolveFilter"]
+                }
+            ]
+        },
+        {
+            "Name" : "TextNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["TargetWrites", "1", "settings", "depthResolveFilter"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["depthResolveFilter"]
+                }
+            ]
+        },
+        {
+            "Name" : "ResolveNode",
+            "Connections" : [
+                {
+                    "ToMember" : ["TargetWrites", "1", "settings", "depthResolveFilter"],
+                    "FromType" : "CameraData",
+                    "FromMember" : ["depthResolveFilter"]
+                }
+            ]
+        }
+    ]
+}

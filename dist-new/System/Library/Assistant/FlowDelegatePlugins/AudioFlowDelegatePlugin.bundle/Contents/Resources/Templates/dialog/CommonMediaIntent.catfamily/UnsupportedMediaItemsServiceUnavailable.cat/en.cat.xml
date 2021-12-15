@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#UnsupportedMediaItemsServiceUnavailable" locale="en">
+    <conditions>
+        <condition name="usedMoreThanAnHourAgo" note="Checks if we should show app name">
+            <expression name="dialogState.minsSinceLastUse" op="gt" value="60"/>
+        </condition>
+    </conditions>
+    <first>
+        <dialog condition="usedMoreThanAnHourAgo">I’m having trouble reaching <var name="app.localizedName"/> right now.</dialog>
+        <dialog>Try again in a little while.</dialog>
+    </first>
+</cat>

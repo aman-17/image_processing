@@ -1,0 +1,45 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../../shared/cam.scnz"
+  },
+  "emoji" : "😡",
+  "identifier" : "pouting_face",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_L" : 0.97721624374389648,
+    "browDown_R" : 0.83372765779495239,
+    "eyeBlink_L" : 0.32771137356758118,
+    "eyeBlink_R" : 0.34129312634468079,
+    "eyeLookUp_L" : 0.071625351905822754,
+    "eyeLookUp_R" : 0.071625344455242157,
+    "eyeSquint_L" : 0.42148754000663757,
+    "eyeSquint_R" : 0.43526163697242737,
+    "mouthClose" : 0.11294765770435333,
+    "mouthDimple_L" : 0.38567489385604858,
+    "mouthDimple_R" : 0.25619852542877197,
+    "mouthFrown_L" : 0.65819686651229858,
+    "mouthFrown_R" : 0.62084019184112549,
+    "mouthShrugUpper" : 0.15977959334850311,
+    "mouthStretch_L" : 0.35537192225456238,
+    "mouthStretch_R" : 0.46831947565078735,
+    "mouthUpperUp_L" : 1,
+    "mouthUpperUp_R" : 0.87603306770324707,
+    "neckOrientation" : [
+      -0.052459880709648132,
+      0.014664488844573498,
+      0.12870067358016968,
+      0.99018627405166626
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ],
+    "noseSneer_L" : 0.97795194387435913,
+    "noseSneer_R" : 1
+  }
+}

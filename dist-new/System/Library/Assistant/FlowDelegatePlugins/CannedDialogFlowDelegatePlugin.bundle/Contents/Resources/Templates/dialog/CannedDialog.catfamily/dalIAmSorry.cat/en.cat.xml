@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalIAmSorry" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<random phrase="">
+			<dialog>It’s OK.</dialog>
+			<dialog>No need to apologize.</dialog>
+			<dialog>It’s all good.</dialog>
+			<dialog condition="used_in_the_last_five_minutes">It’s OK, <var name="user"/>.</dialog>
+		</random>
+	</all>
+	<conditions>
+		<condition name="used_in_the_last_five_minutes">
+			<expression name="dialogState.minsSinceLastUse" op="le" value="5"/>
+		</condition>
+	</conditions>
+	<phrases/>
+</cat>

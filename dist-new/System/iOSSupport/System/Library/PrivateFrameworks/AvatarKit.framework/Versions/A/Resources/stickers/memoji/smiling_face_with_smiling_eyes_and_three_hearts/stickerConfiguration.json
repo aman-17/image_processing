@@ -1,0 +1,68 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../shared/cam.scnz"
+  },
+  "emoji" : "🥰",
+  "identifier" : "smiling_face_with_smiling_eyes_and_three_hearts",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 0.25944572687149048,
+    "browOuterUp_L" : 0.4534003734588623,
+    "browOuterUp_R" : 0.44332480430603027,
+    "eyeBlink_L" : 1,
+    "eyeBlink_R" : 1,
+    "eyeSquint_L" : 1,
+    "eyeSquint_R" : 1,
+    "mouthDimple_L" : 1,
+    "mouthDimple_R" : 1,
+    "mouthSmile_L" : 1,
+    "mouthSmile_R" : 1,
+    "neckOrientation" : [
+      -2.0816681711721685e-16,
+      0,
+      0,
+      1
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "image" : "heart.heic",
+      "position" : {
+        "x" : 0.37,
+        "y" : 0.41999999999999998,
+        "z" : 20
+      },
+      "rotation" : -0.20000000000000001,
+      "scale" : 0.16
+    },
+    {
+      "image" : "heart.heic",
+      "position" : {
+        "x" : 0.29999999999999999,
+        "y" : -0.45000000000000001,
+        "z" : 20
+      },
+      "rotation" : -0.10000000000000001,
+      "scale" : 0.16
+    },
+    {
+      "image" : "heart.heic",
+      "position" : {
+        "x" : -0.40000000000000002,
+        "y" : -0.28000000000000003,
+        "z" : 20
+      },
+      "rotation" : 0.20000000000000001,
+      "scale" : 0.16
+    }
+  ]
+}

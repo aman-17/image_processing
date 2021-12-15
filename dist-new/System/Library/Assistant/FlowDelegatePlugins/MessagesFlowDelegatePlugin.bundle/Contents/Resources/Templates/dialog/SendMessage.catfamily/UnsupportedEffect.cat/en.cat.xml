@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedEffect" locale="en">
+
+    <conditions>
+        <condition name="isNotDriving">
+            <expression name="deviceState.isCarPlay" op="set"/>
+        </condition>
+    </conditions>
+
+    <phrases>
+        <first phrase="effectName">
+            <switch value="unsupportedEffect">
+                <text case="'confetti'">confetti</text>
+                <text case="'echo'">echo effect</text>
+                <text case="'fireworks'">fireworks</text>
+                <text case="'gentle'">gentle effect</text>
+                <text case="'happyBirthday'">balloons effect</text>
+                <text case="'heart'">love effect</text>
+                <text case="'impact'">slam effect</text>
+                <text case="'invisibleInk'">invisible ink effect</text>
+                <text case="'lasers'">lasers</text>
+                <text case="'loud'">loud effect</text>
+                <text case="'shootingStar'">a shooting star</text>
+                <text case="'sparkles'">celebration effect</text>
+                <text case="'spotlight'">spotlight effect</text>
+                <text></text>
+            </switch>
+        </first>
+        <first phrase="unsupportedMessage">
+            <text>Sorry, <opt><var name="user.groundingIfNeeded"/>, </opt>I’m not able to add <phrase name="effectName"/></text>
+        </first>
+        <first phrase="alternativeAction">
+            <text>, but you can do that in <var name="app.name"/></text>
+        </first>
+    </phrases>
+    <first>
+        <dialog>
+            <phrase name="unsupportedMessage"/><phrase name="alternativeAction"/>.
+        </dialog>
+    </first>
+</cat>

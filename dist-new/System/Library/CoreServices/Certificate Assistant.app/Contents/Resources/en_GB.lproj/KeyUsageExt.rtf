@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww12200\viewh5340\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 What is the Key Usage Extension?
+\f1\b0 \
+The Key Usage Extension (KUE) defines how a certificate can be used. You can use a key usage extension to limit which operations the public key in a certificate can perform. For example, you could create a certificate to sign emails, but not to encrypt them. The Extended Key Usage certificate (EKU) is similar to the KUE, but it defines a certificate in terms of \'93purpose\'94 (for example, to sign OCSP responses, identify an SSL client and so on). The EKU is newer and more extensible than the KUE, so it is often considered \'93the\'94 usage-restriction mechanism. You can configure the Extended Key Usage extension later in this assistant.\
+\
+You can use the following Key Usage Extensions:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 Signature:\ulnone  Select this when the certificate\'92s public key is used with a digital signature mechanism to support security services other than certificate signing.\
+\
+\ul Nonrepudiation:\ulnone  Select this when the certificate\'92s public key is used to verify digital signatures that are used to provide a non-repudiation service which protects against falsely denying some action. Non-repudiation ensures a party in a dispute cannot repudiate or refute the validity of a statement or contract.\'a0\
+\
+\ul Key Encipherment\ulnone : Select this when the certificate\'92s public key is used for encrypting a key for any purpose. Key encipherment is used for key transport and key wrapping (or key management).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Data Encipherment\ulnone : Select this when the certificate\'92s public key is used for enciphering user data other than cryptographic keys.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Key Agreement\ulnone : Select this when the certificate\'92s public key is used for key agreement. Key agreement protocol (also known as key exchange protocol) is used when two parties agree on a key to be used in a secret-key crypto system where keys can be shared freely and securely over any insecure medium (for example, if Diffie-Hellman keys are used for key management, this extension is set).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Certificate Signing\ulnone : Select this when the certificate\'92s public key is used for verifying a signature on public key certificates. Certificates with this extension are Certificate Authority (CA) certificates.\'a0 If this extension is assigned to a certificate, the \'93Use this certificate as a Certificate Authority\'94\'a0 in the Basic Constraints Extension (BCE) must also be set. The BCE is shown later in this assistant.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul CRL Signing\ulnone : Select this when the certificate\'92s public key is used for verifying a signature on a Certificate Revocation List (CRL).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Encipher Only\ulnone : Select this only when the Key Agreement is also set.\'a0 It indicates that the certificate\'92s public key can be used for enciphering data while performing key agreement.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Decipher Only:\'a0\ulnone  Select this when the Key Agreement is also set. It indicates that the certificate\'92s public key can be used for deciphering data while performing key agreement.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 What does \'93This extension is critical\'94 mean?
+\f1\b0 \
+This is also known as the \'93criticality indicator\'94. It is a flag that instructs software which uses the certificate whether it is safe to ignore the Key Usage Extension if it does not recognise it. A certificate will be rejected if the software does not recognise a \'93critical extension\'94.}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#PinlockResponse" locale="en">
+    <first>
+        <first condition="isCarPlay">
+            <dialog>You’ll need to unlock <var name="userAssignedDeviceName"/> first, but I don’t advise doing that while you’re driving.</dialog>
+            <dialog>You’ll need to unlock your device first, but I don’t advise doing that while you’re driving.</dialog>
+        </first>
+        <dialog>You’ll need to unlock <var name="userAssignedDeviceName"/> first.</dialog>
+        <dialog>You’ll need to unlock your device first.</dialog>
+    </first>
+</cat>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#UnsupportedMediaItemsPlaybackDeviceNotFound" locale="en">
+    <first>
+        <dialog>There’s no device capable of audio playback connected.</dialog>
+    </first>
+</cat>

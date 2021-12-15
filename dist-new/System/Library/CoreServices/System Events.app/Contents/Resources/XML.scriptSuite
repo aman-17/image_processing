@@ -1,0 +1,98 @@
+{
+    Name = "XML";
+    AppleEventCode = "xmlz";
+
+    UsedFeatures = (UnnamedArguments); 
+    Classes = {
+        XMLAttribute = {
+            AppleEventCode = "xmla";
+            Superclass = "NSCoreSuite.AbstractObject";
+            Attributes = {
+                name = {
+                    AppleEventCode = "pnam";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                value = {
+                    AppleEventCode = "valL";
+                    ReadOnly = "NO";
+                    Type = "NSObject";
+                };
+            };
+        };
+        XMLElement = {
+            AppleEventCode = "xmle";
+            Superclass = "NSCoreSuite.AbstractObject";
+            ToManyRelationships = {
+                xmlElements = {
+                    AppleEventCode = "xmle";
+                    ReadOnly = "NO";
+                    Type = "XML.XMLElement";
+                };
+                xmlAttributes = {
+                    AppleEventCode = "xmla";
+                    ReadOnly = "NO";
+                    Type = "XML.XMLAttribute";
+                };
+            };
+            Attributes = {
+                name = {
+                    AppleEventCode = "pnam";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                uniqueID = {
+                    AppleEventCode = "ID  ";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                value = {
+                    AppleEventCode = "valL";
+                    ReadOnly = "NO";
+                    Type = "NSObject";
+                };
+            };
+        };
+        XMLFile = {
+            AppleEventCode = "xmlf";
+            Superclass = "DiskFolderFile.File";
+			DefaultSubcontainerAttribute = "contents";
+            Attributes = {
+                contents = {
+                    AppleEventCode = "pcnt";
+                    ReadOnly = "NO";
+                    Type = "XML.XMLData";
+                };
+            };
+        };
+        XMLData = {
+            AppleEventCode = "xmld";
+            Superclass = "NSCoreSuite.AbstractObject";
+            ToManyRelationships = {
+                xmlElements = {
+                    AppleEventCode = "xmle";
+                    ReadOnly = "NO";
+                    Type = "XML.XMLElement";
+                };
+            };
+			DefaultSubcontainerAttribute = "textStorage";
+            Attributes = {
+                name = {
+                    AppleEventCode = "pnam";
+                    ReadOnly = "NO";
+                    Type = "NSString";
+                };
+                uniqueID = {
+                    AppleEventCode = "ID  ";
+                    ReadOnly = "YES";
+                    Type = "NSString";
+                };
+                textStorage = {
+                    AppleEventCode = "ctxt";
+                    ReadOnly = "NO";
+                    Type = "NSTextSuite.NSTextStorage";
+                };
+            };
+        };
+    };
+}

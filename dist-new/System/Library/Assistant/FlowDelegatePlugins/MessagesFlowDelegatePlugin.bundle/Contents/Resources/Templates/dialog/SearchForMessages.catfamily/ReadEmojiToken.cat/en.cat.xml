@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" locale="en">
+  <conditions>
+      
+      <condition name="moreThanThreeDistinctEmoji">
+          <expression name="numberOfDistinctEmojiInToken" op="gt" value="3"/>
+      </condition>
+      
+      <condition name="needComma">
+          <expression name="isLast" op="unset"/>
+      </condition>
+      
+      <condition name="needAnd">
+          <and>
+              <expression name="totalNumberOfTokens" op="ge" value="2"/>
+              <expression name="isLast" op="set"/>
+          </and>
+      </condition>
+
+      <condition name="needVerb">
+          <and>
+              <expression name="isFirst" op="unset"/>
+              <or>
+                  <and>
+                      <expression name="isEmoji" op="set"/>
+                      <expression name="isPreviousTokenEmoji" op="unset"/>
+                  </and>
+                  <and>
+                      <expression name="isEmoji" op="unset"/>
+                      <expression name="isPreviousTokenEmoji" op="set"/>
+                  </and>
+              </or>
+          </and>
+      </condition>
+  </conditions>
+
+  <phrases>
+      
+      <first phrase="emoji">
+          <text><var name="unabridgedEmojiList" list="and"/></text>
+      </first>
+      
+      <first condition="needComma" phrase="comma">
+          <text>,</text>
+      </first>
+      
+      <first condition="needAnd" phrase="andSaid">
+          <text>and</text>
+      </first>
+
+      <first condition="needVerb" phrase="verb">
+          <text condition="isEmoji">sent</text>
+          <text>said</text>
+      </first>
+
+      <first condition="needAnd" phrase="and">
+          <text>and</text>
+      </first>
+
+  </phrases>
+
+  <first>
+      <dialog condition="isEmoji">
+          <opt><phrase name="and"/> </opt><opt><phrase name="verb"/> </opt><phrase name="emoji"/><opt><phrase name="comma"/></opt>
+      </dialog>
+      
+      <dialog>
+          <opt><phrase name="and"/> </opt><opt><phrase name="verb"/> </opt><var name="text"/><opt><phrase name="comma"/></opt>
+      </dialog>
+  </first>
+
+</cat>

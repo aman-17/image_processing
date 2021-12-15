@@ -1,0 +1,34 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Apa itu identitas digital?
+\b0 \
+Identitas digital adalah cara untuk mengidentifikasi seseorang secara elektronik. Identitas digital berisi rahasia yang Anda simpan (\'93kunci pribadi\'94 Anda), dan yang Anda terbitkan dengan bebas (\'93kunci publik\'94 Anda). Kunci pribadi Anda memungkinkan Anda untuk menandatangani dokumen elektronik yang tanda tangannya dapat diverifikasi semua orang hanya dengan menggunakan kunci publik Anda. Selain itu, kunci pribadi Anda dapat membuka (\'93dekripsi\'94) rahasia yang disembunyikan (\'93dienkripsi\'94) oleh orang lain menggunakan kunci publik Anda.\
+\
+
+\b Apa itu sertifikat digital?
+\b0 \
+Sertifikat digital adalah dokumen elektronik yang mengaitkan identitas digital Anda dengan informasi lain, seperti nama, alamat email, atau bisnis Anda. Sertifikat berisi hal publik dari identitas digital Anda, identitas organisasi (\'93otoritas sertifikat\'94 atau CA) yang menandatangani sertifikat Anda, dan data apa pun yang dipilih CA untuk dikaitkan dengan identitas Anda. Sertifikat biasanya dibatasi untuk penggunaan tertentu, seperti tanda tangan digital, enkripsi, penggunaan dengan server web, dll. Ini disebut dengan pembatasan \'93penggunaan kunci\'94 pada sertifikat. Upaya untuk menggunakan sertifikat untuk tujuan lain akan gagal. Meskipun pembuatan satu identitas (dan satu sertifikat) untuk beberapa penggunaan mungkin dilakukan, pembuatan satu identitas (dan satu sertifikat) untuk semua kemungkinan penggunaan bukan merupakan hal yang biasa. Membuat sertifikat dengan beberapa kegunaan juga kurang aman. Sertifikat hanya sah dalam jangka waktu tertentu, yang jika habis sertifikat menjadi tidak sah dan harus diganti dengan versi yang lebih baru. Otoritas sertifikat dapat membuat sertifikat tidak sah (\'93membatalkan\'94) sebelum kedaluwarsa. Keabsahan sertifikat hanya dapat diverifikasi secara elektronik, menggunakan \'93infrastruktur kunci publik\'94 atau PKI.\
+\
+
+\b Bagaimana caranya untuk mendapatkan sertifikat?
+\b0 \
+Untuk memperoleh sertifikat yang sah, buat permintaan sertifikat dan kirim ke otoritas sertifikat. Jika otoritas setuju, otoritas akan membuat sertifikat Anda dan mengembalikannya kepada Anda. Anda dapat menggunakan Asisten Sertifikat atau situs web otoritas sertifikat komersial untuk membuat permintaan sertifikat. Anda dapat memperoleh dan memiliki beberapa sertifikat yang ditandatangani oleh CA yang berbeda yang masing-masing sah dan tunduk pada kebijakan yang berbeda. Misalnya, Anda boleh memiliki sertifikat yang mengizinkan Anda untuk menandatangani email, dan satu lagi yang mengizinkan Anda untuk mengidentifikasi diri Anda sendiri di Pesan.\
+\
+
+\b Di mana saya menyimpan sertifikat saya?
+\b0 \
+Identitas digital, termasuk sertifikat, disimpan di rantai kunci Anda. Setelah itu, rantai kunci akan tersedia untuk digunakan oleh aplikasi seperti Mail dan Safari. Sertifikat untuk orang lain (koresponden mail, situs web, dll.) juga disimpan di rantai kunci Anda setelah diambil oleh komputer Anda. Anda dapat menggunakan Akses Rantai Kunci (terletak di Aplikasi > Utilitas) untuk melihat dan memanipulasi sertifikat Anda. Anda dapat memindahkan dan menyalin sertifikat dengan bebas (berbeda dengan kunci pribadi terkaitnya) karena sertifikat tidak berisi informasi pribadi atau personal yang harus Anda lindungi. Anda diizinkan untuk menyimpan beberapa salinan dari satu sertifikat. Jika Anda perlu mengirim sertifikat ke seseorang, Anda dapat mengekspornya menggunakan Akses Rantai Kunci dan mengirimnya dengan aman melalui email atau media lain. Selain itu, jika seseorang mengirimkan Anda sertifikat, Anda dapat menambahkannya ke rantai kunci Anda dengan mengedropnya ke Akses Rantai Kunci, atau menggunakan menu File > Impor Item\'85 di Akses Rantai Kunci.\
+\
+
+\b Apa itu Otoritas Sertifikat?
+\b0 \
+Otoritas sertifikat (CA) merupakan identitas digital yang menandatangani sertifikat dan menjadikannya dokumen elektronik yang sah. Karena CA juga merupakan identitas digital, CA juga dapat disahkan oleh CA lain, membentuk apa yang disebut \'93rantai sertifikat.\'94 Agar sertifikat sah, CA yang menandatanganinya juga harus sah, dan seterusnya. Ini ditetapkan secara otomatis oleh perangkat lunak sistem saat mengevaluasi sertifikat.\
+\
+
+\b Kenapa harus mengevaluasi sertifikat?
+\b0 \
+Gunakan Asisten Sertifikat untuk mengevaluasi keabsahan sertifikat dan menentukan apakah sertifikat tersebut asli. Perangkat lunak yang aman, seperti Safari atau Mail, mengevaluasi sertifikat sebelum menggunakannya. Misalnya, jika Anda menggunakan Safari untuk membeli sesuatu secara online, Safari akan mengevaluasi sertifikat situs web dan memberitahu Anda apakah situs tersebut sah. Asisten Sertifikat menyediakan lebih banyak detail dan memberi Anda lebih banyak kontrol terhadap penggunaan sertifikat.}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AddMediaIntent#DisambiguateParameterValue" locale="en">
+    <first>
+        <switch value="parameter">
+            <dialog case="'mediaItems'">What do you want to add?</dialog>
+            <dialog case="'mediaDestination'">Where do you want to add that?</dialog>
+            <dialog case="'maxResultCount'">How many results would you like?</dialog>
+            <dialog><var name="app.localizedName"/> needs a value for <var name="parameter"/>.</dialog>
+        </switch>
+    </first>
+</cat>

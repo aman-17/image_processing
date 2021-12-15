@@ -1,0 +1,25 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf100
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Hva er en selvsignert rotsertifikatautoritet (CA)?\
+
+\f1\b0 En CA som ikke valideres ved hjelp av en annen CA, kalles en \'abrot-CA\'bb eller \'abanker-CA\'bb. En CA som valideres ved hjelp av en annen CA, kalles en \'abintermedi\'e6r CA\'bb. Godkjenning av en slik rot-CA m\'e5 utf\'f8res med noe annet enn et sertifikat. Datamaskinens systemprogramvare inneholder en liste med rot-CA-identiteter som Apple g\'e5r god for. Du kan legge til andre CA-er i denne listen ved hjelp av programmet N\'f8kkelring, eller du kan f\'e5 en administrator til \'e5 gj\'f8re det for deg.\
+\
+
+\f0\b Hva er en intermedi\'e6r sertifikatautoritet?\
+
+\f1\b0 En sertifikatautoritet (CA) som valideres ved hjelp av en annen CA, kalles en \'abintermedi\'e6r CA\'bb. Godkjenning av en intermedi\'e6r CA avhenger av CA-en som utstedte den, og den intermedi\'e6re CA-en kan gj\'f8res ugyldig eller tilbakekalles av den utstedende CA-en. Intermedi\'e6re CA-er brukes ofte av den utstedende CA-en til \'e5 delegere autoritet i forbindelse med en underordnet operasjon, for eksempel for en bestemt type bruk eller en klasse med brukere. Hvis du eller systemet godkjenner utstederen av en intermedi\'e6r CA, vil ogs\'e5 den intermedi\'e6re CA-en godkjennes, med mindre du eksplisitt overstyrer dette. Du kan ogs\'e5 godkjenne en intermedi\'e6r CA uten \'e5 godkjenne utstederen. Man omg\'e5r imidlertid da gyldighetskontroller som er basert p\'e5 utstederens autoritet. N\'e5r du oppretter en intermedi\'e6r CA ved hjelp av Sertifikatassistent, m\'e5 en eksisterende rot eller intermedi\'e6r CA (sammen med den tilh\'f8rende private n\'f8kkelen) v\'e6re til stede for \'e5 signere den.\
+\
+
+\f0\b Hva betyr \'abBruk denne CA-en som standard\'bb?\
+
+\f1\b0 N\'e5r du tar imot sertifikatsigneringsforesp\'f8rsler fra brukere, velges den sertifikatautoriteten som er angitt som standard, automatisk fra lokalmenyen med tilgjengelige sertifikatautoriteter. N\'e5r du klikker p\'e5 \'abBruk denne CA-en som standard\'bb, vil det sertifikatautoritetsnavnet du har spesifisert ovenfor, brukes som standard.\
+\
+
+\f0\b Hvordan brukes \'abE-post fra\'bb?\
+
+\f1\b0 N\'e5r Sertifikatassistent har opprettet en sertifikatautoritet for deg, kan du opprette en invitasjonsfil som brukere kan benytte n\'e5r de skal be sertifikatautoriteten om et sertifikat. N\'e5r brukere dobbeltklikker p\'e5 denne invitasjonsfilen, vil de bli ledet gjennom foresp\'f8rselsprosessen av Sertifikatassistent. Sertifikatforesp\'f8rselen sendes til e-postadressen som er oppgitt her.}

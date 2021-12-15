@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#ConfirmInterruptingAnotherSE" locale="en">
+    <conditions>
+        <condition name="deviceLocationPresent">
+            <expression name="deviceLocation" op="nonempty"/>
+        </condition>
+        <condition name="roomLocationPresent">
+            <expression name="roomLocation" op="nonempty"/>
+        </condition>
+        <condition name="repromptAndMultipleDevices">
+            <and>
+                <expression name="reprompt"/>
+                <expression name="multipleDevices"/>
+            </and>
+        </condition>
+        <condition name="repromptAndMultipleRooms">
+            <and>
+                <expression name="reprompt"/>
+                <expression name="multipleRooms"/>
+            </and>
+        </condition>
+    </conditions>
+    <first>
+        <first condition="deviceLocationPresent">
+            <first condition="repromptAndMultipleDevices">
+                <random>
+                    <dialog>Sorry, I didn't quite get that. Do you want to stop audio on other devices to play this?</dialog>
+                    <dialog>Sorry, I missed what you said. Do you want to stop audio on other devices to play this?</dialog>
+                    <dialog>Sorry, I missed that. Do you want to stop audio on other devices to play this?</dialog>
+                    <dialog>Hmm, let’s try that again. Do you want to stop audio on other devices to play this?</dialog>
+                </random>
+            </first>
+            <first condition="reprompt">
+                <random>
+                    <dialog>Sorry, I didn't quite get that. Do you want to stop audio on <var name="deviceLocation"/> to play this?</dialog>
+                    <dialog>Sorry, I missed what you said. Do you want to stop audio on <var name="deviceLocation"/> to play this?</dialog>
+                    <dialog>Sorry, I missed that. Do you want to stop audio on <var name="deviceLocation"/> to play this?</dialog>
+                    <dialog>Hmm, let’s try that again. Do you want to stop audio on <var name="deviceLocation"/> to play this?</dialog>
+                </random>
+            </first>
+            <dialog condition="multipleDevices">Do you want to stop audio on other devices to play this?</dialog>
+            <dialog>Do you want to stop audio on <var name="deviceLocation"/> to play this?</dialog>
+        </first>
+        <first condition="roomLocationPresent">
+            <first condition="repromptAndMultipleRooms">
+                <random>
+                    <dialog>Sorry, I didn't quite get that. Do you want to stop audio in <var name="roomLocation"/> and other rooms to play this?</dialog>
+                    <dialog>Sorry, I missed what you said. Do you want to stop audio in <var name="roomLocation"/> and other rooms to play this?</dialog>
+                    <dialog>Sorry, I missed that. Do you want to stop audio in <var name="roomLocation"/> and other rooms to play this?</dialog>
+                    <dialog>Hmm, let’s try that again. Do you want to stop audio in <var name="roomLocation"/> and other rooms to play this?</dialog>
+                </random>
+            </first>
+            <first condition="reprompt">
+                <random>
+                    <dialog>Sorry, I didn't quite get that. Do you want to stop audio in <var name="roomLocation"/> to play this?</dialog>
+                    <dialog>Sorry, I missed what you said. Do you want to stop audio in <var name="roomLocation"/> to play this?</dialog>
+                    <dialog>Sorry, I missed that. Do you want to stop audio in <var name="roomLocation"/> to play this?</dialog>
+                    <dialog>Hmm, let’s try that again. Do you want to stop audio in <var name="roomLocation"/> to play this?</dialog>
+                </random>
+            </first>
+            <dialog condition="multipleRooms">Do you want to stop audio in <var name="roomLocation"/> and other rooms to play this?</dialog>
+            <dialog>Do you want to stop audio in <var name="roomLocation"/> to play this?</dialog>
+        </first>
+        <dialog>Do you want to stop audio elsewhere to play this?</dialog>
+    </first>
+</cat>

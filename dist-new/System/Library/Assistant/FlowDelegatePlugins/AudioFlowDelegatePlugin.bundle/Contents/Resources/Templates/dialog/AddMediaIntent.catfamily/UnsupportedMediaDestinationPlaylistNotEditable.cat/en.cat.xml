@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AddMediaIntent#UnsupportedMediaDestinationPlaylistNotEditable" locale="en">
+    <conditions>
+        <condition name="isPlaylistPresent" note="Is the playlist name present">
+            <expression name="playlistName" op="nonempty"/>
+        </condition>
+        <condition name="groundingWithPlaylistName">
+            <and>
+                <expression name="isGrounding"/>
+                <expression name="playlistName" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="groundingWithoutPlaylistName">
+            <and>
+                <expression name="isGrounding"/>
+                <expression name="playlistName" op="empty"/>
+            </and>
+        </condition>
+        <condition name="noGroundingWithPlaylistName">
+            <and>
+                <expression name="isGrounding" op="eq" value="false"/>
+                <expression name="playlistName" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="noGroundingWithoutPlaylistName">
+            <and>
+                <expression name="isGrounding" op="eq" value="false"/>
+                <expression name="playlistName" op="empty"/>
+            </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="multiUserIntroduction">
+            <text condition="isGrounding">Sorry, <var name="user.groundingIfNeeded"/>, </text>
+            <text></text>
+        </first>
+        <first phrase="thethatTheThat">
+            <text condition="groundingWithPlaylistName">the</text>
+            <text condition="noGroundingWithPlaylistName">The</text>
+            <text condition="groundingWithoutPlaylistName">that</text>
+            <text condition="noGroundingWithoutPlaylistName">That</text>
+            <text></text>
+        </first>
+    </phrases>
+    <first>
+        <dialog condition="isPlaylistPresent"><phrase name="multiUserIntroduction"/><phrase name="thethatTheThat"/> <var name="app.localizedName"/> playlist ‘<var name="playlistName"/>’ can’t be edited.</dialog>
+        <dialog><phrase name="multiUserIntroduction"/><phrase name="thethatTheThat"/> <var name="app.localizedName"/> playlist can’t be edited.</dialog>
+        <dialog>That playlist can’t be edited.</dialog>
+    </first>
+</cat>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalThoughtsOnOtherAssistant" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<dialog><print>I’m a big fan of good listeners and helpful beings.</print> <speak>I’m a big fan of good listeners, and helpful beings.</speak></dialog>
+	</all>
+</cat>

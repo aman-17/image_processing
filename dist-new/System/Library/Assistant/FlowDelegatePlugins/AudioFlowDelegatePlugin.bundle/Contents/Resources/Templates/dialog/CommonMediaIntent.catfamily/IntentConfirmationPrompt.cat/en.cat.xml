@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#IntentConfirmationPrompt" locale="en">
+    <first>
+        <dialog>Here’s what I have. Should I continue?</dialog>
+    </first>
+</cat>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#OfferSendMessageIntent">
+    <meta name="description" value="Ask the user if they want to reply."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="isGroup" type ="dialog.Boolean" description="Whether or not we are replying to a group conversation."/>
+    </parameters>
+
+</cat>

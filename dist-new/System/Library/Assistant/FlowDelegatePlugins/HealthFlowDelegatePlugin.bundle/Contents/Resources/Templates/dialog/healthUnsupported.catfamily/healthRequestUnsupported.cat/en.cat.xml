@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthUnsupported#healthRequestUnsupported" locale="en">
+  <first>
+    <dialog condition="device.isPhone">I can’t answer that on your <var name="device.deviceName"/>, but you can find it in the Health app.</dialog>
+    <dialog>I can’t answer that on your <var name="device.deviceName"/>, but you can find it in the Health app on your iPhone.</dialog>
+  </first>
+</cat>

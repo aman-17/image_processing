@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#AskToUnmute" locale="en">
+    <all>
+        <dialog>My voice is muted. Shall I read it anyway?</dialog>
+    </all>
+</cat>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="health#promptForSlotValue" locale="en">
+  
+  <phrases>
+      <switch phrase="promptForWorkoutName" value="verb">
+          <text case="'start'">Which workout do you want to start?</text>
+          <text case="'stop'">Which workout do you want to end?</text>
+          <text case="'pause'">Which workout do you want to pause?</text>
+          <text case="'resume'">Which workout do you want to resume?</text>
+          <text case="'cancel'">Which workout do you want to cancel?</text>
+      </switch>
+  </phrases>
+ 
+  <first>
+      <switch value="slot">
+          <dialog case="'workoutName'" id="workoutName"><phrase name="promptForWorkoutName"/></dialog>
+          <dialog case="'workoutGoalUnitType'" id="workoutGoalUnitType">What is your duration, distance or calorie goal for this workout?</dialog>
+          <dialog case="'isGoalValueSlot'" id="isGoalValueSlot">What is your duration, distance or calorie goal for this workout?</dialog>
+          <dialog case="'workoutLocationType'" id="workoutLocationType">Is this an indoor or outdoor workout?</dialog>
+          <dialog case="'isOpenEnded'" id="isOpenEnded">Do you want an open-ended workout?</dialog>
+          <dialog id="promptForSlotValueError">Something went wrong.</dialog>
+      </switch>
+  </first>
+
+</cat>

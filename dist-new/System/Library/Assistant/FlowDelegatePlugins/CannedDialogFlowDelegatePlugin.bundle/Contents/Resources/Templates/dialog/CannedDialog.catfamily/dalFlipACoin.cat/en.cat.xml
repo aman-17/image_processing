@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.4" locale="en" id="CannedDialog#dalFlipACoin">
+	<all>
+		<random phrase="">
+			<random phrase="">
+				<dialog>Heads.</dialog>
+				<dialog>It’s heads.</dialog>
+				<dialog condition="used_in_the_last_day">It’s heads this time.</dialog>
+			</random>
+			<random phrase="">
+				<dialog>Tails.</dialog>
+				<dialog>It’s tails.</dialog>
+				<dialog condition="used_in_the_last_day">It’s tails this time.</dialog>
+			</random>
+			<dialog condition="april_fools">Wow, that never happens… it landed perfectly balanced on its edge! <break time="2000ms"/>April Fools!</dialog>
+		</random>
+	</all>
+	<conditions>
+		<condition name="april_fools">
+			<and>
+                <expression name="now.month" op="eq" value="4"/>
+                <expression name="now.dayOfMonth" op="eq" value="1"/>
+				<expression name="dialogState.hoursSinceLastUse" value="8" op="ge"/>
+			</and>
+		</condition>
+		<condition name="used_in_the_last_day">
+			<expression name="dialogState.hoursSinceLastUse" value="24" op="lt"/>
+		</condition>
+	</conditions>
+</cat>

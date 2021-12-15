@@ -1,0 +1,43 @@
+{
+    "Name": "RealitySimpleWaterMaterialDefinition",
+    "OverrideMaterial": "pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "speed": "1.0",
+            "noiseLevel": "5.0",
+            "intensity": "1.0",
+            "frequency": "1.0",
+            "normalFactor": "1.0"
+        },
+        "Textures": {
+            "textureEnvironment" : "scene.prefilteredSpecularMap"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "Standard",
+        "VertexShader": {
+            "Entry": "vsSimpleWater"
+        },
+        "PixelShader": {
+            "Entry": "fsSimpleWater"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater",
+            "AlphaBlendOperation" : "Add",
+            "AlphaSourceFactor" : "SourceAlpha",
+            "AlphaDestinationFactor" : "OneMinusSourceAlpha",
+            "RgbBlendOperation" : "Add",
+            "RgbSourceFactor" : "SourceAlpha",
+            "RgbDestinationFactor" : "OneMinusSourceAlpha"
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque": "Standard",
+        "OpaqueAR": "Standard",
+        "OpaqueDynamicLighting": "Standard",
+        "OpaqueARDynamicLighting": "Standard"
+    }
+}

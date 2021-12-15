@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalMlCannedCommand" xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <first>
+        <dialog>That may be beyond my abilities at the moment.</dialog>
+    </first>
+</cat>

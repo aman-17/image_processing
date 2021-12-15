@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalOkayFollowup" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<dialog>OK. Let me know if there’s anything else I can help you with.</dialog>
+	</all>
+</cat>

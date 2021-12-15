@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="Tests#TestApp" locale="en">
+    <first>
+        <dialog id="Test">
+            <opt>localizedName:<var name="app.localizedName"/></opt>
+            <opt>isFirstParty:<var name="app.isFirstParty"/></opt>
+            <opt>isMusic:<var name="app.isMusic"/></opt>
+            <opt>isPodcasts:<var name="app.isPodcasts"/></opt>
+            <opt>isBooks:<var name="app.isBooks"/></opt>
+            <opt>isSoundscapes:<var name="app.isSoundscapes"/></opt>
+        </dialog>
+    </first>
+</cat>

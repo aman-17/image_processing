@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ReadMissedCallHistoryIntroduction" locale="en">
+  <conditions>            
+      <condition name="hasCallRecords" note="check whether call records are greater than 0">
+        <expression name="callRecordCount" op="gt" value="0"/>
+      </condition>
+      
+      <condition name="isZeroCallRecord" note="check whether there are 0 call records">
+        <expression name="totalCallRecordCount" op="eq" value="0"/>
+      </condition>
+      
+      <condition name="isMaxCallRecords" note="check whether there are 25 call records">
+        <expression name="callRecordCount" op="eq" value="25"/>
+      </condition>
+      
+      <condition name="hasRecipient" note="does the intent have a recipient">
+        <expression name="intent.recipient.list.length" op="gt" value="0"/>
+      </condition>
+      
+  </conditions>
+
+  <phrases>
+      <first phrase="optionalGrounding">
+          <text>Ok, <var name="user.groundingIfNeeded"/>, </text>
+      </first>
+      
+      <first phrase="summary">
+        <text condition="isZeroCallRecord">I didn’t find any missed calls</text>
+        <text condition="isMaxCallRecords">I found at least <var name="callRecordCount" number="asWords"/> missed calls</text>
+        <text>I found <var name="totalCallRecordCount" number="asWords"/> missed calls</text>
+      </first>
+      
+      <first phrase="contactsNames">
+          <text condition="hasCallRecords"><var name="intent.recipient.list" list="and"/></text>
+          <text condition="isZeroCallRecord"><var name="intent.recipient.list" list="or" /></text>
+      </first>
+      
+      <first phrase="recipientSummary">
+          <text condition="hasRecipient"> from <phrase name="contactsNames"/></text>
+      </first>
+  </phrases>
+
+  <first>
+      <dialog><opt><phrase name="optionalGrounding"/></opt><phrase name="summary"/><opt><phrase name="recipientSummary"/></opt>.</dialog>
+  </first>
+</cat>

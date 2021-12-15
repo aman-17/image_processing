@@ -1,0 +1,182 @@
+{
+    "Name": "Projective Mesh Shadow Receiver",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "colorTint" : "[1, 1, 1, 1]",
+            "lightingEnabled": "false",
+            "intensityMax": "1",
+            "intensityScale": "0.9",
+            "normalDotThreshold": "0",
+            "lightDirection" : "[0, 0, 1]",
+            "numRowTiles" : "1",
+            "numClusters" : "0",
+            "receiverDepthConversion" : "1"
+        },
+        "Buffers": {
+            "shadowClusterConstants" : "geometry.vertexPosition"
+        },
+        "Textures": {
+            "textureProjectiveMeshShadow": "fallback.black",
+            "textureTiledDepthPrepass": "fallback.white",
+            "compositedSceneUnderstandingShadowsColor": "fallback.black",
+            "compositedSceneUnderstandingShadowsDepth": "fallback.black"
+        }
+    },
+    "Techniques" : [
+        {
+            "Name": "CompositeMeshShadowsWithDepthTest",
+            "VertexShader": {
+                "Entry": "fullScreenVert"
+            },
+            "PixelShader": {
+                "Entry": "fsCompositeMeshShadowsWithDepth"
+            },
+            "State" : {
+                "AlphaBlend"                : false,
+                "WriteDepth"                : false,
+                "DepthCompareFunction"      : "GreaterEqual"
+            }
+        },
+        {
+            "Name": "OcclusionOnly",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "State" : {
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            }
+        },
+        {
+            "Name": "OcclusionWithFakeColorWrite",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "State" : {
+                "AlphaBlend"                : false,
+                "ColorWriteMask"            : "None",
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            }
+        },
+        {
+            "Name": "SUShadowsRasterizeWithoutDepthTest",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshSoftShadowReceiver"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "WriteDepth"                : false,
+                "DepthCompareFunction"      : "Always",
+                "AlphaBlendOperation"       : "Max",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "One",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+            }
+        },
+        {
+            "Name": "OcclusionWithSoftShadowSingleChannel",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshSoftShadowReceiverSingleChannel"
+            },
+            "State" : {
+                "AlphaBlend"                : false,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            }
+        },
+        {
+            "Name": "OcclusionWithSoftShadow",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshSoftShadowReceiver"
+            },
+            "State" : {
+                "AlphaBlend"                : false,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "Greater"
+            }
+        },
+        {
+            "Name": "OcclusionWithSoftShadowWithoutDepthWrite",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshSoftShadowReceiver"
+            },
+            "State" : {
+                "AlphaBlend"                : false,
+                "WriteDepth"                : false,
+                "DepthCompareFunction"      : "Greater"
+            }
+        },
+        {
+            "Name": "OcclusionWithSoftShadowAndAlphaBlend",
+            "VertexShader": {
+                "Entry": "vsRealityPbr"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshSoftShadowReceiver"
+            },
+            "State" : {
+                "AlphaBlend"                : true,
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "GreaterEqual",
+                "AlphaBlendOperation"       : "Add",
+                "AlphaSourceFactor"         : "One",
+                "AlphaDestinationFactor"    : "OneMinusSourceAlpha",
+                "RgbBlendOperation"         : "Add",
+                "RgbSourceFactor"           : "One",
+                "RgbDestinationFactor"      : "OneMinusSourceAlpha"
+            }
+        },
+        {
+            "Name": "WireframeMesh",
+            "VertexShader": {
+                "Entry": "vsUnlit"
+            },
+            "PixelShader": {
+                "Entry": "fsMeshDepth"
+            },
+            "State" : {
+                "WriteDepth"                : true,
+                "DepthCompareFunction"      : "GreaterEqual"
+            }
+        },
+        {
+            "Name": "InvisibleTechnique",
+            "VertexShader": {
+                "Entry": "vsSceneUnderstandingMeshShadowsInvisible",
+            },
+            "State" : {
+                "AlphaBlend" : false,
+                "WriteDepth" : false,
+                "DepthCompareFunction" : "Never"
+            }
+        }
+    ],
+    "TechniqueMapping": {
+        "SceneUnderstandingMeshShadow": "OcclusionWithSoftShadow",
+        "SceneUnderstandingMeshShadowSingleChannel": "OcclusionWithSoftShadowSingleChannel",
+        "SceneUnderstandingMeshShadowWithoutDepthWrite": "OcclusionWithSoftShadowWithoutDepthWrite",
+        "SceneUnderstandingOcclusionOnly": "OcclusionOnly",
+        "SceneUnderstandingOcclusionWithFakeColorWrite": "OcclusionWithFakeColorWrite",
+        "SUShadowsRasterizeWithoutDepthTest": "SUShadowsRasterizeWithoutDepthTest",
+        "SceneUnderstandingMeshShadowWithBlend": "OcclusionWithSoftShadowAndAlphaBlend",
+        "SceneUnderstandingWireframe": "WireframeMesh",
+        "CompositeMeshShadowsWithDepthTest" : "CompositeMeshShadowsWithDepthTest",
+        "InvisibleTechnique": "InvisibleTechnique"
+    }
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AnnounceIncomingCall#OfferFollowUpIntent">
+    <meta name="category" value="Prompt"/>
+    <meta name="description" value="Executed when we want to prompt the user with a followup message."/>
+    <meta name="readyForLoc" value="true"/>
+    <meta name="excludeIfSet" value="*****"/>
+    <parameters>
+      <parameter name="followUpOfferType" type="dialog.String" description="Keep unnecessary parameter to satisfy protocol for IncomingCallCATs"/>
+    </parameters>
+
+</cat>

@@ -1,0 +1,34 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 HelveticaNeue;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Wat is de uitbreiding voor uitgebreid sleutelgebruik?
+\b0 \
+De uitbreiding voor uitgebreid sleutelgebruik is grotendeels gelijk aan de uitbreiding voor sleutelgebruik, alleen worden de waarden voor uitgebreid sleutelgebruik als doelen gedefinieerd (bijvoorbeeld ondertekening van OCSP-antwoorden, identificatie van een SSL-client, enz.) en zijn ze eenvoudig uit te breiden.\'a0De uitbreiding voor uitgebreid sleutelgebruik wordt gedefinieerd met objectidentificaties, de zogeheten OID's.
+\f1  
+\f0 Als deze uitbreiding wordt weggelaten, zijn in principe alle bewerkingen geldig.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\b \cf0 Wat is het verschil tussen de uitbreiding voor sleutelgebruik en die voor uitgebreid sleutelgebruik?
+\b0 \
+De uitbreiding voor uitgebreid sleutelgebruik is nieuwer en wordt gezien als h\'e9t mechanisme voor gebruiksbeperkingen, terwijl de uitbreiding voor sleutelgebruik als minder flexibel wordt beschouwd. De uitbreiding voor sleutelgebruik wordt gedefinieerd in termen van bewerkingen en de uitbreiding voor uitgebreid sleutelgebruik in termen van doelen. Waarden voor uitgebreid sleutelgebruik moeten doorgaans per se aan bepaalde eisen voldoen ("moet deze OID bevatten"); bij waarden voor sleutelgebruik is dit minder strikt ("moet niet-afwijzingsinformatie bevatten en mag informatie voor alleen versleuteling bevatten"). De lijst met doelen bepaalt welke typen certificaten een certificaatautoriteit mag aanmaken
+\f1 . Een bewerking is alleen geldig als deze voorkomt in zowel de autoriteit als in de certificaten die de autoriteit ondertekent.
+\f0 \
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Wat betekent 'Deze uitbreiding is vereist'?\
+\pard\pardeftab720\partightenfactor0
+
+\b0 \cf0 Dit wordt ook wel de "kritikaliteitsindicator" genoemd. De indicator bestaat uit een vlag waarmee aan software die het certificaat gebruikt, wordt doorgegeven of de uitbreiding voor uitgebreid sleutelgebruik kan worden genegeerd als deze niet wordt herkend. Een certificaat wordt geweigerd als een "vereiste uitbreiding" niet wordt herkend door de software.
+\f2\fs26 \
+}

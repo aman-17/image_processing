@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedRecipientNoValidHandle" locale="en">
+    
+    <phrases>
+        <first phrase="recipientName">
+            <text condition="recipient"><var name="recipient"/></text>
+            <text>the recipient</text>
+        </first>
+    </phrases>
+    
+    <first>
+        <random condition="app.isDesignedByApple">
+            <dialog>I don’t see a number or iMessage address for <phrase name="recipientName"/>.</dialog>
+            <dialog>You don’t have a number or iMessage address for <phrase name="recipientName"/>.</dialog>
+        </random>
+        <random note="Ask CAT people to fix inflection bug.">
+            <dialog>I don’t see <var name="app.name" inflect="withIndefArticle"/> address for <phrase name="recipientName"/>.</dialog>
+            <dialog>You don’t have <var name="app.name" inflect="withIndefArticle"/> address for <phrase name="recipientName"/>.</dialog>
+        </random>
+    </first>
+    
+</cat>

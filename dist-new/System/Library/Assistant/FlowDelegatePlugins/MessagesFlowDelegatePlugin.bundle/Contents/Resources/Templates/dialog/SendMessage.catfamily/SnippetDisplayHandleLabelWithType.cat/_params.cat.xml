@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#SnippetDisplayHandleLabelWithType">
+
+    <meta name="description" value="Value to use in disambiguation menu when displaying the label with type."/>
+    <meta name="category" value="UsedForSnippet"/>
+    <meta name="readyForLoc" value="true"/>
+ 
+    <parameters>
+        <parameter name="handleLabel" type="dialog.String" description="The handle label (i.e., Home, Work, Office, etc.)."/>
+        <parameter name="handleType" type="dialog.String" description="ToDO. Update params with dialog.PersonHandle once we have access to public property Type. The handle type (i.e., phoneNumberHandleType, emailHandleType, etc.)."/>
+    </parameters>
+
+</cat>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedGroupName">
+
+    <meta name="description" value="Executed when the groupName slot is unsupported."/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="app" type="messages.App" description="The App."/>
+        <parameter name="groupName" type="dialog.String" description="The unsupported groupName"/>
+    </parameters>
+ 
+ </cat>

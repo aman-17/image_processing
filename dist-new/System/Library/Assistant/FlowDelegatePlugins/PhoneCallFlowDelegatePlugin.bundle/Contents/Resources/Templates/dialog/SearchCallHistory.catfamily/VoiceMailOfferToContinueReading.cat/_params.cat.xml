@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#VoiceMailOfferToContinueReading">
+    <meta name="description" value="Offer to continue reading call records."/>
+    <meta name="category" value="Confirm"/>
+    <meta name="readyForLoc" value="true"/>
+    
+    <parameters>
+        <parameter name="isLastPage" type="dialog.Boolean"/>
+        <parameter name="isLeadingSavedVoiceMailPrePrompt" type="dialog.Boolean"/>
+    </parameters>
+</cat>

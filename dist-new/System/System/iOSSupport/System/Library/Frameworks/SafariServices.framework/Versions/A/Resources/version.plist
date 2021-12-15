@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildAliasOf</key>
+	<string>MobileSafari</string>
+	<key>BuildVersion</key>
+	<string>3</string>
+	<key>CFBundleShortVersionString</key>
+	<string>14.1.1</string>
+	<key>CFBundleVersion</key>
+	<string>604.1</string>
+	<key>ProjectName</key>
+	<string>MobileSafari_iosmac</string>
+	<key>SourceVersion</key>
+	<string>7611002007001004</string>
+</dict>
+</plist>

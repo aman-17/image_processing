@@ -1,0 +1,96 @@
+{
+    "Name": "LightmappedPbr",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Parameters": {
+        "Constants": {
+            "lightmapIntensityLV": "0.0"
+        },
+        "Textures": {
+            "textureLightmap" : "fallback.white"
+        },
+        "Buffers": {
+            "lightmapTexcoord" : "geometry.textureCoordinate1"
+        }
+    },
+    "Techniques": [
+    {
+        "Name": "Standard",
+        "VertexShader": {
+            "Entry": "vsRealityPbr"
+        },
+        "PixelShader": {
+            "Entry": "fsRealityPbr"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"    : "true",
+            "EnableNormalMap"       : "true",
+            "EnableEmissiveMap"     : "true",
+            "EnableAreaLight"       : "true",
+            "EnableSeparateRMAS"    : "true",
+            "EnableRoughnessMap"    : "true",
+            "EnableMetallicMap"     : "true",
+            "EnableAOMap"           : "true",
+            "EnableSpecularMap"     : "true",
+            "EnableClearcoat"       : "false",
+            "VertexColorOption"     : "0",
+            "EnableIBL"             : "true",
+            "EnableLightmap"        : "true"
+        },
+        "DebugMapping": "PbrDebug"
+    },
+    {
+        "Name": "StandardAR",
+        "VertexShader": {
+            "Entry": "vsRealityPbr"
+        },
+        "PixelShader": {
+            "Entry": "fsRealityPbr"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater"
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"    : "true",
+            "EnableNormalMap"       : "true",
+            "EnableEmissiveMap"     : "true",
+            "EnableAreaLight"       : "true",
+            "EnableSeparateRMAS"    : "true",
+            "EnableRoughnessMap"    : "true",
+            "EnableMetallicMap"     : "true",
+            "EnableAOMap"           : "true",
+            "EnableSpecularMap"     : "true",
+            "EnableClearcoat"       : "false",
+            "VertexColorOption"     : "0",
+            "EnableIBL"             : "true",
+            "EnableLightmap"        : "true",
+            "EnableAREnvProbe"      : "true"
+        },
+        "DebugMapping": "PbrDebug"
+    },
+    {
+        "Name": "Shadow",
+        "VertexShader": {
+            "Entry": "vsShadow"
+        },
+        "PixelShader": {
+            "Entry": "fsShadow"
+        },
+        "State" : {
+            "ColorWriteMask" : "None"
+        }
+    }],
+    "TechniqueMapping": {
+        "Opaque"   : "Standard",
+        "OpaqueAR" : "StandardAR",
+        "OpaqueDynamicLighting"   : "Standard",
+        "OpaqueARDynamicLighting" : "StandardAR",
+        "Shadow"   : "Shadow"
+    }
+}

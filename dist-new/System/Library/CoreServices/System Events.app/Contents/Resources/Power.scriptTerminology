@@ -1,0 +1,24 @@
+{
+    Name = "Power Suite";
+    Description = "Terms and Events for controlling System power";
+
+    Commands = {
+        shutDown = {
+            Description = "Shut Down the computer";
+            Name = "shut down";
+        };
+        restart = {
+            Description = "Restart the computer";
+            Name = "restart";
+        };
+        sleep = {
+            Description = "Put the computer to sleep";
+            Name = "sleep";
+        };
+        logout = {
+            Description = "Log out the current user";
+            Name = "log out";
+        };
+    };
+}
+

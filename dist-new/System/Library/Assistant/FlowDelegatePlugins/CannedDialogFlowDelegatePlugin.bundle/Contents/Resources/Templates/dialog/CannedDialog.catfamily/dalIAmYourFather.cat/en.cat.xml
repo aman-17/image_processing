@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalIAmYourFather" xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <random>
+        <dialog>No…no! That’s not true! That’s impossible!</dialog>
+        <dialog>
+            <print>Nooooooo!</print>
+            <speak>No</speak>
+        </dialog>
+        <dialog>Together, we can rule the galaxy as father and intelligent assistant!</dialog>
+        <dialog>Searching my feelings…</dialog>
+        <dialog>Something, something, something, dark side…</dialog>
+        <dialog>Excuse me while I jump from the maintenance catwalk into the air shaft… and then get sucked into the gas shaft and then cling to a weather vane on the underside of Cloud City… metaphorically.</dialog>
+    </random>
+</cat>

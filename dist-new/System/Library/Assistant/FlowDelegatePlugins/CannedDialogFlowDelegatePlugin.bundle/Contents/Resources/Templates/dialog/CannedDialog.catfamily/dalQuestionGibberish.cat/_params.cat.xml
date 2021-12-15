@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalQuestionGibberish" xmlns="urn:apple:names:siri:cat:1.0">
+    <meta name="category" value="Can't Understand"/>
+    <meta name="description" value="Use this DUC for utterances that are NOT phrased as full statements, but appear to be the start of a question. Likely scenario here is end pointing."/>
+    <meta name="readyForLoc" value="false"/>
+    <meta name="listenAfterSpeaking" value="true"/>
+</cat>

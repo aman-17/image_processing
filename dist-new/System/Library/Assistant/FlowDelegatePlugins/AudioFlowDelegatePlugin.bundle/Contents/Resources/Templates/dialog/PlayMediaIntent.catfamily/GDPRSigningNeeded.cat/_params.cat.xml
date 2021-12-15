@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#GDPRSigningNeeded">
+    <meta name="description" value=""/>
+    <meta name="category" value="Incomplete"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="mediaType" type="dialog.String" description="The type of thing the user asked to play"/>
+        <parameter name="mediaItem" type="dialog.String" description="The thing requested to play"/>
+    </parameters>
+
+</cat>

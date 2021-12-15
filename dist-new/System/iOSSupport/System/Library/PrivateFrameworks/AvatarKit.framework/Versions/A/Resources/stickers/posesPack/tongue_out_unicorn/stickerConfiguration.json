@@ -1,0 +1,42 @@
+{
+  "emoji" : "😛",
+  "identifier" : "tongue_out_unicorn",
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_R" : 1,
+    "browInnerUp" : 0.1334858238697052,
+    "browOuterUp_L" : 0.40000000596046448,
+    "cheekSquint_L" : 0.25999999046325684,
+    "cheekSquint_R" : 1,
+    "eyeBlink_L" : 0.077465243637561798,
+    "eyeBlink_R" : 1,
+    "eyeLookDown_L" : 0.059999998658895493,
+    "eyeLookDown_R" : 0.059999998658895493,
+    "eyeLookIn_L" : 0.26433110237121582,
+    "eyeLookOut_R" : 0.26433119177818298,
+    "eyeSquint_L" : 0.23000000417232513,
+    "eyeSquint_R" : 0.96108216047286987,
+    "jawOpen" : 0.50717175006866455,
+    "mouthDimple_L" : 0.60000002384185791,
+    "mouthDimple_R" : 0.97000002861022949,
+    "mouthRight" : 0.11783439666032791,
+    "mouthSmile_L" : 0.90723913908004761,
+    "mouthSmile_R" : 1,
+    "neckOrientation" : [
+      0.019037447869777679,
+      0.080989181995391846,
+      0.10602159798145294,
+      0.99087733030319214
+    ],
+    "neckPosition" : [
+      0,
+      2,
+      0
+    ],
+    "noseSneer_R" : 0.21253287792205811,
+    "tongueOut" : 1
+  },
+  "props" : [
+
+  ]
+}

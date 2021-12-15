@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw12240\paperh15840\margl1440\margr1440\vieww16880\viewh12960\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Mik\'e4 on avaimenk\'e4ytt\'f6laajennus?
+\f1\b0 \
+Avaimenk\'e4ytt\'f6laajennus m\'e4\'e4ritt\'e4\'e4, miten varmennetta voidaan k\'e4ytt\'e4\'e4. Avaimenk\'e4ytt\'f6laajennuksella voidaan rajoittaa, mit\'e4 toimintoja varmenteessa oleva julkinen avain voi suorittaa. Voit esimerkiksi luoda varmenteen, jolla voidaan allekirjoittaa s\'e4hk\'f6posteja, mutta ei salata niit\'e4. Laajennettu avaimen k\'e4ytt\'f6 on l\'e4hes sama asia, mutta m\'e4\'e4ritt\'e4\'e4 varmenteen k\'e4ytt\'f6tarkoituksen perusteella (esimerkiksi OCSP-vastausten allekirjoittamiseen, SSL-asiakkaan tunnistamiseen ja niin edelleen). Laajennettu avaimen k\'e4ytt\'f6 on uudempi ja paremmin laajennettavissa kuin Avaimenk\'e4ytt\'f6laajennus, joten sit\'e4 pidet\'e4\'e4n parempana k\'e4yt\'f6nrajoitusmekanismina. Voit m\'e4\'e4ritt\'e4\'e4 laajennetun avaimenk\'e4ytt\'f6laajennuksen my\'f6hemmin t\'e4ss\'e4 apurissa.\
+\
+Voit k\'e4ytt\'e4\'e4 seuraavia avaimenk\'e4ytt\'f6laajennuksia:\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 Allekirjoitus:\ulnone  Valitse t\'e4m\'e4, kun varmenteen julkista avainta k\'e4ytet\'e4\'e4n digitaalisen allekirjoitusmekanismin kanssa tukemaan muita turvallisuuspalveluja kuin varmenteen allekirjoitusta.\
+\
+\ul Kiist\'e4m\'e4tt\'f6myys:\ulnone  Valitse t\'e4m\'e4, kun varmenteen julkisella avaimella varmennetaan digitaalisia allekirjoituksia, joiden avulla tarjotaan kiist\'e4m\'e4tt\'f6myyspalvelua (est\'e4\'e4 jonkin toiminnon kiist\'e4misen valheellisesti). Kiist\'e4m\'e4tt\'f6myys varmistaa, ett\'e4 kiistan osapuoli ei kiist\'e4 lausunnon tai sopimuksen pit\'e4vyytt\'e4.\'a0\
+\
+\ul Avaimen salaus:\ulnone  Valitse t\'e4m\'e4, kun varmenteen julkista avainta k\'e4ytet\'e4\'e4n avaimen salaamiseen miss\'e4 tahansa tarkoituksessa. Avaimen salausta k\'e4ytet\'e4\'e4n avainten siirt\'e4miseen ja paketoimiseen (tai hallintaan).\
+\
+\ul Datan salaus:\ulnone  Valitse t\'e4m\'e4, kun varmenteen julkisella avaimella salataan dataa, joka ei ole salausavaimia.\
+\
+\ul Avainsopimus:\ulnone  Valitse t\'e4m\'e4, kun varmenteen julkista avainta k\'e4ytet\'e4\'e4n avainsopimukseen. Avainsopimusprotokollaa (tunnetaan my\'f6s nimell\'e4 avaimenvaihtoprotokolla) k\'e4ytet\'e4\'e4n, kun kaksi osapuolta sopivat avaimesta, jota k\'e4ytet\'e4\'e4n salaisen avaimen salausj\'e4rjestelm\'e4ss\'e4, jossa avaimet voidaan jakaa vapaasti ja turvallisesti ep\'e4turvallisen v\'e4yl\'e4n kautta. (Esimerkiksi, jos Diffie-Hellman-avaimia k\'e4ytet\'e4\'e4n avaintenhallintaan, t\'e4t\'e4 laajennusta k\'e4ytet\'e4\'e4n.)\
+\
+\ul Varmenteen allekirjoitus:\ulnone  Valitse t\'e4m\'e4, kun varmenteen julkista avainta k\'e4ytet\'e4\'e4n julkisen avaimen varmenteissa olevien allekirjoitusten tarkistamiseen. Varmenteet, joissa on t\'e4m\'e4 laajennus, ovat varmentajavarmenteita.\'a0Jos t\'e4m\'e4 laajennus lis\'e4t\'e4\'e4n varmenteeseen, perusrajoitustenlaajennuksissa on my\'f6s asetettava \'94K\'e4yt\'e4 t\'e4t\'e4 varmennetta varmentajana\'94. Perusrajoitustenlaajennus n\'e4ytet\'e4\'e4n my\'f6hemmin t\'e4ss\'e4 apurissa.\
+\
+\ul CRL-allekirjoitus:\ulnone  Valitse t\'e4m\'e4, kun varmenteen julkista avainta k\'e4ytet\'e4\'e4n varmenteen sulkulistan (CRL) allekirjoituksen varmentamiseen.\
+\
+\ul Vain salaus:\ulnone  Valitse t\'e4m\'e4 vain, jos avainsopimus on my\'f6s valittuna.\'a0Se osoittaa, ett\'e4 varmenteen julkista avainta voidaan k\'e4ytt\'e4\'e4 datan salaukseen avainsopimusta solmittaessa.\
+\
+\ul Vain purku:\'a0\ulnone  Valitse t\'e4m\'e4 vain, jos avainsopimus on my\'f6s valittuna. Se osoittaa, ett\'e4 varmenteen julkista avainta voidaan k\'e4ytt\'e4\'e4 datan purkuun avainsopimusta solmittaessa.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Mit\'e4 \'94T\'e4m\'e4 laajennus on kriittinen\'94 tarkoittaa?
+\f1\b0 \
+T\'e4m\'e4 tunnetaan nimell\'e4 \'94kriittisyyden osoitin\'94. T\'e4m\'e4 lippu kertoo varmennetta k\'e4ytt\'e4v\'e4lle ohjelmistolle, onko sen turvallista j\'e4tt\'e4\'e4 avaimenk\'e4ytt\'f6laajennus huomioimatta, jos se ei tunnista sit\'e4. Varmenne hyl\'e4t\'e4\'e4n, jos ohjelmisto ei tunnista kriittist\'e4 laajennusta.\
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalCanIAskYou" xmlns="urn:apple:names:siri:cat:1.0">
+	<meta name="description" value="Users asked Siri whether they could ask something."/>
+	<meta name="category" value="Canned"/>
+	<meta name="subcategory" value="Utility"/>
+	<meta name="readyForLoc" value="false"/>
+	<meta name="listenAfterSpeaking" value="true"/>
+</cat>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#DisambiguateContacts" locale="en">
+    <conditions>
+        <condition name="isRelationshipRequest">
+            <expression name="requestedRelationship" op="nonempty"/>
+        </condition>
+    </conditions>
+    <first>
+        <dialog id="DisambiguateRelationship" condition="isRelationshipRequest"><opt>Ok, <var name="user.groundingIfNeeded"/>. </opt>Which <var name="requestedRelationship"/>?</dialog>
+        <dialog id="DisambiguateGeneric"><opt>Ok, <var name="user.groundingIfNeeded"/>. </opt>Which one?</dialog>
+    </first>
+</cat>
+

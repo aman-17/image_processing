@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#DisambiguateParameterValue" locale="en">
+    <all>
+        <switch value="parameter">
+            <dialog case="'mediaItems'">What do you want to play<opt> in <var name="app.localizedName"/></opt>?</dialog>
+            <dialog case="'maxResultCount'">How many do you want to play?</dialog>
+            <dialog case="'playShuffled'">Do you want it shuffled?</dialog>
+            <dialog case="'playbackOrder'">How do you want them ordered?</dialog>
+            <dialog case="'playbackRepeatMode'">How do you want them repeated?</dialog>
+            <dialog case="'playbackQueuePosition'">Where in the queue should it be added?</dialog>
+            <dialog><var name="app.localizedName"/> doesn’t support that.</dialog>
+        </switch>
+    </all>
+</cat>

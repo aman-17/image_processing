@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ConfirmContent" locale="en">
+     
+    <conditions>
+        <condition name="isAudioMessage">
+             <expression name="outgoingMessageType" op="eq" value="'audio'"/>
+        </condition>
+    </conditions>
+     
+    <first>
+        <dialog condition="isAudioMessage">Great. Send it?</dialog>
+        <dialog condition="valueToConfirm">Your message says: <var name="valueToConfirm"/>. Is that correct?</dialog>
+        <dialog>To confirm, you want to send an empty message?</dialog>
+    </first>
+    
+</cat>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#HomePodAccountError">
+    <meta name="description" value="Dialog for saying there is an account error on homepod"/>
+    <meta name="category" value="Fatal"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+    </parameters>
+</cat>

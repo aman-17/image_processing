@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ConfirmReply">
+
+    <meta name="description" value="Executed when user gives reply payload, but not confirmation to reply."/>
+    <meta name="category" value="Confirm"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="replyPayload" type="dialog.String" description="The user's input."/>
+    </parameters>
+
+  </cat>
+

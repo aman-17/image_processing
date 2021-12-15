@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#OfferContinueReading" locale="en">
+  <random>
+      <dialog>Would you like me to continue reading?</dialog>
+      <dialog>Would you like to hear more messages?</dialog>
+  </random>
+</cat>

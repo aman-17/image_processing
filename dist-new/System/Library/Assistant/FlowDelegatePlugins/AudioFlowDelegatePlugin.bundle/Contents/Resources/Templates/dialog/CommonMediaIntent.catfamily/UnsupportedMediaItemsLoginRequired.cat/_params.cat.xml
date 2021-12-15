@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#UnsupportedMediaItemsLoginRequired">
+    <meta name="description" value="Dialog for rendering CommonMediaIntent cannot perform action because login required"/>
+    <meta name="category" value="Incomplete"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="isUserRecognized" type="dialog.Boolean" description="is the user recognized in multi-user"/>
+        <parameter name="isMultiUserDisabled" type="dialog.Boolean" description="is multi-user disabled on device state"/>
+        <parameter name="fallbackUsername" type="dialog.String" description="Fallback Username for multiuser"/>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+    </parameters>
+</cat>

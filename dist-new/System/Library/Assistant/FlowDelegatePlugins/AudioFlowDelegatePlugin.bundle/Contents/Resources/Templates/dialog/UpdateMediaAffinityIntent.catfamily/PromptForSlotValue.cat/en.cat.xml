@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="UpdateMediaAffinityIntent#PromptForSlotValue" locale="en">
+    <phrases>
+        <first phrase="mediaItemsDialog">
+            <text condition="isDislikeAffinity">What do you want to dislike on <var name="app.localizedName"/>?</text>
+            <text condition="isLikeAffinity">What do you want to like on <var name="app.localizedName"/>?</text>
+            <text>What do you want to update on <var name="app.localizedName"/>?</text>
+        </first>
+    </phrases>
+    
+    <switch value="parameter">
+        <dialog case="'mediaItems'"><phrase name="mediaItemsDialog"/></dialog>
+        <dialog case="'affinityType'">Want to like or dislike it on <var name="app.localizedName"/>?</dialog>
+    </switch>
+</cat>

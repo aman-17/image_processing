@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#CannotDetermineSenders">
+    <meta name="description" value="Tells user that we do not know who the sender is"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+</cat>

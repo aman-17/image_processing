@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#DisambiguateRecipient">
+
+    <meta name="description" value="A recipient slot needs disambiguation."/>
+    <meta name="category" value="Disambiguate"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="recipients" type="dialog.Person[]" description="The object containing the contacts."/>
+        <parameter name="deviceState" type="sirikit.DeviceState" description="The device siri was invoked."/>
+        <parameter name="recipientsAreEqual" type="dialog.Boolean" description="All recipients equal, handles are different"/>
+        <parameter name="isAllHandlePhoneNumber" type="dialog.Boolean" description="All Recipient:PersonHandles are type:PhoneNumber"/>
+        <parameter name="allRecipientsSameFirstName" type="dialog.Boolean" description="All recipients have same first name"/>
+    </parameters>
+ 
+</cat>

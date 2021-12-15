@@ -1,0 +1,39 @@
+{\rtf1\mac\ansicpg10000\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 \'8ato je Key Usage ekstenzija?\
+
+\f1\b0 Key Usage ekstenzija (KUE) definira na\uc0\u269 in na koji se certifikat mo\'9ee koristiti. Mo\'9eete upotrijebiti Key Usage ekstenziju za ograni\u269 avanje postupaka koje javni klju\u269 u certifikatu mo\'9ee provoditi. Primjerice, mo\'9eete izraditi certifikat za potpisivanje e-mail poruka, ali koji ih ne mo\'9ee kriptirati. Extended Key Usage certifikat (EKU) je sli\u269 an KUE, ali on definira certifikat u smislu "svrhe" (primjerice, za potpisivanje OCSP odziva, identifikaciju SSL klijenta, itd.). EKU je noviji i lak\'9ae podesivi od KUE, pa se \u269 esto smatra "ispravnim" mehanizmom za ograni\u269 enje uporabe. Extended Key Usage ekstenziju mo\'9eete podesiti kasnije u ovom asistentu.\
+\
+Mo\'9eete upotrijebiti sljede\uc0\u263 e Key Usage ekstenzije:\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 Potpis:\ulnone  Odaberite ovu opciju kad se javni klju\uc0\u269  certifikata koristi s mehanizmom za digitalno potpisivanje za podr\'9eavanje sigurnosnih usluga osim potpisivanja certifikata.\
+\
+\ul Nepovredivost:\ulnone  Odaberite ovu opciju kad se javni klju\uc0\u269  certifikata koristi za ovjeru digitalnih potpisa koji slu\'9ee za pru\'9eanje usluge nepovredivosti, koja \'9atiti od la\'9enog odbijanja nekog postupka. Nepovredivost osigurava da konfliktna strana ne mo\'9ee povrijediti ili poni\'9atiti valjanost izjave ili ugovora.\'a0\
+\
+\ul \'8aifriranje klju\uc0\u269 a:\ulnone  Odaberite ovu opciju kad se javni klju\uc0\u269  certifikata koristi za kriptiranje klju\u269 a u bilo koje svrhe. \'8aifriranje klju\u269 a se koristi za prijenos klju\u269 a ili omatanje klju\u269 a (ili za upravljanje klju\u269 evima).\
+\
+\ul \'8aifriranje podataka:\ulnone  Odaberite ovu opciju kad se javni klju\uc0\u269  certifikata koristi za \'9aifriranje korisni\u269 kih podataka, osim kriptografskih klju\u269 eva.\
+\
+\ul Sporazum o klju\uc0\u269 u:\ulnone  Odaberite ovu opciju kad se javni klju\uc0\u269  certifikata koristi za sporazum o klju\u269 u. Key agreement protokol (tako\u273 er poznat i kao protokol za usugla\'9aavanje klju\u269 eva) koristi se kad se dvije strane slo\'9ee oko klju\u269 a koji \u263 e se koristiti u sustavu kriptiranja tajnog klju\u269 a, pomo\u263 u kojeg se klju\u269 evi mogu slobodno dijeliti putem bilo kojeg medija koji nije siguran (Primjerice, ako se za upravljanje klju\u269 evima koriste Diffie-Hellman klju\u269 evi, ova ekstenzija je pode\'9aena.)\
+\
+\ul Potpisivanje certifikata:\ulnone  Odaberite ovu opciju kad se javni klju\uc0\u269  certifikata koristi za ovjeru potpisa na certifikatu javnog klju\u269 a. Certifikati s ovom ekstenzijom su autoriteti za certifikat (CA).\'a0 Ako se ova ekstenzija dodijeli certifikatu, tako\u273 er se treba podesiti opcija "Koristi ovaj certifikat kao autoritet za certifikat"\'a0 u Basic Constraints ekstenziji (BCE). BCE se prikazuje kasnije u ovom asistentu.\
+\
+\ul CRL potpisivanje:\ulnone  Odaberite ovu opciju kad se javni klju\uc0\u269  certifikata koristi za ovjeru potpisa na Certificate Revocation popisu (CRL).\
+\
+\ul Samo \'9aifriranje:\ulnone  Odaberite ovu opciju samo kad je pode\'9aen i sporazum o klju\uc0\u269 u.\'a0 Time je nazna\u269 eno da se javni klju\u269  certifikata mo\'9ee koristiti za \'9aifriranje podataka tijekom provo\u273 enja sporazuma o klju\u269 u.\
+\
+\ul Samo otkrivanje:\ulnone \'a0 Odaberite ovu opciju kad je pode\'9aen i sporazum o klju\uc0\u269 u. Time je nazna\u269 eno da se javni klju\u269  certifikata mo\'9ee koristiti za otkrivanje podataka tijekom provo\u273 enja sporazuma o klju\u269 u.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 \'8ato zna\uc0\u269 i "Ova ekstenzija je klju\u269 na"?\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b0 \cf0 Tako\uc0\u273 er se naziva i "indikator va\'9enosti". To je zastavica koja softveru daje naredbu da koristi certifikat svaki put kad je sigurno zanemariti Extended Key Usage ekstenziju, ako je ne prepozna. Certifikat \u263 e se odbiti ako softver ne prepozna "klju\u269 nu ekstenziju".}

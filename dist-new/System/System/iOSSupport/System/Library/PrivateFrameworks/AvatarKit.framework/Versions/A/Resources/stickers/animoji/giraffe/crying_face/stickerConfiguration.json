@@ -1,0 +1,58 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../../shared/cam.scnz"
+  },
+  "emoji" : "😢",
+  "identifier" : "crying_face",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_L" : 0.88209950923919678,
+    "browDown_R" : 0.84350460767745972,
+    "browInnerUp" : 0.94429868459701538,
+    "cheekPuff" : 0.12121210247278214,
+    "cheekSquint_L" : 0.2837468683719635,
+    "cheekSquint_R" : 0.22865039110183716,
+    "eyeLookDown_L" : 0.085399441421031952,
+    "eyeLookDown_R" : 0.074380174279212952,
+    "eyeSquint_L" : 0.45801553130149841,
+    "eyeSquint_R" : 0.4087696373462677,
+    "jawOpen" : 0.059594649821519852,
+    "mouthDimple_L" : 0.16528920829296112,
+    "mouthDimple_R" : 0.21212121844291687,
+    "mouthFrown_L" : 0.4250946044921875,
+    "mouthFrown_R" : 0.3725435733795166,
+    "mouthLeft" : 0.093663915991783142,
+    "mouthPress_L" : 0.18457300961017609,
+    "mouthPress_R" : 0.27823710441589355,
+    "mouthShrugLower" : 0.49311277270317078,
+    "mouthShrugUpper" : 0.49035823345184326,
+    "mouthStretch_L" : 0.80991733074188232,
+    "mouthStretch_R" : 0.68595039844512939,
+    "neckOrientation" : [
+      0,
+      0,
+      0.061048541218042374,
+      0.9981347918510437
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "image" : "../../../shared/crying_face/crying_tear.heic",
+      "position" : {
+        "x" : -0.050000000000000003,
+        "y" : 0.23000000000000001,
+        "z" : 18
+      },
+      "renderLast" : false
+    }
+  ]
+}

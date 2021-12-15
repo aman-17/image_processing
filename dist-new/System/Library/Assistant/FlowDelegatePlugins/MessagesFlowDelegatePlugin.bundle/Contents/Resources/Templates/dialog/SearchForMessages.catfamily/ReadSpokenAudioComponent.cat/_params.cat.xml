@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadSpokenAudioComponent">
+
+    <meta name="description" value="Read the audio component in spoken messages mode."/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="sender" type ="dialog.Person" description="The sender of the message."/>
+        <parameter name="count" type="dialog.Number" description="The number of audio messages with the same effect sent."/>
+        <parameter name="effect" type ="dialog.String" description="The effect on the message."/>
+        <parameter name="shouldSummarize" type="dialog.Boolean" description="whether audio messages should be played directly or summarized with dialog."/>
+        <parameter name="componentContext" type="messages.MessageComponentDialogContext" description="Context used for dialoging about given message component"/>
+        <parameter name="spokenContext" type="messages.SpokenDialogContext" description="Spoken messages context used for dialoging."/>
+    </parameters>
+
+</cat>

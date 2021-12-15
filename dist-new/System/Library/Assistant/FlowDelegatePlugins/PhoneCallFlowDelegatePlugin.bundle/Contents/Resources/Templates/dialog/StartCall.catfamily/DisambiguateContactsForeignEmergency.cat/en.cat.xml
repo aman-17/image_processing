@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#DisambiguateContactsForeignEmergency" locale="en">
+
+<first>
+    <dialog condition="device.isDialogDriven">Which would you like to call?</dialog>
+    <dialog>Would you like to call <var name="nonLocalEmergencyContact"/> or emergency services?</dialog>
+</first>
+</cat>

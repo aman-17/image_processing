@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ErrorWithCodeMessageServiceNotAvailable">
+
+    <meta name="description" value="Executed when the message service was unavailable."/>
+    <meta name="category" value="Fatal"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="app" type="messages.App" description="The app object used to send the message."/>
+    </parameters>
+  
+</cat>
+

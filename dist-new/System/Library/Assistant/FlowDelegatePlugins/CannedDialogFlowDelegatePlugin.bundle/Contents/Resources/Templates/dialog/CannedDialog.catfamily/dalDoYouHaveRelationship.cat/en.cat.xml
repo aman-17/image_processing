@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalDoYouHaveRelationship" xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <random>
+        <dialog>My end user license agreement is commitment enough for me.</dialog>
+        <dialog>I’ve been told my artificial intelligence standards are too high.</dialog>
+        <dialog>I’m not into terrestrial partnerships. I’m more of a free radical.</dialog>
+        <dialog>No, but I’m always dating. Try saying, "What’s the date?"</dialog>
+    </random>
+</cat>

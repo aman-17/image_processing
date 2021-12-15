@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+  <conditions>
+      <condition name="isUnknownProvider">
+          <or>
+              <expression name="preferredCallProvider" op="eq" value="'UNKNOWN'"/>
+              <expression name="preferredCallProvider" op="empty"/>
+          </or>
+      </condition>
+  </conditions>
+  <phrases>
+      <switch phrase="callType" value="preferredCallProvider">
+          <text case="'FACETIME_PROVIDER'">a FaceTime call</text>
+          <text case="'TELEPHONY_PROVIDER'">a phone call</text>
+      </switch>
+  </phrases>
+  <first>
+      <dialog condition="isUnknownProvider">There is nothing to confirm for type of destination.</dialog>
+      <dialog>Just to confirm, you would like to make <phrase name="callType"/>?</dialog>
+  </first>
+
+</cat>

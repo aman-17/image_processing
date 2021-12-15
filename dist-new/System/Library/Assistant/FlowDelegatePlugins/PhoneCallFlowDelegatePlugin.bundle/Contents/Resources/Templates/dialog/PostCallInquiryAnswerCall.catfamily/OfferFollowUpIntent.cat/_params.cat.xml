@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PostCallInquiryAnswerCall#OfferFollowUpIntent">
+    <meta name="category" value="Prompt"/>
+    <meta name="description" value="Executed when we want to prompt the user with a followup message."/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+      <parameter name="followUpOfferType" type="dialog.String"/>
+    </parameters>
+</cat>

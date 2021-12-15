@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedRecipientRequestedHandleInvalid" locale="en">
+    <phrases>
+        <first phrase="personHandleType">
+            <text condition="personHandle.formattedType"><var name="personHandle.formattedType"/></text>
+            <text>contact method</text>
+        </first>
+    </phrases>
+    
+    <first>
+        <dialog>Hmm, looks like there’s a problem with that <phrase name="personHandleType"/>.</dialog>
+    </first>
+</cat>

@@ -1,0 +1,21 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\b\fs24 \cf0 Hvad er Udbygget brug af udvidet n\'f8gle?
+\f1\b0 \
+Udbygget brug af udvidet n\'f8gle (UBUN) er n\'e6sten det samme som Brug af udvidet n\'f8gle (BUN), bortset fra at UBUN-v\'e6rdier defineres p\'e5 basis af \'93form\'e5l\'94 (for eksempel signering af OCSP-svar, identifikation af en SSL-klient osv.) og let kan udbygges. UBUN defineres med objektidentifikatorer kaldet OID'er. Hvis udbygningen af BUN udelades, er alle handlinger potentielt gyldige.\
+\
+
+\f0\b Hvad er forskellen mellem BUN og UBUN?
+\f1\b0 \
+UBUN er nyere og opfattes som \'93selve\'94 mekanismen til begr\'e6nset brug, mens BUN normalt anses for mindre fleksibel. BUN defineres p\'e5 basis af \'93handlinger\'94. UBUN defineres p\'e5 basis af \'93form\'e5l\'94. UBUN'er kontrolleres normalt offensivt, dvs. \'93skal have denne UBUN OID\'94, mens BUN'er normalt kontrolleres defensivt, dvs. \'93ingen afvisning skal v\'e6re indstillet, og kun kryptering/dekryptering kan v\'e6re indstillet\'94. I tilf\'e6lde af en certifikatmyndighed kan listen over form\'e5l begr\'e6nse de typer certifikater, som myndigheden kan oprette; der skal v\'e6re inkluderet en handling i b\'e5de myndigheden og de certifikater, den signerer, f\'f8r de er gyldige.\
+\
+
+\f0\b Hvad betyder \'93Denne udvidelse er kritisk\'94?
+\f1\b0 \
+Det kaldes ogs\'e5 den \'93kritiske indikator\'94. Det er et flag, der fort\'e6ller software, som bruger certifikatet, om det er sikkert at ignorere den udbyggede brug af udvidet n\'f8gle, hvis den ikke genkender den. Et certifikat vil blive afvist, hvis softwaren ikke genkender en \'93kritisk udvidelse\'94.}

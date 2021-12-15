@@ -1,0 +1,464 @@
+{
+    Name = "Disk-Folder-File Suite";
+    Description = "Terms and Events for controlling Disks, Folders, and Files";
+
+    Commands = {
+        delete = {
+            Name = "delete";
+            Description = "Delete disk item(s).";
+			UnnamedArgument = {
+				Description = "The disk item(s) to be deleted.";
+			};
+        };
+        move = {
+            Name = "move";
+            Description = "Move disk item(s) to a new location.";
+			UnnamedArgument = {
+				Description = "The disk item(s) to be moved.";
+			};
+            Arguments = {
+                ToLocation = {
+                    Name = "to";
+                    Description = "The new location for the disk item(s).";
+                };
+            };
+        };
+        open = {
+            Name = "open";
+            Description = "Open disk item(s) with the appropriate application.";
+			UnnamedArgument = {
+				Description = "The disk item(s) to be opened.";
+			};
+        };
+	};
+    Classes = {
+        OldItem = {
+            Name = "item";
+            PluralName = "items";
+            Description = "An item stored in the file system";
+            Attributes = {
+                name = {
+                    Name = "name";
+                    Description = "the name of the item";
+                };
+                uniqueID = {
+                    Name = "id";
+                    Description = "the unique ID of the item";
+                };
+			};
+		};
+        DiskItem = {
+            Name = "disk item";
+            PluralName = "disk items";
+            Description = "An item stored in the file system";
+            Attributes = {
+                name = {
+                    Name = "name";
+                    Description = "the name of the disk item";
+                };
+                uniqueID = {
+                    Name = "id";
+                    Description = "the unique ID of the disk item";
+                };
+                volume = {
+                    Name = "volume";
+                    Description = "the volume on which the disk item resides";
+                };
+                hfsPath = {
+                    Name = "path";
+                    Description = "the file system path of the disk item";
+                };
+                posixPath = {
+                    Name = "POSIX path";
+                    Description = "the POSIX file system path of the disk item";
+                };
+                creationDate = {
+					Name = "creation date";
+					Description = "the date on which the disk item was created";
+				};
+                modificationDate = {
+					Name = "modification date";
+					Description = "the date on which the disk item was last modified";
+				};
+                nameExtension = {
+                    Name = "name extension";
+                    Description = "the extension portion of the name";
+                };
+                busyStatus = {
+                    Name = "busy status";
+                    Description = "Is the disk item busy?";
+                };
+                packageFolder = {
+                    Name = "package folder";
+                    Description = "Is the disk item a package?";
+                };
+                visible = {
+                    Name = "visible";
+                    Description = "Is the disk item visible?";
+                };
+                url = {
+                    Name = "URL";
+                    Description = "the URL of the disk item";
+                };
+                displayedName = {
+                    Name = "displayed name";
+                    Description = "the name of the disk item as displayed in the User Interface";
+                };
+                logicalSize = {
+					Name = "size";
+                    Description = "the logical size of the disk item";
+				};
+                physicalSize = {
+					Name = "physical size";
+                    Description = "the actual space used by the disk item on disk";
+				};
+                container = {
+					Name = "container";
+                    Description = "the folder or disk which has this disk item as an element";
+				};
+            };
+        };
+        Disk = {
+            Name = "disk";
+            PluralName = "disks";
+            Description = "A disk in the file system";
+            Attributes = {
+                capacity = {
+                    Name = "capacity";
+                    Description = "the total number of bytes (free or used) on the disk";
+                };
+                freeSpace = {
+                    Name = "free space";
+                    Description = "the number of free bytes left on the disk";
+                };
+                ejectable = {
+                    Name = "ejectable";
+                    Description = "Can the media be ejected (floppies, CD's, and so on)?";
+                };
+                localVolume = {
+                    Name = "local volume";
+                    Description = "Is the media a local volume (as opposed to a file server)?";
+                };
+                startup = {
+                    Name = "startup";
+                    Description = "Is this disk the boot disk?";
+                };
+                format = {
+                    Name = "format";
+                    Description = "the file system format of this disk";
+                };
+                ignorePrivileges = {
+                    Name = "ignore privileges";
+                    Description = "Ignore permissions on this disk?";
+                };
+                afpZone = {
+                    Name = "zone";
+                    Description = "the zone in which the disk's server resides, AFP volumes only";
+                };
+                afpServer = {
+                    Name = "server";
+                    Description = "the server on which the disk resides, AFP volumes only";
+                };
+            };
+        };
+        Domain = {
+            Name = "domain";
+            PluralName = "domains";
+            Description = "A domain in the file system";
+            Attributes = {
+                name = {
+                    Name = "name";
+                    Description = "the name of the domain";
+                };
+                uniqueID = {
+                    Name = "id";
+                    Description = "the unique identifier of the domain";
+                };
+                folderApplications = {
+					Name = "applications folder";
+					Description = "The Applications folder";
+                };
+                folderApplicationSupport = {
+					Name = "application support folder";
+					Description = "The Application Support folder";
+                };
+                folderDesktopPictures = {
+					Name = "desktop pictures folder";
+					Description = "The Desktop Pictures folder";
+                };
+                folderFolderActionScripts = {
+					Name = "Folder Action scripts folder";
+					Description = "The Folder Action Scripts folder";
+                };
+                folderFonts = {
+					Name = "fonts folder";
+					Description = "The Fonts folder";
+                };
+                folderLibrary = {
+					Name = "library folder";
+					Description = "The Library folder";
+                };
+                folderPreferences = {
+					Name = "preferences folder";
+					Description = "The Preferences folder";
+                };
+                folderScriptingAdditions = {
+					Name = "scripting additions folder";
+					Description = "The Scripting Additions folder";
+                };
+                folderScripts = {
+					Name = "scripts folder";
+					Description = "The Scripts folder";
+                };
+                folderSharedDocuments = {
+					Name = "shared documents folder";
+					Description = "The Shared Documents folder";
+                };
+                folderSpeakable = {
+					Name = "speakable items folder";
+					Description = "The Speakable Items folder";
+                };
+                folderUtilities = {
+					Name = "utilities folder";
+					Description = "The Utilities folder";
+                };
+                folderWorkflows = {
+					Name = "workflows folder";
+					Description = "The Automator Workflows folder";
+                };
+            };
+        };
+        SystemDomain = {
+            Name = "system domain object";
+            PluralName = "system domain objects";
+            Description = "The system domain in the file system";
+        };
+        LocalDomain = {
+            Name = "local domain object";
+            PluralName = "local domain objects";
+            Description = "The local domain in the file system";
+        };
+        NetworkDomain = {
+            Name = "network domain object";
+            PluralName = "network domain objects";
+            Description = "The network domain in the file system";
+        };
+        UserDomain = {
+            Name = "user domain object";
+            PluralName = "user domain objects";
+            Description = "The user domain in the file system";
+            Attributes = {
+                folderDesktop = {
+					Name = "desktop folder";
+					Description = "The user's Desktop folder";
+                };
+                folderDocuments = {
+					Name = "documents folder";
+					Description = "The user's Documents folder";
+                };
+                folderDownloads = {
+					Name = "downloads folder";
+					Description = "The user's Downloads folder";
+                };
+                folderFavorites = {
+					Name = "favorites folder";
+					Description = "The user's Favorites folder";
+                };
+                folderHome = {
+					Name = "home folder";
+					Description = "The user's Home folder";
+                };
+                folderMovies = {
+					Name = "movies folder";
+					Description = "The user's Movies folder";
+                };
+                folderMusic = {
+					Name = "music folder";
+					Description = "The user's Music folder";
+                };
+                folderPictures = {
+					Name = "pictures folder";
+					Description = "The user's Pictures folder";
+                };
+                folderPublic = {
+					Name = "public folder";
+					Description = "The user's Public folder";
+                };
+                folderSites = {
+					Name = "sites folder";
+					Description = "The user's Sites folder";
+                };
+                folderTemporary = {
+					Name = "temporary items folder";
+					Description = "The Temporary Items folder";
+                };
+            };
+        };
+        ClassicDomain = {
+            Name = "Classic domain object";
+            PluralName = "Classic domain objects";
+            Description = "The Classic domain in the file system";
+            Attributes = {
+                folderAppleMenu = {
+					Name = "apple menu folder";
+					Description = "The Apple Menu Items folder";
+                };
+                folderControlPanels = {
+					Name = "control panels folder";
+					Description = "The Control Panels folder";
+                };
+                folderControlStripModules = {
+					Name = "control strip modules folder";
+					Description = "The Control Strip Modules folder";
+                };
+                folderDesktop = {
+					Name = "desktop folder";
+					Description = "The Classic Desktop folder";
+                };
+                folderExtensions = {
+					Name = "extensions folder";
+					Description = "The Extensions folder";
+                };
+               folderFonts = {
+					Name = "fonts folder";
+					Description = "The Fonts folder";
+                };
+                folderLauncher = {
+					Name = "launcher items folder";
+					Description = "The Launcher Items folder";
+                };
+                folderPreferences = {
+					Name = "preferences folder";
+					Description = "The Classic Preferences folder";
+                };
+                folderShutdown = {
+					Name = "shutdown folder";
+					Description = "The Shutdown Items folder";
+                };
+                folderStartup = {
+					Name = "startup items folder";
+					Description = "The StartupItems folder";
+                };
+                folderSystem = {
+					Name = "system folder";
+					Description = "The System folder";
+                };
+            };
+        };
+        Folder = {
+            Name = "folder";
+            PluralName = "folders";
+            Description = "A folder in the file system";
+        };
+        File = {
+            Name = "file";
+            PluralName = "files";
+            Description = "A file in the file system";
+            Attributes = {
+                fileType = {
+                    Name = "file type";
+                    Description = "the OSType identifying the type of data contained in the file";
+                };
+                creatorType = {
+                    Name = "creator type";
+                    Description = "the OSType identifying the application that created the file";
+                };
+                stationery = {
+                    Name = "stationery";
+                    Description = "Is the file a stationery pad?";
+                };
+                kind = {
+                    Name = "kind";
+                    Description = "The kind of file, as shown in Finder";
+                };
+                uniformTypeID = {
+                    Name = "type identifier";
+                    Description = "The type identifier of the file";
+                };
+                productVersion = {
+                    Name = "product version";
+                    Description = "the version of the product (visible at the top of the \"Get Info\" window)";
+                };
+                version = {
+                    Name = "version";
+                    Description = "the version of the file (visible at the bottom of the \"Get Info\" window)";
+                };
+                shortVersion = {
+                    Name = "short version";
+                    Description = "the short version of the file";
+                };
+                defaultApplication = {
+                    Name = "default application";
+                    Description = "the application that will launch if the file is opened";
+                };
+            };
+        };
+        FilePackage = {
+            Name = "file package";
+            PluralName = "file packages";
+            Description = "A file package in the file system";
+        };
+        Alias = {
+            Name = "alias";
+            PluralName = "aliases";
+            Description = "An alias in the file system";
+            Attributes = {
+                fileType = {
+                    Name = "file type";
+                    Description = "the OSType identifying the type of data contained in the alias";
+                };
+                creatorType = {
+                    Name = "creator type";
+                    Description = "the OSType identifying the application that created the alias";
+                };
+                stationery = {
+                    Name = "stationery";
+                    Description = "Is the alias a stationery pad?";
+                };
+                kind = {
+                    Name = "kind";
+                    Description = "The kind of alias, as shown in Finder";
+                };
+                uniformTypeID = {
+                    Name = "type identifier";
+                    Description = "The type identifier of the alias";
+                };
+                productVersion = {
+                    Name = "product version";
+                    Description = "the version of the product (visible at the top of the \"Get Info\" window)";
+                };
+                version = {
+                    Name = "version";
+                    Description = "the version of the application bundle referenced by the alias (visible at the bottom of the \"Get Info\" window)";
+                };
+                shortVersion = {
+                    Name = "short version";
+                    Description = "the short version of the application bundle referenced by the alias";
+                };
+                defaultApplication = {
+                    Name = "default application";
+                    Description = "the application that will launch if the alias is opened";
+                };
+            };
+        };
+    };
+	Enumerations = {
+        DiskFormats = {
+			MacOS = {Description = "Mac OS format"; Name = "Mac OS format"; };
+			MacOSExtended = {Description = "Mac OS Extended format"; Name = "Mac OS Extended format"; };
+			UFS = {Description = "UFS format"; Name = "UFS format"; };
+			NFS = {Description = "NFS format"; Name = "NFS format"; };
+			Audio = {Description = "audio format"; Name = "audio format"; };
+			ProDOS = {Description = "ProDOS format"; Name = "ProDOS format"; };
+			MSDOS = {Description = "MSDOS format"; Name = "MSDOS format"; };
+			ISO9660 = {Description = "ISO 9660 format"; Name = "ISO 9660 format"; };
+			HighSierra = {Description = "High Sierra format"; Name = "High Sierra format"; };
+			QuickTake = {Description = "QuickTake format"; Name = "QuickTake format"; };
+			ApplePhoto = {Description = "Apple Photo format"; Name = "Apple Photo format"; };
+			AppleShare = {Description = "AppleShare format"; Name = "AppleShare format"; };
+			UDF = {Description = "UDF format"; Name = "UDF format"; };
+			WebDAV = {Description = "WebDAV format"; Name = "WebDAV format"; };
+			Unknown = {Description = "unknown format"; Name = "unknown format"; };
+        };
+    };
+}

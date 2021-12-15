@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ConfirmGroupName" locale="en">
+    <first>
+        <dialog condition="valueToConfirm">To confirm, you’d like to read messages from the group <var name="valueToConfirm"/>?</dialog>
+        <dialog>To confirm, you want to read messages from the specified group?</dialog>
+    </first>
+    
+</cat>

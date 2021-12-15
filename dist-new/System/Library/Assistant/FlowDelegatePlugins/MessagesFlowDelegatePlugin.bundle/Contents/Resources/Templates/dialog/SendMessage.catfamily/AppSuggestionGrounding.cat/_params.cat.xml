@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#AppSuggestionGrounding">
+    
+    <meta name="description" value="Dialog to notify user that SeAS (Smart enough App Selection) is helping to select a 3rd-party app. Please note, this dialog will show at most once a day and totally at most twice. This dialog will produce an empty result if the condition shouldShowAppSuggestion is false."/>
+    <meta name="category" value="Interstitial"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="app" type="messages.App" description="The app which is suggested by SEAS."/>
+    </parameters>
+    
+</cat>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalWhoIsSiri">
+	<all>
+		<random phrase="">
+			<dialog>I’m Siri, your virtual assistant.</dialog>
+			<dialog>I am Siri.</dialog>
+			<dialog>I’m Siri…<break time="500ms"/> here to help.</dialog>
+			<dialog note="This should have listen after speaking"><print>I’m Siri. But enough about me… how can I help you?</print><speak>I’m Siri. <break time="750ms"/>But enough about me… <break time="500ms"/>how can I help you.</speak></dialog>
+		</random>
+	</all>
+	<conditions/>
+	<phrases/>
+</cat>

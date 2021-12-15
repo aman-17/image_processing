@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#ConfirmResumePlayback" locale="en">
+      <first>
+          <dialog condition="resumePlayback">Just to confirm, you’d like to resume playing in <var name="app.localizedName"/>, right?</dialog>
+          <dialog>Just to confirm, you don’t want to resume playing in <var name="app.localizedName"/>, right?</dialog>
+      </first>
+</cat>

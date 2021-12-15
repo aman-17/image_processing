@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CannedDialog#dalUserQuotedSiri">
+    <meta name="description" value="For times when a user has clearly directly quoted Siri back at itself, like 'You auto complete me.'"/>
+    <meta name="category" value="Social"/>
+    <meta name="subcategory" value="Passing Time"/>
+    <meta name="readyForLoc" value="false"/>
+</cat>

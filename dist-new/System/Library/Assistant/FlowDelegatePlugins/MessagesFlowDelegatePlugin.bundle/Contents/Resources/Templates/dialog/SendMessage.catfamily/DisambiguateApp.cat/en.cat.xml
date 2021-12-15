@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#DisambiguateApp" locale="en">
+    <random>
+        <dialog>Which app would you like to use?</dialog>
+        <dialog>Which app?</dialog>
+    </random>
+</cat>

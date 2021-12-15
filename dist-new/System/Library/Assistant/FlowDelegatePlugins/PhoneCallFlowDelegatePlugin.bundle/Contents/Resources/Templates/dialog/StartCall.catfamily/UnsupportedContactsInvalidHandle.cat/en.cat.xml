@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <conditions>
+        <condition name="isCallingPhoneNumber">
+            <and>
+                <expression name="contacts.isUnnamedPhoneNumber"/>
+                <expression name="contacts.list.length" op="gt" value="0"/>
+                <expression name="contacts.list[0].personHandle" op="defined"/>
+            </and>
+        </condition>
+    </conditions>
+    <first>
+        <dialog id="PhoneNumberSpecified" condition="isCallingPhoneNumber">Sorry, I can’t call <var name="contacts.list[0].personHandle.formattedValue"/>.</dialog>
+        <dialog id="PhoneNumberNotSpecified">Sorry, I can’t call using that number.</dialog>
+    </first>
+</cat>

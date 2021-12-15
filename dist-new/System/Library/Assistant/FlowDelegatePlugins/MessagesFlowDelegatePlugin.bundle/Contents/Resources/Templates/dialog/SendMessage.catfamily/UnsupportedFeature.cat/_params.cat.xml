@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedFeature">
+    <meta name="description" value="Provides dialog for unsupported feature"/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="unsupportedMessageType" type="dialog.String" description="The unsupported message type"/>
+    </parameters>
+</cat>

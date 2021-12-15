@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayMediaItemsEmpty" locale="en">
+    <conditions>
+        <condition name="fallbackUsernamePresent" note="fallbackUsername non-empty">
+            <expression name="fallbackUsername" op="nonempty"/>
+        </condition>
+        <condition name="areSpeakerNamesPresent">
+            <or>
+                <expression name="wha.firstSpeakerName"/>
+                <expression name="wha.secondSpeakerName"/>
+            </or>
+        </condition>
+        <condition name="areSpeakerRoomsPresent">
+            <or>
+                <expression name="wha.firstSpeakerRoom"/>
+                <expression name="wha.secondSpeakerRoom"/>
+            </or>
+        </condition>
+        <condition name="areBothPermanentNamesPresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+            </and>
+        </condition>
+        <condition name="isPermanentNameAndRoomNamePresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <expression name="wha.firstRoomNameFromSpokenEntities"/>
+                <or>
+                    <not>
+                        <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+                </or>
+            </and>
+        </condition>
+        <condition name="isOnlyFirstPermanentNamePresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <or>
+                    <not>
+                        <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+                </or>
+                <or>
+                    <not>
+                        <expression name="wha.firstRoomNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.firstRoomNameFromSpokenEntities" op="empty"/>
+                </or>
+            </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="multiUserIntroduction">
+            <text condition="isGrounding">OK, <var name="user.groundingIfNeeded"/>, </text>
+            <text></text>
+        </first>
+        <first phrase="fallbackUsernameAttribution">
+            <text condition="fallbackUsernamePresent"><var name="fallbackUsername" inflect="genitive"/> </text>
+            <text></text>
+        </first>
+        <first phrase="groupsDialog">
+            <text condition="areBothPermanentNamesPresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and <var name="wha.secondPermanentNameFromSpokenEntities"/></text>
+            <text condition="isPermanentNameAndRoomNamePresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and in the <var name="wha.firstRoomNameFromSpokenEntities"/></text>
+            <text condition="isOnlyFirstPermanentNamePresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/></text>
+            <text></text>
+        </first>
+        <first phrase="whaDialog">
+            <text condition="wha.isAllSpeakers"> everywhere</text>
+            <text condition="wha.hasThreeOrMoreRooms"> in multiple rooms</text>
+            <text condition="wha.hasGroups"><phrase name="groupsDialog"/></text>
+            <text condition="areSpeakerNamesPresent"> on the <var name="wha.firstSpeakerName"/><opt> and <var name="wha.secondSpeakerName"/></opt></text>
+            <text condition="areSpeakerRoomsPresent"> in the <var name="wha.firstSpeakerRoom"/><opt> and <var name="wha.secondSpeakerRoom"/></opt></text>
+            <text></text>
+        </first>
+    </phrases>
+    <first>
+        <dialog id="InterstitialNextEmptyMediaItems" condition="isPlaybackQueueLocationNext">
+            <phrase name="multiUserIntroduction"/>I’ve asked <opt><phrase name="fallbackUsernameAttribution"/></opt><var name="app.localizedName"/> to play it next…
+        </dialog>
+        <dialog id="InterstitialLaterEmptyMediaItems" condition="isPlaybackQueueLocationLater">
+            <phrase name="multiUserIntroduction"/>I’ve asked <opt><phrase name="fallbackUsernameAttribution"/></opt><var name="app.localizedName"/> to add it to your queue…
+        </dialog>
+        <random>
+            <dialog>
+                <phrase name="multiUserIntroduction"/><transform mode="capitalizeSentence">here’s</transform> <opt><phrase name="fallbackUsernameAttribution"/></opt><var name="app.localizedName"/><phrase name="whaDialog"/>…
+            </dialog>
+            <dialog>
+                <phrase name="multiUserIntroduction"/><transform mode="capitalizeSentence">now</transform> playing <opt><phrase name="fallbackUsernameAttribution"/></opt><var name="app.localizedName"/><phrase name="whaDialog"/>…
+            </dialog>
+        </random>
+    </first>
+</cat>

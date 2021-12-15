@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalNiceToMeetYou" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+    <first>
+        <dialog condition="dialogState.isFirstTime">
+            <print>Well<opt>, <var name="user"/></opt>, it’s nice to meet you, too.</print>
+            <speak>Well, it’s nice to meet you, too.</speak>
+        </dialog>
+        <random>
+            <dialog>Likewise.</dialog>
+            <dialog>The pleasure is all mine.</dialog>
+        </random>
+    </first>
+</cat>

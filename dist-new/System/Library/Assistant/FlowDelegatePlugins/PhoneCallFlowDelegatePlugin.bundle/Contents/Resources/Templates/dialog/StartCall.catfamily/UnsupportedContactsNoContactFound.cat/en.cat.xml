@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <first>
+        <first condition="isFirstPartyApp">
+            <dialog id="FirstPartyNamed"><opt>Sorry, <var name="user.groundingIfNeeded"/>, </opt>I don’t see a <transform mode="quote"><var name="contact"/></transform> in your Contacts.</dialog>
+            <dialog id="FirstPartyUnnamed">Hmm, I didn’t find that contact.</dialog>
+        </first>
+        <dialog id="ThirdPartyNamed1">Hmm, <var name="appName"/> didn’t find <transform mode="quote"><var name="contact"/></transform>.</dialog>
+        <dialog id="ThirdPartyNamed2">Hmm, this app didn’t find <transform mode="quote"><var name="contact"/></transform>.</dialog>
+        <dialog id="ThirdPartyUnnamed1">Hmm, <var name="appName"/> didn’t find that contact.</dialog>
+        <dialog id="ThirdPartyUnnamed2">Hmm, this app didn’t find that contact.</dialog>
+    </first>
+</cat>

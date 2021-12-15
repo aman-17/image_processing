@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#HomePodAccountError" locale="en">
+    <first>
+        <dialog>Something's up with your Apple Music account. For details, see the Home app.</dialog>
+    </first>
+</cat>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadSpokenLongMessageConciseHint" locale="en">
+        <first>
+            <dialog><break time="1000ms"/>To hear the full message, say, ’Reed it.’</dialog>
+        </first>
+</cat>

@@ -1,0 +1,38 @@
+{\rtf1\ansi\ansicpg1250\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww24400\viewh14080\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs24 \cf0 Co to jest rozszerzenie zastosowa\uc0\u324  klucza?
+\f1\b0 \
+Rozszerzenie zastosowa\uc0\u324  klucza (KUE) okre\u347 la spos\'f3b korzystania z\'a0certyfikatu. Mo\u380 esz u\u380 y\u263  rozszerzenia zastosowa\u324  klucza, aby ograniczy\u263  operacje, jakie mo\u380 liwe s\u261  do wykonania za pomoc\u261  klucza publicznego w\'a0danym certyfikacie. Przyk\u322 adowo, mo\u380 esz utworzy\u263  certyfikat pozwalaj\u261 cy na podpisywanie wiadomo\u347 ci, ale nie na ich szyfrowanie. Certyfikat poszerzonych zastosowa\u324  klucza (EKU) podobny jest do KUE, ale okre\u347 la certyfikat pod wzgl\u281 dem celu, np. do podpisywania odpowiedzi OCSP, identyfikowania klienta SSL itp. Mechanizm EKU jest nowszy i\'a0bardziej uniwersalny ni\u380  KUE, wi\u281 c cz\u281 sto uznawany jest za podstawowy spos\'f3b ograniczania zastosowa\u324 . Ten asystent pozwoli Ci p\'f3\u378 niej skonfigurowa\u263  rozszerzenie EKU.\
+\
+Oto rozszerzenia zastosowa\uc0\u324  klucza, kt\'f3rych mo\u380 esz u\u380 y\u263 :\
+\
+Podpis: zaznacz, je\uc0\u380 eli klucz publiczny certyfikatu jest u\u380 ywany z\'a0mechanizmem podpisu cyfrowego w\'a0celu obs\u322 ugi innych us\u322 ug bezpiecze\u324 stwa, ni\u380  podpisywanie certyfikat\'f3w.\
+\
+Niezaprzeczalno\uc0\u347 \u263 : zaznacz, je\u380 eli klucz publiczny certyfikatu jest u\u380 ywany do sprawdzania podpis\'f3w cyfrowych, u\u380 ywanych do udost\u281 pniania us\u322 ugi niezaprzeczalno\u347 ci, chroni\u261 cej przed fa\u322 szywym odrzuceniem niekt\'f3rych czynno\u347 ci. Niezaprzeczalno\u347 \u263  zapewnia, \u380 e \u380 adna ze stron nie mo\u380 e odrzuci\u263  wa\u380 no\u347 ci zeznania ani uchyli\u263  si\u281  od wype\u322 nienia umowy.\'a0\
+\
+Szyfrowanie klucza: zaznacz, je\uc0\u380 eli klucz publiczny certyfikatu jest u\u380 ywany do szyfrowania klucza w\'a0dowolnym celu. Szyfrowanie klucza u\u380 ywane jest do przesy\u322 ania kluczy i\'a0zarz\u261 dzania nimi.\
+\
+Szyfrowanie danych: zaznacz, je\uc0\u380 eli klucz publiczny certyfikatu jest u\u380 ywany do szyfrowania innych danych u\u380 ytkownika, ni\u380  klucze kryptograficzne.\
+\
+Uzgadnianie klucza: zaznacz, je\uc0\u380 eli klucz publiczny certyfikatu jest u\u380 ywany do uzgadniania klucza. Protok\'f3\u322  uzgadniania klucza (nazywany tak\u380 e protoko\u322 em wymiany kluczy) u\u380 ywany jest wtedy, gdy dwie strony zgadzaj\u261  si\u281  na wykorzystanie klucza, stosowanego w\'a0systemie kryptograficznym dopuszczaj\u261 cym swobodn\u261  i\'a0bezpieczn\u261  wymian\u281  kluczy poprzez niezabezpieczone medium. Przyk\u322 adowo, rozszerzenie to jest w\u322 \u261 czone, je\u380 eli do zarz\u261 dzania kluczami wykorzystywany jest protok\'f3\u322  Diffiego-Hellmana.\
+\
+Podpisywanie certyfikatu: zaznacz, je\uc0\u380 eli klucz publiczny certyfikatu u\u380 ywany jest do sprawdzania podpisu certyfikat\'f3w klucza publicznego. Certyfikaty z\'a0tym rozszerzeniem to certyfikaty urz\u281 du certyfikacji (CA). Gdy rozszerzenie to zostanie przypisane do certyfikatu, zaznaczona musi by\u263  r\'f3wnie\u380  opcja \'84U\u380 yj tego certyfikatu jako urz\u281 du certyfikacji\'94, znajduj\u261 ca si\u281  w\'a0rozszerzeniu podstawowych ogranicze\u324  (BCE). BCE b\u281 dzie dost\u281 pne p\'f3\u378 niej w\'a0oknie tego asystenta.\
+\
+Podpisywanie CRL: zaznacz, je\uc0\u380 eli klucz publiczny certyfikatu u\u380 ywany jest do sprawdzania podpisu na li\u347 cie uniewa\u380 nionych certyfikat\'f3w (CRL).\
+\
+Tylko szyfrowanie: zaznacz tylko wtedy, gdy zaznaczone jest r\'f3wnie\uc0\u380  \'84Uzgadnianie klucza\'94. Wskazuje to, \u380 e klucz publiczny tego certyfikatu mo\u380 e by\u263  u\u380 ywany do szyfrowania danych podczas uzgadniania klucza.\
+\
+Tylko odszyfrowanie:\'a0 zaznacz tylko wtedy, gdy zaznaczone jest r\'f3wnie\uc0\u380  \'84Uzgadnianie klucza\'94. Wskazuje to, \u380 e klucz publiczny tego certyfikatu mo\u380 e by\u263  u\u380 ywany do odszyfrowywania danych podczas uzgadniania klucza.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\b \cf0 Co to znaczy, \uc0\u380 e \'84to rozszerzenie jest krytyczne\'94?
+\f1\b0 \
+Takie rozszerzenie jest r\'f3wnie\uc0\u380  okre\u347 lane jako \'84rozszerzenie rozstrzygaj\u261 ce\'94 lub \'84wska\u378 nik rozstrzygania\'94. Wska\u378 nik ten informuje oprogramowanie, kt\'f3re korzysta z\'a0certyfikatu, czy mo\u380 na bezpiecznie zignorowa\u263  rozszerzenie zastosowa\u324  klucza, je\u347 li nie zostanie ono rozpoznane. Nierozpoznanie rozszerzenia oznaczonego jako krytyczne powoduje odrzucenie certyfikatu.}

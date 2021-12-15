@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#IntentConfirmationEmergency" locale="en">
+  <conditions>
+    <condition name="isVoiceOnly" note="Returns if we are in a VOX situation: HomePod, CarDnD, EyesFree">
+      <or>
+        <expression name="device.isHomePod" op="set"/>
+        <expression name="device.isCarDnD" op="set"/>
+        <expression name="device.isEyesFree" op="set"/>
+      </or>
+    </condition>
+    <condition name="isSpeakerRoute">
+      <expression name="intent.audioRoute" op="eq" value="'SPEAKERPHONE_AUDIO_ROUTE'"/>
+    </condition>
+  </conditions>
+
+  <first>
+    <dialog id="VOXEmergencyConfirmation" condition="isVoiceOnly">
+        <print>Should I call Emergency Services?</print>
+        <speak>Should I call Emergency Services.</speak>
+    </dialog>
+    <dialog id="EmergencyCountdownSpeaker" condition="isSpeakerRoute">Calling Emergency Services on speaker…</dialog>
+    <dialog id="EmergencyCountdown">Calling Emergency Services…</dialog>
+  </first>
+</cat>

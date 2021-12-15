@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PostCallInquiryAnswerCall#IntentHandledResponse">
+    <meta name="category" value="Handled"/>
+    <meta name="description" value="Executed when a given Intent has been correctly handled by an app."/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+      <parameter name="incomingCallConcept" type="phone.IncomingCall"/>
+    </parameters>
+</cat>

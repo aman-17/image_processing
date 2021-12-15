@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DEFAULT-OPTIONS</key>
+	<dict>
+		<key>Level</key>
+		<dict>
+			<key>Enable</key>
+			<string>Info</string>
+			<key>Persist</key>
+			<string>Default</string>
+		</dict>
+		<key>TTL</key>
+		<dict>
+			<key>Debug</key>
+			<string>0</string>
+			<key>Default</key>
+			<string>3</string>
+			<key>Info</key>
+			<string>3</string>
+		</dict>
+	</dict> 
+
+     <key>TraceHandoverManager</key>
+        <dict>
+                <key>Level</key>
+                <dict>
+                        <key>Enable</key>
+                        <string>Inherit</string>
+                        <key>Persist</key>
+                        <string>Inherit</string>
+                </dict>
+        </dict> 
+
+      <key>TraceFTHandoverManager</key>
+        <dict>
+                <key>Level</key>
+                <dict>
+                        <key>Enable</key>
+                        <string>Inherit</string>
+                        <key>Persist</key>
+                        <string>Inherit</string>
+                </dict>
+        </dict>	 
+
+      
+      <key>TraceMetrics</key>
+        <dict>
+                <key>Level</key>
+                <dict>
+                        <key>Enable</key>
+                        <string>Inherit</string>
+                        <key>Persist</key>
+                        <string>Inherit</string>
+                </dict>
+        </dict>	  
+
+      <key>TraceOther</key>
+        <dict>
+                <key>Level</key>
+                <dict>
+                        <key>Enable</key>
+                        <string>Inherit</string>
+                        <key>Persist</key>
+                        <string>Inherit</string>
+                </dict>
+        </dict>	 
+   
+</dict>
+</plist>

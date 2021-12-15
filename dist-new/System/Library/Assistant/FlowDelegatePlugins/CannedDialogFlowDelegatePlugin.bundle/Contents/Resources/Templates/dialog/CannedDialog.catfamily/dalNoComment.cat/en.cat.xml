@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalNoComment" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<random>
+			<dialog>I couldn’t say.</dialog>
+			<dialog>I can’t really say.</dialog>
+			<dialog>I really couldn’t say.</dialog>
+		</random>
+	</all>
+</cat>

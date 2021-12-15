@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="HangUpCall#ErrorWithCodeNoCallToHangUp" locale="en">
+  <first>
+      <dialog>There’s nobody calling right now<opt>, <var name="user.groundingIfNeeded"/></opt>.</dialog>
+  </first>
+</cat>

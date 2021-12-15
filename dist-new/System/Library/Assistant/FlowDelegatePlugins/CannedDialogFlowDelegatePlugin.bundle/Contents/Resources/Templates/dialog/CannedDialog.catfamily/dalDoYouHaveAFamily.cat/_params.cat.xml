@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CannedDialog#dalDoYouHaveAFamily">
+	<meta name="description" value="User asked “Do you have a family?”"/>
+	<meta name="category" value="Social"/>
+	<meta name="subcategory" value="Trust Building"/>    
+	<meta name="readyForLoc" value="false"/>
+	<meta name="listenAfterSpeaking" value="false"/>
+</cat>

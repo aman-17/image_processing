@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ErrorWithCodeAppConfigurationRequired" locale="en">
+    <conditions>
+        <condition name="isRequestForVoicemail" note="Is request for voicemail calls">
+          <expression name="intent.isRequestForVoicemail"/>
+        </condition>
+    </conditions>
+    <first>
+        <dialog condition="isRequestForVoicemail">It looks like you haven’t set up your voicemail yet<opt> , <var name="user.groundingIfNeeded"/></opt>.</dialog>
+        <dialog>OK<opt> <var name="user.groundingIfNeeded"/></opt>, but first you’ll need to set up <var name="appName"/> to do that.</dialog>
+        <dialog>OK<opt> <var name="user.groundingIfNeeded"/></opt>, but first you’ll need to set up the app to do that.</dialog>
+    </first>
+</cat>

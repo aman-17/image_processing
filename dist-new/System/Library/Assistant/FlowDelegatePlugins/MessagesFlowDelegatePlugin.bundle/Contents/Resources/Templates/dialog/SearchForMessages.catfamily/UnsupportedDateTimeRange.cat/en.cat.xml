@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" locale="en">
+    
+    <phrases>
+        <first phrase="appName">
+            <text condition="app.name"><var name="app.name"/></text>
+            <text>The app</text>
+        </first>
+        
+        <first phrase="needsGrounding">
+            <text><opt>Sorry, <var name="user.groundingIfNeeded"/>, </opt></text>
+        </first>
+    </phrases>
+
+    <first>
+        <dialog>
+            <phrase name="needsGrounding"/><phrase name="appName"/> doesn’t recognize that time range.
+        </dialog>
+    </first>
+
+</cat>

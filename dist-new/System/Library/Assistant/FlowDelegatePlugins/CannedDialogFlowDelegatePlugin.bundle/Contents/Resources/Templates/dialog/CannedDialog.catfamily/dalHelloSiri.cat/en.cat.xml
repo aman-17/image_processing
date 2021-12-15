@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalHelloSiri" locale="en" xmlns="urn:apple:names:siri:cat:1.4">
+    <conditions>
+        <condition name="familyFirstUseAndEmptyUserAndNotHomePod">
+            <and>
+                <expression name="dialogState.familyUsageCount" op="le" value="1"/>
+                <expression name="user" op="empty"/>
+                <expression name="device.isHomePod" op="eq" value="false"/>
+            </and>
+        </condition>
+        <condition name="familyFirstUseAndHasUser">
+            <and>
+                <expression name="dialogState.familyUsageCount" op="le" value="1"/>
+                <expression name="user" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="familyNotUsedInLastFiveHoursAndHasUser">
+            <and>
+                <expression name="dialogState.familyHoursSinceLastUse" op="gt" value="5"/>
+                <expression name="user" op="nonempty"/>
+            </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="howCanIHelp">
+            <text condition="now.isMorning">Good morning, <var name="user"/>. How can I help?</text>
+            <text condition="now.isAfternoon">Good afternoon, <var name="user"/>. How can I help?</text>
+            <text condition="now.isEvening">Good evening, <var name="user"/>. How can I help?</text>
+            <text><phrase name="hiHello"/>, <var name="user"/>. How can I help?</text>
+        </first>
+        <random phrase="hiHello">
+            <text>Hi</text>
+            <text>Hello</text>
+        </random>
+    </phrases>
+    <all>
+        <first>
+            <dialog condition="familyFirstUseAndEmptyUserAndNotHomePod">Hello! I don’t think we’ve been introduced.</dialog>
+            <dialog condition="familyFirstUseAndHasUser">Hi. It’s nice to meet you, <var name="user"/>.</dialog>
+            <dialog condition="familyNotUsedInLastFiveHoursAndHasUser" id="howCanIHelp#listenAfterSpeaking"><phrase name="howCanIHelp"/></dialog>
+            <dialog><phrase name="hiHello"/>, <var name="user"/>.</dialog>
+            <random>
+                <dialog>Hi there.</dialog>
+                <dialog>Hello.</dialog>
+            </random>
+        </first>
+    </all>
+</cat>

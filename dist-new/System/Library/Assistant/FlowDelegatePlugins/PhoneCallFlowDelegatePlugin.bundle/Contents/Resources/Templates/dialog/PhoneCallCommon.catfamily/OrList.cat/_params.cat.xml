@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PhoneCallCommon#OrList">
+    <meta name="description" value="OrList for VOX disambiguation readout"/>
+    <meta name="category" value="Disambiguate"/>
+    <meta name="readyForLoc" value="true"/>
+
+    <parameters>
+        <parameter name="items" type="dialog.String[]"/>
+    </parameters>
+</cat>

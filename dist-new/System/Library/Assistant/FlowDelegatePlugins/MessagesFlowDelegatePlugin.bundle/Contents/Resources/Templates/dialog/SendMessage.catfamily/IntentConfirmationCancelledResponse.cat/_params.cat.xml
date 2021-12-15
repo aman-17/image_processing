@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#IntentConfirmationCancelledResponse">
+
+    <meta name="description" value="Siri asked a confirmation to handle an intent and the user declined (by saying something like cancel or nevermind) in a way that should halt the flow."/>
+    <meta name="category" value="User Declined"/>
+    <meta name="readyForLoc" value="true"/>
+    
+</cat>

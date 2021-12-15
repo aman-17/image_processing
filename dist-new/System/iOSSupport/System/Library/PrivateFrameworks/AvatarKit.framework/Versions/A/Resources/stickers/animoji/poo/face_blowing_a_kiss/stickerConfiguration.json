@@ -1,0 +1,52 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../../shared/cam.scnz"
+  },
+  "emoji" : "😘",
+  "identifier" : "face_blowing_a_kiss",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_L" : 0.64335978031158447,
+    "browInnerUp" : 0.1334858238697052,
+    "browOuterUp_R" : 0.39944911003112793,
+    "cheekSquint_L" : 1,
+    "cheekSquint_R" : 0.26446273922920227,
+    "eyeBlink_L" : 0.93518596887588501,
+    "eyeBlink_R" : 0.14387930929660797,
+    "eyeLookDown_L" : 0.10000000149011612,
+    "eyeLookDown_R" : 0.10000000149011612,
+    "eyeLookIn_R" : 0.15671543776988983,
+    "eyeLookOut_L" : 0.10942268371582031,
+    "eyeSquint_L" : 0.96108216047286987,
+    "eyeSquint_R" : 0.22865022718906403,
+    "mouthLeft" : 0.86296528577804565,
+    "mouthPucker" : 0.87165772914886475,
+    "mouthSmile_L" : 0.42000004649162292,
+    "mouthSmile_R" : 0.48307684063911438,
+    "neckOrientation" : [
+      -0.020657248795032501,
+      0.024749923497438431,
+      0.013387914746999741,
+      0.99939066171646118
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "image" : "../../../shared/face_blowing_a_kiss/heart.heic",
+      "position" : {
+        "x" : 0.10000000000000001,
+        "y" : 0.029999999999999999,
+        "z" : 15
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../../shared/cam.scnz"
+  },
+  "emoji" : "😀",
+  "identifier" : "smiling_face_with_open_mouth_and_smiling_eyes",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browInnerUp" : 0.55496221780776978,
+    "browOuterUp_L" : 0.80000001192092896,
+    "browOuterUp_R" : 0.75,
+    "cheekSquint_L" : 0.78787875175476074,
+    "cheekSquint_R" : 0.81746035814285278,
+    "eyeSquint_L" : 0.92460793256759644,
+    "eyeSquint_R" : 0.92998617887496948,
+    "eyeWide_L" : 0.50208783149719238,
+    "eyeWide_R" : 0.39266195893287659,
+    "jawLeft" : 0.11330049484968185,
+    "jawOpen" : 0.63781076669692993,
+    "mouthDimple_L" : 0.59414553642272949,
+    "mouthDimple_R" : 0.46116766333580017,
+    "mouthSmile_L" : 0.99881953001022339,
+    "mouthSmile_R" : 0.93660759925842285,
+    "mouthStretch_L" : 0.15426994860172272,
+    "mouthStretch_R" : 0.10468319803476334,
+    "mouthUpperUp_L" : 0.29201102256774902,
+    "mouthUpperUp_R" : 0.24517898261547089,
+    "neckOrientation" : [
+      0,
+      0,
+      -0.038037147372961044,
+      0.99927628040313721
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+
+  ]
+}

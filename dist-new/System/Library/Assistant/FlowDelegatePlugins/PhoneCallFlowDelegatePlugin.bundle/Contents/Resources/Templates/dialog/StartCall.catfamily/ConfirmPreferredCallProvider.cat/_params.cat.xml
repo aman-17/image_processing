@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#ConfirmPreferredCallProvider">
+    <meta name="description" value="Confirm preferredCallProvider for call"/>
+    <meta name="category" value="Confirm"/>
+    <meta name="readyForLoc" value="true"/>
+    <meta name="note" value="Not used, and not available to 3P - exists for completeness"/>
+    <parameters>
+        <parameter name="preferredCallProvider" type="dialog.String"/>
+    </parameters>
+
+</cat>

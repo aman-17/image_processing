@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayEditorialPlaylist">
+    <meta name="description" value="Best and Worst album dialog for rendering PlayMediaIntent success cases"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="isDialogDriven" type="dialog.Boolean" description="if interaction type is dialog driven"/>
+        <parameter name="title" type="dialog.String" description="Title of the content" profanityFilter="yes"/>
+        <parameter name="artist" type="dialog.String" description="Artist for the content"/>
+        <parameter name="artistSpecified" type="dialog.String" description="Artist specified in the intent"/>
+        <parameter name="isOnShuffle" type="dialog.Boolean" description="If the playback is shuffled"/>
+        <parameter name="isOnRepeat" type="dialog.Boolean" description="If the playback is repeating"/>
+        <parameter name="isTopGenre" type="dialog.Boolean" description="If request is for top genre music"/>
+        <parameter name="isPersonalized" type="dialog.Boolean" description="If the resolved content is a personalized entity"/>
+        <parameter name="isUserPlaylist" type="dialog.Boolean" description="If request is for a users playlist"/>
+        <parameter name="isAppSpecified" type="dialog.Boolean" description="if user specified app"/>
+        <parameter name="isAlgorithmicRadioStation" type="dialog.Boolean" description="If the media item type is algorithmicRadioStation"/>
+        <parameter name="app" type="audio.App" description="App"/>
+        <parameter name="isGrounding" type="dialog.Boolean" description="if user grounding is required"/>
+        <parameter name="isAppAttributionRequired" type="dialog.Boolean" description="if app attribution is required"/>
+        <parameter name="useDialogMemoryForAppAttribution" type="dialog.Boolean" description="should app attribution use dialog memory"/>
+        <parameter name="fallbackUsername" type="dialog.String" description="Fallback Username for multiuser"/>
+        <parameter name="isPlaybackQueueLocationNext" type="dialog.Boolean" description="If the playback queue location is next"/>
+        <parameter name="isPlaybackQueueLocationLater" type="dialog.Boolean" description="If the playback queue location is later"/>
+        <parameter name="device" type="sirikit.DeviceState" description="This still needs support from SKPlatform."/>
+        <parameter name="wha" type="audio.WholeHouseAudio" description="WHA Params"/>
+        <parameter name="isDecadeStation" type="dialog.Boolean" description="If the query is for decade"/>
+    </parameters>
+</cat>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#DisambiguateContactsForeignEmergency">
+  <meta name="description" value="Disambiguate between a number that is an emergency number elsewhere (nonlocal/foreign emergency) and local emergency services"/>
+  <meta name="category" value="Disambiguate"/>
+  <meta name="readyForLoc" value="true"/>
+  <parameters>
+    <parameter name="device" type="sirikit.DeviceState"/>
+    <parameter name="nonLocalEmergencyContact" type="dialog.Person" description="represents the nonlocal/foreign emergency number"/>
+  </parameters>
+</cat>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><cat xmlns="urn:apple:names:siri:cat:1.0" id="addTasksV2#intentConfirmationPrompt" locale="en">
+
+  <conditions>
+    <condition name="condition_1">
+      <and>
+        <expression name="intent.response.addedTasksList.size()" op="gt" value="0"/>
+        <expression name="intent.response.getAddedTasks(0).temporalEventTrigger" op="defined"/>
+      </and>
+    </condition>
+    <condition name="condition_2">
+      <and>
+        <expression name="intent.response.addedTasksList.size()" op="gt" value="0"/>
+        <expression name="intent.response.getAddedTasks(0).spatialEventTrigger" op="defined"/>
+      </and>
+    </condition>
+    <condition name="intent_response_modifiedTaskList_defined">
+      <expression name="intent.response.modifiedTaskList" op="defined"/>
+    </condition>
+  </conditions>
+ 
+  <phrases>
+    <random phrase="phrase_0">
+      <text condition="condition_1">Here’s your reminder. Shall I create it?</text>
+    </random>
+    <random phrase="phrase_1">
+      <text condition="condition_2">Here’s your reminder. Shall I create it?</text>
+    </random>
+    <random phrase="phrase_2">
+      <text condition="intent_response_modifiedTaskList_defined">Here’s what I have. Shall I add it?</text>
+    </random>
+  </phrases>
+
+
+  <first>
+    <dialog><opt>OK <var name="user.groundingIfNeeded"/>. </opt><opt><phrase name="phrase_0"/></opt><opt><phrase name="phrase_1"/></opt><opt><phrase name="phrase_2"/></opt>Here’s what I have. Good to go?</dialog>
+  </first>
+
+</cat>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalGoodBye">
+	<all>
+		<random>
+			<dialog>Bye for now…<break time="1000ms"/></dialog>
+			<dialog>So long…<break time="1000ms"/></dialog>
+			<dialog>Take care…<break time="1000ms"/></dialog>
+			<dialog>Nice talking with you…<break time="1000ms"/></dialog>
+			<dialog>OK. Nice talking with you…<break time="1000ms"/></dialog>
+			<dialog>Until we talk again…<break time="1000ms"/></dialog>
+			<dialog>Until next time…<break time="1000ms"/></dialog>
+			<dialog>It’s been a pleasure…<break time="1000ms"/></dialog>
+			<dialog>Goodbye…<break time="1000ms"/></dialog>
+			<dialog>Bye…<break time="1000ms"/></dialog>
+		</random>
+	</all>
+	<phrases/>
+	<conditions/>
+</cat>

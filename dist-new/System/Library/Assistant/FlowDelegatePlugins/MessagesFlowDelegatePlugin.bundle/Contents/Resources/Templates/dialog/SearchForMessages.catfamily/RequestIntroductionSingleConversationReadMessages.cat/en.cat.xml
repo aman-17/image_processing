@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#RequestIntroductionSingleConversationReadMessages" locale="en">
+    
+    <conditions>
+        <condition name="isNamedGroup">
+            <and>
+                <expression name="conversation.isGroup" op="set"/>
+                <expression name="conversation.speakableGroupName" op="defined"/>
+            </and>
+        </condition>
+        
+        <condition name="isSingleMessage">
+            <expression name="conversation.numberOfMessages" op="eq" value="1"/>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="readMessagesConversationInfo">
+            <text condition="isNamedGroup">in <var name="conversation.speakableGroupName"/></text>
+            <switch value="conversation.numberOfMembersOtherThanYou">
+                <text case="1">from <var name="conversation.membersOtherThanYou[0]"/></text>
+                <text case="2">in your group with <var name="conversation.membersOtherThanYou[0]"/> and <var name="conversation.membersOtherThanYou[1]"/></text>
+                <text case="3">in your group with <var name="conversation.membersOtherThanYou[0]"/>, <var name="conversation.membersOtherThanYou[1]"/>, and <var name="conversation.membersOtherThanYou[2]"/></text>
+                <text>in your group with <var name="conversation.membersOtherThanYou[0]"/> and <var name="conversation.numberOfMembersOtherThanYouMinusOne"/> others</text>
+            </switch>
+        </first>
+        
+        <first phrase="readMessagesIntro">
+            <text condition="isSingleMessage">Here is a recent message</text>
+            <text>Here are some recent messages</text>
+        </first>
+    </phrases>
+    
+    <all>
+        <dialog><opt>OK, <var name="user.groundingIfNeeded"/>, </opt><phrase name="readMessagesIntro"/> <phrase name="readMessagesConversationInfo"/>…</dialog>
+    </all>
+    
+</cat>

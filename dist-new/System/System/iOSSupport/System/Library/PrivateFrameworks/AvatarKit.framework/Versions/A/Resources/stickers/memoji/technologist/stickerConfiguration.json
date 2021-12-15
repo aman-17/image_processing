@@ -1,0 +1,144 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../shared/cam.scnz"
+  },
+  "emoji" : "👩‍💻",
+  "identifier" : "technologist",
+  "options" : {
+    "duration" : 1,
+    "morpherOverrides" : [
+      {
+        "geometry" : "hair_*",
+        "morpher" : "variant_stickerDefault",
+        "value" : 1
+      },
+      {
+        "geometry" : "headwear_*",
+        "morpher" : "variant_stickerHandUp",
+        "value" : 1
+      }
+    ]
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "neckOrientation" : [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "palettes" : [
+        {
+          "material" : "head_MAT",
+          "palette" : "skin"
+        },
+        {
+          "material" : "cuffs_MAT",
+          "palette" : "headwear"
+        },
+        {
+          "material" : "hat_MAT",
+          "palette" : "headwear"
+        }
+      ],
+      "scene" : "body.scnz"
+    },
+    {
+      "adjustments" : {
+        "age" : [
+          {
+            "position" : {
+              "x" : 0,
+              "y" : 0.070000000000000007,
+              "z" : 0
+            },
+            "scale" : {
+              "x" : 1.1499999999999999,
+              "y" : 1.1499999999999999,
+              "z" : 1.1499999999999999
+            },
+            "value" : "child"
+          },
+          {
+            "position" : {
+              "x" : 0,
+              "y" : 0.052499999999999998,
+              "z" : 0
+            },
+            "scale" : {
+              "x" : 1.1125,
+              "y" : 1.1125,
+              "z" : 1.1125
+            },
+            "value" : "child_75"
+          },
+          {
+            "position" : {
+              "x" : 0,
+              "y" : 0.035000000000000003,
+              "z" : 0
+            },
+            "scale" : {
+              "x" : 1.075,
+              "y" : 1.075,
+              "z" : 1.075
+            },
+            "value" : "child_50"
+          },
+          {
+            "position" : {
+              "x" : 0,
+              "y" : 0.037999999999999999,
+              "z" : 0
+            },
+            "scale" : {
+              "x" : 1.0375000000000001,
+              "y" : 1.0375000000000001,
+              "z" : 1.0375000000000001
+            },
+            "value" : "child_25"
+          }
+        ]
+      },
+      "image" : "technologist_laptop.heic",
+      "position" : {
+        "x" : 0,
+        "y" : -0.48999999999999999,
+        "z" : 15
+      },
+      "scale" : 0.59999999999999998
+    }
+  ],
+  "shaders" : [
+    {
+      "file" : "../shared/crop_at_worldPosY.metal",
+      "forceDoubleSided" : true,
+      "geometry" : "hair_*",
+      "modifier" : "fragment",
+      "properties" : [
+        {
+          "name" : "crop_pos",
+          "type" : "float",
+          "value" : -8
+        }
+      ]
+    },
+    {
+      "file" : "../shared/crop_at_worldPosY.metal",
+      "forceDoubleSided" : true,
+      "geometry" : "headwear_*",
+      "modifier" : "fragment",
+      "properties" : [
+        {
+          "name" : "crop_pos",
+          "type" : "float",
+          "value" : -5.7999999999999998
+        }
+      ]
+    }
+  ]
+}

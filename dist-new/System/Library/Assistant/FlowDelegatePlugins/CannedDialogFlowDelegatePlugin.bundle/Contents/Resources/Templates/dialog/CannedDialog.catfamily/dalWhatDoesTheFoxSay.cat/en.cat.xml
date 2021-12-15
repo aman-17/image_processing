@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalWhatDoesTheFoxSay" locale="en" xmlns="urn:apple:names:siri:cat:1.4">
+    <all>
+        <random phrase="">
+            <random condition="is_April_Fools" phrase="">
+                <dialog>Quack. <break time="1000ms"/>April Fools!</dialog>
+                <dialog>Meow. <break time="1000ms"/>April Fools!</dialog>
+                <dialog>
+                    <print>Woof. April Fools!</print>
+                    <speak>Wooph. <break time="1000ms"/>April Fools!</speak>
+                </dialog>
+                <dialog>Moo. <break time="1000ms"/>April Fools!</dialog>
+            </random>
+            <random phrase="">
+                <dialog><prosody rate="150%">Ring-ding-ding-ding-dingeringeding!</prosody></dialog>
+                <dialog><prosody rate="150%">Wa-pa-pa-pa-pa-pa-pow!</prosody></dialog>
+                <dialog><prosody rate="150%">Chacha-chacha-chacha-chow!</prosody></dialog>
+                <dialog><prosody rate="150%">Fraka-kaka-kaka-kaka-kow!</prosody></dialog>
+            </random>
+        </random>
+    </all>
+    <conditions>
+        <condition name="is_April_Fools">
+            <and>
+                <expression name="now.month" op="eq" value="4"/>
+                <expression name="now.dayOfMonth" op="eq" value="1"/>
+            </and>
+        </condition>
+    </conditions>
+</cat>

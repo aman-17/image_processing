@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="Messages#DeleteNotSupported">
+    <meta name="description" value="User asked to delete one or more messages. Advise the user that we don’t support deleting messages."/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+</cat>

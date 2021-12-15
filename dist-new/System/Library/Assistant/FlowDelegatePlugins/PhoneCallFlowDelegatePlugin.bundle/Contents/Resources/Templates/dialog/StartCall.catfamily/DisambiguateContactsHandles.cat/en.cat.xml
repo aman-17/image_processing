@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#DisambiguateContactsHandles" locale="en">
+<first>
+    <dialog id="RequestedHandle" condition="isRequestForHandle">
+        <opt>Ok, <var name="user.groundingIfNeeded"/>. </opt>Did you mean one of these?
+    </dialog>
+
+    <dialog id="PhoneNumberDisambiguation" condition="isPhoneNumberHandleDisambiguation">
+        <opt>Ok, <var name="user.groundingIfNeeded"/>. </opt>Which phone number for <var name="requestedContact"/>?
+    </dialog>
+
+    <dialog id="GenericHandleDisambiguation">
+        <opt>Ok, <var name="user.groundingIfNeeded"/>. </opt>Which of these should I use for <var name="requestedContact"/>?
+    </dialog>
+</first>
+</cat>
+

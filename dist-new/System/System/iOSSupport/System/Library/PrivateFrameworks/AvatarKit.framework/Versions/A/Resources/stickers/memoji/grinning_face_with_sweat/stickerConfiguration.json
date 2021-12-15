@@ -1,0 +1,55 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../shared/cam.scnz"
+  },
+  "emoji" : "😅",
+  "identifier" : "grinning_face_with_sweat",
+  "options" : {
+    "duration" : 1
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_L" : 0.87005358934402466,
+    "browInnerUp" : 0.47129955887794495,
+    "browOuterUp_R" : 0.72180473804473877,
+    "cheekSquint_L" : 0.95919603109359741,
+    "cheekSquint_R" : 0.79235929250717163,
+    "eyeBlink_L" : 0.04341956228017807,
+    "eyeBlink_R" : 0.075082309544086456,
+    "eyeSquint_L" : 0.98053699731826782,
+    "eyeSquint_R" : 0.89126431941986084,
+    "jawOpen" : 0.31223270297050476,
+    "mouthDimple_L" : 0.96330273151397705,
+    "mouthDimple_R" : 0.79614299535751343,
+    "mouthLowerDown_L" : 0.51459848880767822,
+    "mouthLowerDown_R" : 0.48905116319656372,
+    "mouthSmile_L" : 0.99090194702148438,
+    "mouthSmile_R" : 0.59227025508880615,
+    "mouthStretch_L" : 0.15426994860172272,
+    "mouthStretch_R" : 0.10468319803476334,
+    "mouthUpperUp_L" : 0.29201102256774902,
+    "mouthUpperUp_R" : 0.24517898261547089,
+    "neckOrientation" : [
+      0,
+      0,
+      0,
+      1
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ]
+  },
+  "props" : [
+    {
+      "image" : "../../shared/grinning_face_with_sweat/tear.heic",
+      "position" : {
+        "x" : 0.69999999999999996,
+        "y" : 0.44,
+        "z" : 30
+      }
+    }
+  ]
+}

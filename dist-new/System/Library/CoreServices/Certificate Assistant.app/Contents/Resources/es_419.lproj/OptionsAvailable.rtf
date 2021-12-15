@@ -1,0 +1,35 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\partightenfactor0
+
+\f0\b\fs24 \cf0 \'bfQu\'e9 es una identidad digital?
+\f1\b0 \
+Una identidad digital es un medio electr\'f3nico para identificar a alguien. Se compone de un secreto que quieres mantener como tal (la clave \'93privada\'94) y de otra parte que puede publicar libremente (la clave \'93p\'fablica\'94). La clave privada te permite firmar digitalmente documentos electr\'f3nicos cuya firma pueda ser verificada por cualquiera mediante tu clave p\'fablica. De forma similar, la clave privada permite revelar (\'93desencriptar\'94) secretos que hayan sido ocultados (\'93encriptados\'94) por otras personas utilizando tu clave p\'fablica.\
+\
+
+\f0\b \'bfQu\'e9 es un certificado digital?
+\f1\b0 \
+Un certificado digital es un documento electr\'f3nico que asocia tu identidad digital con otra informaci\'f3n, como el nombre, direcci\'f3n de correo electr\'f3nico o empresa. Un certificado est\'e1 compuesto por la parte p\'fablica de la identidad digital, la identidad de la organizaci\'f3n (\'93autoridad certificadora\'94 o CA) que firm\'f3 el certificado y cualesquiera otros datos que decidas asociar a tu identidad. Un certificado suele estar restringido para usos concretos, como pueden ser firmas digitales, encriptaci\'f3n, uso con servidores web, etc. Esto se conoce como la restricci\'f3n de \'93uso de clave\'94 de un certificado. Cualquier intento de usar un certificado con otro fin no tendr\'e1 \'e9xito. Aunque es posible crear una identidad (y un certificado) con usos m\'faltiples, no suele crearse una misma identidad para todos los usos posibles. La creaci\'f3n de un certificado para usos m\'faltiples tambi\'e9n es menos segura. Un certificado s\'f3lo es v\'e1lido durante un plazo de tiempo limitado, despu\'e9s del cual deja ser v\'e1lido y debe reemplazarse con una versi\'f3n m\'e1s reciente. La autoridad certificadora tambi\'e9n puede invalidar (\'93revocar\'94) un certificado antes de que venza. La validez de un certificado puede verificarse de forma electr\'f3nica, usando la \'93infraestructura de clave p\'fablica\'94, o PKI.\
+\
+
+\f0\b \'bfC\'f3mo puedo conseguir un certificado?
+\f1\b0 \
+Para obtener un certificado v\'e1lido, crea una solicitud de certificado y env\'edala a una autoridad certificadora. Si la autoridad la acepta, crear\'e1 el certificado y te lo har\'e1 llegar. Puedes usar el Asistente de Certificados o el sitio web de una autoridad certificadora comercial para crear la solicitud del certificado. Puedes obtener y conservar numerosos certificados firmados por CA distintas, cuya validez ser\'e1 independiente de las dem\'e1s y estar\'e1n sujetos a pol\'edticas distintas. Por ejemplo, puedes tener un certificado que te permita firmar correo electr\'f3nico y otro que te permita identificarse en Mensajes.\
+\
+
+\f0\b \'bfD\'f3nde puedo guardar mis certificados?
+\f1\b0 \
+Las identidades digitales, incluidos los certificados, se almacenan en tu llavero. Esto hace que est\'e9n disponibles para su uso por parte de aplicaciones como Mail y Safari. Los certificados para otras personas (contactos de correo, sitios web, etc.) tambi\'e9n se almacenan en el llavero a medida que tu computadora los obtiene para ti. Puedes usar Acceso a Llaveros (situado en Aplicaciones > Utilidades) para visualizar y administrar tus certificados. Puedes mover y copiar libremente los certificados (a diferencia de su clave privada asociada), dado que no contienen informaci\'f3n personal ni privada que necesites proteger. Puedes tener tantas copias de un mismo certificado como quieras. Si necesitas enviar un certificado a otra persona, puedes exportarlo mediante Acceso a Llaveros y enviarlo por correo electr\'f3nico de forma segura, o por otros medios. De forma similar, si alguien te env\'eda un certificado, puedes agregarlo a tu llavero con s\'f3lo arrastrarlo hacia Acceso a Llaveros, o bien desde el men\'fa Archivo > \'93Importar elementos\'94 de Acceso a Llaveros.\
+\
+
+\f0\b \'bfQu\'e9 es una autoridad certificadora?
+\f1\b0 \
+Una autoridad certificadora (CA) es una identidad digital que firma certificados y los convierte en documentos electr\'f3nicos v\'e1lidos. Dado que las CA son identidades digitales en s\'ed mismas, tambi\'e9n pueden ser validadas por otra CA, formando as\'ed lo que se denomina una \'93cadena de certificados\'94. Para que un certificado sea v\'e1lido, la CA que lo haya firmado tambi\'e9n debe ser v\'e1lida, y as\'ed sucesivamente con todos los eslabones de la cadena. El software del sistema determina esto de forma autom\'e1tica cuando eval\'faa un certificado.\
+\
+
+\f0\b \'bfPor qu\'e9 deben evaluarse los certificados?
+\f1\b0 \
+Usa el Asistente de Certificados para evaluar la validez de un certificado y determinar si es leg\'edtimo. El software seguro, como en el caso de Safari o de la aplicaci\'f3n Mail, eval\'faa los certificados antes de usarlos. Por ejemplo, si usas Safari para comprar algo en Internet, Safari eval\'faa el certificado del sitio web y te informa de si es o no v\'e1lido. El Asistente de Certificados proporciona m\'e1s detalles y un mayor control sobre el uso de los certificados.}

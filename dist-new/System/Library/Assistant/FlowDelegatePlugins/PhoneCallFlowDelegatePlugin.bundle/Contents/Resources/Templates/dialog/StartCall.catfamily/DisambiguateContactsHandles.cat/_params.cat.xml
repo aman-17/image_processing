@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#DisambiguateContactsHandles">
+  <meta name="description" value="Disambiguate between contact handles"/>
+  <meta name="category" value="Disambiguate"/>
+  <meta name="readyForLoc" value="true"/>
+  <parameters>
+    <parameter name="isRequestForHandle" type="dialog.Boolean" description="User requested a particular handle label (e.g. 'Call Bob Jones home')"/>
+    <parameter name="isPhoneNumberHandleDisambiguation" type="dialog.Boolean"/>
+    <parameter name="requestedContact" type="dialog.Person" description="Name/person who the user requested"/>
+  </parameters>
+</cat>

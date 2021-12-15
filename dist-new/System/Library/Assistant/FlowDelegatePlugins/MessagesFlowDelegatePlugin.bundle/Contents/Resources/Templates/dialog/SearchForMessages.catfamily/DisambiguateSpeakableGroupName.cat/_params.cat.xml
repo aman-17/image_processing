@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#DisambiguateSpeakableGroupName">
+    <meta name="description" value="When user searches for messages from a group and app asks to disambiguate which group"/>
+    <meta name="category" value="Disambiguate"/>
+    <meta name="readyForLoc" value="true"/>
+</cat>

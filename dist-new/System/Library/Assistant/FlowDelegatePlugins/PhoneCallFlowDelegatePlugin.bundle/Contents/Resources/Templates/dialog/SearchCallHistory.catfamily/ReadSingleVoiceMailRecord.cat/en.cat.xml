@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ReadSingleVoiceMailRecord" locale="en">
+  <conditions>
+      <condition name="isSavedVoiceMail">
+          <expression name="callRecord.unseen" op="unset"/>
+      </condition>
+
+      <condition name="isCallerNeeded">
+          <expression name="callRecord.caller" op="defined"/>
+      </condition>
+      
+      <condition name="isDateNeeded">
+          <expression name="callRecord.dateCreated" op="defined"/>
+      </condition>
+      
+      <condition name="shouldReadTimeOnly">
+          <and>
+              <expression name="callRecord.dateCreated" op="defined"/>
+              <or>
+                  <expression name="callRecord.dateCreated.isToday"/>
+                  <expression name="isSingleDateRequest"/>
+                  <expression name="isTimeRangeRequest"/>
+              </or>
+          </and>
+      </condition>
+  </conditions>
+
+  <phrases>
+      <first phrase="callerName">
+          <text><var name="callRecord.caller"/></text>
+          <text>an unknown caller</text>
+      </first>
+      
+      <first phrase="callerInfo">
+          <text condition="isCallerNeeded"> from <phrase name="callerName"/></text>
+      </first>
+      
+      <first phrase="dateTime">
+          <text condition="shouldReadTimeOnly"><var name="callRecord.dateCreated.timeDescriptiveWithPrefix"/></text>
+          <text condition="isDateNeeded"><var name="callRecord.dateCreated.dateTimeDescriptiveWithPrefixOn"/></text>
+      </first>
+  </phrases>
+
+  <first>
+      <dialog condition="intent.isRequestForLatest"><transform mode="capitalizeFirst"><opt>Ok, <var name="user.groundingIfNeeded"/>, </opt>here’s your most recent voicemail<opt><phrase name="callerInfo"/></opt><opt>, left <phrase name="dateTime"/></opt>:</transform></dialog>
+      <dialog condition="isSavedVoiceMail"><opt>Ok, <var name="user.groundingIfNeeded"/>, </opt>I didn’t find any new voicemail, but you have one saved message<opt><phrase name="callerInfo"/></opt><opt>, left <phrase name="dateTime"/></opt>.</dialog>
+      <dialog><opt>Ok, <var name="user.groundingIfNeeded"/>, </opt>I found one new voicemail<opt><phrase name="callerInfo"/></opt><opt>, left <phrase name="dateTime"/></opt>.</dialog>
+  </first>
+</cat>

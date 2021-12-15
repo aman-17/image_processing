@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#DisambiguateRecipient" locale="en">
+    <all>
+        <dialog><opt>OK, <var name="user.groundingIfNeeded"/>. </opt>Which one?</dialog>
+    </all>
+</cat>

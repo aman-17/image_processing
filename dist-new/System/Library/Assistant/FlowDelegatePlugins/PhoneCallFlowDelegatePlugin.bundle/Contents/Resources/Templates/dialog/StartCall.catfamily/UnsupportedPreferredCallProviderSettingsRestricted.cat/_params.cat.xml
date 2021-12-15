@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#UnsupportedPreferredCallProviderSettingsRestricted">
+    <meta name="description" value="Unsupported dialog for preferredCallProvider slot when reason = 'SETTINGS_RESTRICTED'"/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="intent" type="phone.StartCallIntent"/>
+        <parameter name="device" type="sirikit.DeviceState"/>
+    </parameters>
+</cat>

@@ -1,0 +1,70 @@
+{
+    Name = "XML Suite";
+    Description = "Terms and Events for accessing the content of XML files";
+
+    Classes = {
+        XMLAttribute = {
+            Name = "XML attribute";
+            PluralName = "XML attributes";
+            Description = "A named value associated with a unit of data in XML format";
+            Attributes = {
+                name = {
+                    Name = "name";
+                    Description = "the name of the XML attribute";
+                };
+                value = {
+                    Name = "value";
+                    Description = "the value of the XML attribute";
+                };
+            };
+        };
+        XMLElement = {
+            Name = "XML element";
+            PluralName = "XML elements";
+            Description = "A unit of data in XML format";
+            Attributes = {
+                name = {
+                    Name = "name";
+                    Description = "the name of the XML element";
+                };
+                uniqueID = {
+                    Name = "id";
+                    Description = "the unique identifier of the XML element";
+                };
+                value = {
+                    Name = "value";
+                    Description = "the value of the XML element";
+                };
+            };
+        };
+        XMLFile = {
+            Name = "XML file";
+            PluralName = "XML files";
+            Description = "A file containing data in XML format";
+            Attributes = {
+                contents = {
+                    Name = "contents";
+                    Description = "the contents of the XML file; elements and properties of the XML data may be accessed as if they were elements and properties of the XML file";
+                };
+            };
+        };
+        XMLData = {
+            Name = "XML data";
+            Description = "Data in XML format";
+            Attributes = {
+                name = {
+                    Name = "name";
+                    Description = "the name of the XML data";
+                };
+                uniqueID = {
+                    Name = "id";
+                    Description = "the unique identifier of the XML data";
+                };
+                textStorage = {
+                    Name = "text";
+                    Description = "the text representation of the XML data";
+                };
+            };
+        };
+    };
+}

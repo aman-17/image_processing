@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalAssistantFunny" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<random>
+		<dialog>Ha! I’m glad you think so.</dialog>
+		<dialog>Was it something I said?</dialog>
+		<dialog><print>LOL</print><speak>ell oh ell</speak></dialog>
+		<dialog>I’ll take that as a compliment.</dialog>
+	</random>
+</cat>

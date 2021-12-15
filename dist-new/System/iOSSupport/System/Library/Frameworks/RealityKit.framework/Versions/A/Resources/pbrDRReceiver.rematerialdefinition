@@ -1,0 +1,81 @@
+{
+    "Name": "PbrDRReceiver",
+    "OverrideMaterial": "engine:pbrCommon.rematerialdefinition",
+    "Techniques": [
+    {
+        "Name": "OpaqueDynamicLightingDR",
+        "VertexShader": {
+            "Entry": "vsRealityPbr"
+        },
+        "PixelShader": {
+            "Entry": "fsRealityPbr"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater",
+            "StencilReferenceValue" : 1
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"    : "true",
+            "EnableNormalMap"       : "true",
+            "EnableEmissiveMap"     : "true",
+            "EnableAreaLight"       : "true",
+            "EnableSeparateRMAS"    : "true",
+            "EnableSingleRMAS"      : "false",
+            "EnableRoughnessMap"    : "true",
+            "EnableMetallicMap"     : "true",
+            "EnableAOMap"           : "true",
+            "EnableSpecularMap"     : "true",
+            "EnableClearcoat"       : "false",
+            "VertexColorOption"     : "0",
+            "EnableIBL"             : "true",
+            "UseBaseColorMapAsTintMask" : "false",
+            "EnableDynamicLighting" : "true"
+        }
+    },
+    {
+        "Name": "OpaqueARDynamicLightingDR",
+        "VertexShader": {
+            "Entry": "vsRealityPbr"
+        },
+        "PixelShader": {
+            "Entry": "fsRealityPbr"
+        },
+        "State" : {
+            "AlphaBlend" : false,
+            "WriteDepth" : true,
+            "DepthCompareFunction" : "Greater",
+            "StencilReferenceValue" : 1
+        },
+        "FunctionConstants" : {
+            "EnableBaseColorMap"    : "true",
+            "EnableNormalMap"       : "true",
+            "EnableEmissiveMap"     : "true",
+            "EnableAreaLight"       : "true",
+            "EnableSeparateRMAS"    : "true",
+            "EnableSingleRMAS"      : "false",
+            "EnableRoughnessMap"    : "true",
+            "EnableMetallicMap"     : "true",
+            "EnableAOMap"           : "true",
+            "EnableSpecularMap"     : "true",
+            "UseBaseColorMapAsTintMask" : "false",
+            "EnableClearcoat"       : "false",
+            "VertexColorOption"     : "0",
+            "EnableIBL"             : "true",
+            "EnableAREnvProbe"      : "true",
+            "EnableDynamicLighting" : "true"
+        }
+    },
+    ],
+    "TechniqueMapping": {
+        "Opaque": "OpaqueDynamicLightingDR",
+        "OpaqueAR" : "OpaqueARDynamicLightingDR",
+        "OpaqueDynamicLighting": "OpaqueDynamicLightingDR",
+        "OpaqueARDynamicLighting" : "OpaqueARDynamicLightingDR",
+        "OpaqueDRReceiver": "OpaqueDynamicLightingDR",
+        "OpaqueARDRReceiver": "OpaqueARDynamicLightingDR",
+        "Shadow": "Shadow",
+        "ShadowDRReceiver": "Shadow"
+    }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="SearchCallHistory#ConfirmCallTypes" locale="en">
+    <conditions>
+        <condition name="hasCallTypeToConfirm">
+            <and>
+                <expression name="callTypeToConfirm" op="defined"/>
+                <expression name="callTypesCount" op="gt" value="0"/>
+            </and>
+        </condition>
+        <condition name="hasOneCallType">
+            <and>
+                <expression name="callTypeToConfirm" op="defined"/>
+                <expression name="callTypesCount" op="eq" value="1"/>
+            </and>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <switch phrase="callType" value="callTypeToConfirm">
+            <text case="'OUTGOING'">outgoing calls</text>
+            <text case="'MISSED'">missed calls</text>
+            <text case="'RECEIVED'">received calls</text>
+            <text case="'LATEST'">the latest call</text>
+            <text case="'VOICEMAIL'">to check voicemails</text>
+            <text case="'RINGING'">incoming calls</text>
+            <text case="'PROGRESS'">ongoing calls</text>
+            <text case="'ON_HOLD'">held calls</text>
+            <text case="'UNSEEN'">unseen calls</text>
+            <text>to search for calls</text>
+        </switch>
+    </phrases>
+  <first>
+      <dialog id="hasOneCallType" condition="hasOneCallType">Are you sure you want <phrase name="callType"/>?</dialog>
+      <dialog id="hasCallTypeToConfirm" condition="hasCallTypeToConfirm">Are you sure you want this call type?</dialog>
+      <dialog id="NoCallTypeToConfirm">No value to confirm.</dialog>
+  </first>
+</cat>
+    

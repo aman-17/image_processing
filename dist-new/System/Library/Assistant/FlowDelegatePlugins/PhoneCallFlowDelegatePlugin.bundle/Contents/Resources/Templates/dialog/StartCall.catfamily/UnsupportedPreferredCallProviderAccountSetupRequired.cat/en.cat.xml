@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+    <conditions>
+        <condition name="isFaceTime">
+            <expression name="intent.preferredCallProvider" op="eq" value="'FACETIME_PROVIDER'"/>
+        </condition>
+    </conditions>
+
+    <first>
+        <first condition="isFaceTime">
+            <dialog condition="device.isWatch">Sorry, but you’ll need to set up a FaceTime account first.</dialog>
+            <dialog>Before I do that, <opt><var name="user.groundingAlwaysIfMultiUser"/>, </opt>you’ll need to set up a FaceTime account.</dialog>
+        </first>
+        <dialog>Sorry, you’ll need to set up an account for this call provider.</dialog>
+    </first>
+</cat>

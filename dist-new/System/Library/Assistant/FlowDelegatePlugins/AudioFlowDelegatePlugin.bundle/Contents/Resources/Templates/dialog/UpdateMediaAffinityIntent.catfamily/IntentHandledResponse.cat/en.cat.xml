@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="UpdateMediaAffinityIntent#IntentHandledResponse" locale="en">
+    <conditions>
+        <condition name="attributionWithDialogMemory" note="attribution required using dialog memory">
+            <and>
+                <expression name="isAppAttributionRequired"/>
+                <expression name="useDialogMemoryForAppAttribution"/>
+                <expression name="app.localizedName" op="nonempty"/>
+            </and>
+        </condition>
+        <condition name="attributionRequired" note="attribution required by explicitly for HomePod usecase or if we are non-HomePod third party">
+            <or>
+                <and>
+                    <expression name="isAppAttributionRequired"/>
+                    <expression name="app.localizedName" op="nonempty"/>
+                    <not><expression name="useDialogMemoryForAppAttribution"/></not>
+                </and>
+                <and>
+                    <expression name="app.localizedName" op="nonempty"/>
+                    <not><expression name="app.isFirstParty"/></not>
+                    <not><expression name="useDialogMemoryForAppAttribution"/></not>
+                </and>
+            </or>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="dont">
+            <text condition="isDislikeAffinity"> don’t</text>
+            <text/>
+        </first>
+        <first phrase="modifiedEntity">
+            <text condition="isCurrentlyPlaying"> this.</text>
+            <text condition="isShowMediaItemTitle"> <var name="title"/>.</text>
+            <text> it.</text>
+        </first>
+        <first phrase="multiUserIntroductionAttribution">
+            <text condition="isGrounding">Ok, <var name="user.groundingIfNeeded"/>, </text>
+            <text></text>
+        </first>
+        <first phrase="multiUserIntroduction">
+            <text condition="isGrounding">, <var name="user.groundingIfNeeded"/></text>
+            <text></text>
+        </first>
+        <first phrase="app">
+            <text condition="attributionWithDialogMemory"><var name="app.localizedName" ground="OnceThisWeek"/></text>
+            <text condition="attributionRequired"><var name="app.localizedName"/></text>
+        </first>
+    </phrases>
+    <first>
+        <first condition="attributionWithDialogMemory">
+            <dialog condition="app"><phrase name="multiUserIntroductionAttribution"/>I told <phrase name="app"/> that you<phrase name="dont"/> like <phrase name="modifiedEntity"/></dialog>
+            <dialog>Ok<phrase name="multiUserIntroduction"/>, got it.</dialog>
+        </first>
+        <dialog condition="attributionRequired"><phrase name="multiUserIntroductionAttribution"/>I told <phrase name="app"/> that you<phrase name="dont"/> like <phrase name="modifiedEntity"/></dialog>
+        <dialog>OK<phrase name="multiUserIntroduction"/>, got it.</dialog>
+    </first>
+</cat>

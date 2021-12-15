@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#MediaPlaybackDisabledOnRequestedDevice">
+    <meta name="description" value="Notifying user that media playback toggle disabled on device requested for playback"/>
+    <meta name="category" value="Handled"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters></parameters>
+</cat>

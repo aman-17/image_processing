@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="AnnounceIncomingCall#IntentHandledResponse">
+
+  <conditions>
+      <condition name="hasCallProvider">
+          <expression name="incomingCallConcept.latestCallRecord.callProvider" op="defined"/>
+      </condition>
+      <condition name="isFirstPartyPhone">
+          <expression name="incomingCallConcept.latestCallRecord.callProvider.isFirstPartyPhone" op="set"/>
+      </condition>
+      <condition name="isFaceTimeAudio">
+          <and>
+              <expression name="incomingCallConcept.latestCallRecord.callProvider.isFaceTime" op="set"/>
+              <expression name="incomingCallConcept.latestCallRecord.callCapability" op="eq" value="'AUDIO_CALL'"/>
+          </and>
+      </condition>
+      <condition name="isFaceTimeVideo">
+          <and>
+              <expression name="incomingCallConcept.latestCallRecord.callProvider.isFaceTime" op="set"/>
+              <expression name="incomingCallConcept.latestCallRecord.callCapability" op="eq" value="'VIDEO_CALL'"/>
+          </and>
+      </condition>
+      <condition name="isThirdParty">
+          <expression name="incomingCallConcept.latestCallRecord.callProvider.preferredCallProvider" op="eq" value="'THIRD_PARTY_PROVIDER'"/>
+      </condition>
+      <condition name="isThirdPartyAudio">
+          <and>
+              <expression name="incomingCallConcept.latestCallRecord.callProvider.preferredCallProvider" op="eq" value="'THIRD_PARTY_PROVIDER'"/>
+              <expression name="incomingCallConcept.latestCallRecord.callCapability" op="eq" value="'AUDIO_CALL'"/>
+          </and>
+      </condition>
+      <condition name="isThirdPartyVideo">
+          <and>
+              <expression name="incomingCallConcept.latestCallRecord.callProvider.preferredCallProvider" op="eq" value="'THIRD_PARTY_PROVIDER'"/>
+              <expression name="incomingCallConcept.latestCallRecord.callCapability" op="eq" value="'VIDEO_CALL'"/>
+          </and>
+      </condition>
+      <condition name="hasCaller">
+          <expression name="incomingCallConcept.latestCallRecord.caller" op="defined"/>
+      </condition>
+      <condition name="hasTwoAliases">
+          <expression name="incomingCallConcept.latestCallRecord.callerWithAliases.list.length" op="eq" value="2"/>
+      </condition>
+      <condition name="hasTwoAliasesWithSameFamilyName">
+          <and>
+              <expression name="incomingCallConcept.latestCallRecord.callerWithAliases.list.length" op="eq" value="2"/>
+              <expression name="incomingCallConcept.latestCallRecord.callerWithAliases.allSameFamilyName" op="set"/>
+          </and>
+      </condition>
+      <condition name="hasMoreThanTwoAliases">
+          <expression name="incomingCallConcept.latestCallRecord.callerWithAliases.list.length" op="gt" value="2"/>
+      </condition>
+  </conditions>
+  <phrases>
+      <first phrase="fromCaller">
+          <text condition="hasMoreThanTwoAliases" note="e.g. 'from Bob, Joe, and 3 others'">
+              from <var name="incomingCallConcept.latestCallRecord.callerWithAliases.list[0]"/>, <var name="incomingCallConcept.latestCallRecord.callerWithAliases.list[1]"/>, or
+              <var name="incomingCallConcept.latestCallRecord.callerWithAliases.numOfOthers"/>
+              <quantity value="incomingCallConcept.latestCallRecord.callerWithAliases.numOfOthers" includeValue="false">
+                  <one>other</one>
+                  <other>others</other>
+              </quantity></text>
+          <text condition="hasTwoAliasesWithSameFamilyName" note="e.g. 'from Harry or James Potter' - This abbreviation is locale-specific and may not apply everywhere.">
+              from <var name="incomingCallConcept.latestCallRecord.callerWithAliases.list" list="or" itemformat="{givenName}"/> <var name="incomingCallConcept.latestCallRecord.caller.familyName"/></text>
+          <text condition="hasTwoAliases">
+              from <var name="incomingCallConcept.latestCallRecord.callerWithAliases.list" list="or"/></text>
+          <text condition="incomingCallConcept.latestCallRecord.isCallerIdBlocked">from an unknown caller</text>
+          <text condition="hasCaller">from <var name="incomingCallConcept.latestCallRecord.caller"/></text>
+          <text>from an unknown caller</text>
+      </first>
+  </phrases>
+  <first>
+      <first condition="hasCallProvider">
+          <dialog id="Phone" condition="isFirstPartyPhone">Call <phrase name="fromCaller"/>.</dialog>
+          <dialog id="FaceTimeAudio" condition="isFaceTimeAudio">Call <phrase name="fromCaller"/>.</dialog>
+          <dialog id="FaceTimeVideo" condition="isFaceTimeVideo">FaceTime Video <phrase name="fromCaller"/>.</dialog>
+          <dialog id="ThirdPartyAudio" condition="isThirdPartyAudio"><var name="incomingCallConcept.latestCallRecord.callProvider.providerName.upperFirst"/> call <phrase name="fromCaller"/>.</dialog>
+          <dialog id="ThirdPartyVideo"><var name="incomingCallConcept.latestCallRecord.callProvider.providerName.upperFirst"/> Video call <phrase name="fromCaller"/>.</dialog>
+          <dialog id="ThirdParty"><var name="incomingCallConcept.latestCallRecord.callProvider.providerName.upperFirst"/> call <phrase name="fromCaller"/>.</dialog>
+      </first>
+      <dialog id="Generic">Incoming call <phrase name="fromCaller"/>.</dialog>
+  </first>
+
+</cat>

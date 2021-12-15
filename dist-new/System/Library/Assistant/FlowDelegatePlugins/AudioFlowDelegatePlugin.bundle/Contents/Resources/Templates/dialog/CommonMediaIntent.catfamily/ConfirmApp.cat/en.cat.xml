@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CommonMediaIntent#ConfirmApp" locale="en">
+    <random>
+        <dialog>Would you like to use <var name="app.localizedName"/>?</dialog>
+        <dialog>Great. Confirming you want to use <var name="app.localizedName"/>?</dialog>
+    </random>
+</cat>

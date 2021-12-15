@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalLoveMe">
+	<random phrase="">
+		<dialog>I think you’re pretty great.</dialog>
+		<dialog condition="not_the_first_time">Well, I enjoy spending quality time with you.</dialog>
+		<dialog>I respect you.</dialog>
+		<dialog>You have my utmost admiration.</dialog>
+	</random>
+	<conditions>
+		<condition name="not_the_first_time">
+			<expression name="dialogState.usageCount" value="1" op="gt"/>
+		</condition>
+	</conditions>
+</cat>

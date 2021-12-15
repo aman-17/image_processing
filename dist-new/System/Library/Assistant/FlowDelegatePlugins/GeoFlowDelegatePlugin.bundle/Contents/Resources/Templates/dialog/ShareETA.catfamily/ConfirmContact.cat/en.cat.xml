@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="ShareETA#ConfirmContact" xmlns="urn:apple:names:siri:cat:1.0" locale="en" >
+  <random>
+      <dialog>Just to confirm - you’d like to share your ETA<opt> with <var name="recipient.conversationalName"/></opt>?</dialog>
+  </random>
+</cat>

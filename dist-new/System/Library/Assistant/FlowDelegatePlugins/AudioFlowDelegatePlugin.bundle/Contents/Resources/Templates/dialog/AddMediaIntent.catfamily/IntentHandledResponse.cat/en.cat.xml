@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="AddMediaIntent#IntentHandledResponse" locale="en">
+    <conditions>
+        <condition name="hasMediaType" note="should we show the media type">
+            <expression name="mediaType" op="nonempty"/>
+        </condition>
+        <condition name="isPodcast" note="if it is podcast request">
+            <and>
+              <expression name="mediaType" op="nonempty"/>
+              <expression name="mediaType" op="eq" value="'podcast'"/>
+            </and>
+        </condition>
+        <condition name="isDestinationPlaylist" note="should we show the app name">
+          <and>
+            <expression name="playlistTitle" op="nonempty"/>
+            <expression name="isDestinationPlaylist"/>
+          </and>
+        </condition>
+        <condition name="attributionWithDialogMemory" note="attribution required using dialog memory">
+            <and>
+                <expression name="isAppAttributionRequired"/>
+                <expression name="useDialogMemoryForAppAttribution"/>
+            </and>
+        </condition>
+        <condition name="attributionRequired" note="attribution required by explicitly for HomePod usecase or if we are non-HomePod third party">
+            <or>
+                <expression name="isAppAttributionRequired"/>
+                <and>
+                    <expression name="app.localizedName" op="nonempty"/>
+                    <not><expression name="app.isFirstParty"/></not>
+                </and>
+            </or>
+        </condition>
+        <condition name="titleTooLong" note="title">
+            <expression name="title.length" op="gt" value="29"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="playlistOrLibrary">
+            <text condition="isDestinationPlaylist"><var name="playlistTitle"/> playlist</text>
+            <text>library</text>
+        </first>
+        <first phrase="mediaType">
+            <text condition="hasMediaType">the <var name="mediaType"/> </text>
+            <text/>
+        </first>
+        <first phrase="multiUserIntroduction">
+            <text condition="isGrounding">OK, <var name="user.groundingIfNeeded"/>, </text>
+            <text/>
+        </first>
+        <first phrase="app">
+            <text condition="attributionWithDialogMemory"><opt> in <var name="app.localizedName" ground="OnceThisWeek"/></opt></text>
+            <text condition="attributionRequired"><opt> in <var name="app.localizedName"/></opt></text>
+            <text/>
+        </first>
+        <first phrase="title">
+            <text>
+                <print>‘<var name="title"/>’</print>
+                <speak><say-as interpret-as="music"><var name="title"/></say-as></speak>
+            </text>
+        </first>
+        <first phrase="content">
+            <text condition="titleTooLong"></text>
+            <text condition="title"><phrase name="title"/></text>
+            <text></text>
+        </first>
+    </phrases>
+    <first>
+        <dialog condition="isPodcast">OK, you’re now following <phrase name="content"/>.</dialog>
+        <dialog><phrase name="multiUserIntroduction"/>I’ve added that to your <phrase name="playlistOrLibrary"/><phrase name="app"/>.</dialog>
+    </first>
+</cat>

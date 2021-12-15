@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SearchForMessages#ReadSpokenTapbackComponent" locale="en">
+    <conditions>        
+        
+        <condition name="needSenders">
+            <expression name="tapbackContext.isFirstComponentFromSender" op="set"/>
+        </condition>
+
+        <condition name="needStandaloneAndConnector">
+            <and>
+                <expression name="tapbackContext.type" op="eq" value="'standalone'"/>
+
+                <or>
+                    <and>
+                        <expression name="tapbackContext.isFirstTapbackOnMessage" op="unset"/>
+                        <expression name="tapbackContext.isLastTapbackOnMessage" op="set"/>
+                    </and>
+                    <and>
+                        <expression name="tapbackContext.isFirstComponentFromSender" op="unset"/>
+                        <expression name="tapbackContext.isLastComponentFromSender" op="set"/>
+                    </and>
+                </or>
+            </and>
+        </condition>
+
+        <condition name="needInlineAndConnector">
+            <and>
+                <expression name="tapbackContext.type" op="eq" value="'inline'"/>
+
+                <or>
+                    <or>
+                        <expression name="tapbackContext.isFirstTapbackOnMessage" op="set"/>
+                        <expression name="tapbackContext.isLastTapbackOnMessage" op="set"/>
+                    </or>
+                    <and>
+                        <expression name="tapbackContext.isFirstComponentFromSender" op="unset"/>
+                        <expression name="tapbackContext.isLastComponentFromSender" op="set"/>
+                    </and>
+                </or>
+            </and>
+        </condition>
+
+        <condition name="isInlineTapback">
+            <expression name="tapbackContext.type" op="eq" value="'inline'"/>
+        </condition>
+
+        <condition name="isStandaloneTapback">
+            <expression name="tapbackContext.type" op="eq" value="'standalone'"/>
+        </condition>
+        
+        <condition name="useIt">
+            <expression name="tapbackContext.isFirstTapbackOnMessage" op="unset"/>
+        </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="andConnector">
+            <text condition="needStandaloneAndConnector">and </text>
+            <text condition="needInlineAndConnector">and </text>
+            <random condition="spokenContext.useAppendedConnector">
+                <text>and </text>
+                <text>also </text>
+            </random>
+            <text></text>
+        </first>
+        
+        <first phrase="tapback">
+            <text condition="useIt"><phrase name="tapbackOnIt"/></text>
+            <text condition="tapbackContext.isTapbackOnSendersOwnMessage"><phrase name="tapbackOnSendersOwnMessage"/></text>
+            <text condition="tapbackContext.isTapbackOnMyMessage"><phrase name="tapbackOnMyOwnMessage"/></text>
+            <text><phrase name="tapbackOnGenitiveSendersMessage"/></text>
+        </first>
+        
+        <first phrase="tapbackOnIt">
+            <text><opt><phrase name="senders"/> </opt><phrase name="verb"/> it</text>
+        </first>
+        
+        <first phrase="tapbackOnSendersOwnMessage">
+            <text condition="isStandaloneTapback"><opt><phrase name="senders"/> </opt><phrase name="verb"/> their own <phrase name="standaloneTapbackedMessage"/></text>
+            <text><opt><phrase name="senders"/> </opt><phrase name="verb"/> <phrase name="inlineTapbackedMessage"/></text>
+        </first>
+        
+        <first phrase="tapbackOnMyOwnMessage">
+            <text condition="isStandaloneTapback"><opt><phrase name="senders"/> </opt><phrase name="verb"/> your <phrase name="standaloneTapbackedMessage"/></text>
+            <text><opt><phrase name="senders"/> </opt><phrase name="verb"/> <phrase name="inlineTapbackedMessage"/></text>
+        </first>
+        
+        <first phrase="tapbackOnGenitiveSendersMessage">
+            <text condition="isStandaloneTapback"><opt><phrase name="senders"/> </opt><phrase name="verb"/> <var name="tapbackContext.referencedMessage.sender" inflect="genitive"/> <phrase name="standaloneTapbackedMessage"/></text>
+            <text><opt><phrase name="senders"/> </opt><phrase name="verb"/> <phrase name="inlineTapbackedMessage"/></text>
+        </first>
+        
+        <first phrase="verb">
+            <switch value="tapbackContext.sentiment">
+                <text case="'laughed'">laughed at</text>
+                <text case="'loved'">loved</text>
+                <text case="'disliked'">disliked</text>
+                <text case="'emphasized'">emphasized</text>
+                <text case="'questioned'">questioned</text>
+                <text case="'liked'">liked</text>
+            </switch>
+        </first>
+
+        <first phrase="senders">
+            <text condition="needSenders"><var name="senders" list="and"/> </text>
+        </first>
+
+        <first phrase="inlineTapbackedMessage">
+            <switch value="tapbackContext.referencedMessage.messageType">
+                <text case="'activitySnippet'">the activity message</text>
+                <text case="'animoji'">the Animoji</text>
+                <text case="'audio'">it</text>
+                <text case="'digitalTouch'">the digital touch message</text>
+                <text case="'genericFile'">the file</text>
+                <text case="'handwriting'">the handwritten message</text>
+                <text case="'link'">the link</text>
+                <text case="'mediaAddressCard'">the contact</text>
+                <text case="'mediaCalendar'">the calendar event</text>
+                <text case="'mediaImage'">the image</text>
+                <text case="'mediaPass'">the wallet pass</text>
+                <text case="'mediaVideo'">the video</text>
+                <text case="'mediaLocation'">the location</text>
+                <text case="'paymentNote'">the payment note</text>
+                <text case="'paymentRequest'">the payment request</text>
+                <text case="'paymentSent'">the payment</text>
+                <text case="'sticker'">the sticker</text>
+                <text>it</text>
+            </switch>
+        </first>
+
+        <first phrase="standaloneTapbackedMessage">
+            <switch value="tapbackContext.referencedMessage.messageType">
+                <text case="'activitySnippet'">activity message</text>
+                <text case="'animoji'">Animoji</text>
+                <text case="'audio'">audio message</text>
+                <text case="'digitalTouch'">digital touch message</text>
+                <text case="'genericFile'">file</text>
+                <text case="'handwriting'">handwritten message</text>
+                <text case="'link'">link</text>
+                <text case="'mediaAddressCard'">contact</text>
+                <text case="'mediaCalendar'">calendar event</text>
+                <text case="'mediaImage'">image</text>
+                <text case="'mediaPass'">wallet pass</text>
+                <text case="'mediaVideo'">video</text>
+                <text case="'mediaLocation'">location</text>
+                <text case="'paymentNote'">payment note<opt>: <say-as interpret-as="sms"><var name="tapbackContext.referencedMessage.content"/></say-as></opt></text>
+                <text case="'paymentRequest'">payment request<opt> of <var name="tapbackContext.referencedMessage.paymentTransferAmount"/></opt></text>
+                <text case="'paymentSent'">payment<opt> of <var name="tapbackContext.referencedMessage.paymentTransferAmount"/></opt></text>
+                <text case="'sticker'">sticker</text>
+                <text>message<opt>: <say-as interpret-as="sms"><var name="tapbackContext.referencedMessage.content"/></say-as></opt></text>
+            </switch>
+        </first>
+    </phrases>
+
+    <all>
+        <dialog>
+            <opt><phrase name="andConnector"/></opt>
+            <opt><phrase name="tapback"/></opt>
+        </dialog>
+    </all>
+</cat>

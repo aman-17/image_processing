@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en" id="CannedDialog#dalILike">
+	<all>
+		<random phrase="">
+            <dialog id="doYou#listenAfterSpeaking">Do you?</dialog>
+            <dialog>Got it.</dialog>
+		</random>
+	</all>
+</cat>

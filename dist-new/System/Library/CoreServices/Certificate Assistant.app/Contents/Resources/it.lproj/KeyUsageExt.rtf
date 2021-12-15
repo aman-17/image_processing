@@ -1,0 +1,55 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw12240\paperh15840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\ri340\partightenfactor0
+
+\f0\b\fs24 \cf0 Cos\'92\'e8 Estensione utilizzo chiave?
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Estensione utilizzo chiave (KUE) definisce il modo in cui \'e8 possibile utilizzare un certificato. Puoi fare uso di una estensione utilizzo chiave per limitare il numero di operazioni possibili da parte della chiave pubblica in un certificato. Ad esempio, puoi creare un certificato per firmare i tuoi messaggi di posta, ma non per codificarli. Il certificato Utilizzo chiave esteso (EKU) \'e8 simile alla KUE, ma definisce un certificato in termini di \'93scopo\'94 (ad esempio, per siglare risposte OCSP, identificare un client SSL e cos\'ec via). EKU \'e8 pi\'f9 recente ed estendibile, rispetto a KUE, per questo motivo viene considerato il meccanismo di restrizione utilizzo per eccellenza. Puoi configurare l\'92estensione Utilizzo chiave esteso pi\'f9 avanti in questa guida.\
+\
+\pard\pardeftab720\ri340\partightenfactor0
+\cf0 Puoi utilizzare le seguenti Estensioni utilizzo chiave:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 Firma:\ulnone  seleziona questa opzione quando la chiave pubblica del certificato viene utilizzata con un meccanismo di firma digitale, che supporti servizi di sicurezza o firme certificate.\
+\
+\ul Non rifiuto:\ulnone  seleziona questa opzione quando la chiave pubblica del certificato viene utilizzata per la verifica delle firme digitali in uso durante un servizio di non rifiuto, che protegge contro l\'92erroneo diniego di un\'92azione. Il non rifiuto assicura che una parte in una disputa non possa ripudiare o rifiutare la validit\'e0 di un contratto o di una decisione.\'a0\
+\
+\ul Cifratura chiave\ulnone : seleziona questa opzione quando la chiave pubblica del certificato viene utilizzata per la codifica di una chiave, per qualsiasi utilizzo. La codifica della chiave viene utilizzata per il trasporto e wrapping (o gestione) della chiave.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Cifratura dati\ulnone : seleziona questa opzione quando la chiave pubblica del certificato viene utilizzata per codificare i dati dell\'92utente, piuttosto che le chiavi crittografiche.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Contratto chiave\ulnone : seleziona questa opzione quando la chiave pubblica del certificato viene utilizzata per il contratto chiave. Il protocollo del contratto chiave (o protocollo di scambio delle chiavi) viene utilizzato quando le due parti si accordano su di una chiave da utilizzare in un sistema di codifica a chiave segreta, all\'92interno del quale le chiavi possono essere condivise liberamente e in sicurezza, su qualsiasi mezzo non protetto (per esempio, se vengono utilizzate le chiavi Diffie-Hellman per la gestione delle chiavi, questa estensione viene attivata).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Firma certificato\ulnone : seleziona questa opzione quando la chiave pubblica del certificato viene utilizzata per la verifica di una firma su certificati a chiave pubblica. I certificati con questa estensione sono di tipo Autorit\'e0 di certificazione (CA). Se questa estensione viene assegnata a un certificato, si dovr\'e0 attivare l\'92opzione \'93Utilizza questo certificato come Autorit\'e0 di certificazione\'94 nella Estensione limiti di base (BCE). La BCE verr\'e0 mostrata pi\'f9 avanti in questa guida.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Firma CRL\ulnone : seleziona questa opzione quando la chiave pubblica del certificato viene utilizzata per la verifica di una firma su un Elenco dei certificati revocati (CRL).\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Cifra solamente\ulnone : seleziona questa opzione solamente quando anche il Contratto chiave \'e8 attivo.\'a0Questa opzione indica che la chiave pubblica del certificato pu\'f2 essere utilizzata per la codifica dei dati, durante l'esecuzione del contratto chiave.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul Decifra solamente:\ulnone  seleziona questa opzione quando anche il Contratto chiave \'e8 attivo. Questa opzione indica che la chiave pubblica del certificato pu\'f2 essere utilizzata per codificare i dati durante l'esecuzione del contratto chiave.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\ri340\partightenfactor0
+
+\f0\b \cf0 Cosa significa \'93Estensione critica\'94?
+\f1\b0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 Anche detta \'93indicatore di criticit\'e0\'94, \'e8 un\'92opzione che indica al software che utilizza il certificato se \'e8 sicuro ignorare Estensione utilizzo chiave, in caso di mancato riconoscimento. Un certificato verr\'e0 rifiutato se il software non dovesse riconoscere un\'92\'93estensione critica\'94.}

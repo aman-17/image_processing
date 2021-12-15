@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="Labels#ButtonSkip" locale="en">
+    <first>
+        <dialog>Skip</dialog>
+    </first>
+</cat>

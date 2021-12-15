@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthWorkoutStart#unsupportedSlotValue" locale="en">
+    
+    <conditions>
+      <condition name="notOpenEnded">
+          <not>
+            <expression name="isOpenEnded"/>
+          </not>
+      </condition>
+    </conditions>
+    
+    <phrases>
+        <first phrase="appNameOrGeneric">
+            <text condition="appName"><var name="appName"/></text>
+            <text>the app</text>
+        </first>
+    </phrases>
+
+    <first>
+      <switch value="slot">
+          <dialog case="'workoutName'" id="workoutName">Sorry, <phrase name="appNameOrGeneric"/> doesn’t support workout names.</dialog>
+          
+          <dialog case="'goalValue'" id="goalValue">Sorry, <phrase name="appNameOrGeneric"/> doesn’t support a value for the workout goal.</dialog>
+          
+          <dialog case="'workoutGoalUnitType'" id="workoutGoalUnitType">Sorry, <phrase name="appNameOrGeneric"/> doesn’t support workout type.</dialog>
+          
+          <dialog case="'workoutLocationType'" id="workoutLocationType"><phrase name="appNameOrGeneric"/> doesn’t support specifying a workout location.</dialog>
+          
+          <first case="'isOpenEnded'">
+              <dialog condition="notOpenEnded" id="onlyOpenEnded">Sorry, <phrase name="appNameOrGeneric"/> only supports open-ended workouts.</dialog>
+              <dialog id="noOpenEnded">Sorry, <phrase name="appNameOrGeneric"/> doesn’t support open-ended workouts.</dialog>
+          </first>
+      </switch>
+    </first>
+
+</cat>

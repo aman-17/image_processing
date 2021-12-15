@@ -1,0 +1,109 @@
+{
+  "camera" : {
+    "name" : "stickerCam",
+    "scene" : "../../shared/cam.scnz"
+  },
+  "emoji" : "😜",
+  "identifier" : "winking_face_with_stuck_out_tongue",
+  "options" : {
+    "duration" : 1
+  },
+  "physicsState" : {
+    "memoji" : {
+      "lowerBack_DYN" : {
+        "offset" : [
+          -0.066507339477539062,
+          0.14245986938476562,
+          -1.6945203542709351
+        ]
+      },
+      "lowerBackLeft_DYN" : {
+        "offset" : [
+          -0.92488861083984375,
+          -0.71592283248901367,
+          -1.2361875772476196
+        ]
+      },
+      "lowerBackRight_DYN" : {
+        "offset" : [
+          0.76962661743164062,
+          0.97859525680541992,
+          -1.1602363586425781
+        ]
+      },
+      "lowerFront_DYN" : {
+        "offset" : [
+          -0.14245510101318359,
+          -0.066511631011962891,
+          -1.6945219039916992
+        ]
+      },
+      "lowerFrontLeft_DYN" : {
+        "offset" : [
+          -0.97860145568847656,
+          -0.76963376998901367,
+          1.1602339744567871
+        ]
+      },
+      "lowerFrontRight_DYN" : {
+        "offset" : [
+          0.71592807769775391,
+          0.9248957633972168,
+          1.2361743450164795
+        ]
+      },
+      "lowerLeft_DYN" : {
+        "offset" : [
+          -1.3026847839355469,
+          -1.0937199592590332,
+          -0.053705237805843353
+        ]
+      },
+      "lowerRight_DYN" : {
+        "offset" : [
+          1.0937261581420898,
+          -1.3026914596557617,
+          -0.053704775869846344
+        ]
+      }
+    }
+  },
+  "pose" : {
+    "bakedAnimationBlendFactor" : 0,
+    "browDown_R" : 0.87461799383163452,
+    "browInnerUp" : 0.55853772163391113,
+    "browOuterUp_L" : 1,
+    "cheekSquint_L" : 1,
+    "cheekSquint_R" : 1,
+    "eyeBlink_R" : 1,
+    "eyeLookDown_L" : 0.059999998658895493,
+    "eyeLookDown_R" : 0.059999998658895493,
+    "eyeLookIn_R" : 0.15999999642372131,
+    "eyeLookOut_L" : 0.15999999642372131,
+    "eyeSquint_L" : 0.9114687442779541,
+    "eyeSquint_R" : 1,
+    "eyeWide_L" : 1,
+    "jawOpen" : 0.69775247573852539,
+    "mouthDimple_L" : 1,
+    "mouthDimple_R" : 0.97000002861022949,
+    "mouthLeft" : 0.35402417182922363,
+    "mouthSmile_L" : 1,
+    "mouthSmile_R" : 1,
+    "neckOrientation" : [
+      -0.006829781923443079,
+      -0.046863824129104614,
+      0.086557440459728241,
+      0.99512052536010742
+    ],
+    "neckPosition" : [
+      0,
+      0,
+      0
+    ],
+    "noseSneer_R" : 0.21253287792205811,
+    "tongueOut" : 1
+  },
+  "props" : [
+
+  ]
+}

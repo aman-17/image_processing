@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="StartCall#ConfirmContacts" locale="en">
+    <conditions>
+        <condition name="hasContactToConfirm">
+            <expression name="contactToConfirm" op="defined"/>
+        </condition>
+        <condition name="hasHandleLabel">
+            <expression name="contactToConfirm.personHandle.label" op="nonempty"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="formattedContactToConfirm">
+          <text condition="hasHandleLabel"><var name="contactToConfirm"/> - <var name="contactToConfirm.personHandle.label"/></text>
+          <text><var name="contactToConfirm"/></text>
+        </first>
+    </phrases>
+    <first>
+        <first condition="hasContactToConfirm">
+            <dialog id="FoundInAppWithGrounding" condition="isFoundInAppConfirmation">
+                Ok, <var name="user.groundingIfNeeded"/>, I found a phone number for <phrase name="formattedContactToConfirm"/> in your apps. Is that the one you want?
+            </dialog>
+            <dialog id="FoundInAppWithoutGrounding" condition="isFoundInAppConfirmation">
+                I found a phone number for <phrase name="formattedContactToConfirm"/> in your apps. Is that the one you want?
+            </dialog>
+            <dialog id="TopMatchWithGrounding" condition="isTopMatchConfirmation">
+                Ok, <var name="user.groundingIfNeeded"/>, did you mean <phrase name="formattedContactToConfirm"/>?
+            </dialog>
+            <dialog id="TopMatchWithoutGrounding" condition="isTopMatchConfirmation">
+                Did you mean <phrase name="formattedContactToConfirm"/>?
+            </dialog>
+            <dialog id="FaceTimeConfirmWithGrounding" condition="isFaceTime">
+                Ok, <var name="user.groundingIfNeeded"/>, just to confirm — you’d like to FaceTime <phrase name="formattedContactToConfirm"/>?
+            </dialog>
+            <dialog id="FaceTimeConfirmWithoutGrounding" condition="isFaceTime">
+                Just to confirm — you’d like to FaceTime <phrase name="formattedContactToConfirm"/>?
+            </dialog>
+            <dialog id="ConfirmWithGrounding">
+                Ok, <var name="user.groundingIfNeeded"/>, just to confirm — you’d like to call <phrase name="formattedContactToConfirm"/>?
+            </dialog>
+            <dialog id="ConfirmWithoutGrounding">
+                Just to confirm — you’d like to call <phrase name="formattedContactToConfirm"/>?
+            </dialog>
+        </first>
+        <dialog id="NoContactToConfirm">There is nothing to confirm for contacts.</dialog>
+    </first>
+</cat>

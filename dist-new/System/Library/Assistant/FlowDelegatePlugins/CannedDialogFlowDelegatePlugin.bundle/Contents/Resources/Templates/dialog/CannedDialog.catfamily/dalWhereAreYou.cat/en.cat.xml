@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat id="CannedDialog#dalWhereAreYou" locale="en" xmlns="urn:apple:names:siri:cat:1.0">
+	<all>
+		<random phrase="">
+			<dialog>Here I am!</dialog>
+			<dialog>I’m here.</dialog>
+			<dialog condition="not_Watch_or_TV">I’m over here…</dialog>
+		</random>
+	</all>
+	<conditions>
+		<condition name="not_Watch_or_TV">
+			<and>
+				<expression name="device.isWatch" op="eq" value="false"/>
+				<expression name="device.isAppleTV" op="eq" value="false"/>
+				<expression name="device.isDialogDriven"/>
+			</and>
+		</condition>
+	</conditions>
+	<phrases/>
+</cat>

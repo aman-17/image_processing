@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#ErrorWithCode">
+
+    <meta name="description" value="Executed whenever an code specific error occurs in a non slot-resolution Synapse transaction."/>
+    <meta name="category" value="Fatal"/>
+    <meta name="readyForLoc" value="true"/>
+    
+    <parameters>
+        <parameter name="deviceState" type="sirikit.DeviceState" description="Did user invoke request using Carplay?"/>
+    </parameters>
+
+</cat>

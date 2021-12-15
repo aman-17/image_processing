@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="UpdateMediaAffinityIntent#DisambiguateParameterValue" locale="en">
+    <first condition="isParameterMediaItems">
+        <dialog condition="isDislikeAffinity">What do you want to dislike?</dialog>
+        <dialog condition="isLikeAffinity">What do you want to like?</dialog>
+        <dialog/>
+    </first>
+</cat>

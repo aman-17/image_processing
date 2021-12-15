@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#HandleFailed" locale="en">
+    <conditions>
+        <condition name="appNotEmpty">
+            <expression name="app.localizedName" op="nonempty"/>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="generic">
+            <first condition="appNotEmpty">
+                <text condition="isGenericFailure">Sorry, there was a problem with <var name="app.localizedName"/></text>
+                <text condition="app">Sorry, you’ll need to continue in <var name="app.localizedName"/></text>
+            </first>
+            <text>Sorry, there was a problem</text>
+        </first>
+    </phrases>
+    <first>
+        <first condition="appNotEmpty">
+            <switch value="code">
+                <dialog case="'INPlayMediaIntentResponseCodeFailureUnknownMediaType'"><var name="app.localizedName"/> doesn’t know what type of media that is.</dialog>
+                <dialog case="'INPlayMediaIntentResponseCodeFailureNoUnplayedContent'">Sorry, <var name="app.localizedName"/> doesn’t have any unplayed content.</dialog>
+                <dialog case="'INPlayMediaIntentResponseCodeFailureRestrictedContent'">Looks like <var name="app.localizedName"/> can’t play that.</dialog>
+                <dialog><phrase name="generic"/>.</dialog>
+            </switch>
+        </first>
+        <dialog><phrase name="generic"/>.</dialog>
+    </first>
+</cat>

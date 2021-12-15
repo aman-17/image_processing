@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.5" id="SendMessage#UnsupportedEffect">
+    <meta name="description" value="Provides dialog for unsupported effect slot"/>
+    <meta name="category" value="Can't Do"/>
+    <meta name="readyForLoc" value="true"/>
+    <parameters>
+        <parameter name="unsupportedEffect" type="dialog.String" description="The unsupported effect"/>
+        <parameter name="app" type="messages.App" description="The app object used to send the message."/>
+        <parameter name="deviceState" type="sirikit.DeviceState" description="The device state."/>
+    </parameters>
+</cat>

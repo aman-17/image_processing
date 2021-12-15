@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="CannedDialog#dalJokePositiveFeedback">
+    <meta name="description" value="User laughed or gave positive feedback after a joke by Siri."/>
+    <meta name="category" value="Social"/>
+    <meta name="subcategory" value="Passing Time"/>
+    <meta name="readyForLoc" value="false"/>
+    <meta name="listenAfterSpeaking" value="true"/>
+</cat>

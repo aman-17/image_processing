@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="healthUnsupported#controlWorkoutUnsupported" locale="en">
+  <first>
+      <dialog condition="device.isWatch" id="watch">My apologies. I can’t modify the workout.</dialog>
+      <dialog id="otherDevices">I can’t control Workouts on your <var name="device.deviceName"/>.</dialog>
+  </first>
+</cat>

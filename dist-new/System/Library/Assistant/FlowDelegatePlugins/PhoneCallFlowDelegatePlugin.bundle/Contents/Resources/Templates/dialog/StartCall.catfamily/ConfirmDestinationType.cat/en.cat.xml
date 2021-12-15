@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" locale="en">
+  <conditions>
+      <condition name="isUnknownDestinationType">
+          <or>
+              <expression name="destinationType" op="eq" value="'UNKNOWN'"/>
+              <expression name="destinationType" op="empty"/>
+          </or>
+      </condition>
+  </conditions>
+  <phrases>
+      <switch phrase="callType" value="destinationType">
+          <text case="'NORMAL_DESTINATION'">make a call</text>
+          <text case="'EMERGENCY_DESTINATION'">make an emergency call</text>
+          <text case="'VOICEMAIL_DESTINATION'">call your voicemail</text>
+          <text case="'REDIAL_DESTINATION'">redial</text>
+          <text case="'CALL_BACK_DESTINATION'">call back</text>
+      </switch>
+  </phrases>
+  <first>
+      <dialog condition="isUnknownDestinationType">There is nothing to confirm for type of destination.</dialog>
+      <dialog>Just to confirm, you would like to <phrase name="callType"/>?</dialog>
+  </first>
+
+</cat>

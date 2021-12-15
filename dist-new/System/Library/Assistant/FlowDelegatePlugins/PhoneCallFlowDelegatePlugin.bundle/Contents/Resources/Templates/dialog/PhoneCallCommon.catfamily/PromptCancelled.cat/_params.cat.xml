@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PhoneCallCommon#PromptCancelled">
+    <meta name="category" value="Handled"/>
+    <meta name="description" value="Executed when user declines to make a call."/>
+    <meta name="readyForLoc" value="true"/>
+</cat>

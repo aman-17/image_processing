@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#MediaPlaybackDisabledOnRequestedDevice" locale="en">
+    <first>
+        <dialog>Media playback is turned off for this device. You can turn it on in the Home app.</dialog>
+    </first>
+</cat>

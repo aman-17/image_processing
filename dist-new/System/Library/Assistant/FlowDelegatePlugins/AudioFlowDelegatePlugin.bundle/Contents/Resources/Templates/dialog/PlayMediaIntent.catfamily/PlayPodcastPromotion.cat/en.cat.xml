@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cat xmlns="urn:apple:names:siri:cat:1.0" id="PlayMediaIntent#PlayPodcastPromotion" locale="en">
+    <conditions>
+        <condition name="areSpeakerNamesPresent">
+            <or>
+                <expression name="wha.firstSpeakerName"/>
+                <expression name="wha.secondSpeakerName"/>
+            </or>
+        </condition>
+        <condition name="areSpeakerRoomsPresent">
+            <or>
+                <expression name="wha.firstSpeakerRoom"/>
+                <expression name="wha.secondSpeakerRoom"/>
+            </or>
+        </condition>
+        <condition name="areBothPermanentNamesPresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+            </and>
+        </condition>
+        <condition name="isPermanentNameAndRoomNamePresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <expression name="wha.firstRoomNameFromSpokenEntities"/>
+                <or>
+                    <not>
+                        <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+                </or>
+            </and>
+        </condition>
+        <condition name="isOnlyFirstPermanentNamePresent">
+            <and>
+                <expression name="wha.firstPermanentNameFromSpokenEntities"/>
+                <or>
+                    <not>
+                        <expression name="wha.secondPermanentNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.secondPermanentNameFromSpokenEntities" op="empty"/>
+                </or>
+                <or>
+                    <not>
+                        <expression name="wha.firstRoomNameFromSpokenEntities"/>
+                    </not>
+                    <expression name="wha.firstRoomNameFromSpokenEntities" op="empty"/>
+                </or>
+            </and>
+        </condition>
+    </conditions>
+    <phrases>
+        <first phrase="titleByArtist">
+            <text>‘<var name="title"/>’<opt><break time="0ms"/> from <var name="artist"/></opt></text>
+        </first>
+        <first phrase="title">
+            <text>‘<var name="title"/>’</text>
+        </first>
+        <first phrase="groupsDialog">
+            <text condition="areBothPermanentNamesPresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and <var name="wha.secondPermanentNameFromSpokenEntities"/></text>
+            <text condition="isPermanentNameAndRoomNamePresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/> and in the <var name="wha.firstRoomNameFromSpokenEntities"/></text>
+            <text condition="isOnlyFirstPermanentNamePresent"> on the <var name="wha.firstPermanentNameFromSpokenEntities"/></text>
+            <text></text>
+        </first>
+        <first phrase="whaDialog">
+            <text condition="wha.isAllSpeakers"> everywhere</text>
+            <text condition="wha.hasThreeOrMoreRooms"> in multiple rooms</text>
+            <text condition="wha.hasGroups"><phrase name="groupsDialog"/></text>
+            <text condition="areSpeakerNamesPresent"> on the <var name="wha.firstSpeakerName"/><opt> and <var name="wha.secondSpeakerName"/></opt></text>
+            <text condition="areSpeakerRoomsPresent"> in the <var name="wha.firstSpeakerRoom"/><opt> and <var name="wha.secondSpeakerRoom"/></opt></text>
+            <text></text>
+        </first>
+    </phrases>
+    <first>
+        <random condition="userRequestByStoryName">
+            <dialog>OK, now playing <phrase name="titleByArtist"/><phrase name="whaDialog"/>…</dialog>
+            <dialog>OK, let’s listen to <phrase name="titleByArtist"/><phrase name="whaDialog"/>…</dialog>
+        </random>
+        <random condition="isStoryTelling">
+            <dialog>OK, the following story comes from <phrase name="title"/><phrase name="whaDialog"/>…</dialog>
+            <dialog>OK, this story comes from <phrase name="title"/><phrase name="whaDialog"/>…</dialog>
+            <dialog>OK, let’s listen to <phrase name="title"/><phrase name="whaDialog"/>…</dialog>
+        </random>
+        <random condition="isStorySleep">
+            <dialog>OK, this story comes from <phrase name="title"/><phrase name="whaDialog"/>. I hope you can sleep well after listening to it!</dialog>
+            <dialog>OK, let’s listen to <phrase name="title"/><phrase name="whaDialog"/>…</dialog>
+            <dialog condition="isNight">OK, the following story comes from <phrase name="title"/><phrase name="whaDialog"/>, good night.</dialog>
+        </random>
+        <first condition="isWordOfTheDay">
+            <dialog note="ground only works on var so cant use phrase">Here’s a podcast: ‘<var name="title" ground="Once"/>’<phrase name="whaDialog"/></dialog>
+            <dialog>Here’s <phrase name="title"/><phrase name="whaDialog"/>…</dialog>
+        </first>
+        <dialog>OK, the <phrase name="title"/> podcast will play right away<phrase name="whaDialog"/>…</dialog>
+    </first>
+</cat>

@@ -1,0 +1,125 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf820
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\b\fs22 \cf0 Apakah Sambungan Kegunaan Kunci?
+\b0\fs24 \
+\pard\pardeftab720\partightenfactor0
+
+\fs22 \cf0 Sambungan Kegunaan Kunci (KUE) mentakrifkan bagaimana sijil boleh digunakan.
+\fs24  
+\fs22 Anda boleh menggunakan sambungan kegunaan kunci untuk menghadkan operasi yang boleh dilaksanakan oleh kunci awam dalam sijil.
+\fs24  
+\fs22 Sebagai contoh, anda boleh mencipta sijil untuk menandatangani e-mel, tetapi tidak boleh  menyulitkannya.
+\fs24  
+\fs22 Sijil Kegunaan Kunci Tambahan (EKU) menyerupai KUE, tetapi ia mentakrifkan sijil dari segi \'93tujuan\'94 (sebagai contoh, untuk menandatangani OCSP, mengenal pasti pelanggan SSL dan sebagainya).
+\fs24  
+\fs22 EKU adalah lebih baru dan boleh dilanjutkan lebih daripada KUE, jadi ia sering dianggap sebagai mekanisme sekatan penggunaan.
+\fs24  
+\fs22 Anda boleh mengkonfigurasi Sambungan Kegunaan Kunci Tambahan kemudian dalam pembantu ini.
+\fs24 \
+\
+
+\fs22 Anda boleh gunakan Sambungan Kegunaan Kunci berikut:
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs22 \cf0 \ul \ulc0 Tandatangan\ulnone :
+\fs24  
+\fs22 Pilih ini apabila kunci awam sijil digunakan dengan mekanisme tandatangan digital untuk menyokong perkhidmatan keselamatan selain daripada menandatangani sijil.
+\fs24 \
+\
+
+\fs22 \ul Tanpa Sangkalan\ulnone :
+\fs24  
+\fs22 Pilih ini apabila kunci awam sijil digunakan untuk mengesahkan tandatangan digital yang digunakan untuk membekalkan perkhidmatan tanpa sangkalan yang melindungi terhadap penafian palsu sesetengah tindakan.
+\fs24  
+\fs22 Tanpa Sangkalan memastikan pihak dalam pertikaian tidak boleh menolak atau menafikan kesahihan kenyataan atau kontrak.
+\fs24 \'a0\
+\
+
+\fs22 \ul Pensiferan Kunci\ulnone :
+\fs24  
+\fs22 Pilih ini apabila kunci awam sijil digunakan untuk menyulitkan kunci untuk sebarang tujuan.
+\fs24  
+\fs22 Pensiferan Kunci digunakan untuk pengangkutan kunci dan pembalutan kunci (atau pengurusan kunci).
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs22 \cf0 \ul Pensiferan Data\ulnone :
+\fs24  
+\fs22 Pilih ini apabila kunci awam sijil digunakan untuk mensiferkan data pengguna selain daripada kunci kriptografi.
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs22 \cf0 \ul Persetujuan Kunci\ulnone : 
+\fs24  
+\fs22 Pilih ini apabila kunci awam sijil digunakan untuk persetujuan kunci.
+\fs24  
+\fs22 Protokol persetujuan kunci (juga dikenali sebagai protokol pertukaran kunci) digunakan apabila kedua-dua pihak bersetuju dengan kunci digunakan di dalam sistem kripto kunci rahsia di mana kunci boleh dikongsi secara bebas dan selamat melalui mana-mana medium tidak selamat.
+\fs24  
+\fs22 (Sebagai contoh, jika kunci Diffie-Hellman digunakan untuk pengurusan kunci, sambungan ini disetkan.)
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs22 \cf0 \ul Tandatangan Sijil\ulnone :
+\fs24  
+\fs22 Pilih ini apabila kunci awam sijil digunakan untuk mengesahkan tandatangan pada sijil kunci awam.
+\fs24  
+\fs22 Sijil dengan sambungan ini adalah sijil Autoriti Sijil (CA).
+\fs24 \'a0 
+\fs22 Jika sambungan ini diperuntukkan kepada sijil, \'93Gunakan sijil ini sebagai Autoriti Sijil\'94 dalam Sambungan Kekangan Asas (BCE) mesti juga disetkan.
+\fs24  
+\fs22 BCE ditunjukkan kemudian dalam pembantu ini.
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs22 \cf0 \ul Tandatangan CRL\ulnone :
+\fs24  
+\fs22 Pilih ini apabila kunci awam sijil digunakan untuk mengesahkan tandatangan pada Senarai Pembatalan Sijil (CRL).
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs22 \cf0 \ul Pensifer Sahaja\ulnone :
+\fs24  
+\fs22 Hanya pilih ini apabila Persetujuan Kunci juga disetkan. Ia menunjukkan bahawa kunci awam sijil boleh digunakan untuk mensiferkan data semasa melaksanakan persetujuan kunci.
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs22 \cf0 \ul Penyahsifer Sahaja\ulnone :
+\fs24 \ul \'a0\ulnone  
+\fs22 Pilih ini apabila Persetujuan Kunci juga disetkan.
+\fs24  
+\fs22 Ia menunjukkan bahawa kunci awam sijil boleh digunakan untuk menyahsiferkan data semasa melaksanakan persetujuan kunci.
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardeftab720\partightenfactor0
+\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\b\fs22 \cf0 Apakah maksud \'93Sambungan ini adalah kritikal\'94?
+\b0\fs24 \
+\pard\pardeftab720\partightenfactor0
+
+\fs22 \cf0 Ini juga dikenali sebagai \'93penunjuk kegentingan.\'94
+\fs24  
+\fs22 Ia adalah bendera yang mengarahkan perisian yang menggunakan sijil sama ada selamat mengabaikan Sambungan Kegunaan Kunci jika ia tidak mengenalinya.
+\fs24  
+\fs22 Sijil akan ditolak jika perisian tidak mengenali \'93sambungan kritikal.\'94}
