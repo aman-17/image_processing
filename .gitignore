@@ -1,0 +1,9 @@
+.vscode/
+AngledImages/
+appyhubvenv/
+BoundingboxQuarter/
+CamouflageDataset/
+descaledBoundingBoxQuarter/
+dilation_threshold/
+dist-new/
+dist-transform/
