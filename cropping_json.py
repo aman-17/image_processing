@@ -64,7 +64,7 @@ for c in cnts:
         #p=math.floor(pixelsPerMetric)
         #print(p)
 
-p=70
+p=66
 
 
 
