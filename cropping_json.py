@@ -11,13 +11,14 @@ from shapely.affinity import scale
 from shapely.ops import transform
 from shapely.geometry import Polygon
 import json
+from pprint import pprint
  
 # Opening JSON file
 f = open('dh-tshirt-panel.json')
 data = json.load(f)
-d=data.keys()
-
-print(f)
+d=data["xl"]["m"]["fb2"]
+# pprint(d)
+# print(f)
 
 
 def midpoint(ptA, ptB):
@@ -63,99 +64,130 @@ for c in cnts:
         #p=math.floor(pixelsPerMetric)
         #print(p)
 
-p=44
-
-h, b =  10.61, 8.58
-
-xp1, yp1 = 5.57, 1.02
-xp2, yp2 = 0, 10.61
-
-
-cx1, cy1   = 5.44, 2.76
-cx2, cy2   = 5.39, 3.17
-cx3, cy3   = 5.35, 3.56
-cx4, cy4   = 5.32, 3.96
-cx5, cy5   = 5.30, 4.35
-cx6, cy6   = 5.28, 4.75
-cx7, cy7   = 5.28, 5.14
-cx8, cy8   = 5.28, 5.53
-cx9, cy9   = 5.30, 5.92
-cx10, cy10 = 5.33, 6.37
-cx11, cy11 = 5.37, 6.73
-cx12, cy12 = 5.43, 7.11
-cx13, cy13 = 5.51, 7.50
-cx14, cy14 = 5.62, 7.89
-cx15, cy15 = 5.76, 8.28
-cx16, cy16 = 5.93, 8.68
-cx17, cy17 = 6.17, 9.08
-cx18, cy18 = 6.50, 9.47
-cx19, cy19 = 6.74, 9.67
-cx20, cy20 = 7.05, 9.89
-cx21, cy21 = 7.46, 10.14
-
-xcp1=math.ceil(xp1*p)
-xcp2=math.ceil(xp2*p)
-
-
-ycp1=math.ceil(yp1*p)
-ycp2=math.ceil(yp2*p)
+p=70
 
 
 
-c1=math.ceil(h*p)
-c2=math.ceil(b*p)
+xcp1=math.ceil(d["xp1"]*p)
+xcp2=math.ceil(d["xp2"]*p)
+xcp3=math.ceil(d["xp3"]*p)
+ycp1=math.ceil(d["yp1"]*p)
+ycp2=math.ceil(d["yp2"]*p)
+ycp3=math.ceil(d["yp3"]*p)
 
 
-ccx1=math.ceil(cx1*p)
-ccx2=math.ceil(cx2*p)
-ccx3=math.ceil(cx3*p)
-ccx4=math.ceil(cx4*p)
-ccx5=math.ceil(cx5*p)
-ccx6=math.ceil(cx6*p)
-ccx7=math.ceil(cx7*p)
-ccx8=math.ceil(cx8*p)
-ccx9=math.ceil(cx9*p)
-ccx10=math.ceil(cx10*p)
-ccx11=math.ceil(cx11*p)
-ccx12=math.ceil(cx12*p)
-ccx13=math.ceil(cx13*p)
-ccx14=math.ceil(cx14*p)
-ccx15=math.ceil(cx15*p)
-ccx16=math.ceil(cx16*p)
-ccx17=math.ceil(cx17*p)
-ccx18=math.ceil(cx18*p)
-ccx19=math.ceil(cx19*p)
-ccx20=math.ceil(cx20*p)
-ccx21=math.ceil(cx21*p)
+c1=math.ceil(d["h"]*p)
+c2=math.ceil(d["b"]*p)
 
 
+ccx1=math.ceil(d["cx1"]*p)
+ccx2=math.ceil(d["cx2"]*p)
+ccx3=math.ceil(d["cx3"]*p)
+ccx4=math.ceil(d["cx4"]*p)
+ccx5=math.ceil(d["cx5"]*p)
+ccx6=math.ceil(d["cx6"]*p)
+ccx7=math.ceil(d["cx7"]*p)
+ccx8=math.ceil(d["cx8"]*p)
+ccx9=math.ceil(d["cx9"]*p)
+ccx10=math.ceil(d["cx10"]*p)
+ccx11=math.ceil(d["cx11"]*p)
+ccx12=math.ceil(d["cx12"]*p)
+ccx13=math.ceil(d["cx13"]*p)
+ccx14=math.ceil(d["cx14"]*p)
+ccx15=math.ceil(d["cx15"]*p)
+ccx16=math.ceil(d["cx16"]*p)
+ccx17=math.ceil(d["cx17"]*p)
+ccx18=math.ceil(d["cx18"]*p)
+ccx19=math.ceil(d["cx19"]*p)
+ccx20=math.ceil(d["cx20"]*p)
+ccx21=math.ceil(d["cx21"]*p)
+ccx22=math.ceil(d["cx22"]*p)
+ccx23=math.ceil(d["cx23"]*p)
+ccx24=math.ceil(d["cx24"]*p)
+ccx25=math.ceil(d["cx25"]*p)
+ccx26=math.ceil(d["cx26"]*p)
+ccx27=math.ceil(d["cx27"]*p)
+ccx28=math.ceil(d["cx28"]*p)
+ccx29=math.ceil(d["cx29"]*p)
+ccx30=math.ceil(d["cx30"]*p)
+ccx31=math.ceil(d["cx31"]*p)
+ccx32=math.ceil(d["cx32"]*p)
+ccx33=math.ceil(d["cx33"]*p)
+ccx34=math.ceil(d["cx34"]*p)
+ccx35=math.ceil(d["cx35"]*p)
+ccx36=math.ceil(d["cx36"]*p)
+ccx37=math.ceil(d["cx37"]*p)
+ccx38=math.ceil(d["cx38"]*p)
+ccx39=math.ceil(d["cx39"]*p)
+ccx40=math.ceil(d["cx40"]*p)
+ccx41=math.ceil(d["cx41"]*p)
+ccx42=math.ceil(d["cx42"]*p)
+ccx43=math.ceil(d["cx43"]*p)
+ccx44=math.ceil(d["cx44"]*p)
+ccx45=math.ceil(d["cx45"]*p)
+ccx46=math.ceil(d["cx46"]*p)
+ccx47=math.ceil(d["cx47"]*p)
+ccx48=math.ceil(d["cx48"]*p)
+ccx49=math.ceil(d["cx49"]*p)
+ccx50=math.ceil(d["cx50"]*p)
 
-ccy1=math.ceil(cy1*p)
-ccy2=math.ceil(cy2*p)
-ccy3=math.ceil(cy3*p)
-ccy4=math.ceil(cy4*p)
-ccy5=math.ceil(cy5*p)
-ccy6=math.ceil(cy6*p)
-ccy7=math.ceil(cy7*p)
-ccy8=math.ceil(cy8*p)
-ccy9=math.ceil(cy9*p)
-ccy10=math.ceil(cy10*p)
-ccy11=math.ceil(cy11*p)
-ccy12=math.ceil(cy12*p)
-ccy13=math.ceil(cy13*p)
-ccy14=math.ceil(cy14*p)
-ccy15=math.ceil(cy15*p)
-ccy16=math.ceil(cy16*p)
-ccy17=math.ceil(cy17*p)
-ccy18=math.ceil(cy18*p)
-ccy19=math.ceil(cy19*p)
-ccy20=math.ceil(cy20*p)
-ccy21=math.ceil(cy21*p)
 
+ccy1=math.ceil(d["cy1"]*p)
+ccy2=math.ceil(d["cy2"]*p)
+ccy3=math.ceil(d["cy3"]*p)
+ccy4=math.ceil(d["cy4"]*p)
+ccy5=math.ceil(d["cy5"]*p)
+ccy6=math.ceil(d["cy6"]*p)
+ccy7=math.ceil(d["cy7"]*p)
+ccy8=math.ceil(d["cy8"]*p)
+ccy9=math.ceil(d["cy9"]*p)
+ccy10=math.ceil(d["cy10"]*p)
+ccy11=math.ceil(d["cy11"]*p)
+ccy12=math.ceil(d["cy12"]*p)
+ccy13=math.ceil(d["cy13"]*p)
+ccy14=math.ceil(d["cy14"]*p)
+ccy15=math.ceil(d["cy15"]*p)
+ccy16=math.ceil(d["cy16"]*p)
+ccy17=math.ceil(d["cy17"]*p)
+ccy18=math.ceil(d["cy18"]*p)
+ccy19=math.ceil(d["cy19"]*p)
+ccy20=math.ceil(d["cy20"]*p)
+ccy21=math.ceil(d["cy21"]*p)
+ccy22=math.ceil(d["cy22"]*p)
+ccy23=math.ceil(d["cy23"]*p)
+ccy24=math.ceil(d["cy24"]*p)
+ccy25=math.ceil(d["cy25"]*p)
+ccy26=math.ceil(d["cy26"]*p)
+ccy27=math.ceil(d["cy27"]*p)
+ccy28=math.ceil(d["cy28"]*p)
+ccy29=math.ceil(d["cy29"]*p)
+ccy30=math.ceil(d["cy30"]*p)
+ccy31=math.ceil(d["cy31"]*p)
+ccy32=math.ceil(d["cy32"]*p)
+ccy33=math.ceil(d["cy33"]*p)
+ccy34=math.ceil(d["cy34"]*p)
+ccy35=math.ceil(d["cy35"]*p)
+ccy36=math.ceil(d["cy36"]*p)
+ccy37=math.ceil(d["cy37"]*p)
+ccy38=math.ceil(d["cy38"]*p)
+ccy39=math.ceil(d["cy39"]*p)
+ccy40=math.ceil(d["cy40"]*p)
+ccy41=math.ceil(d["cy41"]*p)
+ccy42=math.ceil(d["cy42"]*p)
+ccy43=math.ceil(d["cy43"]*p)
+ccy44=math.ceil(d["cy44"]*p)
+ccy45=math.ceil(d["cy45"]*p)
+ccy46=math.ceil(d["cy46"]*p)
+ccy47=math.ceil(d["cy47"]*p)
+ccy48=math.ceil(d["cy48"]*p)
+ccy49=math.ceil(d["cy49"]*p)
+ccy50=math.ceil(d["cy50"]*p)
 
-
-list1 = [(0,0),(xcp1, ycp1),(ccx1, ccy1),(ccx2, ccy2),(ccx3, ccy3),(ccx4, ccy4),(ccx5, ccy5),(ccx6, ccy6),(ccx7, ccy7),(ccx8, ccy8),(ccx9, ccy9)
-,(ccx10, ccy10),(ccx11, ccy11),(ccx12, ccy12),(ccx13, ccy13),(ccx14, ccy14),(ccx15, ccy15),(ccx16, ccy16),(ccx17, ccy17),(ccx18, ccy18),(ccx19, ccy19),(ccx20, ccy20),(ccx21, ccy21),(c2,c1),(xcp2, ycp2),(0,0)]
+list1=[(xcp1,0),(0,c1),(c2,c1),(ccx50,ccy50),(ccx49,ccy49),(ccx48,ccy48),(ccx47,ccy47),(ccx46,ccy46),(ccx45,ccy45),(ccx44,ccy44),(ccx43,ccy43),(ccx42,ccy42),(ccx41,ccy41),(ccx40,ccy40),
+       (ccx39,ccy39),(ccx38,ccy38),(ccx37,ccy37),(ccx36,ccy36),(ccx35,ccy35),(ccx34,ccy34),(ccx33,ccy33),(ccx32,ccy32),(ccx31,ccy31),(xcp3,ycp3),(xcp2,ycp2),(ccx30,ccy30),
+       (ccx29,ccy29),(ccx28,ccy28),(ccx27,ccy27),(ccx26,ccy26),(ccx25,ccy25),(ccx24,ccy24),(ccx23,ccy23),(ccx22,ccy22),(ccx21,ccy21),(ccx20,ccy20),
+       (ccx19,ccy19),(ccx18,ccy18),(ccx17,ccy17),(ccx16,ccy16),(ccx15,ccy15),(ccx14,ccy14),(ccx13,ccy13),(ccx12,ccy12),(ccx11,ccy11),(ccx10,ccy10),
+       (ccx9,ccy9),(ccx8,ccy8),(ccx7,ccy7),(ccx6,ccy6),(ccx5,ccy5),(ccx4,ccy4),(ccx3,ccy3),(ccx2,ccy2),(ccx1,ccy1)]
 
 
 # c1 = math.ceil(pixelsPerMetric * float(h))
@@ -234,8 +266,8 @@ img=cv2.line(img, list1[20], list1[21], (0,255,0), 2)
 img=cv2.line(img, list1[21], list1[22], (0,255,0), 2)
 img=cv2.line(img, list1[22], list1[23], (0,255,0), 2)
 img=cv2.line(img, list1[23], list1[24], (0,255,0), 2)
-img=cv2.line(img, list1[24], list1[0], (0,255,0), 2)
-'''
+img=cv2.line(img, list1[24], list1[25], (0,255,0), 2)
+
 img=cv2.line(img, list1[25], list1[26], (0,255,0), 2)
 img=cv2.line(img, list1[26], list1[27], (0,255,0), 2)
 img=cv2.line(img, list1[27], list1[28], (0,255,0), 2)
@@ -266,7 +298,7 @@ img=cv2.line(img, list1[51], list1[52], (0,255,0), 2)
 img=cv2.line(img, list1[52], list1[53], (0,255,0), 2)
 img=cv2.line(img, list1[53], list1[54], (0,255,0), 2)
 img=cv2.line(img, list1[54], list1[0], (0,255,0), 2)
-'''
+
 cv2.imshow('no-coin-1.jpg', img)
 k=cv2.waitKey(0) & 0xFF
 if k == 27:
