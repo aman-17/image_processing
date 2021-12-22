@@ -1,5 +1,6 @@
 import math
 p=44
+#fb1
 #xs
 h, b =  8.61, 5.33
 
@@ -193,5 +194,10 @@ ccy19=math.ceil(cy19*p)
 ccy20=math.ceil(cy20*p)
 ccy21=math.ceil(cy21*p)
 
-list1 = [(0,0),(xcp1, ycp1),(ccx1, ccy1),(ccx2, ccy2),(ccx3, ccy3),(ccx4, ccy4),(ccx5, ccy5),(ccx6, ccy6),(ccx7, ccy7),(ccx8, ccy8),(ccx9, ccy9)
-,(ccx10, ccy10),(ccx11, ccy11),(ccx12, ccy12),(ccx13, ccy13),(ccx14, ccy14),(ccx15, ccy15),(ccx16, ccy16),(ccx17, ccy17),(ccx18, ccy18),(ccx19, ccy19),(ccx20, ccy20),(ccx21, ccy21),(c2,c1),(xcp2, ycp2),(0,0)]
+# list1 = [(0,0),(xcp1, ycp1),(ccx1, ccy1),(ccx2, ccy2),(ccx3, ccy3),(ccx4, ccy4),(ccx5, ccy5),(ccx6, ccy6),(ccx7, ccy7),(ccx8, ccy8),
+# (ccx9, ccy9),(ccx10, ccy10),(ccx11, ccy11),(ccx12, ccy12),(ccx13, ccy13),(ccx14, ccy14),(ccx15, ccy15),(ccx16, ccy16),(ccx17, ccy17),(ccx18, ccy18),
+# (ccx19, ccy19),(ccx20, ccy20),(ccx21, ccy21),(c2,c1),(xcp2, ycp2),(0,0)]
+
+list1=[(0,0),(xcp2, ycp2),(c2,c1),(ccx21, ccy21),(ccx20, ccy20),(ccx19, ccy19),(ccx18, ccy18),(ccx17, ccy17),(ccx16, ccy16),
+(ccx15, ccy15),(ccx14, ccy14),(ccx13, ccy13),(ccx12, ccy12),(ccx11, ccy11),(ccx10, ccy10),(ccx9, ccy9),(ccx8, ccy8),(ccx7, ccy7),
+(ccx6, ccy6),(ccx5, ccy5),(ccx4, ccy4),(ccx3, ccy3),(ccx2, ccy2),(ccx1, ccy1),(xcp1, ycp1),(0,0)]

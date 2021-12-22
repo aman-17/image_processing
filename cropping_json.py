@@ -10,6 +10,15 @@ import math
 from shapely.affinity import scale
 from shapely.ops import transform
 from shapely.geometry import Polygon
+import json
+ 
+# Opening JSON file
+f = open('dh-tshirt-panel.json')
+data = json.load(f)
+d=data.keys()
+
+print(f)
+
 
 def midpoint(ptA, ptB):
     return ((ptA[0] + ptB[0]) * 0.5, (ptA[1] + ptB[1]) * 0.5)
@@ -54,74 +63,43 @@ for c in cnts:
         #p=math.floor(pixelsPerMetric)
         #print(p)
 
-p=74
+p=44
 
-h, b =  8.614, 11.756
+h, b =  10.61, 8.58
 
-xp1, yp1 = 0, 0
-xp2, yp2 = 6.14, 0
-xp3, yp3 = 10.5, 1.02
+xp1, yp1 = 5.57, 1.02
+xp2, yp2 = 0, 10.61
 
-cx1, cy1 = 0.06, 0.27
-cx2, cy2 = 0.09, 0.43
-cx3, cy3 = 0.11, 0.59
-cx4, cy4 = 0.21, 1.02
-cx5, cy5 = 0.35, 1.45
-cx6, cy6 = 0.43, 1.69
-cx7, cy7 = 0.61, 2.08
-cx8, cy8 = 0.70, 2.24
-cx9, cy9 = 0.80, 2.40
-cx10, cy10 =0.95, 2.59 
-cx11, cy11 =1.15, 2.79
-cx12, cy12 =1.29, 2.88
-cx13, cy13 =1.85, 3.12
 
-cx14, cy14 =2.00, 3.17
-cx15, cy15 =2.32, 3.26 
-cx16, cy16 =2.63, 3.33 
-cx17, cy17 =2.99, 3.38
-cx18, cy18 =3.58, 3.42
-cx19, cy19 =4.29, 3.34
-cx20, cy20 =4.44, 3.28
-cx21, cy21 =4.72, 3.14
-cx22, cy22 =5.07, 2.95
-cx23, cy23 =5.31, 2.75
-cx24, cy24 =5.51, 2.55
-cx25, cy25 =5.66, 2.36
-cx26, cy26 =5.78, 2.04
-cx27, cy27 =5.94, 1.61
-cx28, cy28 =6.06, 1.18
-cx29, cy29 =6.10, 0.82
-cx30, cy30 =6.14, 0.39
-
-cx31, cy31 = 10.14, 1.65
-cx32, cy32 = 10.02, 1.96
-cx33, cy33 = 9.83, 2.4 
-cx34, cy34 = 9.70, 2.95
-cx35, cy35 = 9.64, 3.38 
-cx36, cy36 = 9.56, 3.85
-cx37, cy37 = 9.57, 4.25
-cx38, cy38 = 9.58, 4.72
-cx39, cy39 = 9.60, 5.19
-cx40, cy40 = 9.65, 5.59
-cx41, cy41 = 9.73, 6.06
-cx42, cy42 = 9.80, 6.49
-cx43, cy43 = 9.92, 6.92
-cx44, cy44 = 10.03, 7.28
-cx45, cy45 = 10.27, 7.63
-cx46, cy46 = 10.43, 7.91
-cx47, cy47 = 10.62, 8.11
-cx48, cy48 = 10.76, 8.22 
-cx49, cy49 = 11.0, 8.38
-cx50, cy50 = 11.7, 8.60
+cx1, cy1   = 5.44, 2.76
+cx2, cy2   = 5.39, 3.17
+cx3, cy3   = 5.35, 3.56
+cx4, cy4   = 5.32, 3.96
+cx5, cy5   = 5.30, 4.35
+cx6, cy6   = 5.28, 4.75
+cx7, cy7   = 5.28, 5.14
+cx8, cy8   = 5.28, 5.53
+cx9, cy9   = 5.30, 5.92
+cx10, cy10 = 5.33, 6.37
+cx11, cy11 = 5.37, 6.73
+cx12, cy12 = 5.43, 7.11
+cx13, cy13 = 5.51, 7.50
+cx14, cy14 = 5.62, 7.89
+cx15, cy15 = 5.76, 8.28
+cx16, cy16 = 5.93, 8.68
+cx17, cy17 = 6.17, 9.08
+cx18, cy18 = 6.50, 9.47
+cx19, cy19 = 6.74, 9.67
+cx20, cy20 = 7.05, 9.89
+cx21, cy21 = 7.46, 10.14
 
 xcp1=math.ceil(xp1*p)
 xcp2=math.ceil(xp2*p)
-xcp3=math.ceil(xp3*p)
+
 
 ycp1=math.ceil(yp1*p)
 ycp2=math.ceil(yp2*p)
-ycp3=math.ceil(yp3*p)
+
 
 
 c1=math.ceil(h*p)
@@ -149,35 +127,7 @@ ccx18=math.ceil(cx18*p)
 ccx19=math.ceil(cx19*p)
 ccx20=math.ceil(cx20*p)
 ccx21=math.ceil(cx21*p)
-ccx22=math.ceil(cx22*p)
-ccx23=math.ceil(cx23*p)
-ccx24=math.ceil(cx24*p)
-ccx25=math.ceil(cx25*p)
-ccx26=math.ceil(cx26*p)
-ccx27=math.ceil(cx27*p)
-ccx28=math.ceil(cx28*p)
-ccx29=math.ceil(cx29*p)
-ccx30=math.ceil(cx30*p)
-ccx31=math.ceil(cx31*p)
-ccx32=math.ceil(cx32*p)
-ccx33=math.ceil(cx33*p)
-ccx34=math.ceil(cx34*p)
-ccx35=math.ceil(cx35*p)
-ccx36=math.ceil(cx36*p)
-ccx37=math.ceil(cx37*p)
-ccx38=math.ceil(cx38*p)
-ccx39=math.ceil(cx39*p)
-ccx40=math.ceil(cx40*p)
-ccx41=math.ceil(cx41*p)
-ccx42=math.ceil(cx42*p)
-ccx43=math.ceil(cx43*p)
-ccx44=math.ceil(cx44*p)
-ccx45=math.ceil(cx45*p)
-ccx46=math.ceil(cx46*p)
-ccx47=math.ceil(cx47*p)
-ccx48=math.ceil(cx48*p)
-ccx49=math.ceil(cx49*p)
-ccx50=math.ceil(cx50*p)
+
 
 
 ccy1=math.ceil(cy1*p)
@@ -201,41 +151,11 @@ ccy18=math.ceil(cy18*p)
 ccy19=math.ceil(cy19*p)
 ccy20=math.ceil(cy20*p)
 ccy21=math.ceil(cy21*p)
-ccy22=math.ceil(cy22*p)
-ccy23=math.ceil(cy23*p)
-ccy24=math.ceil(cy24*p)
-ccy25=math.ceil(cy25*p)
-ccy26=math.ceil(cy26*p)
-ccy27=math.ceil(cy27*p)
-ccy28=math.ceil(cy28*p)
-ccy29=math.ceil(cy29*p)
-ccy30=math.ceil(cy30*p)
-ccy31=math.ceil(cy31*p)
-ccy32=math.ceil(cy32*p)
-ccy33=math.ceil(cy33*p)
-ccy34=math.ceil(cy34*p)
-ccy35=math.ceil(cy35*p)
-ccy36=math.ceil(cy36*p)
-ccy37=math.ceil(cy37*p)
-ccy38=math.ceil(cy38*p)
-ccy39=math.ceil(cy39*p)
-ccy40=math.ceil(cy40*p)
-ccy41=math.ceil(cy41*p)
-ccy42=math.ceil(cy42*p)
-ccy43=math.ceil(cy43*p)
-ccy44=math.ceil(cy44*p)
-ccy45=math.ceil(cy45*p)
-ccy46=math.ceil(cy46*p)
-ccy47=math.ceil(cy47*p)
-ccy48=math.ceil(cy48*p)
-ccy49=math.ceil(cy49*p)
-ccy50=math.ceil(cy50*p)
 
-list1=[(xcp1,0),(0,c1),(c2,c1),(ccx50,ccy50),(ccx49,ccy49),(ccx48,ccy48),(ccx47,ccy47),(ccx46,ccy46),(ccx45,ccy45),(ccx44,ccy44),(ccx43,ccy43),(ccx42,ccy42),(ccx41,ccy41),(ccx40,ccy40),
-       (ccx39,ccy39),(ccx38,ccy38),(ccx37,ccy37),(ccx36,ccy36),(ccx35,ccy35),(ccx34,ccy34),(ccx33,ccy33),(ccx32,ccy32),(ccx31,ccy31),(xcp3,ycp3),(xcp2,ycp2),(ccx30,ccy30),
-       (ccx29,ccy29),(ccx28,ccy28),(ccx27,ccy27),(ccx26,ccy26),(ccx25,ccy25),(ccx24,ccy24),(ccx23,ccy23),(ccx22,ccy22),(ccx21,ccy21),(ccx20,ccy20),
-       (ccx19,ccy19),(ccx18,ccy18),(ccx17,ccy17),(ccx16,ccy16),(ccx15,ccy15),(ccx14,ccy14),(ccx13,ccy13),(ccx12,ccy12),(ccx11,ccy11),(ccx10,ccy10),
-       (ccx9,ccy9),(ccx8,ccy8),(ccx7,ccy7),(ccx6,ccy6),(ccx5,ccy5),(ccx4,ccy4),(ccx3,ccy3),(ccx2,ccy2),(ccx1,ccy1)]
+
+
+list1 = [(0,0),(xcp1, ycp1),(ccx1, ccy1),(ccx2, ccy2),(ccx3, ccy3),(ccx4, ccy4),(ccx5, ccy5),(ccx6, ccy6),(ccx7, ccy7),(ccx8, ccy8),(ccx9, ccy9)
+,(ccx10, ccy10),(ccx11, ccy11),(ccx12, ccy12),(ccx13, ccy13),(ccx14, ccy14),(ccx15, ccy15),(ccx16, ccy16),(ccx17, ccy17),(ccx18, ccy18),(ccx19, ccy19),(ccx20, ccy20),(ccx21, ccy21),(c2,c1),(xcp2, ycp2),(0,0)]
 
 
 # c1 = math.ceil(pixelsPerMetric * float(h))
@@ -314,8 +234,8 @@ img=cv2.line(img, list1[20], list1[21], (0,255,0), 2)
 img=cv2.line(img, list1[21], list1[22], (0,255,0), 2)
 img=cv2.line(img, list1[22], list1[23], (0,255,0), 2)
 img=cv2.line(img, list1[23], list1[24], (0,255,0), 2)
-img=cv2.line(img, list1[24], list1[25], (0,255,0), 2)
-
+img=cv2.line(img, list1[24], list1[0], (0,255,0), 2)
+'''
 img=cv2.line(img, list1[25], list1[26], (0,255,0), 2)
 img=cv2.line(img, list1[26], list1[27], (0,255,0), 2)
 img=cv2.line(img, list1[27], list1[28], (0,255,0), 2)
@@ -346,7 +266,7 @@ img=cv2.line(img, list1[51], list1[52], (0,255,0), 2)
 img=cv2.line(img, list1[52], list1[53], (0,255,0), 2)
 img=cv2.line(img, list1[53], list1[54], (0,255,0), 2)
 img=cv2.line(img, list1[54], list1[0], (0,255,0), 2)
-
+'''
 cv2.imshow('no-coin-1.jpg', img)
 k=cv2.waitKey(0) & 0xFF
 if k == 27:
