@@ -16,7 +16,7 @@ import urllib
 
 # width=0.955
 def YOLOImageURL():
-    image_url='https://i.postimg.cc/FK4yCSq2/IMG20210921121426-Warped.jpg'
+    image_url='http://api.demo.dhana.com/api/v1/asset/preview/b39bbd10-b4f9-465b-973f-fcd9682d3b07'
     url = 'https://od-v2.api.dhana.com/models/coin-detection-v2/predict_image_url?image_url=' + image_url
     myobj = {'image_url': image_url}
     x = requests.post(url ,data = myobj)
@@ -37,8 +37,8 @@ def YOLOImageURL():
     h = bounding_box['bottom']-bounding_box['top']
     image = img[bounding_box['top']:bounding_box['top']+h, bounding_box['left']:bounding_box['left']+w]
 
-    cv2.imshow('output1.jpg',image)
-    if cv2.waitKey() & 0xff == 27: quit()
+    cv2.imwrite('output1.jpg',image)
+    # if cv2.waitKey() & 0xff == 27: quit()
     return None
 
 def YOLOImageUpload(filename):
@@ -61,5 +61,6 @@ def YOLOImageUpload(filename):
     return final_data
 
 # filename = cv2.imread("test9.jpg")
-filename = "test9.jpg"
-YOLOImageUpload(filename)
+# filename = "test9.jpg"
+# YOLOImageUpload(filename)
+YOLOImageURL()

@@ -892,4 +892,4 @@ def four_transform():
         os.remove("Warped.jpg")
     return None
 
-four_transform()
+distance_transform()
