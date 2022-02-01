@@ -16,7 +16,7 @@ import urllib
 
 # width=0.955
 def YOLOImageURL():
-    image_url='http://api.demo.dhana.com/api/v1/asset/preview/b39bbd10-b4f9-465b-973f-fcd9682d3b07'
+    image_url='https://api.demo2.dhana.com/api/v1/asset/preview/08e85f89-fad1-4b0b-9375-8da36dce4c0d'
     url = 'https://od-v2.api.dhana.com/models/coin-detection-v2/predict_image_url?image_url=' + image_url
     myobj = {'image_url': image_url}
     x = requests.post(url ,data = myobj)

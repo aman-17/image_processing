@@ -474,41 +474,41 @@ def threshold() ->None:
     images = []
     #BoundingboxDataset/*.jpg
     #CamouflageDataset/*.png
-    for img in glob.glob("descaledBoundingboxQuarter/*"):
-        img_names = os.path.basename(img).split(".")[0]
-        image= cv2.imread(img)
-        images.append(image)
-        #image = cv2.imread("backimage_1613411078.png")
-        image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-        mean, std = image_gray.mean(), image_gray.std()
-        chosen_contour = decide_contour(mean, std)
-        blurred = cv2.GaussianBlur(image_gray, (5, 5), 0)
+    # for img in glob.glob("descaledBoundingboxQuarter/*"):
+    #     img_names = os.path.basename(img).split(".")[0]
+    #     image= cv2.imread(img)
+    #     images.append(image)
+    image = cv2.imread("output1.jpg")
+    image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+    mean, std = image_gray.mean(), image_gray.std()
+    chosen_contour = decide_contour(mean, std)
+    blurred = cv2.GaussianBlur(image_gray, (5, 5), 0)
 
-        wide = cv2.Canny(blurred, 10, 200)
-        tight = cv2.Canny(blurred, 240, 250)
+    wide = cv2.Canny(blurred, 10, 200)
+    tight = cv2.Canny(blurred, 240, 250)
 
-        kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(9,9))
-        tight = cv2.dilate(tight, kernel)
-        #_, cnts, _ = cv2.findContours(tight.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE,(9,9))
+    tight = cv2.dilate(tight, kernel)
+    #_, cnts, _ = cv2.findContours(tight.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
-        if chosen_contour=="tight":
-            _, final_chosen_thresh_image = cv2.threshold(tight, 127, 255, cv2.THRESH_BINARY)
-        
-        else:
-            _, final_chosen_thresh_image = cv2.threshold(wide, 127, 255, cv2.THRESH_BINARY)
+    if chosen_contour=="tight":
+        _, final_chosen_thresh_image = cv2.threshold(tight, 127, 255, cv2.THRESH_BINARY)
+    
+    else:
+        _, final_chosen_thresh_image = cv2.threshold(wide, 127, 255, cv2.THRESH_BINARY)
 
-            # threshold value 127 chosen as most of the values in the image tight are either very close to 255 or to 0
-            # set of all points in tight where pixel is white after binarizing it
-        r, c = np.where(final_chosen_thresh_image == 255)
-        xmin, ymin, xmax, ymax = c.min(), r.min(), c.max(),  r.max()
+        # threshold value 127 chosen as most of the values in the image tight are either very close to 255 or to 0
+        # set of all points in tight where pixel is white after binarizing it
+    r, c = np.where(final_chosen_thresh_image == 255)
+    xmin, ymin, xmax, ymax = c.min(), r.min(), c.max(),  r.max()
 
-        #print(xmax-xmin) #width of the coin.
-        # [xmin, ymin, xmax, ymax] are the tight bounding box coordinates around the coin
+    #print(xmax-xmin) #width of the coin.
+    # [xmin, ymin, xmax, ymax] are the tight bounding box coordinates around the coin
 
-        img = cv2.rectangle(image,(xmin, ymin),(xmax, ymax),(0,255,0),1)
-        #cv2.imshow(img_names+'_box.jpg', img)
-        cv2.imshow("normal"+img_names+'.jpg',image)
-        if cv2.waitKey() & 0xff == 27: quit()
+    img = cv2.rectangle(image,(xmin, ymin),(xmax, ymax),(0,255,0),1)
+    cv2.imshow('_box.jpg', img)
+    # cv2.imshow("normal"+img_names+'.jpg',image)
+    if cv2.waitKey() & 0xff == 27: quit()
 
 
 def decide_contour(mean, std, mean_thresh = 100,std_thresh = 40):
@@ -892,4 +892,4 @@ def four_transform():
         os.remove("Warped.jpg")
     return None
 
-distance_transform()
+threshold()
