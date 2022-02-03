@@ -15,10 +15,16 @@ import json
 from pprint import pprint
 from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
+import os
 width=0.955
 
+name="IMG_5430.xml"
+img_names = os.path.basename(name).split(".")[0]
+img = cv2.imread(img_names+'.jpg')
 
-tree = ET.parse('/Users/amanrangapur/desktop/labels_my-project-name_2022-02-01-01-21-27/IMG_5419.xml')
+
+
+tree = ET.parse('/Users/amanrangapur/desktop/labels_my-project-name_2022-02-01-01-21-27/'+name)
 root = tree.getroot() 
 
 xmin = (root[5][4][0].text)
@@ -44,7 +50,7 @@ d2=data["txl"]["m"]["bc1"]
 d3=data["txl"]["m"]["fc2"]
 
 
-img = cv2.imread("IMG_5438.jpg")
+
 
 # plt.imshow(img)
 # plt.show()
