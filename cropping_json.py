@@ -1,3 +1,4 @@
+from turtle import width
 from scipy.spatial import distance as dist
 from imutils import perspective
 from imutils import contours
@@ -12,8 +13,26 @@ from shapely.ops import transform
 from shapely.geometry import Polygon
 import json
 from pprint import pprint
- 
-# Opening JSON file
+from bs4 import BeautifulSoup
+import xml.etree.ElementTree as ET
+width=0.955
+
+
+tree = ET.parse('/Users/amanrangapur/desktop/labels_my-project-name_2022-02-01-01-21-27/IMG_5419.xml')
+root = tree.getroot() 
+
+xmin = (root[5][4][0].text)
+print("xmin: ",xmin)
+
+xmax = (root[5][4][2].text)
+print("xmax: ",xmax)
+
+p=math.ceil((int(xmax)-int(xmin))/width)
+print(p)
+
+
+
+
 f = open('dh-4-panel.json')
 data = json.load(f)
 d=data["txl"]["m"]["hc2"]
@@ -31,7 +50,7 @@ img = cv2.imread("IMG_5438.jpg")
 # plt.show()
 
 
-p=35
+# p=35
 
 
 
@@ -113,12 +132,19 @@ yc33=math.ceil(p*d['cy33'])
 yc34=math.ceil(p*d['cy34'])
 yc35=math.ceil(p*d['cy35'])
 
-list1=[(1600+px1,2100+py1),(1600+xc1,2100+yc1),(1600+xc2,2100+yc2),(1600+xc3,2100+yc3),(1600+xc4,2100+yc4),(1600+xc5,2100+yc5),(1600+xc6,2100+yc6),
-(1600+xc7,2100+yc7),(1600+xc8,2100+yc8),(1600+xc9,2100+yc9),(1600+xc10,2100+yc10),(1600+xc11,2100+yc11),(1600+xc12,2100+yc12),(1600+xc13,2100+yc13),
-(1600+xc14,2100+yc14),(1600+xc15,2100+yc15),(1600+xc16,2100+yc16),(1600+px2,2100+py2),(1600+xc17,2100+yc17),(1600+xc18,2100+yc18),(1600+xc19,2100+yc19),
-(1600+xc20,2100+yc20),(1600+xc21,2100+yc21),(1600+xc22,2100+yc22),(1600+xc23,2100+yc23),(1600+xc24,2100+yc24),(1600+xc25,2100+yc25),(1600+xc26,2100+yc26),
-(1600+xc27,2100+yc27),(1600+xc28,2100+yc28),(1600+xc29,2100+yc29),(1600+xc30,2100+yc30),(1600+xc31,2100+yc31),(1600+xc32,2100+yc32),(1600+xc33,2100+yc33),
-(1600+xc34,2100+yc34),(1600+xc35,2100+yc35),]
+list1=[(2000+px1,1700+py1),(2000+xc1,1700+yc1),(2000+xc2,1700+yc2),(2000+xc3,1700+yc3),(2000+xc4,1700+yc4),(2000+xc5,1700+yc5),(2000+xc6,1700+yc6),
+(2000+xc7,1700+yc7),(2000+xc8,1700+yc8),(2000+xc9,1700+yc9),(2000+xc10,1700+yc10),(2000+xc11,1700+yc11),(2000+xc12,1700+yc12),(2000+xc13,1700+yc13),
+(2000+xc14,1700+yc14),(2000+xc15,1700+yc15),(2000+xc16,1700+yc16),(2000+px2,1700+py2),(2000+xc17,1700+yc17),(2000+xc18,1700+yc18),(2000+xc19,1700+yc19),
+(2000+xc20,1700+yc20),(2000+xc21,1700+yc21),(2000+xc22,1700+yc22),(2000+xc23,1700+yc23),(2000+xc24,1700+yc24),(2000+xc25,1700+yc25),(2000+xc26,1700+yc26),
+(2000+xc27,1700+yc27),(2000+xc28,1700+yc28),(2000+xc29,1700+yc29),(2000+xc30,1700+yc30),(2000+xc31,1700+yc31),(2000+xc32,1700+yc32),(2000+xc33,1700+yc33),
+(2000+xc34,1700+yc34),(2000+xc35,1700+yc35)]
+
+list01=[(2000+px1,2500+py1),(2000+xc1,2500+yc1),(2000+xc2,2500+yc2),(2000+xc3,2500+yc3),(2000+xc4,2500+yc4),(2000+xc5,2500+yc5),(2000+xc6,2500+yc6),
+(2000+xc7,2500+yc7),(2000+xc8,2500+yc8),(2000+xc9,2500+yc9),(2000+xc10,2500+yc10),(2000+xc11,2500+yc11),(2000+xc12,2500+yc12),(2000+xc13,2500+yc13),
+(2000+xc14,2500+yc14),(2000+xc15,2500+yc15),(2000+xc16,2500+yc16),(2000+px2,2500+py2),(2000+xc17,2500+yc17),(2000+xc18,2500+yc18),(2000+xc19,2500+yc19),
+(2000+xc20,2500+yc20),(2000+xc21,2500+yc21),(2000+xc22,2500+yc22),(2000+xc23,2500+yc23),(2000+xc24,2500+yc24),(2000+xc25,2500+yc25),(2000+xc26,2500+yc26),
+(2000+xc27,2500+yc27),(2000+xc28,2500+yc28),(2000+xc29,2500+yc29),(2000+xc30,2500+yc30),(2000+xc31,2500+yc31),(2000+xc32,2500+yc32),(2000+xc33,2500+yc33),
+(2000+xc34,2500+yc34),(2000+xc35,2500+yc35)]
 # print("******")
 # print(len(list1))
 
@@ -160,6 +186,43 @@ img=cv2.line(img, list1[34], list1[35], (0,255,0), 8)
 img=cv2.line(img, list1[35], list1[36], (0,255,0), 8)
 img=cv2.line(img, list1[36], list1[0], (0,255,0), 8)
 
+img=cv2.line(img, list01[0], list01[1], (0,255,0), 8)
+img=cv2.line(img, list01[1], list01[2], (0,255,0), 8)
+img=cv2.line(img, list01[2], list01[3], (0,255,0), 8)
+img=cv2.line(img, list01[3], list01[4], (0,255,0), 8)
+img=cv2.line(img, list01[4], list01[5], (0,255,0), 8)
+img=cv2.line(img, list01[5], list01[6], (0,255,0), 8)
+img=cv2.line(img, list01[6], list01[7], (0,255,0), 8)
+img=cv2.line(img, list01[7], list01[8], (0,255,0), 8)
+img=cv2.line(img, list01[8], list01[9], (0,255,0), 8)
+img=cv2.line(img, list01[9], list01[10], (0,255,0), 8)
+img=cv2.line(img, list01[10], list01[11], (0,255,0), 8)
+img=cv2.line(img, list01[11], list01[12], (0,255,0), 8)
+img=cv2.line(img, list01[12], list01[13], (0,255,0), 8)
+img=cv2.line(img, list01[13], list01[14], (0,255,0), 8)
+img=cv2.line(img, list01[14], list01[15], (0,255,0), 8)
+img=cv2.line(img, list01[15], list01[16], (0,255,0), 8)
+img=cv2.line(img, list01[16], list01[17], (0,255,0), 8)
+img=cv2.line(img, list01[17], list01[18], (0,255,0), 8)
+img=cv2.line(img, list01[18], list01[19], (0,255,0), 8)
+img=cv2.line(img, list01[19], list01[20], (0,255,0), 8)
+img=cv2.line(img, list01[20], list01[21], (0,255,0), 8)
+img=cv2.line(img, list01[21], list01[22], (0,255,0), 8)
+img=cv2.line(img, list01[22], list01[23], (0,255,0), 8)
+img=cv2.line(img, list01[23], list01[24], (0,255,0), 8)
+img=cv2.line(img, list01[24], list01[25], (0,255,0), 8)
+img=cv2.line(img, list01[25], list01[26], (0,255,0), 8)
+img=cv2.line(img, list01[26], list01[27], (0,255,0), 8)
+img=cv2.line(img, list01[27], list01[28], (0,255,0), 8)
+img=cv2.line(img, list01[28], list01[29], (0,255,0), 8)
+img=cv2.line(img, list01[29], list01[30], (0,255,0), 8)
+img=cv2.line(img, list01[30], list01[31], (0,255,0), 8)
+img=cv2.line(img, list01[31], list01[32], (0,255,0), 8)
+img=cv2.line(img, list01[32], list01[33], (0,255,0), 8)
+img=cv2.line(img, list01[33], list01[34], (0,255,0), 8)
+img=cv2.line(img, list01[34], list01[35], (0,255,0), 8)
+img=cv2.line(img, list01[35], list01[36], (0,255,0), 8)
+img=cv2.line(img, list01[36], list01[0], (0,255,0), 8)
 
 l0=(float(d1['h2'])-float(d1['h0']))/2
 l1=(float(d1['h2'])-float(d1['h4']))/2
@@ -362,9 +425,14 @@ yc12=math.ceil(p*d3['cy12'])
 yc13=math.ceil(p*d3['cy13'])
 yc14=math.ceil(p*d3['cy14'])
 
-list4=[(700+px1,2000+py1),(700+px2,2000+py2),(700+xc1,2000+yc1),(700+xc2,2000+yc2),(700+xc3,2000+yc3),(700+xc4,2000+yc4),(700+xc5,2000+yc5),
-(700+xc6,2000+yc6),(700+xc7,2000+yc7),(700+xc8,2000+yc8),(700+xc9,2000+yc9),(700+xc10,2000+yc10),(700+px3,2000+py3),(700+0,2000+py3+y2),(700+x1,2000+py3+y2),
-(700+x1,2000+py4),(700+xc11,2000+yc11),(700+xc12,2000+yc12),(700+xc13,2000+yc13),(700+xc14,2000+yc14)]
+list4=[(650+px1,2000+py1),(650+px2,2000+py2),(650+xc1,2000+yc1),(650+xc2,2000+yc2),(650+xc3,2000+yc3),(650+xc4,2000+yc4),(650+xc5,2000+yc5),
+(650+xc6,2000+yc6),(650+xc7,2000+yc7),(650+xc8,2000+yc8),(650+xc9,2000+yc9),(650+xc10,2000+yc10),(650+px3,2000+py3),(650+0,2000+py3+y2),(650+x1,2000+py3+y2),
+(650+x1,2000+py4),(650+xc11,2000+yc11),(650+xc12,2000+yc12),(650+xc13,2000+yc13),(650+xc14,2000+yc14)]
+
+
+list04=[(1280+px1,2000+py1),(1280+px2,2000+py2),(1280+xc1,2000+yc1),(1280+xc2,2000+yc2),(1280+xc3,2000+yc3),(1280+xc4,2000+yc4),(1280+xc5,2000+yc5),
+(1280+xc6,2000+yc6),(1280+xc7,2000+yc7),(1280+xc8,2000+yc8),(1280+xc9,2000+yc9),(1280+xc10,2000+yc10),(1280+px3,2000+py3),(1280+0,2000+py3+y2),(1280+x1,2000+py3+y2),
+(1280+x1,2000+py4),(1280+xc11,2000+yc11),(1280+xc12,2000+yc12),(1280+xc13,2000+yc13),(1280+xc14,2000+yc14)]
 # print("******:list3")
 # print(len(list4))
 
@@ -388,6 +456,30 @@ img=cv2.line(img, list4[16], list4[17], (0,255,0), 8)
 img=cv2.line(img, list4[17], list4[18], (0,255,0), 8)
 img=cv2.line(img, list4[18], list4[19], (0,255,0), 8)
 img=cv2.line(img, list4[19], list4[0], (0,255,0), 8)
+
+
+
+img=cv2.line(img, list04[0], list04[1], (0,255,0), 8)
+img=cv2.line(img, list04[1], list04[2], (0,255,0), 8)
+img=cv2.line(img, list04[2], list04[3], (0,255,0), 8)
+img=cv2.line(img, list04[3], list04[4], (0,255,0), 8)
+img=cv2.line(img, list04[4], list04[5], (0,255,0), 8)
+img=cv2.line(img, list04[5], list04[6], (0,255,0), 8)
+img=cv2.line(img, list04[6], list04[7], (0,255,0), 8)
+img=cv2.line(img, list04[7], list04[8], (0,255,0), 8)
+img=cv2.line(img, list04[8], list04[9], (0,255,0), 8)
+img=cv2.line(img, list04[9], list04[10], (0,255,0), 8)
+img=cv2.line(img, list04[10], list04[11], (0,255,0), 8)
+img=cv2.line(img, list04[11], list04[12], (0,255,0), 8)
+img=cv2.line(img, list04[12], list04[13], (0,255,0), 8)
+img=cv2.line(img, list04[13], list04[14], (0,255,0), 8)
+img=cv2.line(img, list04[14], list04[15], (0,255,0), 8)
+img=cv2.line(img, list04[15], list04[16], (0,255,0), 8)
+img=cv2.line(img, list04[16], list04[17], (0,255,0), 8)
+img=cv2.line(img, list04[17], list04[18], (0,255,0), 8)
+img=cv2.line(img, list04[18], list04[19], (0,255,0), 8)
+img=cv2.line(img, list04[19], list04[0], (0,255,0), 8)
+
 # img=cv2.line(img, list4[20], list4[0], (0,255,0), 8)
 
 # img=cv2.line(img, list1[37], list1[38], (0,255,0), 8)
