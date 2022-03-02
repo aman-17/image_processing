@@ -59,6 +59,8 @@ def houghcircle() ->None:
                 #if cv2.waitKey() & 0xff == 27: quit()
 
                    
+
+                   
 def laplace_of_gaussian(gray_img, sigma=0.25, kappa=0.5, pad=False):
     """
     Applies Laplacian of Gaussians to grayscale image.
