@@ -17,12 +17,12 @@ b, h = 4.748, 4.233
 
 #s=29, m=29.5, l=30.5, xl=31, ts=29.5, tm=30, tl=31, txl=31.5
 
-img = cv2.imread("test3.jpeg")
+img = cv2.imread("test1.jpeg")
 
 # plt.imshow(img)
 # plt.show()
 
-p=abs(707/30)
+p=abs((920-157)/30)
 
 
 f = open('dh-34-panel.json')
