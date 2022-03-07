@@ -4,7 +4,7 @@ def descale():
     images = []
     #BoundingboxDataset/*.jpg
     #CamouflageDataset/*.png
-    for img in glob.glob("BoundingboxQuarter/*"):
+    for img in glob.glob("./*.jpg"):
         img_names = os.path.basename(img).split(".")[0]
         image= cv2.imread(img)
         images.append(image)
