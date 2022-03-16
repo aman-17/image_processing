@@ -1,10 +1,10 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('IMG_1565.jpg')
+img = cv2.imread('testimg.jpeg')
 w=(img.shape)
-width=int(w[1]/2)
-height=int(w[0]/2)
+width=int(w[0]/2)
+height=int(w[1]/2)
 
 print(width,height)
 cv2.imshow("original", img)
@@ -21,3 +21,4 @@ cv2.imwrite("Cropped_Image.jpg", cropped_image)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
