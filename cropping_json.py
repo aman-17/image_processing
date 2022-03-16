@@ -18,23 +18,23 @@ import xml.etree.ElementTree as ET
 import os
 width=0.955
 
-# name="IMG_5430.xml"
-# img_names = os.path.basename(name).split(".")[0]
-# img = cv2.imread(img_names+'.jpg')
+name="IMG_5430.xml"
+img_names = os.path.basename(name).split(".")[0]
+img = cv2.imread(img_names+'.jpg')
 
 
 
-# tree = ET.parse('/Users/amanrangapur/desktop/labels_my-project-name_2022-02-01-01-21-27/'+name)
-# root = tree.getroot() 
+tree = ET.parse('/Users/amanrangapur/desktop/labels_my-project-name_2022-02-01-01-21-27/'+name)
+root = tree.getroot() 
 
-# xmin = (root[5][4][0].text)
-# print("xmin: ",xmin)
+xmin = (root[5][4][0].text)
+print("xmin: ",xmin)
 
-# xmax = (root[5][4][2].text)
-# print("xmax: ",xmax)
+xmax = (root[5][4][2].text)
+print("xmax: ",xmax)
 
-# p=math.ceil((int(xmax)-int(xmin))/width)
-# print(p)
+p=math.ceil((int(xmax)-int(xmin))/width)
+print(p)
 
 #h3=365,532
 #f1=587,703
