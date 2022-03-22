@@ -1,1 +1,576 @@
-/Users/amanrangapur/Desktop/labels/backimage_1645741778.png	[40248, 42189, 38393, 32981, 28025, 52536, 31270, 29595, 54705, 34745, 50483, 32981, 36526, 31270, 29595, 34745, 42189, 61697, 40248, 42189, 48310, 31270, 38393, 40248, 42189, 38393, 40248, 40248, 40248, 40248, 44137, 48310, 52536, 68939, 44137, 29595, 31270, 26422, 42189, 61697, 48310, 36526, 36526, 54705, 48310, 48310, 26422, 36526, 31270, 42189, 40248, 34745, 32981, 34745, 29595, 40248, 36526, 32981, 52536, 29595, 42189, 42189, 40248, 34745, 32981, 44137, 38393, 54705, 44137, 38393, 44137, 52536, 28025, 40248, 32981, 38393, 31270, 31270, 38393, 28025, 52536, 40248, 31270, 42189, 44137, 56970, 42189, 31270, 44137, 59334, 50483, 31270, 36526, 48310, 48310, 44137, 38393, 48310, 42189, 40248, 61697, 29595, 31270, 28025, 36526, 36526, 36526, 29595, 31270, 26422, 36526, 32981, 34745, 40248, 26422, 36526, 59334, 28025, 31270, 36526, 28025, 52536, 38393, 52536, 40248, 32981, 54705, 52536, 42189, 40248, 34745, 40248, 34745, 48310, 40248, 44137, 44137, 29595, 61697, 32981, 36526, 32981, 32981, 56970, 50483, 34745, 52536, 26422, 63964, 29595, 42189, 48310, 54705, 34745, 29595, 29595, 42189, 59334, 52536, 31270, 24890, 74091, 40248, 42189, 29595, 59334, 29595, 48310, 36526, 31270, 34745, 48310, 40248, 29595, 24890, 31270, 48310, 28025, 24890, 29595, 42189, 29595, 31270, 40248, 32981, 40248, 36526, 26422]	[[...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...], [...]]	[86.32727092029417, 104.61731731019934, 81.447138801344, 105.34853400442678, 100.0, 84.01286736713872, 100.0, 117.401588106099, 80.68183895439174, 100.0, 68.82514906007962, 110.74861283769444, 95.12402124514044, 84.49632235369363, 111.44112181111674, 94.92301050510865, 91.00239398895447, 81.8240757249137, 109.66259193003378, 91.00239398895447, 79.47215897329745, 100.0, 72.99507722761962, 95.3910753329358, 100.0, 85.90368035839867, 95.3910753329358, 104.8225998807394, 95.3910753329358, 90.75233551977739, 86.9859754854204, 83.31194369695714, 108.43992690726358, 73.22850636069569, 78.72080114189909, 111.44112181111674, 105.47169811320755, 138.24085988948605, 78.17440565076204, 65.23493848971586, 75.60753467191059, 90.29458467940646, 126.47703006077862, 92.28224111141577, 83.31194369695714, 64.72779962740634, 124.8240102944516, 90.29458467940646, 128.71122481611766, 86.57706985233118, 104.8225998807394, 100.0, 100.0, 105.1259173981868, 100.0, 81.94444444444444, 100.0, 100.0, 59.52109029998477, 142.5544855549924, 100.0, 100.0, 81.94444444444444, 100.0, 89.73348291440526, 86.9859754854204, 100.0, 88.31002650580386, 78.72080114189909, 90.49826791342171, 86.9859754854204, 80.30493375970764, 136.99553969669938, 95.3910753329358, 110.74861283769444, 81.447138801344, 116.80844259673808, 116.80844259673808, 81.447138801344, 111.57894736842104, 87.93398812243034, 73.53160405485987, 89.62264150943396, 58.996420867998765, 82.75596438362372, 77.47410918027032, 78.17440565076204, 111.11288775183883, 70.84758819131342, 71.10425725553645, 72.35306935007824, 94.64342820594818, 90.29458467940646, 79.47215897329745, 75.60753467191059, 74.72415433763055, 81.447138801344, 91.36203684537362, 100.0, 95.3910753329358, 62.22830931811919, 111.44112181111674, 79.59705788295491, 105.60214094558431, 110.19000164266551, 85.61025023271095, 100.0, 111.44112181111674, 89.62264150943396, 124.8240102944516, 105.11142747631823, 110.74861283769444, 100.0, 90.75233551977739, 112.00893195064718, 90.29458467940646, 55.58533050190447, 100.0, 89.62264150943396, 90.29458467940646, 111.57894736842104, 69.52565859601036, 81.447138801344, 80.30493375970764, 109.66259193003378, 110.74861283769444, 70.18188465405356, 59.52109029998477, 91.00239398895447, 90.75233551977739, 110.49935242480933, 125.42983502285827, 115.83825010792921, 79.47215897329745, 90.75233551977739, 82.75596438362372, 82.75596438362372, 117.401588106099, 78.30202440961473, 100.0, 76.72616766139188, 100.0, 80.1127922136988, 74.05476566614007, 79.72584830537014, 115.83825010792921, 87.93398812243034, 124.8240102944516, 72.22343818397849, 117.401588106099, 74.11884614472967, 91.36203684537362, 80.68183895439174, 115.83825010792921, 100.0, 123.41949653657713, 86.57706985233118, 67.83294569723935, 84.01286736713872, 111.11288775183883, 139.59421454399356, 65.2036009771767, 81.94444444444444, 78.17440565076204, 100.0, 81.42043347827553, 105.6597398209157, 75.60753467191059, 95.12402124514044, 111.11288775183883, 121.42466541948482, 64.72779962740634, 90.75233551977739, 105.6597398209157, 118.90317396544796, 94.64342820594818, 83.31194369695714, 123.97859054415702, 139.59421454399356, 100.0, 86.57706985233118, 123.41949653657713, 100.0, 77.69330153051082, 110.74861283769444, 95.3910753329358, 95.12402124514044, 112.00893195064718]
+Size-small
+Accuracy:  86.32727092029417
+Accuracy:  90.49989333712578
+Accuracy:  85.90368035839867
+Accuracy:  94.65146599557322
+Accuracy:  94.39785905441569
+Accuracy:  87.93398812243034
+Accuracy:  94.52830188679245
+Accuracy:  76.58050346342287
+Accuracy:  84.44749108856594
+Accuracy:  100.0
+Accuracy:  72.35306935007824
+Accuracy:  83.59055213607836
+Accuracy:  100.0
+Accuracy:  89.62264150943396
+Accuracy:  88.55887818888326
+Accuracy:  100.0
+Accuracy:  95.39927469245538
+Accuracy:  81.8240757249137
+Accuracy:  85.21914132379248
+Accuracy:  91.00239398895447
+Accuracy:  83.31194369695714
+Accuracy:  94.52830188679245
+Accuracy:  77.08436433724899
+Accuracy:  100.0
+Accuracy:  95.38268268980066
+Accuracy:  85.90368035839867
+Accuracy:  95.3910753329358
+Accuracy:  90.33740806996622
+Accuracy:  100.0
+Accuracy:  95.3910753329358
+Accuracy:  86.9859754854204
+Accuracy:  87.3297453943283
+Accuracy:  87.0603015075377
+Accuracy:  76.20650139978822
+Accuracy:  82.75596438362372
+Accuracy:  82.598411893901
+Accuracy:  88.88711224816117
+Accuracy:  61.759140110513954
+Accuracy:  82.3555903197516
+Accuracy:  68.38095855552135
+Accuracy:  79.47215897329745
+Accuracy:  95.12402124514044
+Accuracy:  67.73804960849805
+Accuracy:  96.03509734027969
+Accuracy:  87.3297453943283
+Accuracy:  68.2695094183399
+Accuracy:  68.49973506926045
+Accuracy:  90.29458467940646
+Accuracy:  65.081547809402
+Accuracy:  86.57706985233118
+Accuracy:  95.1774001192606
+Accuracy:  94.8740826018132
+Accuracy:  94.65146599557322
+Accuracy:  94.8740826018132
+Accuracy:  100.0
+Accuracy:  86.32727092029417
+Accuracy:  94.88857252368177
+Accuracy:  94.65146599557322
+Accuracy:  62.7779046748896
+Accuracy:  50.86332150701131
+Accuracy:  95.38268268980066
+Accuracy:  95.38268268980066
+Accuracy:  86.32727092029417
+Accuracy:  94.8740826018132
+Accuracy:  94.81216457960645
+Accuracy:  91.18879851371865
+Accuracy:  95.16839007110671
+Accuracy:  92.28224111141577
+Accuracy:  82.75596438362372
+Accuracy:  95.13713437345349
+Accuracy:  91.18879851371865
+Accuracy:  80.30493375970764
+Accuracy:  63.00446030330062
+Accuracy:  95.3910753329358
+Accuracy:  89.25138716230556
+Accuracy:  85.90368035839867
+Accuracy:  77.22097857371281
+Accuracy:  83.19155740326192
+Accuracy:  85.90368035839867
+Accuracy:  82.3157894736842
+Accuracy:  91.95599208162022
+Accuracy:  77.69330153051082
+Accuracy:  94.64342820594818
+Accuracy:  62.62769916328901
+Accuracy:  86.9859754854204
+Accuracy:  81.09004739336493
+Accuracy:  78.17440565076204
+Accuracy:  88.88711224816117
+Accuracy:  74.72415433763055
+Accuracy:  71.10425725553645
+Accuracy:  72.35306935007824
+Accuracy:  100.0
+Accuracy:  95.12402124514044
+Accuracy:  83.31194369695714
+Accuracy:  79.47215897329745
+Accuracy:  78.72080114189909
+Accuracy:  85.90368035839867
+Accuracy:  91.36203684537362
+Accuracy:  100.0
+Accuracy:  95.3910753329358
+Accuracy:  65.23493848971586
+Accuracy:  82.598411893901
+Accuracy:  84.49632235369363
+Accuracy:  88.42105263157896
+Accuracy:  89.80999835733449
+Accuracy:  90.29458467940646
+Accuracy:  100.0
+Accuracy:  82.598411893901
+Accuracy:  94.64342820594818
+Accuracy:  68.49973506926045
+Accuracy:  94.88857252368177
+Accuracy:  83.59055213607836
+Accuracy:  100.0
+Accuracy:  95.3910753329358
+Accuracy:  81.65165392475966
+Accuracy:  95.12402124514044
+Accuracy:  58.55833080527185
+Accuracy:  94.39785905441569
+Accuracy:  94.64342820594818
+Accuracy:  95.12402124514044
+Accuracy:  82.3157894736842
+Accuracy:  73.07941221257805
+Accuracy:  81.447138801344
+Accuracy:  84.01286736713872
+Accuracy:  85.21914132379248
+Accuracy:  83.59055213607836
+Accuracy:  73.57279956128325
+Accuracy:  59.52109029998477
+Accuracy:  91.00239398895447
+Accuracy:  90.75233551977739
+Accuracy:  89.50064757519067
+Accuracy:  69.46929039952298
+Accuracy:  84.16174989207079
+Accuracy:  79.47215897329745
+Accuracy:  90.75233551977739
+Accuracy:  86.9859754854204
+Accuracy:  86.9859754854204
+Accuracy:  82.598411893901
+Accuracy:  78.30202440961473
+Accuracy:  100.0
+Accuracy:  81.02447571592838
+Accuracy:  100.0
+Accuracy:  84.97316636851521
+Accuracy:  77.47410918027032
+Accuracy:  83.5707069706634
+Accuracy:  78.57533458051518
+Accuracy:  87.93398812243034
+Accuracy:  68.49973506926045
+Accuracy:  72.22343818397849
+Accuracy:  82.598411893901
+Accuracy:  78.17440565076204
+Accuracy:  95.62616435520597
+Accuracy:  84.44749108856594
+Accuracy:  84.16174989207079
+Accuracy:  94.3402601790843
+Accuracy:  70.27200540631864
+Accuracy:  86.57706985233118
+Accuracy:  71.10425725553645
+Accuracy:  87.93398812243034
+Accuracy:  88.88711224816117
+Accuracy:  53.25030132583365
+Accuracy:  65.2036009771767
+Accuracy:  86.32727092029417
+Accuracy:  78.17440565076204
+Accuracy:  100.0
+Accuracy:  81.42043347827553
+Accuracy:  94.3402601790843
+Accuracy:  79.47215897329745
+Accuracy:  95.12402124514044
+Accuracy:  83.19155740326192
+Accuracy:  72.96877248524967
+Accuracy:  68.2695094183399
+Accuracy:  95.3910753329358
+Accuracy:  88.55887818888326
+Accuracy:  74.3672157492969
+Accuracy:  100.0
+Accuracy:  83.31194369695714
+Accuracy:  76.02140945584298
+Accuracy:  53.25030132583365
+Accuracy:  94.3402601790843
+Accuracy:  91.00239398895447
+Accuracy:  76.58050346342287
+Accuracy:  94.52830188679245
+Accuracy:  77.69330153051082
+Accuracy:  83.59055213607836
+Accuracy:  95.3910753329358
+Accuracy:  100.0
+Accuracy:  87.99106804935282
+Average Accuracy:  85.13498747245876
+
+
+
+
+size-m
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048124.png :  86.32727092029417
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563593.png :  95.38268268980066
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439330.png :  81.447138801344
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438012.png :  94.65146599557322
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741950.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563793.png :  84.01286736713872
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563394.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048669.png :  82.598411893901
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645565487.png :  80.68183895439174
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740939.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048537.png :  68.82514906007962
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048669.png :  89.25138716230556
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438401.png :  95.12402124514044
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741951.png :  84.49632235369363
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563394.png :  88.55887818888326
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048125.png :  94.92301050510865
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740939.png :  91.00239398895447
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645565487.png :  81.8240757249137
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563593.png :  90.33740806996622
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438402.png :  91.00239398895447
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048536.png :  79.47215897329745
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563793.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438012.png :  72.99507722761962
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439330.png :  95.3910753329358
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048068.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438772.png :  85.90368035839867
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439493.png :  95.3910753329358
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741834.png :  95.1774001192606
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048479.png :  95.3910753329358
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740650.png :  90.75233551977739
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439725.png :  86.9859754854204
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564212.png :  83.31194369695714
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741376.png :  91.56007309273642
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741002.png :  73.22850636069569
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645566822.png :  78.72080114189909
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047984.png :  88.55887818888326
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438175.png :  94.52830188679245
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564748.png :  61.759140110513954
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438773.png :  78.17440565076204
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741002.png :  65.23493848971586
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564212.png :  75.60753467191059
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439725.png :  90.29458467940646
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741376.png :  73.52296993922138
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740650.png :  92.28224111141577
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048479.png :  83.31194369695714
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564428.png :  64.72779962740634
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564748.png :  75.1759897055484
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438175.png :  90.29458467940646
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047984.png :  71.28877518388234
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645566822.png :  86.57706985233118
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048068.png :  95.1774001192606
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741834.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439493.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563902.png :  94.8740826018132
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741474.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439409.png :  81.94444444444444
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645046036.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564314.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741264.png :  59.52109029998477
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048347.png :  57.4455144450076
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741886.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048187.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047842.png :  81.94444444444444
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563646.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438072.png :  89.73348291440526
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741059.png :  86.9859754854204
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047842.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048187.png :  88.31002650580386
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741059.png :  78.72080114189909
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438072.png :  90.49826791342171
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645566058.png :  86.9859754854204
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563646.png :  80.30493375970764
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563902.png :  63.00446030330062
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741886.png :  95.3910753329358
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048347.png :  89.25138716230556
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741264.png :  81.447138801344
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645046036.png :  83.19155740326192
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564314.png :  83.19155740326192
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439409.png :  81.447138801344
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741474.png :  88.42105263157896
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048586.png :  87.93398812243034
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645566895.png :  73.53160405485987
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438261.png :  89.62264150943396
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045659.png :  58.996420867998765
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740591.png :  82.75596438362372
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045880.png :  77.47410918027032
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563468.png :  78.17440565076204
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439552.png :  88.88711224816117
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048626.png :  70.84758819131342
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045880.png :  71.10425725553645
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048626.png :  72.35306935007824
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741711.png :  94.64342820594818
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439552.png :  90.29458467940646
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646436716.png :  79.47215897329745
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740591.png :  75.60753467191059
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045659.png :  74.72415433763055
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438261.png :  81.447138801344
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645566895.png :  91.36203684537362
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048586.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741712.png :  95.3910753329358
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045520.png :  62.22830931811919
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047519.png :  88.55887818888326
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439616.png :  79.59705788295491
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047452.png :  94.39785905441569
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645566657.png :  89.80999835733449
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563539.png :  85.61025023271095
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645565014.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047724.png :  88.55887818888326
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563539.png :  89.62264150943396
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047518.png :  75.1759897055484
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645566657.png :  94.88857252368177
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047452.png :  89.25138716230556
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563467.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438735.png :  90.75233551977739
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047724.png :  87.99106804935282
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645565014.png :  90.29458467940646
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045520.png :  55.58533050190447
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438873.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439616.png :  89.62264150943396
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438736.png :  90.29458467940646
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047904.png :  88.42105263157896
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741531.png :  69.52565859601036
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438874.png :  81.447138801344
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741136.png :  80.30493375970764
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045733.png :  90.33740806996622
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563271.png :  89.25138716230556
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741532.png :  70.18188465405356
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645742007.png :  59.52109029998477
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645566057.png :  91.00239398895447
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564132.png :  90.75233551977739
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645567001.png :  89.50064757519067
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045733.png :  74.57016497714173
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563271.png :  84.16174989207079
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741136.png :  79.47215897329745
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645567001.png :  90.75233551977739
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564132.png :  82.75596438362372
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645742007.png :  82.75596438362372
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047904.png :  82.598411893901
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045929.png :  78.30202440961473
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741636.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645742063.png :  76.72616766139188
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645566743.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645742103.png :  80.1127922136988
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045569.png :  74.05476566614007
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740517.png :  79.72584830537014
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048272.png :  84.16174989207079
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741580.png :  87.93398812243034
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047369.png :  75.1759897055484
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740891.png :  72.22343818397849
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439676.png :  82.598411893901
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564427.png :  74.11884614472967
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045385.png :  91.36203684537362
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045797.png :  80.68183895439174
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645566742.png :  84.16174989207079
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645742102.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048272.png :  76.58050346342287
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740517.png :  86.57706985233118
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045797.png :  67.83294569723935
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045385.png :  84.01286736713872
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439676.png :  88.88711224816117
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047369.png :  60.40578545600644
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740891.png :  65.2036009771767
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741580.png :  81.94444444444444
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645742063.png :  78.17440565076204
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741636.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045569.png :  81.42043347827553
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741778.png :  94.3402601790843
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438551.png :  75.60753467191059
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741208.png :  95.12402124514044
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563993.png :  88.88711224816117
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645565927.png :  78.57533458051518
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564569.png :  64.72779962740634
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740698.png :  90.75233551977739
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047782.png :  94.3402601790843
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646436804.png :  81.09682603455204
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047594.png :  94.64342820594818
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564569.png :  83.31194369695714
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047594.png :  76.02140945584298
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646436804.png :  60.40578545600644
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047782.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740698.png :  86.57706985233118
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645565927.png :  76.58050346342287
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563993.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741208.png :  77.69330153051082
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438625.png :  89.25138716230556
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438551.png :  95.3910753329358
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564232.png :  95.12402124514044
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741778.png :  87.99106804935282
+Average Accuracy:  84.93008763207486
+
+
+size-xs
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048124.png :  90.75233551977739
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563593.png :  85.49147882149374
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439330.png :  85.90368035839867
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438012.png :  89.25138716230556
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741950.png :  94.39785905441569
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563793.png :  91.95599208162022
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563394.png :  94.52830188679245
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048669.png :  76.58050346342287
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645565487.png :  88.31002650580386
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740939.png :  94.8740826018132
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048537.png :  76.05134401679773
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048669.png :  83.59055213607836
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438401.png :  94.88857252368177
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741951.png :  89.62264150943396
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563394.png :  82.598411893901
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048125.png :  94.8740826018132
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740939.png :  95.39927469245538
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645565487.png :  85.15162811806084
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563593.png :  79.96919101570263
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438402.png :  95.39927469245538
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048536.png :  87.3297453943283
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563793.png :  88.88711224816117
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438012.png :  81.447138801344
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439330.png :  95.1774001192606
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048068.png :  95.38268268980066
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438772.png :  90.49826791342171
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439493.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741834.png :  85.21914132379248
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048479.png :  95.1774001192606
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740650.png :  95.3910753329358
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439725.png :  91.18879851371865
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564212.png :  91.36203684537362
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741376.png :  82.5624333790163
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741002.png :  79.35276113665705
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645566822.png :  86.9859754854204
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047984.png :  76.58050346342287
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438175.png :  83.19155740326192
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564748.png :  54.69305881462418
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438773.png :  82.3555903197516
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741002.png :  71.53832439178565
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564212.png :  83.31194369695714
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439725.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741376.png :  67.73804960849805
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740650.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048479.png :  91.36203684537362
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564428.png :  68.2695094183399
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564748.png :  61.759140110513954
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438175.png :  95.12402124514044
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047984.png :  65.081547809402
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645566822.png :  91.00239398895447
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048068.png :  90.33740806996622
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741834.png :  94.8740826018132
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439493.png :  94.65146599557322
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563902.png :  89.50064757519067
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741474.png :  94.3402601790843
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439409.png :  90.75233551977739
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645046036.png :  94.88857252368177
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564314.png :  94.65146599557322
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741264.png :  62.7779046748896
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048347.png :  43.90268626457171
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741886.png :  95.38268268980066
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048187.png :  90.49989333712578
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047842.png :  86.32727092029417
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563646.png :  94.8740826018132
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438072.png :  94.81216457960645
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741059.png :  91.18879851371865
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047842.png :  90.1127809756987
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048187.png :  96.03509734027969
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741059.png :  86.9859754854204
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438072.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645566058.png :  95.58646940208895
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563646.png :  84.01286736713872
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563902.png :  56.385370205173956
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741886.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048347.png :  83.59055213607836
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741264.png :  85.90368035839867
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645046036.png :  77.22097857371281
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564314.png :  77.22097857371281
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439409.png :  90.49826791342171
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741474.png :  76.02140945584298
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048586.png :  96.09220344144967
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645566895.png :  81.94444444444444
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438261.png :  94.64342820594818
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045659.png :  66.42726777121999
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740591.png :  86.9859754854204
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045880.png :  84.79901702650517
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563468.png :  82.3555903197516
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439552.png :  83.19155740326192
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048626.png :  74.72415433763055
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045880.png :  74.38736643408501
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048626.png :  76.05134401679773
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741711.png :  94.52830188679245
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439552.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646436716.png :  87.3297453943283
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740591.png :  83.31194369695714
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045659.png :  82.75596438362372
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438261.png :  90.49826791342171
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645566895.png :  95.62616435520597
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048586.png :  95.38268268980066
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741712.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045520.png :  68.38095855552135
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047519.png :  76.58050346342287
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439616.png :  84.49632235369363
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047452.png :  88.42105263157896
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645566657.png :  84.49597546952856
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563539.png :  90.29458467940646
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645565014.png :  94.88857252368177
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047724.png :  76.58050346342287
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563539.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047518.png :  61.759140110513954
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645566657.png :  89.80999835733449
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047452.png :  77.96610169491525
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563467.png :  94.8740826018132
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438735.png :  95.3910753329358
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047724.png :  75.1759897055484
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645565014.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045520.png :  61.55998247210705
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438873.png :  94.39785905441569
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439616.png :  94.64342820594818
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438736.png :  95.12402124514044
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047904.png :  76.02140945584298
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741531.png :  76.61032434901782
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438874.png :  85.90368035839867
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741136.png :  84.01286736713872
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045733.png :  79.96919101570263
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563271.png :  77.96610169491525
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741532.png :  77.12092130518235
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645742007.png :  62.7779046748896
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645566057.png :  95.39927469245538
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564132.png :  95.3910753329358
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645567001.png :  84.16174989207079
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045733.png :  64.08020274299344
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563271.png :  78.57533458051518
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741136.png :  83.31194369695714
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645567001.png :  95.3910753329358
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564132.png :  91.18879851371865
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645742007.png :  86.9859754854204
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047904.png :  76.58050346342287
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045929.png :  81.8240757249137
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741636.png :  94.65146599557322
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645742063.png :  85.61025023271095
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645566743.png :  94.65146599557322
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645742103.png :  84.97316636851521
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045569.png :  81.09004739336493
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740517.png :  83.5707069706634
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645048272.png :  78.57533458051518
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741580.png :  91.95599208162022
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047369.png :  68.49973506926045
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740891.png :  75.52685885810769
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646439676.png :  76.58050346342287
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564427.png :  82.3555903197516
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045385.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045797.png :  88.31002650580386
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645566742.png :  78.57533458051518
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645742102.png :  94.3402601790843
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645048272.png :  70.27200540631864
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740517.png :  91.00239398895447
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645045797.png :  71.10425725553645
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045385.png :  91.95599208162022
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646439676.png :  83.19155740326192
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047369.png :  45.74929690638811
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740891.png :  68.13648081413398
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741580.png :  86.32727092029417
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645742063.png :  82.3555903197516
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741636.png :  94.3402601790843
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645045569.png :  85.08275187919236
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741778.png :  88.55887818888326
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438551.png :  83.31194369695714
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645741208.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645563993.png :  83.19155740326192
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645565927.png :  72.96877248524967
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645564569.png :  68.2695094183399
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645740698.png :  95.3910753329358
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047782.png :  88.55887818888326
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646436804.png :  74.3672157492969
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645047594.png :  94.52830188679245
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564569.png :  87.3297453943283
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047594.png :  69.66636931311331
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646436804.png :  45.74929690638811
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645047782.png :  94.3402601790843
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645740698.png :  91.00239398895447
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1645565927.png :  70.27200540631864
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645563993.png :  88.88711224816117
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741208.png :  81.94444444444444
+Accuracy of  /Users/amanrangapur/Desktop/labels/frontimage_1646438625.png :  77.96610169491525
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438551.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564232.png :  100.0
+Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741778.png :  81.65165392475966
+Average Accuracy:  84.92970483676217

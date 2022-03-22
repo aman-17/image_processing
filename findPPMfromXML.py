@@ -20,7 +20,7 @@ import os, glob, requests
 
 
 width = 0.955
-medium = 29
+medium = 28.5
 path_xml = '/Users/amanrangapur/Desktop/labels/'
 path = '/Users/amanrangapur/Desktop/labels/*png'
 images = []
@@ -58,9 +58,9 @@ def ppmfromxml():
         xmin = (root[5][4][0].text)
         xmax = (root[5][4][2].text)
         pixelsPerMetric_ann=math.ceil((int(xmax)-int(xmin))/width)
-        print("Annotations-PPM of ",img,": ",pixelsPerMetric_ann)
+        # print("Annotations-PPM of ",img,": ",pixelsPerMetric_ann)
         pixelsPerMetric_mrcnn=math.ceil((boundaries[2]-boundaries[0])/medium)
-        print("MRCNN-PPM of ",img,": ",pixelsPerMetric_mrcnn)
+        # print("MRCNN-PPM of ",img,": ",pixelsPerMetric_mrcnn)
 
 
         ann_c0=math.ceil(pixelsPerMetric_ann*float(d['h']))
@@ -163,7 +163,7 @@ def ppmfromxml():
         ann_sum2 = ann_sum2 + ann_vertices[0][0]*ann_vertices[ann_numberOfVertices-1][1]   
         
         ann_area = math.ceil(abs(ann_sum1 - ann_sum2) / 2)
-        print("Annotations Area ", "of ",img,": ",ann_area)
+        # print("Annotations Area ", "of ",img,": ",ann_area)
         areas_ann.append(ann_area)
 
         mrcnn_numberOfVertices = len(mrcnn_vertices)
@@ -176,18 +176,21 @@ def ppmfromxml():
         mrcnn_sum1 = mrcnn_sum1 + mrcnn_vertices[mrcnn_numberOfVertices-1][0]*mrcnn_vertices[0][1]
         mrcnn_sum2 = mrcnn_sum2 + mrcnn_vertices[0][0]*mrcnn_vertices[mrcnn_numberOfVertices-1][1]
         mrcnn_area = math.ceil(abs(mrcnn_sum1 - mrcnn_sum2) / 2)
-        print("MRCNN Area ", "of ",img,": ",mrcnn_area)
+        # print("MRCNN Area ", "of ",img,": ",mrcnn_area)
         areas_mrcnn.append(areas_mrcnn)
         accuracy = 100*(mrcnn_area/ann_area)
         if accuracy>100:
             accuracy = 200-accuracy
         else:
             accuracy=accuracy
-        print("Accuracy: ", accuracy)
+        print("Accuracy of ",img,": ",accuracy)
         accuracy_arr.append(accuracy)
 
+    
 
-        
+    average_acc = sum(accuracy_arr)/len(accuracy_arr)
+    print("Average Accuracy: ", average_acc)
+
         # with open('data_mrcnn.txt','w') as f:
         #     list1=[[img],[areas_ann],[areas_mrcnn],[accuracy_arr]]
         #     for x in zip(*list1):
