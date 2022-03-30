@@ -574,3 +574,573 @@ Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1646438551.png :  100.
 Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645564232.png :  100.0
 Accuracy of  /Users/amanrangapur/Desktop/labels/backimage_1645741778.png :  81.65165392475966
 Average Accuracy:  84.92970483676217
+
+
+
+
+
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048124.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048124.png :  40
+Threshold:  4.908748824082784
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563593.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563593.png :  46
+Threshold:  14.56875753920386
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439330.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439330.png :  38
+Threshold:  4.432334363660798
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438012.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438012.png :  40
+Threshold:  6.201358234295416
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741950.png :  25
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741950.png :  36
+Threshold:  2.07189862783534
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563793.png :  14
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563793.png :  46
+Threshold:  10.659752868490733
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563394.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563394.png :  38
+Threshold:  9.946019300361883
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048669.png :  20
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048669.png :  40
+Threshold:  3.979300577404946
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645565487.png :  20
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645565487.png :  46
+Threshold:  5.26310055561608
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740939.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740939.png :  40
+Threshold:  7.03776493256262
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048537.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048537.png :  41
+Threshold:  7.397495183044316
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048669.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048669.png :  41
+Threshold:  6.518336162988115
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438401.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438401.png :  41
+Threshold:  3.7915267627888602
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741951.png :  14
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741951.png :  35
+Threshold:  6.1838040600176525
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563394.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563394.png :  39
+Threshold:  5.898981324278438
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048125.png :  13
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048125.png :  40
+Threshold:  9.380071905495635
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740939.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740939.png :  42
+Threshold:  3.974718546316413
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645565487.png :  25
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645565487.png :  48
+Threshold:  3.6779613553626436
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563593.png :  20
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563593.png :  46
+Threshold:  5.26310055561608
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438402.png :  10
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438402.png :  42
+Threshold:  17.310967741935485
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048536.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048536.png :  43
+Threshold:  4.166403318190796
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563793.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563793.png :  39
+Threshold:  10.477985524728588
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438012.png :  17
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438012.png :  37
+Threshold:  4.696605587263442
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439330.png :  14
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439330.png :  43
+Threshold:  9.309135039717564
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048068.png :  25
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048068.png :  44
+Threshold:  3.0899607952954353
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438772.png :  23
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438772.png :  39
+Threshold:  2.864858179419525
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439493.png :  10
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439493.png :  42
+Threshold:  17.310967741935485
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741834.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741834.png :  45
+Threshold:  6.2084397258433
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048479.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048479.png :  43
+Threshold:  4.166403318190796
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740650.png :  14
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740650.png :  41
+Threshold:  8.471535745807591
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439725.png :  13
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439725.png :  42
+Threshold:  10.335901386748844
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564212.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564212.png :  44
+Threshold:  3.346754625417046
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741376.png :  11
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741376.png :  52
+Threshold:  22.011059579022476
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741002.png :  13
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741002.png :  49
+Threshold:  14.04853620955316
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645566822.png :  22
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645566822.png :  41
+Threshold:  3.465072202166065
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047984.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047984.png :  40
+Threshold:  3.6071499111198895
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438175.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438175.png :  40
+Threshold:  7.03776493256262
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564748.png :  22
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564748.png :  41
+Threshold:  3.465072202166065
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438773.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438773.png :  39
+Threshold:  10.477985524728588
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741002.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741002.png :  44
+Threshold:  4.358779379814339
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564212.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564212.png :  42
+Threshold:  3.974718546316413
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439725.png :  10
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439725.png :  40
+Threshold:  15.710107526881721
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741376.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741376.png :  46
+Threshold:  14.56875753920386
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740650.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740650.png :  49
+Threshold:  6.594936708860759
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048479.png :  23
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048479.png :  44
+Threshold:  3.639264511873351
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564428.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564428.png :  38
+Threshold:  9.946019300361883
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564748.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564748.png :  40
+Threshold:  6.201358234295416
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438175.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438175.png :  39
+Threshold:  4.188667872212176
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047984.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047984.png :  43
+Threshold:  12.72285886610374
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645566822.png :  23
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645566822.png :  41
+Threshold:  3.165649736147757
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048068.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048068.png :  44
+Threshold:  5.931595215696815
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741834.png :  11
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741834.png :  40
+Threshold:  13.031038173385658
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439493.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439493.png :  39
+Threshold:  5.898981324278438
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563902.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563902.png :  41
+Threshold:  2.9112071580224446
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741474.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741474.png :  37
+Threshold:  9.430036188178528
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439409.png :  13
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439409.png :  40
+Threshold:  9.380071905495635
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645046036.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645046036.png :  41
+Threshold:  4.628450874020494
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564314.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564314.png :  39
+Threshold:  4.66939927429109
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741264.png :  13
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741264.png :  38
+Threshold:  8.469696969696969
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048347.png :  17
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048347.png :  45
+Threshold:  6.938570141183539
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741886.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741886.png :  44
+Threshold:  5.931595215696815
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048187.png :  22
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048187.png :  45
+Threshold:  4.169404332129964
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047842.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047842.png :  39
+Threshold:  4.66939927429109
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563646.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563646.png :  40
+Threshold:  11.015078407720145
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438072.png :  22
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438072.png :  37
+Threshold:  2.822202166064982
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741059.png :  10
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741059.png :  42
+Threshold:  17.310967741935485
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047842.png :  10
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047842.png :  43
+Threshold:  18.145806451612902
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048187.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048187.png :  48
+Threshold:  15.843184559710494
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741059.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741059.png :  41
+Threshold:  3.7915267627888602
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438072.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438072.png :  41
+Threshold:  2.9112071580224446
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645566058.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645566058.png :  43
+Threshold:  8.128901734104046
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563646.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563646.png :  44
+Threshold:  3.346754625417046
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563902.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563902.png :  42
+Threshold:  3.974718546316413
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741886.png :  20
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741886.png :  42
+Threshold:  4.384791371609108
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048347.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048347.png :  41
+Threshold:  2.9112071580224446
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741264.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741264.png :  38
+Threshold:  9.946019300361883
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645046036.png :  25
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645046036.png :  41
+Threshold:  2.6878325399047887
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564314.png :  11
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564314.png :  41
+Threshold:  13.69711023902961
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439409.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439409.png :  39
+Threshold:  10.477985524728588
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741474.png :  13
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741474.png :  39
+Threshold:  8.922701592193118
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048586.png :  22
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048586.png :  47
+Threshold:  4.556227436823105
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645566895.png :  25
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645566895.png :  38
+Threshold:  2.308947073648838
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438261.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438261.png :  36
+Threshold:  5.702312138728324
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045659.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045659.png :  35
+Threshold:  4.758064516129032
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740591.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740591.png :  41
+Threshold:  2.9112071580224446
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045880.png :  17
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045880.png :  46
+Threshold:  7.255932712526284
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563468.png :  10
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563468.png :  39
+Threshold:  14.944086021505376
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439552.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439552.png :  40
+Threshold:  4.40337552742616
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048626.png :  10
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048626.png :  38
+Threshold:  14.185376344086022
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045880.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045880.png :  44
+Threshold:  5.931595215696815
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048626.png :  14
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048626.png :  41
+Threshold:  8.471535745807591
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741711.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741711.png :  38
+Threshold:  3.976009644364075
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439552.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439552.png :  40
+Threshold:  2.76963906581741
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646436716.png :  17
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646436716.png :  43
+Threshold:  6.336587563832983
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740591.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740591.png :  42
+Threshold:  12.13751507840772
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045659.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045659.png :  40
+Threshold:  3.6071499111198895
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438261.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438261.png :  39
+Threshold:  4.66939927429109
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645566895.png :  17
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645566895.png :  45
+Threshold:  6.938570141183539
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048586.png :  11
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048586.png :  44
+Threshold:  15.74634320371031
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741712.png :  13
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741712.png :  42
+Threshold:  10.335901386748844
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045520.png :  14
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045520.png :  43
+Threshold:  9.309135039717564
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047519.png :  23
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047519.png :  40
+Threshold:  3.011708443271768
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439616.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439616.png :  34
+Threshold:  3.1852923447860158
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047452.png :  22
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047452.png :  37
+Threshold:  2.822202166064982
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645566657.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645566657.png :  43
+Threshold:  4.166403318190796
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563539.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563539.png :  38
+Threshold:  3.257061031009283
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645565014.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645565014.png :  41
+Threshold:  2.9112071580224446
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047724.png :  14
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047724.png :  40
+Threshold:  8.059576345984112
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563539.png :  22
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563539.png :  37
+Threshold:  2.822202166064982
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047518.png :  25
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047518.png :  40
+Threshold:  2.5571268552226267
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645566657.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645566657.png :  42
+Threshold:  4.852079566003616
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047452.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047452.png :  42
+Threshold:  3.974718546316413
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563467.png :  14
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563467.png :  40
+Threshold:  8.059576345984112
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438735.png :  22
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438735.png :  41
+Threshold:  3.465072202166065
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047724.png :  20
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047724.png :  38
+Threshold:  3.593092929513019
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645565014.png :  14
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645565014.png :  40
+Threshold:  8.059576345984112
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045520.png :  10
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045520.png :  40
+Threshold:  15.710107526881721
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438873.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438873.png :  36
+Threshold:  2.922674303772467
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439616.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439616.png :  36
+Threshold:  5.024617996604414
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438736.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438736.png :  39
+Threshold:  3.4312660477977484
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047904.png :  22
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047904.png :  39
+Threshold:  3.1358303249097474
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741531.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741531.png :  42
+Threshold:  4.852079566003616
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438874.png :  25
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438874.png :  38
+Threshold:  2.308947073648838
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741136.png :  23
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741136.png :  44
+Threshold:  3.639264511873351
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045733.png :  11
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045733.png :  46
+Threshold:  17.23510524438102
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563271.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563271.png :  42
+Threshold:  7.754913294797688
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741532.png :  17
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741532.png :  43
+Threshold:  6.336587563832983
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645742007.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645742007.png :  38
+Threshold:  5.599490662139219
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645566057.png :  10
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645566057.png :  42
+Threshold:  17.310967741935485
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564132.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564132.png :  41
+Threshold:  7.397495183044316
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645567001.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645567001.png :  42
+Threshold:  4.852079566003616
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045733.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045733.png :  49
+Threshold:  10.540462427745664
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563271.png :  14
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563271.png :  43
+Threshold:  9.309135039717564
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741136.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741136.png :  42
+Threshold:  7.754913294797688
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645567001.png :  20
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645567001.png :  41
+Threshold:  4.182699640483713
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564132.png :  11
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564132.png :  42
+Threshold:  14.358901177310026
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645742007.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645742007.png :  41
+Threshold:  2.9112071580224446
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047904.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047904.png :  40
+Threshold:  3.6071499111198895
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045929.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045929.png :  47
+Threshold:  15.22406513872135
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741636.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741636.png :  39
+Threshold:  4.188667872212176
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645742063.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645742063.png :  37
+Threshold:  4.2023921515925275
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645566743.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645566743.png :  39
+Threshold:  2.634592053381862
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645742103.png :  20
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645742103.png :  35
+Threshold:  3.053164832770454
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045569.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045569.png :  45
+Threshold:  4.562216077424452
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740517.png :  23
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740517.png :  43
+Threshold:  3.4786444591029024
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048272.png :  11
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645048272.png :  43
+Threshold:  15.051373528362468
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741580.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741580.png :  46
+Threshold:  4.770886825992495
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047369.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047369.png :  39
+Threshold:  4.66939927429109
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740891.png :  22
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740891.png :  46
+Threshold:  4.360108303249097
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439676.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646439676.png :  40
+Threshold:  3.6071499111198895
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564427.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564427.png :  39
+Threshold:  2.634592053381862
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045385.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045385.png :  46
+Threshold:  5.823990355635925
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045797.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045797.png :  46
+Threshold:  4.770886825992495
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645566742.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645566742.png :  43
+Threshold:  5.669802445907808
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645742102.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645742102.png :  37
+Threshold:  5.30899830220713
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048272.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645048272.png :  41
+Threshold:  5.159655960220401
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740517.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740517.png :  41
+Threshold:  4.628450874020494
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045797.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645045797.png :  43
+Threshold:  8.128901734104046
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045385.png :  23
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045385.png :  46
+Threshold:  3.983344327176781
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439676.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646439676.png :  40
+Threshold:  6.201358234295416
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047369.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047369.png :  41
+Threshold:  3.7915267627888602
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740891.png :  22
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740891.png :  47
+Threshold:  4.556227436823105
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741580.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741580.png :  39
+Threshold:  6.694605009633912
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645742063.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645742063.png :  39
+Threshold:  10.477985524728588
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741636.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741636.png :  37
+Threshold:  2.3710949347892023
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045569.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645045569.png :  47
+Threshold:  3.827949651198059
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741778.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741778.png :  38
+Threshold:  4.432334363660798
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438551.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438551.png :  42
+Threshold:  7.754913294797688
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741208.png :  10
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645741208.png :  40
+Threshold:  15.710107526881721
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563993.png :  23
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645563993.png :  40
+Threshold:  3.011708443271768
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645565927.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645565927.png :  44
+Threshold:  7.493548387096774
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564569.png :  23
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645564569.png :  38
+Threshold:  2.7194096306068603
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740698.png :  11
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645740698.png :  41
+Threshold:  13.69711023902961
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047782.png :  10
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047782.png :  38
+Threshold:  14.185376344086022
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646436804.png :  19
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646436804.png :  37
+Threshold:  3.7697408077154915
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047594.png :  24
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645047594.png :  38
+Threshold:  2.500834091598423
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564569.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564569.png :  43
+Threshold:  8.128901734104046
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047594.png :  15
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047594.png :  40
+Threshold:  7.03776493256262
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646436804.png :  18
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646436804.png :  41
+Threshold:  5.159655960220401
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047782.png :  25
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645047782.png :  37
+Threshold:  2.189162699523943
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740698.png :  17
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645740698.png :  41
+Threshold:  5.766446380294383
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645565927.png :  11
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1645565927.png :  41
+Threshold:  13.69711023902961
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563993.png :  13
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645563993.png :  39
+Threshold:  8.922701592193118
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741208.png :  21
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741208.png :  38
+Threshold:  3.257061031009283
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438625.png :  16
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/frontimage_1646438625.png :  42
+Threshold:  6.833276740237691
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438551.png :  23
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1646438551.png :  42
+Threshold:  3.3186015831134563
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564232.png :  12
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645564232.png :  40
+Threshold:  11.015078407720145
+Annotations-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741778.png :  13
+MRCNN-PPM of  /Users/amanrangapur/Desktop/labels/backimage_1645741778.png :  37
+Threshold:  8.030303030303031
+Average Threshold:  6.846611865214885
