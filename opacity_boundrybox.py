@@ -19,7 +19,7 @@ import xml.etree.ElementTree as ET
 import os, glob, requests
 import random
 
-img = cv2.imread("mrcnn_37.jpg")
+img = cv2.imread("testimg2.jpeg")
 f = open('dh-34-panel.json')
 data = json.load(f)
 d=data["xs"]["f"]["h3"]
