@@ -1,5 +1,3 @@
-import re
-from turtle import width
 from scipy.spatial import distance as dist
 from imutils import perspective
 from imutils import contours
@@ -18,251 +16,339 @@ from bs4 import BeautifulSoup
 import xml.etree.ElementTree as ET
 import os, glob, requests
 import random
+import urllib
 
-img = cv2.imread("testimg2.jpeg")
-f = open('dh-34-panel.json')
+image_url = 'https://api.demo.dhana.com/api/v1/asset/preview/cee3833c-b237-431d-9547-63cea0de1daf'
+req = urllib.request.urlopen(image_url)
+arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
+img = cv2.imdecode(arr, -1)
+
+
+# img = cv2.imread("testimage_1.jpeg")
+f = open('dh-tshirt-panel.json')
 data = json.load(f)
-d=data["xs"]["f"]["h3"]
+point=data["xs"]["f"]["fb1"]
 
-pixelsPerMetric_ann=37
-
-# ann_c0=math.ceil(pixelsPerMetric_ann*float(d['h']))
-# ann_c1=math.ceil(pixelsPerMetric_ann*float(d['b']))
-# ann_ccx1=math.ceil(pixelsPerMetric_ann*float(d['cx1']))
-# ann_ccx2=math.ceil(pixelsPerMetric_ann*float(d['cx2']))
-# ann_ccx3=math.ceil(pixelsPerMetric_ann*float(d['cx3']))
-# ann_ccx4=math.ceil(pixelsPerMetric_ann*float(d['cx4']))
-# ann_ccx5=math.ceil(pixelsPerMetric_ann*float(d['cx5']))
-# ann_ccx6=math.ceil(pixelsPerMetric_ann*float(d['cx6']))
-# ann_ccx7=math.ceil(pixelsPerMetric_ann*float(d['cx7']))
-# ann_ccx8=math.ceil(pixelsPerMetric_ann*float(d['cx8']))
-# ann_ccx9=math.ceil(pixelsPerMetric_ann*float(d['cx9']))
-# ann_ccx10=math.ceil(pixelsPerMetric_ann*float(d['cx10']))
-# ann_ccx11=math.ceil(pixelsPerMetric_ann*float(d['cx11']))
-# ann_ccx12=math.ceil(pixelsPerMetric_ann*float(d['cx12']))
-# ann_ccx13=math.ceil(pixelsPerMetric_ann*float(d['cx13']))
-# ann_ccx14=math.ceil(pixelsPerMetric_ann*float(d['cx14']))
-# ann_ccx15=math.ceil(pixelsPerMetric_ann*float(d['cx15']))
-# ann_ccx16=math.ceil(pixelsPerMetric_ann*float(d['cx16']))
-
-# ann_ccy1=math.ceil(pixelsPerMetric_ann*float(d['cy1']))
-# ann_ccy2=math.ceil(pixelsPerMetric_ann*float(d['cy2']))
-# ann_ccy3=math.ceil(pixelsPerMetric_ann*float(d['cy3']))
-# ann_ccy4=math.ceil(pixelsPerMetric_ann*float(d['cy4']))
-# ann_ccy5=math.ceil(pixelsPerMetric_ann*float(d['cy5']))
-# ann_ccy6=math.ceil(pixelsPerMetric_ann*float(d['cy6']))
-# ann_ccy7=math.ceil(pixelsPerMetric_ann*float(d['cy7']))
-# ann_ccy8=math.ceil(pixelsPerMetric_ann*float(d['cy8']))
-# ann_ccy9=math.ceil(pixelsPerMetric_ann*float(d['cy9']))
-# ann_ccy10=math.ceil(pixelsPerMetric_ann*float(d['cy10']))
-# ann_ccy11=math.ceil(pixelsPerMetric_ann*float(d['cy11']))
-# ann_ccy12=math.ceil(pixelsPerMetric_ann*float(d['cy12']))
-# ann_ccy13=math.ceil(pixelsPerMetric_ann*float(d['cy13']))
-# ann_ccy14=math.ceil(pixelsPerMetric_ann*float(d['cy14']))
-# ann_ccy15=math.ceil(pixelsPerMetric_ann*float(d['cy15']))
-# ann_ccy16=math.ceil(pixelsPerMetric_ann*float(d['cy16']))
-
-# ann_list1=[(0,0),(0,ann_c0),(ann_ccx16,ann_ccy16),(ann_ccx15,ann_ccy15),(ann_ccx14,ann_ccy14),(ann_ccx13,ann_ccy13),(ann_ccx12,ann_ccy12),
-# (ann_ccx11,ann_ccy11),(ann_ccx10,ann_ccy10),(ann_ccx9,ann_ccy9),(ann_ccx8,ann_ccy8),(ann_ccx7,ann_ccy7),(ann_ccx6,ann_ccy6),(ann_ccx5,ann_ccy5),
-# (ann_ccx4,ann_ccy4),(ann_ccx3,ann_ccy3),(ann_ccx2,ann_ccy2),(ann_ccx1,ann_ccy1),(ann_c1,0)]
-
-p=37
-
-h, b =  8.614, 11.756
-
-xp1, yp1 = 0, 0
-xp2, yp2 = 6.14, 0
-xp3, yp3 = 10.5, 1.02
-
-cx1, cy1 = 0.06, 0.27
-cx2, cy2 = 0.09, 0.43
-cx3, cy3 = 0.11, 0.59
-cx4, cy4 = 0.21, 1.02
-cx5, cy5 = 0.35, 1.45
-cx6, cy6 = 0.43, 1.69
-cx7, cy7 = 0.61, 2.08
-cx8, cy8 = 0.70, 2.24
-cx9, cy9 = 0.80, 2.40
-cx10, cy10 =0.95, 2.59 
-cx11, cy11 =1.15, 2.79
-cx12, cy12 =1.29, 2.88
-cx13, cy13 =1.85, 3.12
-
-cx14, cy14 =2.00, 3.17
-cx15, cy15 =2.32, 3.26 
-cx16, cy16 =2.63, 3.33 
-cx17, cy17 =2.99, 3.38
-cx18, cy18 =3.58, 3.42
-cx19, cy19 =4.29, 3.34
-cx20, cy20 =4.44, 3.28
-cx21, cy21 =4.72, 3.14
-cx22, cy22 =5.07, 2.95
-cx23, cy23 =5.31, 2.75
-cx24, cy24 =5.51, 2.55
-cx25, cy25 =5.66, 2.36
-cx26, cy26 =5.78, 2.04
-cx27, cy27 =5.94, 1.61
-cx28, cy28 =6.06, 1.18
-cx29, cy29 =6.10, 0.82
-cx30, cy30 =6.14, 0.39
-
-cx31, cy31 = 10.14, 1.65
-cx32, cy32 = 10.02, 1.96
-cx33, cy33 = 9.83, 2.4 
-cx34, cy34 = 9.70, 2.95
-cx35, cy35 = 9.64, 3.38 
-cx36, cy36 = 9.56, 3.85
-cx37, cy37 = 9.57, 4.25
-cx38, cy38 = 9.58, 4.72
-cx39, cy39 = 9.60, 5.19
-cx40, cy40 = 9.65, 5.59
-cx41, cy41 = 9.73, 6.06
-cx42, cy42 = 9.80, 6.49
-cx43, cy43 = 9.92, 6.92
-cx44, cy44 = 10.03, 7.28
-cx45, cy45 = 10.27, 7.63
-cx46, cy46 = 10.43, 7.91
-cx47, cy47 = 10.62, 8.11
-cx48, cy48 = 10.76, 8.22 
-cx49, cy49 = 11.0, 8.38
-cx50, cy50 = 11.7, 8.60
-
-xcp1=math.ceil(xp1*p)
-xcp2=math.ceil(xp2*p)
-xcp3=math.ceil(xp3*p)
-
-ycp1=math.ceil(yp1*p)
-ycp2=math.ceil(yp2*p)
-ycp3=math.ceil(yp3*p)
+pixelsPerMetric=28
 
 
-c1=math.ceil(h*p)
-c2=math.ceil(b*p)
+xcp1=math.ceil(pixelsPerMetric*point['xp1'])
+xcp2=math.ceil(pixelsPerMetric*point['xp2'])
+
+ycp1=math.ceil(pixelsPerMetric*point['yp1'])
+ycp2=math.ceil(pixelsPerMetric*point['yp2'])
 
 
-ccx1=math.ceil(cx1*p)
-ccx2=math.ceil(cx2*p)
-ccx3=math.ceil(cx3*p)
-ccx4=math.ceil(cx4*p)
-ccx5=math.ceil(cx5*p)
-ccx6=math.ceil(cx6*p)
-ccx7=math.ceil(cx7*p)
-ccx8=math.ceil(cx8*p)
-ccx9=math.ceil(cx9*p)
-ccx10=math.ceil(cx10*p)
-ccx11=math.ceil(cx11*p)
-ccx12=math.ceil(cx12*p)
-ccx13=math.ceil(cx13*p)
-ccx14=math.ceil(cx14*p)
-ccx15=math.ceil(cx15*p)
-ccx16=math.ceil(cx16*p)
-ccx17=math.ceil(cx17*p)
-ccx18=math.ceil(cx18*p)
-ccx19=math.ceil(cx19*p)
-ccx20=math.ceil(cx20*p)
-ccx21=math.ceil(cx21*p)
-ccx22=math.ceil(cx22*p)
-ccx23=math.ceil(cx23*p)
-ccx24=math.ceil(cx24*p)
-ccx25=math.ceil(cx25*p)
-ccx26=math.ceil(cx26*p)
-ccx27=math.ceil(cx27*p)
-ccx28=math.ceil(cx28*p)
-ccx29=math.ceil(cx29*p)
-ccx30=math.ceil(cx30*p)
-ccx31=math.ceil(cx31*p)
-ccx32=math.ceil(cx32*p)
-ccx33=math.ceil(cx33*p)
-ccx34=math.ceil(cx34*p)
-ccx35=math.ceil(cx35*p)
-ccx36=math.ceil(cx36*p)
-ccx37=math.ceil(cx37*p)
-ccx38=math.ceil(cx38*p)
-ccx39=math.ceil(cx39*p)
-ccx40=math.ceil(cx40*p)
-ccx41=math.ceil(cx41*p)
-ccx42=math.ceil(cx42*p)
-ccx43=math.ceil(cx43*p)
-ccx44=math.ceil(cx44*p)
-ccx45=math.ceil(cx45*p)
-ccx46=math.ceil(cx46*p)
-ccx47=math.ceil(cx47*p)
-ccx48=math.ceil(cx48*p)
-ccx49=math.ceil(cx49*p)
-ccx50=math.ceil(cx50*p)
+c1=math.ceil(pixelsPerMetric*point['h'])
+c2=math.ceil(pixelsPerMetric*point['b'])
+
+ccx1=math.ceil(point['cx1']*pixelsPerMetric)
+ccx2=math.ceil(point['cx2']*pixelsPerMetric)
+ccx3=math.ceil(point['cx3']*pixelsPerMetric)
+ccx4=math.ceil(point['cx4']*pixelsPerMetric)
+ccx5=math.ceil(point['cx5']*pixelsPerMetric)
+ccx6=math.ceil(point['cx6']*pixelsPerMetric)
+ccx7=math.ceil(point['cx7']*pixelsPerMetric)
+ccx8=math.ceil(point['cx8']*pixelsPerMetric)
+ccx9=math.ceil(point['cx9']*pixelsPerMetric)
+ccx10=math.ceil(point['cx10']*pixelsPerMetric)
+ccx11=math.ceil(point['cx11']*pixelsPerMetric)
+ccx12=math.ceil(point['cx12']*pixelsPerMetric)
+ccx13=math.ceil(point['cx13']*pixelsPerMetric)
+ccx14=math.ceil(point['cx14']*pixelsPerMetric)
+ccx15=math.ceil(point['cx15']*pixelsPerMetric)
+ccx16=math.ceil(point['cx16']*pixelsPerMetric)
+ccx17=math.ceil(point['cx17']*pixelsPerMetric)
+ccx18=math.ceil(point['cx18']*pixelsPerMetric)
+ccx19=math.ceil(point['cx19']*pixelsPerMetric)
+ccx20=math.ceil(point['cx20']*pixelsPerMetric)
+ccx21=math.ceil(point['cx21']*pixelsPerMetric)
+
+ccy1=math.ceil(point['cy1']*pixelsPerMetric)
+ccy2=math.ceil(point['cy2']*pixelsPerMetric)
+ccy3=math.ceil(point['cy3']*pixelsPerMetric)
+ccy4=math.ceil(point['cy4']*pixelsPerMetric)
+ccy5=math.ceil(point['cy5']*pixelsPerMetric)
+ccy6=math.ceil(point['cy6']*pixelsPerMetric)
+ccy7=math.ceil(point['cy7']*pixelsPerMetric)
+ccy8=math.ceil(point['cy8']*pixelsPerMetric)
+ccy9=math.ceil(point['cy9']*pixelsPerMetric)
+ccy10=math.ceil(point['cy10']*pixelsPerMetric)
+ccy11=math.ceil(point['cy11']*pixelsPerMetric)
+ccy12=math.ceil(point['cy12']*pixelsPerMetric)
+ccy13=math.ceil(point['cy13']*pixelsPerMetric)
+ccy14=math.ceil(point['cy14']*pixelsPerMetric)
+ccy15=math.ceil(point['cy15']*pixelsPerMetric)
+ccy16=math.ceil(point['cy16']*pixelsPerMetric)
+ccy17=math.ceil(point['cy17']*pixelsPerMetric)
+ccy18=math.ceil(point['cy18']*pixelsPerMetric)
+ccy19=math.ceil(point['cy19']*pixelsPerMetric)
+ccy20=math.ceil(point['cy20']*pixelsPerMetric)
+ccy21=math.ceil(point['cy21']*pixelsPerMetric)
 
 
-ccy1=math.ceil(cy1*p)
-ccy2=math.ceil(cy2*p)
-ccy3=math.ceil(cy3*p)
-ccy4=math.ceil(cy4*p)
-ccy5=math.ceil(cy5*p)
-ccy6=math.ceil(cy6*p)
-ccy7=math.ceil(cy7*p)
-ccy8=math.ceil(cy8*p)
-ccy9=math.ceil(cy9*p)
-ccy10=math.ceil(cy10*p)
-ccy11=math.ceil(cy11*p)
-ccy12=math.ceil(cy12*p)
-ccy13=math.ceil(cy13*p)
-ccy14=math.ceil(cy14*p)
-ccy15=math.ceil(cy15*p)
-ccy16=math.ceil(cy16*p)
-ccy17=math.ceil(cy17*p)
-ccy18=math.ceil(cy18*p)
-ccy19=math.ceil(cy19*p)
-ccy20=math.ceil(cy20*p)
-ccy21=math.ceil(cy21*p)
-ccy22=math.ceil(cy22*p)
-ccy23=math.ceil(cy23*p)
-ccy24=math.ceil(cy24*p)
-ccy25=math.ceil(cy25*p)
-ccy26=math.ceil(cy26*p)
-ccy27=math.ceil(cy27*p)
-ccy28=math.ceil(cy28*p)
-ccy29=math.ceil(cy29*p)
-ccy30=math.ceil(cy30*p)
-ccy31=math.ceil(cy31*p)
-ccy32=math.ceil(cy32*p)
-ccy33=math.ceil(cy33*p)
-ccy34=math.ceil(cy34*p)
-ccy35=math.ceil(cy35*p)
-ccy36=math.ceil(cy36*p)
-ccy37=math.ceil(cy37*p)
-ccy38=math.ceil(cy38*p)
-ccy39=math.ceil(cy39*p)
-ccy40=math.ceil(cy40*p)
-ccy41=math.ceil(cy41*p)
-ccy42=math.ceil(cy42*p)
-ccy43=math.ceil(cy43*p)
-ccy44=math.ceil(cy44*p)
-ccy45=math.ceil(cy45*p)
-ccy46=math.ceil(cy46*p)
-ccy47=math.ceil(cy47*p)
-ccy48=math.ceil(cy48*p)
-ccy49=math.ceil(cy49*p)
-ccy50=math.ceil(cy50*p)
 
-contours = [ np.array([[xcp1,0],[0,c1],[c2,c1],[ccx50,ccy50],[ccx49,ccy49],[ccx48,ccy48],[ccx47,ccy47],[ccx46,ccy46],[ccx45,ccy45],[ccx44,ccy44],[ccx43,ccy43],[ccx42,ccy42],[ccx41,ccy41],[ccx40,ccy40],
-       [ccx39,ccy39],[ccx38,ccy38],[ccx37,ccy37],[ccx36,ccy36],[ccx35,ccy35],[ccx34,ccy34],[ccx33,ccy33],[ccx32,ccy32],[ccx31,ccy31],[xcp3,ycp3],[xcp2,ycp2],[ccx30,ccy30],
-       [ccx29,ccy29],[ccx28,ccy28],[ccx27,ccy27],[ccx26,ccy26],[ccx25,ccy25],[ccx24,ccy24],[ccx23,ccy23],[ccx22,ccy22],[ccx21,ccy21],[ccx20,ccy20],
-       [ccx19,ccy19],[ccx18,ccy18],[ccx17,ccy17],[ccx16,ccy16],[ccx15,ccy15],[ccx14,ccy14],[ccx13,ccy13],[ccx12,ccy12],[ccx11,ccy11],[ccx10,ccy10],
-       [ccx9,ccy9],[ccx8,ccy8],[ccx7,ccy7],[ccx6,ccy6],[ccx5,ccy5],[ccx4,ccy4],[ccx3,ccy3],[ccx2,ccy2],[ccx1,ccy1]])
+contours = [ np.array([[320+0,110+0],[320+xcp2, 110+ycp2],[320+c2,110+c1],[320+ccx21, 110+ccy21],[320+ccx20, 110+ccy20],[320+ccx19, 110+ccy19],[320+ccx18, 110+ccy18],[320+ccx17, 110+ccy17],[320+ccx16, 110+ccy16],
+                    [320+ccx15, 110+ccy15],[320+ccx14, 110+ccy14],[320+ccx13, 110+ccy13],[320+ccx12, 110+ccy12],[320+ccx11, 110+ccy11],[320+ccx10, 110+ccy10],[320+ccx9, 110+ccy9],[320+ccx8, 110+ccy8],[320+ccx7, 110+ccy7],
+                    [320+ccx6, 110+ccy6],[320+ccx5, 110+ccy5],[320+ccx4, 110+ccy4],[320+ccx3, 110+ccy3],[320+ccx2, 110+ccy2],[320+ccx1, 110+ccy1],[320+xcp1, 110+ycp1],[320+0,110+0]])
            ]
+
+point=data["xs"]["f"]["fb2"]
+
+xcp1=math.ceil(point['xp1']*pixelsPerMetric)
+xcp2=math.ceil(point['xp2']*pixelsPerMetric)
+xcp3=math.ceil(point['xp3']*pixelsPerMetric)
+
+ycp1=math.ceil(point['yp1']*pixelsPerMetric)
+ycp2=math.ceil(point['yp2']*pixelsPerMetric)
+ycp3=math.ceil(point['yp3']*pixelsPerMetric)
+
+
+c1=math.ceil(point['h']*pixelsPerMetric)
+c2=math.ceil(point['b']*pixelsPerMetric)
+
+
+ccx1=math.ceil(point['cx1']*pixelsPerMetric)
+ccx2=math.ceil(point['cx2']*pixelsPerMetric)
+ccx3=math.ceil(point['cx3']*pixelsPerMetric)
+ccx4=math.ceil(point['cx4']*pixelsPerMetric)
+ccx5=math.ceil(point['cx5']*pixelsPerMetric)
+ccx6=math.ceil(point['cx6']*pixelsPerMetric)
+ccx7=math.ceil(point['cx7']*pixelsPerMetric)
+ccx8=math.ceil(point['cx8']*pixelsPerMetric)
+ccx9=math.ceil(point['cx9']*pixelsPerMetric)
+ccx10=math.ceil(point['cx10']*pixelsPerMetric)
+ccx11=math.ceil(point['cx11']*pixelsPerMetric)
+ccx12=math.ceil(point['cx12']*pixelsPerMetric)
+ccx13=math.ceil(point['cx13']*pixelsPerMetric)
+ccx14=math.ceil(point['cx14']*pixelsPerMetric)
+ccx15=math.ceil(point['cx15']*pixelsPerMetric)
+ccx16=math.ceil(point['cx16']*pixelsPerMetric)
+ccx17=math.ceil(point['cx17']*pixelsPerMetric)
+ccx18=math.ceil(point['cx18']*pixelsPerMetric)
+ccx19=math.ceil(point['cx19']*pixelsPerMetric)
+ccx20=math.ceil(point['cx20']*pixelsPerMetric)
+ccx21=math.ceil(point['cx21']*pixelsPerMetric)
+ccx22=math.ceil(point['cx22']*pixelsPerMetric)
+ccx23=math.ceil(point['cx23']*pixelsPerMetric)
+ccx24=math.ceil(point['cx24']*pixelsPerMetric)
+ccx25=math.ceil(point['cx25']*pixelsPerMetric)
+ccx26=math.ceil(point['cx26']*pixelsPerMetric)
+ccx27=math.ceil(point['cx27']*pixelsPerMetric)
+ccx28=math.ceil(point['cx28']*pixelsPerMetric)
+ccx29=math.ceil(point['cx29']*pixelsPerMetric)
+ccx30=math.ceil(point['cx30']*pixelsPerMetric)
+ccx31=math.ceil(point['cx31']*pixelsPerMetric)
+ccx32=math.ceil(point['cx32']*pixelsPerMetric)
+ccx33=math.ceil(point['cx33']*pixelsPerMetric)
+ccx34=math.ceil(point['cx34']*pixelsPerMetric)
+ccx35=math.ceil(point['cx35']*pixelsPerMetric)
+ccx36=math.ceil(point['cx36']*pixelsPerMetric)
+ccx37=math.ceil(point['cx37']*pixelsPerMetric)
+ccx38=math.ceil(point['cx38']*pixelsPerMetric)
+ccx39=math.ceil(point['cx39']*pixelsPerMetric)
+ccx40=math.ceil(point['cx40']*pixelsPerMetric)
+ccx41=math.ceil(point['cx41']*pixelsPerMetric)
+ccx42=math.ceil(point['cx42']*pixelsPerMetric)
+ccx43=math.ceil(point['cx43']*pixelsPerMetric)
+ccx44=math.ceil(point['cx44']*pixelsPerMetric)
+ccx45=math.ceil(point['cx45']*pixelsPerMetric)
+ccx46=math.ceil(point['cx46']*pixelsPerMetric)
+ccx47=math.ceil(point['cx47']*pixelsPerMetric)
+ccx48=math.ceil(point['cx48']*pixelsPerMetric)
+ccx49=math.ceil(point['cx49']*pixelsPerMetric)
+ccx50=math.ceil(point['cx50']*pixelsPerMetric)
+
+
+ccy1=math.ceil(point['cy1']*pixelsPerMetric)
+ccy2=math.ceil(point['cy2']*pixelsPerMetric)
+ccy3=math.ceil(point['cy3']*pixelsPerMetric)
+ccy4=math.ceil(point['cy4']*pixelsPerMetric)
+ccy5=math.ceil(point['cy5']*pixelsPerMetric)
+ccy6=math.ceil(point['cy6']*pixelsPerMetric)
+ccy7=math.ceil(point['cy7']*pixelsPerMetric)
+ccy8=math.ceil(point['cy8']*pixelsPerMetric)
+ccy9=math.ceil(point['cy9']*pixelsPerMetric)
+ccy10=math.ceil(point['cy10']*pixelsPerMetric)
+ccy11=math.ceil(point['cy11']*pixelsPerMetric)
+ccy12=math.ceil(point['cy12']*pixelsPerMetric)
+ccy13=math.ceil(point['cy13']*pixelsPerMetric)
+ccy14=math.ceil(point['cy14']*pixelsPerMetric)
+ccy15=math.ceil(point['cy15']*pixelsPerMetric)
+ccy16=math.ceil(point['cy16']*pixelsPerMetric)
+ccy17=math.ceil(point['cy17']*pixelsPerMetric)
+ccy18=math.ceil(point['cy18']*pixelsPerMetric)
+ccy19=math.ceil(point['cy19']*pixelsPerMetric)
+ccy20=math.ceil(point['cy20']*pixelsPerMetric)
+ccy21=math.ceil(point['cy21']*pixelsPerMetric)
+ccy22=math.ceil(point['cy22']*pixelsPerMetric)
+ccy23=math.ceil(point['cy23']*pixelsPerMetric)
+ccy24=math.ceil(point['cy24']*pixelsPerMetric)
+ccy25=math.ceil(point['cy25']*pixelsPerMetric)
+ccy26=math.ceil(point['cy26']*pixelsPerMetric)
+ccy27=math.ceil(point['cy27']*pixelsPerMetric)
+ccy28=math.ceil(point['cy28']*pixelsPerMetric)
+ccy29=math.ceil(point['cy29']*pixelsPerMetric)
+ccy30=math.ceil(point['cy30']*pixelsPerMetric)
+ccy31=math.ceil(point['cy31']*pixelsPerMetric)
+ccy32=math.ceil(point['cy32']*pixelsPerMetric)
+ccy33=math.ceil(point['cy33']*pixelsPerMetric)
+ccy34=math.ceil(point['cy34']*pixelsPerMetric)
+ccy35=math.ceil(point['cy35']*pixelsPerMetric)
+ccy36=math.ceil(point['cy36']*pixelsPerMetric)
+ccy37=math.ceil(point['cy37']*pixelsPerMetric)
+ccy38=math.ceil(point['cy38']*pixelsPerMetric)
+ccy39=math.ceil(point['cy39']*pixelsPerMetric)
+ccy40=math.ceil(point['cy40']*pixelsPerMetric)
+ccy41=math.ceil(point['cy41']*pixelsPerMetric)
+ccy42=math.ceil(point['cy42']*pixelsPerMetric)
+ccy43=math.ceil(point['cy43']*pixelsPerMetric)
+ccy44=math.ceil(point['cy44']*pixelsPerMetric)
+ccy45=math.ceil(point['cy45']*pixelsPerMetric)
+ccy46=math.ceil(point['cy46']*pixelsPerMetric)
+ccy47=math.ceil(point['cy47']*pixelsPerMetric)
+ccy48=math.ceil(point['cy48']*pixelsPerMetric)
+ccy49=math.ceil(point['cy49']*pixelsPerMetric)
+ccy50=math.ceil(point['cy50']*pixelsPerMetric)
+
+contours2 = [ np.array(
+    [(540+xcp1,150+0),(540+0,150+c1),(540+c2,150+c1),(540+ccx50,150+ccy50),(540+ccx49,150+ccy49),(540+ccx48,150+ccy48),
+(540+ccx47,150+ccy47),(540+ccx46,150+ccy46),(540+ccx45,150+ccy45),(540+ccx44,150+ccy44),(540+ccx43,150+ccy43),(540+ccx42,150+ccy42),(540+ccx41,150+ccy41),
+(540+ccx40,150+ccy40), (540+ccx39,150+ccy39),(540+ccx38,150+ccy38),(540+ccx37,150+ccy37),(540+ccx36,150+ccy36),(540+ccx35,150+ccy35),(540+ccx34,150+ccy34),
+(540+ccx33,150+ccy33),(540+ccx32,150+ccy32),(540+ccx31,150+ccy31),(540+xcp3,150+ycp3),(540+xcp2,150+ycp2),(540+ccx30,150+ccy30), (540+ccx29,150+ccy29),
+(540+ccx28,150+ccy28),(540+ccx27,150+ccy27),(540+ccx26,150+ccy26),(540+ccx25,150+ccy25),(540+ccx24,150+ccy24),(540+ccx23,150+ccy23),(540+ccx22,150+ccy22),
+(540+ccx21,150+ccy21),(540+ccx20,150+ccy20),(540+ccx19,150+ccy19),(540+ccx18,150+ccy18),(540+ccx17,150+ccy17),(540+ccx16,150+ccy16),(540+ccx15,150+ccy15),
+(540+ccx14,150+ccy14),(540+ccx13,150+ccy13),(540+ccx12,150+ccy12),(540+ccx11,150+ccy11),(540+ccx10,150+ccy10), (540+ccx9,150+ccy9),(540+ccx8,150+ccy8),
+(540+ccx7,150+ccy7),(540+ccx6,150+ccy6),(540+ccx5,150+ccy5),(540+ccx4,150+ccy4),(540+ccx3,150+ccy3),(540+ccx2,150+ccy2),(540+ccx1,150+ccy1)]
+)]
+
+point=data["xs"]["f"]["fb3"]
+
+x0=point['b']-point['s']
+c1=math.ceil(pixelsPerMetric*point['l'])
+c2=math.ceil(pixelsPerMetric*point['b'])
+c3=math.ceil(pixelsPerMetric*point['s'])
+c4=math.ceil(pixelsPerMetric*x0)
+
+contours3 = [ np.array(
+    [(940+0,125+0),(940+c4,125+c1),(940+c2,125+c1),(940+c2,125+0)]
+)]
+
+
+point=data["xs"]["f"]["tb"]
+y1=math.ceil(pixelsPerMetric*point['h'])
+x1=math.ceil(pixelsPerMetric*point['b'])
+
+px1=math.ceil(pixelsPerMetric*point['xp1'])
+px2=math.ceil(pixelsPerMetric*point['xp2'])
+px3=math.ceil(pixelsPerMetric*point['xp3'])
+px4=math.ceil(pixelsPerMetric*point['xp4'])
+px5=math.ceil(pixelsPerMetric*point['xp5'])
+px6=math.ceil(pixelsPerMetric*point['xp6'])
+
+py1=math.ceil(pixelsPerMetric*point['yp1'])
+py2=math.ceil(pixelsPerMetric*point['yp2'])
+py3=math.ceil(pixelsPerMetric*point['yp3'])
+py4=math.ceil(pixelsPerMetric*point['yp4'])
+py5=math.ceil(pixelsPerMetric*point['yp5'])
+py6=math.ceil(pixelsPerMetric*point['yp6'])
+
+xc1=math.ceil(pixelsPerMetric*point['cx1'])
+xc2=math.ceil(pixelsPerMetric*point['cx2'])
+xc3=math.ceil(pixelsPerMetric*point['cx3'])
+xc4=math.ceil(pixelsPerMetric*point['cx4'])
+xc5=math.ceil(pixelsPerMetric*point['cx5'])
+xc6=math.ceil(pixelsPerMetric*point['cx6'])
+xc7=math.ceil(pixelsPerMetric*point['cx7'])
+xc8=math.ceil(pixelsPerMetric*point['cx8'])
+xc9=math.ceil(pixelsPerMetric*point['cx9'])
+xc10=math.ceil(pixelsPerMetric*point['cx10'])
+xc11=math.ceil(pixelsPerMetric*point['cx11'])
+xc12=math.ceil(pixelsPerMetric*point['cx12'])
+xc13=math.ceil(pixelsPerMetric*point['cx13'])
+xc14=math.ceil(pixelsPerMetric*point['cx14'])
+xc15=math.ceil(pixelsPerMetric*point['cx15'])
+xc16=math.ceil(pixelsPerMetric*point['cx16'])
+xc17=math.ceil(pixelsPerMetric*point['cx17'])
+xc18=math.ceil(pixelsPerMetric*point['cx18'])
+xc19=math.ceil(pixelsPerMetric*point['cx19'])
+xc20=math.ceil(pixelsPerMetric*point['cx20'])
+xc21=math.ceil(pixelsPerMetric*point['cx21'])
+xc22=math.ceil(pixelsPerMetric*point['cx22'])
+xc23=math.ceil(pixelsPerMetric*point['cx23'])
+xc24=math.ceil(pixelsPerMetric*point['cx24'])
+xc25=math.ceil(pixelsPerMetric*point['cx25'])
+xc26=math.ceil(pixelsPerMetric*point['cx26'])
+xc27=math.ceil(pixelsPerMetric*point['cx27'])
+xc28=math.ceil(pixelsPerMetric*point['cx28'])
+xc29=math.ceil(pixelsPerMetric*point['cx29'])
+xc30=math.ceil(pixelsPerMetric*point['cx30'])
+xc31=math.ceil(pixelsPerMetric*point['cx31'])
+xc32=math.ceil(pixelsPerMetric*point['cx32'])
+xc33=math.ceil(pixelsPerMetric*point['cx33'])
+
+
+yc1=math.ceil(pixelsPerMetric*point['cy1'])
+yc2=math.ceil(pixelsPerMetric*point['cy2'])
+yc3=math.ceil(pixelsPerMetric*point['cy3'])
+yc4=math.ceil(pixelsPerMetric*point['cy4'])
+yc5=math.ceil(pixelsPerMetric*point['cy5'])
+yc6=math.ceil(pixelsPerMetric*point['cy6'])
+yc7=math.ceil(pixelsPerMetric*point['cy7'])
+yc8=math.ceil(pixelsPerMetric*point['cy8'])
+yc9=math.ceil(pixelsPerMetric*point['cy9'])
+yc10=math.ceil(pixelsPerMetric*point['cy10'])
+yc11=math.ceil(pixelsPerMetric*point['cy11'])
+yc12=math.ceil(pixelsPerMetric*point['cy12'])
+yc13=math.ceil(pixelsPerMetric*point['cy13'])
+yc14=math.ceil(pixelsPerMetric*point['cy14'])
+yc15=math.ceil(pixelsPerMetric*point['cy15'])
+yc16=math.ceil(pixelsPerMetric*point['cy16'])
+yc17=math.ceil(pixelsPerMetric*point['cy17'])
+yc18=math.ceil(pixelsPerMetric*point['cy18'])
+yc19=math.ceil(pixelsPerMetric*point['cy19'])
+yc20=math.ceil(pixelsPerMetric*point['cy20'])
+yc21=math.ceil(pixelsPerMetric*point['cy21'])
+yc22=math.ceil(pixelsPerMetric*point['cy22'])
+yc23=math.ceil(pixelsPerMetric*point['cy23'])
+yc24=math.ceil(pixelsPerMetric*point['cy24'])
+yc25=math.ceil(pixelsPerMetric*point['cy25'])
+yc26=math.ceil(pixelsPerMetric*point['cy26'])
+yc27=math.ceil(pixelsPerMetric*point['cy27'])
+yc28=math.ceil(pixelsPerMetric*point['cy28'])
+yc29=math.ceil(pixelsPerMetric*point['cy29'])
+yc30=math.ceil(pixelsPerMetric*point['cy30'])
+yc31=math.ceil(pixelsPerMetric*point['cy31'])
+yc32=math.ceil(pixelsPerMetric*point['cy32'])
+yc33=math.ceil(pixelsPerMetric*point['cy33'])
+
+
+contours4 = [ np.array(
+[(540+px1,420+py1),(540+px2,420+py2),(540+xc1,420+yc1),(540+xc2,420+yc2),(540+xc3,420+yc3),(540+xc4,420+yc4),(540+xc5,420+yc5),
+(540+xc6,420+yc6),(540+xc7,420+yc7),(540+xc8,420+yc8),(540+xc9,420+yc9),(540+xc10,420+yc10),(540+xc11,420+yc11),
+(540+xc12,420+yc12),(540+0,420+py3),(540+0,420+py3+y1),(540+x1,420+py3+y1),
+(540+x1,420+py6),(540+xc24,420+yc24),(540+xc23,420+yc23),(540+xc22,420+yc22),(540+xc21,420+yc21),(540+xc20,420+yc20),
+(540+xc19,420+yc19),(540+xc18,420+yc18),(540+xc17,420+yc17),(540+xc16,420+yc16),(540+xc15,420+yc15),
+(540+xc14,420+yc14),(540+xc13,420+yc13),(540+px5,420+py5),(540+px4,420+py4),
+(540+xc33,420+yc33),(540+xc32,420+yc32),(540+xc31,420+yc31),(540+xc30,420+yc30),
+(540+xc29,420+yc29),(540+xc28,420+yc28),(540+xc27,420+yc27),(540+xc26,420+yc26),(540+xc25,420+yc25)]
+)]
 
 stencil  = np.zeros(img.shape[:-1]).astype(np.uint8)
 cv2.fillPoly(stencil, contours, 255)
+cv2.fillPoly(stencil, contours2, 255)
+cv2.fillPoly(stencil, contours3, 255)
+cv2.fillPoly(stencil, contours4, 255)
 sel = stencil != 255
 shapes = np.zeros_like(img, np.uint8)
-alpha = 0.5
+alpha = 0.3
 mask = shapes.astype(bool)
 # print("mask: ",mask)
 
 img[sel] = cv2.addWeighted(img, alpha, shapes, 1 - alpha, 0)[sel]
 
 
-
-cv2.imshow("result.jpg", img)
+cv2.imshow("result1.jpg", img)
 k=cv2.waitKey(0) & 0xFF
 if k == 27:
     cv2.destroyAllWindows()
