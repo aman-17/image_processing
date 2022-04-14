@@ -18,7 +18,7 @@ import os, glob, requests
 import random
 import urllib
 
-image_url = 'https://api.demo.dhana.com/api/v1/asset/preview/cee3833c-b237-431d-9547-63cea0de1daf'
+image_url = 'https://ik.imagekit.io/2360uyb96/duplo-dsphere-beta/preview/41f1e7e2-d304-454d-ab07-a16e3a628eae'
 req = urllib.request.urlopen(image_url)
 arr = np.asarray(bytearray(req.read()), dtype=np.uint8)
 img = cv2.imdecode(arr, -1)
@@ -341,7 +341,7 @@ cv2.fillPoly(stencil, contours3, 255)
 cv2.fillPoly(stencil, contours4, 255)
 sel = stencil != 255
 shapes = np.zeros_like(img, np.uint8)
-alpha = 0.3
+alpha = 0.35
 mask = shapes.astype(bool)
 # print("mask: ",mask)
 
